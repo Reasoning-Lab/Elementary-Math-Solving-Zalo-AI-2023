@@ -1,0 +1,19 @@
+project: ORGANIZATION/experiment-tracking
+name: experiment-tracking-default-risk
+wandb:
+  WANDB_API_KEY: YOUR_WANDB_API
+  entity: YOUR_WANDB_API
+  project: experiment-tracking
+  name: TEST
+parameters:
+  # Data preparation
+  n_cv_splits: 5
+  validation_size: 0.2
+  stratified_cv: True
+  shuffle: 1
+  # Random forest
+  rf__n_estimators: 2000
+  rf__criterion: gini
+  rf__max_depth: 40
+  rf__class_weight: balanced
+  rf__max_features: 0.3
