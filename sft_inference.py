@@ -4,7 +4,7 @@ from typing import Optional
 import torch
 from accelerate import Accelerator
 from datasets import load_dataset
-from peft import LoraConfig
+from peft import LoraConfig, get_peft_model
 from tqdm import tqdm
 from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig, HfArgumentParser, TrainingArguments
 
@@ -32,7 +32,7 @@ class ScriptArguments:
     load_in_4bit: Optional[bool] = field(default=False, metadata={"help": "load the model in 4 bits precision"})
     use_peft: Optional[bool] = field(default=False, metadata={"help": "Wether to use PEFT or not to train adapters"})
     trust_remote_code: Optional[bool] = field(default=False, metadata={"help": "Enable `trust_remote_code`"})
-    output_dir: Optional[str] = field(default="outputs", metadata={"help": "the output directory"})
+    output_dir: Optional[str] = field(default="output", metadata={"help": "the output directory"})
     peft_lora_r: Optional[int] = field(default=64, metadata={"help": "the r parameter of the LoRA adapters"})
     peft_lora_alpha: Optional[int] = field(default=16, metadata={"help": "the alpha parameter of the LoRA adapters"})
     logging_steps: Optional[int] = field(default=1, metadata={"help": "the number of logging steps"})
@@ -92,38 +92,8 @@ print(script_args)
 tokenizer = AutoTokenizer.from_pretrained(script_args.model_name, trust_remote_code=script_args.trust_remote_code)
 tokenizer.pad_token = tokenizer.eos_token
 
-# Step 2: Load the dataset
-dataset = load_dataset("json", data_files=script_args.dataset_path, field="data")
-
-# Step 3: Define the training arguments
-training_args = TrainingArguments(
-    output_dir=script_args.output_dir,
-    per_device_train_batch_size=script_args.batch_size,
-    gradient_accumulation_steps=script_args.gradient_accumulation_steps,
-    learning_rate=script_args.learning_rate,
-    logging_steps=script_args.logging_steps,
-    num_train_epochs=script_args.num_train_epochs,
-    max_steps=script_args.max_steps,
-    report_to=script_args.log_with,
-    save_steps=script_args.save_steps,
-    save_total_limit=script_args.save_total_limit,
-    push_to_hub=script_args.push_to_hub,
-    hub_model_id=script_args.hub_model_id,
-    gradient_checkpointing=script_args.gradient_checkpointing,
-    # TODO: uncomment that on the next release
-    # gradient_checkpointing_kwargs=script_args.gradient_checkpointing_kwargs,
-)
-
-# Step 4: Define the LoraConfig
-if script_args.use_peft:
-    peft_config = LoraConfig(
-        r=script_args.peft_lora_r,
-        lora_alpha=script_args.peft_lora_alpha,
-        bias="none",
-        task_type="CAUSAL_LM",
-    )
-else:
-    peft_config = None
+lora_config = LoraConfig.from_pretrained('output')
+model = get_peft_model(model, lora_config)
 
 def formatting_prompts_func(example):
     output_texts = []
@@ -149,19 +119,26 @@ def formatting_prompts_func(example):
         output_texts.append(text)
     return output_texts
 
-# Step 5: Define the Trainer
-trainer = SFTTrainer(
-    model=model,
-    train_dataset=dataset['train'],
-    peft_config=peft_config,
-    max_seq_length=script_args.seq_length,
-    tokenizer=tokenizer,
-    args=training_args,
-    formatting_func=formatting_prompts_func,
-    packing=False
-)
+question = "Nhân viên y tế mất khoảng 5 phút để tiêm xong vắc-xin cho một người. Bố xếp hàng đợi tiêm lúc 9 giờ 20 phút. Phía trước bố còn 6 người nữ. Vậy bố sẽ được tiêm vắc-xin xong lúc:"
+choices = [
+    "A. 9 giờ 50 phút",
+    "B. 10 giờ 5 phút",
+    "C. 10 giờ kém 5 phút",
+    "D. 9 giờ 25 phút"
+]
 
-trainer.train()
+text_choices = "\n".join(choices)
 
-# Step 6: Save the model
-trainer.save_model(script_args.output_dir)
+text = (
+            "Trả lời câu hỏi sau bằng cách đưa ra đáp án chính xác nhất. Đáp án sẽ là một trong các lựa chọn A, B, C, D. Hãy suy nghĩ từng bước một.\n"
+            f"### Câu hỏi: {question}\n"
+            "### Các lựa chọn: \n"
+            f"{text_choices}\n"
+            f"### Giải thích: "
+        )
+device = "cuda:0"
+model.to(device)
+model.eval()
+inputs = tokenizer(text, return_tensors="pt").to(device)
+outputs = model.generate(**inputs, max_new_tokens=1024)
+print(tokenizer.decode(outputs[0], skip_special_tokens=True))
