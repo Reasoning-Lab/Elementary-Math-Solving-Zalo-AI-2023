@@ -34,14 +34,11 @@ def main():
 
     valid_number=False
     while not valid_number:
-        data_list = []
-        number_choice1, number_choice2, number_choice3 = number_choice_sample()
-        for data in [raw_data['data'][number_choice1], raw_data['data'][number_choice2], raw_data['data'][number_choice3]]:
-            if 'explanation' not in data.keys(): break
-            data.pop('id')
-            data_list.append(data)
-        if len(data_list) == 3:
-            valid_number=True
+        number_choices = number_choice_sample()
+        data_entries = [raw_data['data'][idx] for idx in number_choices]
+        if all('explanation' in data for data in data_entries):
+            data_list = [{k: v for k, v in data.items() if k != 'id'} for data in data_entries]
+            valid_number = True
     
     new_prompt = prompt.format(
         multiple_choice1=data_list[0],
