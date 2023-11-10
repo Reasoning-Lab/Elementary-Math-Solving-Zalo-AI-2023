@@ -29,7 +29,13 @@ class alpaca_dataset:
 @dataclass
 class zalo_math_dataset:
     dataset: str = "zalo_math_dataset"
-    file: str = "examples/custom_dataset.py"
     train_split: str = "train"
     test_split: str = "validation"
     data_path: str = "datasets/math_train.json"
+
+@dataclass
+class zalo_math_filter_explanation_dataset:
+    dataset: str = "zalo_math_dataset"
+    train_split: str = "train"
+    test_split: str = "validation"
+    data_path: str = "datasets/filter_explanation_math_train.json"

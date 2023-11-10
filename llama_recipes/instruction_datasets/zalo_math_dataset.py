@@ -12,6 +12,7 @@ from sentencepiece import SentencePieceProcessor
 from torch.utils.data import Dataset
 from typing import List
 
+
 class ZaloMathDataset(Dataset):
     def __init__(self, dataset_config, tokenizer, partition="train", max_words=224):
         self.ann = json.load(open(dataset_config.data_path))['data']
@@ -51,14 +52,19 @@ class ZaloMathDataset(Dataset):
             " [/INST]"
         )
 
-        output = (
-            " {{ "
-            f"### Giải thích: {explanation}\n"
+        output = " {{ "
+
+        if explanation != "":
+            output += f"### Giải thích: {explanation}\n"
+        output += (
             f"### Đáp án: {answer}"
             " }} </s>"
         )
 
         example = prompt + output
+
+        # print('check', example)
+
         prompt = torch.tensor(
             self.tokenizer.encode(prompt), dtype=torch.int64
         )

@@ -7,6 +7,11 @@ import fire
 import os
 import sys
 import time
+import json
+import re
+import random
+
+import pandas as pd
 
 import torch
 from transformers import LlamaTokenizer
@@ -14,13 +19,33 @@ from transformers import LlamaTokenizer
 from inference.safety_utils import get_safety_checker
 from inference.model_utils import load_model, load_peft_model
 
+def get_user_prompt(example):
+    question = example['question']
+    choices = example['choices']
+
+    text_choices = "\n".join(choices)
+
+    user_prompt = (
+        "<s>[INST] <<SYS>>\n"
+        "{{ Trả lời câu hỏi sau bằng cách đưa ra đáp án chính xác nhất. Đáp án sẽ là một trong các lựa chọn A, B, C, D. Hãy suy nghĩ từng bước một. }}\n"
+        "<</SYS>>\n"
+        "{{ "
+        f"### Câu hỏi: {question}\n"
+        "### Các lựa chọn: \n"
+        f"{text_choices}"
+        " }}"
+        " [/INST]"
+        " {{ "
+        "### Giải thích: "
+    )
+    return user_prompt
 
 def main(
     model_name,
     peft_model: str=None,
     quantization: bool=False,
     max_new_tokens =100, #The maximum numbers of tokens to generate
-    prompt_file: str=None,
+    test_file: str='datasets/math_test.json',
     seed: int=42, #seed value for reproducibility
     do_sample: bool=True, #Whether or not to use sampling ; use greedy decoding otherwise.
     min_length: int=None, #The minimum length of the sequence to be generated, input prompt + min_new_tokens
@@ -37,17 +62,8 @@ def main(
     use_fast_kernels: bool = False, # Enable using SDPA from PyTroch Accelerated Transformers, make use Flash Attention and Xformer memory-efficient kernels
     **kwargs
 ):
-    if prompt_file is not None:
-        assert os.path.exists(
-            prompt_file
-        ), f"Provided Prompt file does not exist {prompt_file}"
-        with open(prompt_file, "r") as f:
-            user_prompt = "\n".join(f.readlines())
-    elif not sys.stdin.isatty():
-        user_prompt = "\n".join(sys.stdin.readlines())
-    else:
-        print("No user prompt provided. Exiting.")
-        sys.exit(1)
+    with open(test_file, 'r') as f:
+        data = json.load(f)['data']
     
     # Set the seeds for reproducibility
     torch.cuda.manual_seed(seed)
@@ -74,60 +90,91 @@ def main(
     tokenizer = LlamaTokenizer.from_pretrained(model_name)
     tokenizer.pad_token = tokenizer.eos_token
     
-    safety_checker = get_safety_checker(enable_azure_content_safety,
-                                        enable_sensitive_topics,
-                                        enable_salesforce_content_safety,
-                                        )
+    # safety_checker = get_safety_checker(enable_azure_content_safety,
+    #                                     enable_sensitive_topics,
+    #                                     enable_salesforce_content_safety,
+    #                                     )
 
-    # Safety check of the user prompt
-    safety_results = [check(user_prompt) for check in safety_checker]
-    are_safe = all([r[1] for r in safety_results])
-    if are_safe:
-        print("User prompt deemed safe.")
-        print(f"User prompt:\n{user_prompt}")
-    else:
-        print("User prompt deemed unsafe.")
-        for method, is_safe, report in safety_results:
-            if not is_safe:
-                print(method)
-                print(report)
-        print("Skipping the inference as the prompt is not safe.")
-        sys.exit(1)  # Exit the program with an error status
-        
-    batch = tokenizer(user_prompt, padding='max_length', truncation=True, max_length=max_padding_length, return_tensors="pt")
-
-    batch = {k: v.to("cuda") for k, v in batch.items()}
-    start = time.perf_counter()
-    with torch.no_grad():
-        outputs = model.generate(
-            **batch,
-            max_new_tokens=max_new_tokens,
-            do_sample=do_sample,
-            top_p=top_p,
-            temperature=temperature,
-            min_length=min_length,
-            use_cache=use_cache,
-            top_k=top_k,
-            repetition_penalty=repetition_penalty,
-            length_penalty=length_penalty,
-            **kwargs 
-        )
-    e2e_inference_time = (time.perf_counter()-start)*1000
-    print(f"the inference time is {e2e_inference_time} ms")
-    output_text = tokenizer.decode(outputs[0], skip_special_tokens=True)
+    # # Safety check of the user prompt
+    # safety_results = [check(user_prompt) for check in safety_checker]
+    # are_safe = all([r[1] for r in safety_results])
+    # if are_safe:
+    #     print("User prompt deemed safe.")
+    #     print(f"User prompt:\n{user_prompt}")
+    # else:
+    #     print("User prompt deemed unsafe.")
+    #     for method, is_safe, report in safety_results:
+    #         if not is_safe:
+    #             print(method)
+    #             print(report)
+    #     print("Skipping the inference as the prompt is not safe.")
+    #     sys.exit(1)  # Exit the program with an error status
     
-    # Safety check of the model output
-    safety_results = [check(output_text) for check in safety_checker]
-    are_safe = all([r[1] for r in safety_results])
-    if are_safe:
-        print("User input and model output deemed safe.")
-        print(f"Model output:\n{output_text}")
-    else:
-        print("Model output deemed unsafe.")
-        for method, is_safe, report in safety_results:
-            if not is_safe:
-                print(method)
-                print(report)
+    results = []
+
+    for idx, example in enumerate(data):
+        print(f'Processing {idx}')
+        user_prompt = get_user_prompt(example)
+        id = example['id']
+        choices = example['choices']
+        input = tokenizer(user_prompt, return_tensors="pt")
+
+        batch = {k: v.to("cuda") for k, v in input.items()}
+        start = time.perf_counter()
+        with torch.no_grad():
+            outputs = model.generate(
+                **batch,
+                max_new_tokens=max_new_tokens,
+                do_sample=do_sample,
+                top_p=top_p,
+                temperature=temperature,
+                min_length=min_length,
+                use_cache=use_cache,
+                top_k=top_k,
+                repetition_penalty=repetition_penalty,
+                length_penalty=length_penalty,
+                **kwargs 
+            )
+        e2e_inference_time = (time.perf_counter()-start)*1000
+        print(f"the inference time is {e2e_inference_time} ms")
+        output_text = tokenizer.decode(outputs[0], skip_special_tokens=True)
+        gen_text = tokenizer.decode(outputs[0][input['input_ids'].shape[1]:], skip_special_tokens=True)
+        
+        print(f'Output text: {output_text}')
+        print(f'Gen text {gen_text}')
+
+        answer = None
+        for choice in choices:
+            full_answer = choice
+            value_only = re.sub('[ABCD]. ', '', full_answer)
+            if full_answer in gen_text or value_only in gen_text:
+                answer = choice
+                break
+        print(f'Answer {answer}')
+        if answer is None:
+            answer = random.choice(choices)
+            print(f'Random Answer {answer}')
+        results.append({
+            'id': id,
+            'answer': answer 
+        })
+        
+    result_df = pd.DataFrame.from_dict(results)
+    result_df.to_csv('submission.csv', index=False)
+        
+    
+    # # Safety check of the model output
+    # safety_results = [check(output_text) for check in safety_checker]
+    # are_safe = all([r[1] for r in safety_results])
+    # if are_safe:
+    #     print("User input and model output deemed safe.")
+    #     print(f"Model output:\n{output_text}")
+    # else:
+    #     print("Model output deemed unsafe.")
+    #     for method, is_safe, report in safety_results:
+    #         if not is_safe:
+    #             print(method)
+    #             print(report)
                 
 
 if __name__ == "__main__":
