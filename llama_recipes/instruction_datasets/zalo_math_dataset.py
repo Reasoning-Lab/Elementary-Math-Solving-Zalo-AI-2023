@@ -40,15 +40,22 @@ class ZaloMathDataset(Dataset):
         text_choices = "\n".join(choices)
 
         prompt = (
-             "Trả lời câu hỏi sau bằng cách đưa ra đáp án chính xác nhất. Đáp án sẽ là một trong các lựa chọn A, B, C, D. Hãy suy nghĩ từng bước một.\n"
+            "<s>[INST] <<SYS>>\n"
+            "{{ Trả lời câu hỏi sau bằng cách đưa ra đáp án chính xác nhất. Đáp án sẽ là một trong các lựa chọn A, B, C, D. Hãy suy nghĩ từng bước một. }}\n"
+            "<</SYS>>\n"
+            "{{ "
             f"### Câu hỏi: {question}\n"
             "### Các lựa chọn: \n"
-            f"{text_choices}\n"
+            f"{text_choices}"
+            " }}"
+            " [/INST]"
         )
 
         output = (
+            " {{ "
             f"### Giải thích: {explanation}\n"
             f"### Đáp án: {answer}"
+            " }} </s>"
         )
 
         example = prompt + output
