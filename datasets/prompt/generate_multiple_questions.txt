@@ -4,6 +4,7 @@ here are some examples:
 {multiple_choice2},
 {multiple_choice3}
 the explaination should be more specific as possible to easily to thinking
+AND IN EACH EXPLAINATION, ADD THE CODE PYTHON AS WELL
 Provide me as much as posible any question related to elementary exam, you should first think step by step and answer in english BY YOUR OWN, then answer me with your thinking by translate them to vietnamese, just answer for me with the version VIETNAMESE
 you should answer me in json as format
 {{

@@ -37,7 +37,7 @@ def main():
         number_choices = number_choice_sample()
         data_entries = [raw_data['data'][idx] for idx in number_choices]
         if all('explanation' in data for data in data_entries):
-            data_list = [{k: v for k, v in data.items() if k != 'id'} for data in data_entries]
+            data_list = [{k: v for k, v in data.items() if k not in ['id', 'choices']} for data in data_entries]
             valid_number = True
     
     new_prompt = prompt.format(
