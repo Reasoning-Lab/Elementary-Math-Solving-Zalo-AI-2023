@@ -6842,12 +6842,13 @@
          "id": "423",
          "question": "Diện tích của hình chữ nhật có chiều rộng bằng 4/5 chiều dài và chiều dài hơn chiều rộng 18cm là:",
          "choices": [
-            "A. 60cm2",
-            "B. 70cm2",
-            "C. 80cm2",
-            "D. 90cm2"
+            "A. 6420cm2",
+            "B. 7000cm2",
+            "C. 6480cm2",
+            "D. 6488cm2"
          ],
-         "answer": "C. 80cm2"
+         "answer": "C. 6480cm2",
+         "explanation": "Để giải bài toán này, ta sẽ sử dụng công thức tính diện tích của hình chữ nhật: Diện tích = Chiều dài x Chiều rộng.\n\nTheo đề bài, chiều rộng của hình chữ nhật bằng 4/5 chiều dài. Ta có thể gọi chiều dài là x, vậy chiều rộng sẽ là 4/5x.\n\nTiếp theo, đề bài cũng cho biết chiều dài hơn chiều rộng 18cm. Từ đó, ta có thể viết phương trình: x = 4/5x + 18.\n\nĐể giải phương trình này, ta nhân cả hai vế của phương trình với 5 để loại bỏ phân số: 5x = 4x + 90.\n\nTiếp theo, ta trừ cả hai vế của phương trình đi 4x để tách biệt x: x = 90.\n\nVậy chiều dài của hình chữ nhật là 90cm và chiều rộng là 4/5 x 90 = 72cm.\n\nCuối cùng, ta tính diện tích của hình chữ nhật bằng cách nhân chiều dài và chiều rộng: Diện tích = 90cm x 72cm = 6480cm2.\n\nVậy đáp án đúng là 6480cm2."
       },
       {
          "id": "424",
@@ -10032,12 +10033,12 @@
          "id": "679",
          "question": "Kết quả của phép tính 15kg + 24 yến + 3 tạ theo đơn vị ki-lô-gam là:",
          "choices": [
-            "A. 584kg",
+            "A. 555kg",
             "B. 529kg",
             "C. 548kg",
             "D. 555kg"
          ],
-         "answer": "A. 584kg"
+         "answer": "A. 555kg"
       },
       {
          "id": "68",
@@ -11014,11 +11015,11 @@
          "question": "Một hình chữ nhật có chiều dài 327cm, chiều rộng bằng chiều dài. Diện tích của hình chữ nhật đó là:",
          "choices": [
             "A. 35543cm2",
-            "B. 35643cm2",
+            "B. 106929cm2",
             "C. 34643cm2",
             "D. 6213cm2"
          ],
-         "answer": "B. 35643cm2"
+         "answer": "B. 106929cm2"
       },
       {
          "id": "759",
