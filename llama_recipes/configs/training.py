@@ -43,3 +43,4 @@ class train_config:
     wandb_project: str = "zaloai_2023_math_solving"
     wandb_group: str = "finetuning_sft"
     wandb_baolocpham: str = "baolocpham"
+    wandb_key: str = "KEY"
