@@ -27,8 +27,6 @@ from configs import train_config as TRAIN_CONFIG
 from data.concatenator import ConcatDataset
 from policies import AnyPrecisionAdamW, apply_fsdp_checkpointing
 import wandb
-from omegaconf import DictConfig, OmegaConf
-import hydra
 
 from utils import fsdp_auto_wrap_policy
 from utils.config_utils import (
@@ -49,25 +47,19 @@ from utils.train_utils import (
     get_policies,
 )
 
-
-@hydra.main(version_base=None, config_path="../configs", config_name="config")
-def init_experiment(config):
-    configs = OmegaConf.to_container(config, resolve=True, throw_on_missing=True)
-    if configs["use_wandb"]:
-        wandb.login(key=os.environ["WANDB"])
-        wandb.init(
-            entity=config.wandb.entity,
-            project=config.wandb.project,
-            group="training_stage_1",
-            config=configs,
-        )
-    return wandb
-
-
 def main(**kwargs):
     # Update the configuration for the training and sharding process
     train_config, fsdp_config = TRAIN_CONFIG(), FSDP_CONFIG()
     update_config((train_config, fsdp_config), **kwargs)
+
+    if train_config.use_wandb:
+        wandb.login(key=os.environ["WANDB"] or train_config.wandb_key)
+        wandb.init(
+            entity=train_config.wandb_entity,
+            project=train_config.wandb_project,
+            group=train_config.wandb_group,
+            config={**vars(train_config), **vars(fsdp_config)},
+        )
 
     # Set the seeds for reproducibility
     torch.cuda.manual_seed(train_config.seed)
@@ -111,7 +103,8 @@ def main(**kwargs):
             # )
             model = AutoModelForCausalLM.from_pretrained(
                 train_config.model_name,
-                load_in_4bit=True if train_config.quantization else None,
+                load_in_4bit=True if train_config.load_in == "4bit" else None,
+                load_in_8bit=True if train_config.load_in == "8bit" else None,
                 device_map="auto" if train_config.quantization else None,
                 use_cache=use_cache,
             )
@@ -130,7 +123,8 @@ def main(**kwargs):
         # )
         model = AutoModelForCausalLM.from_pretrained(
             train_config.model_name,
-            load_in_4bit=True if train_config.quantization else None,
+            load_in_4bit=True if train_config.load_in == "4bit" else None,
+            load_in_8bit=True if train_config.load_in == "8bit" else None,
             device_map="auto" if train_config.quantization else None,
             use_cache=use_cache,
         )
@@ -288,10 +282,15 @@ def main(**kwargs):
         fsdp_config if train_config.enable_fsdp else None,
         local_rank if train_config.enable_fsdp else None,
         rank if train_config.enable_fsdp else None,
+        use_wandb=train_config.use_wandb,
     )
     if not train_config.enable_fsdp or rank == 0:
         [print(f"Key: {k}, Value: {v}") for k, v in results.items()]
+    if train_config.use_wandb:
+        wandb.finish()
+    return train_config, fsdp_config
 
 
 if __name__ == "__main__":
+    # init_experiment()
     fire.Fire(main)

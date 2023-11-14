@@ -16,7 +16,7 @@ from torch.distributed.fsdp import StateDictType
 from torch.distributed.fsdp.sharded_grad_scaler import ShardedGradScaler
 from tqdm import tqdm
 from transformers import LlamaTokenizer
-
+import wandb
 
 from model_checkpointing import (
     save_model_checkpoint,
@@ -49,6 +49,7 @@ def train(
     fsdp_config=None,
     local_rank=None,
     rank=None,
+    use_wandb=False,
 ):
     """
     Trains the model on the given dataloader
@@ -249,6 +250,16 @@ def train(
         else:
             print(
                 f"Epoch {epoch+1}: train_perplexity={train_perplexity:.4f}, train_epoch_loss={train_epoch_loss:.4f}, epoch time {epoch_end_time}s"
+            )
+        if use_wandb:
+            wandb.log(
+                {
+                    f"epoch": epoch + 1,
+                    f"train_perplexity": train_perplexity,
+                    f"train_epoch_loss": train_epoch_loss,
+                    f"eval_epoch_loss": eval_epoch_loss,
+                    f"epoch_end_time": epoch_end_time,
+                }
             )
     avg_epoch_time = sum(epoch_times) / len(epoch_times)
     avg_checkpoint_time = (
