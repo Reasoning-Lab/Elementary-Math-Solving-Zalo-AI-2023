@@ -47,6 +47,7 @@ from utils.train_utils import (
     get_policies,
 )
 
+
 def main(**kwargs):
     # Update the configuration for the training and sharding process
     train_config, fsdp_config = TRAIN_CONFIG(), FSDP_CONFIG()
