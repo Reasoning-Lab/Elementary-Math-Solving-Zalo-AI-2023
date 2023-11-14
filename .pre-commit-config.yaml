@@ -1,0 +1,87 @@
+default_stages: [commit, manual]
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-added-large-files
+      - id: check-symlinks
+      - id: check-builtin-literals
+        args:
+          - "--ignore=dict,list"
+      - id: check-case-conflict
+      - id: check-merge-conflict
+      - id: debug-statements
+
+  - repo: "https://github.com/psf/black"
+    rev: 23.3.0
+    hooks:
+      - id: black
+
+  - repo: "https://github.com/asottile/blacken-docs"
+    rev: 1.13.0
+    hooks:
+      - id: blacken-docs
+        entry: blacken-docs --skip-errors
+
+  - repo: "https://github.com/PyCQA/flake8"
+    rev: 5.0.4
+    hooks:
+      - id: flake8
+        args:
+          - >-
+            --ignore=
+              B001,B006,B008
+              C901,
+              E121,E126,E127,E128,E131,E203,E226,E251,E261,E262,E265,E401,E402,E501,E502,E722,
+              F401,F401,F403,F403,F405,F405,F541,F541,
+              N801,N802,N803,N806,N812,N814,N814,
+              SIM102,SIM105,SIM106,SIM110,SIM118,SIM210,SIM300,
+              T001,
+              W292,W292,W391,W503,W503,W504,W504,
+              TYP001,TYP002,
+              T201,
+              N815
+          # - '--select=B,C,E,F,W,T4,B9'
+        additional_dependencies:
+          - pep8-naming
+          - flake8-typing-imports==1.10.1
+          - flake8-bugbear
+          - flake8-mutable
+          - flake8-print
+          - flake8-simplify
+
+  - repo: "https://github.com/asottile/pyupgrade"
+    rev: v3.3.1
+    hooks:
+      - id: pyupgrade
+        args:
+          - "--py36-plus"
+
+#  - repo: https://github.com/RobertCraigie/pyright-python
+#    rev: v1.1.302
+#    hooks:
+#    - id: pyright
+
+  - repo: "https://github.com/PyCQA/bandit"
+    rev: 1.7.5
+    hooks:
+      - id: bandit
+        args:
+          - "-lll"
+          - "-iii"
+          - "--skip=B105,B110,B311,B608,B602,B605"
+          - "--quiet"
+        exclude: "(migrations/|docs/|templates/|geo/|sent_emails/)"
+
+  - repo: "https://github.com/alessandrojcm/commitlint-pre-commit-hook"
+    rev: v9.5.0
+    hooks:
+      # https://www.conventionalcommits.org/en/v1.0.0/#summary
+      # https://github.com/conventional-changelog/commitlint/#what-is-commitlint
+      - id: commitlint
+        stages:
+          - commit-msg
