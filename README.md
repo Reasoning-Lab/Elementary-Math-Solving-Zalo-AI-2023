@@ -1,5 +1,7 @@
 # ZAIC-2023-Elementary-Math-Solving
 
+Todo: config load_in_4bit and load_in_8bit flag
+
 # Cấu hình
 
 Pytorch: 2.1.0
@@ -21,6 +23,12 @@ huggingface-cli login
 
 ```bash
 python llama_recipes/finetuning.py --use_peft --peft_method lora --quantization --model_name meta-llama/Llama-2-7b-hf --output_dir outputs
+```
+
+## Baseline zephyr-7b-alpha
+
+```bash
+python llama_recipes/finetuning.py --use_peft --peft_method lora --quantization --model_name HuggingFaceH4/zephyr-7b-alpha --dataset zalo_math_fill_missing_explain_35 --output_dir outputs
 ```
 
 # Inference
