@@ -1,4 +1,33 @@
-# ML-Project-Experiment-Template
+# ZAIC-2023-Elementary-Math-Solving
+
+# Cấu hình
+
+Pytorch: 2.1.0
+CUDA: 12.1
+
+# Cài đặt
+
+```bash
+pip install -r requirements.txt
+```
+
+```bash
+huggingface-cli login
+```
+
+# Huấn luyện
+
+## Baseline Llama-2-7b LoRA 8bit
+
+```bash
+python llama_recipes/finetuning.py --use_peft --peft_method lora --quantization --model_name meta-llama/Llama-2-7b-hf --output_dir outputs
+```
+
+# Inference
+
+```bash
+python llama_recipes/inference.py --quantization --model_name <model_name> --peft_model <output_dir> --max_new_tokens <max new tokens> --prompt_file test_prompt.txt
+```
 
 Template for my personal Experiment Tracking hyperparameters
 
