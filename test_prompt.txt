@@ -1,9 +1,9 @@
 Trả lời câu hỏi sau bằng cách đưa ra đáp án chính xác nhất. Đáp án sẽ là một trong các lựa chọn A, B, C, D. Hãy suy nghĩ từng bước một.
 ### Câu hỏi: Hình thang ABCD có độ dài hai đáy 6dm và 4dm, chiều cao 3dm. Diện tích hình thang ABCD là:
-### Các lựa chọn: 
+### Các lựa chọn:
 A. 15 dm^{2}
 B. 30 dm^{2}
 C. 36 dm^{2}
 D. 72 dm^{2}
 
-### Giải thích: 
+### Giải thích:

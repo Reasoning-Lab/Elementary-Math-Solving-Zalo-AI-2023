@@ -23,6 +23,7 @@ PROMPT_DICT = {
     ),
 }
 
+
 class InstructionDataset(Dataset):
     def __init__(self, dataset_config, tokenizer, partition="train"):
         self.ann = json.load(open(dataset_config.data_path))
@@ -39,21 +40,16 @@ class InstructionDataset(Dataset):
     def __getitem__(self, index):
         IGNORE_INDEX = -100  # The default setting in CrossEntropyLoss
 
-
         ann = self.ann[index]
         if ann.get("input", "") == "":
             prompt = PROMPT_DICT["prompt_no_input"].format_map(ann)
         else:
             prompt = PROMPT_DICT["prompt_input"].format_map(ann)
         example = prompt + ann["output"]
-        prompt = torch.tensor(
-            self.tokenizer.encode(prompt), dtype=torch.int64
-        )
+        prompt = torch.tensor(self.tokenizer.encode(prompt), dtype=torch.int64)
         example = self.tokenizer.encode(example)
         example.append(self.tokenizer.eos_token_id)
-        example = torch.tensor(
-            example, dtype=torch.int64
-        )
+        example = torch.tensor(example, dtype=torch.int64)
         labels = copy.deepcopy(example)
         labels[: len(prompt)] = -1
         example_mask = example.ge(0)
@@ -64,5 +60,5 @@ class InstructionDataset(Dataset):
         return {
             "input_ids": example.tolist(),
             "labels": labels.tolist(),
-            "attention_mask":example_mask.tolist(),
+            "attention_mask": example_mask.tolist(),
         }

@@ -4,6 +4,7 @@
 from peft import PeftModel
 from transformers import LlamaForCausalLM, LlamaConfig
 
+
 # Function to load the main model for text generation
 def load_model(model_name, quantization):
     model = LlamaForCausalLM.from_pretrained(
@@ -21,10 +22,9 @@ def load_peft_model(model, peft_model):
     peft_model = PeftModel.from_pretrained(model, peft_model)
     return peft_model
 
+
 # Loading the model from config to load FSDP checkpoints into that
 def load_llama_from_config(config_path):
-    model_config = LlamaConfig.from_pretrained(config_path) 
+    model_config = LlamaConfig.from_pretrained(config_path)
     model = LlamaForCausalLM(config=model_config)
     return model
-    
-    

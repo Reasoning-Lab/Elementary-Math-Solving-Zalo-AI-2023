@@ -17,19 +17,21 @@ Dialog = List[Message]
 
 B_INST, E_INST = "[INST]", "[/INST]"
 B_SYS, E_SYS = "<<SYS>>\n", "\n<</SYS>>\n\n"
+
+
 def format_tokens(dialogs, tokenizer):
     prompt_tokens = []
     for dialog in dialogs:
         if dialog[0]["role"] == "system":
             dialog = [
-            {
-                "role": dialog[1]["role"],
-                "content": B_SYS
-                + dialog[0]["content"]
-                + E_SYS
-                + dialog[1]["content"],
-            }
-        ] + dialog[2:]
+                {
+                    "role": dialog[1]["role"],
+                    "content": B_SYS
+                    + dialog[0]["content"]
+                    + E_SYS
+                    + dialog[1]["content"],
+                }
+            ] + dialog[2:]
         assert all([msg["role"] == "user" for msg in dialog[::2]]) and all(
             [msg["role"] == "assistant" for msg in dialog[1::2]]
         ), (
@@ -44,7 +46,8 @@ def format_tokens(dialogs, tokenizer):
             [
                 tokenizer.encode(
                     f"{B_INST} {(prompt['content']).strip()} {E_INST} {(answer['content']).strip()} ",
-                ) + [tokenizer.eos_token_id]
+                )
+                + [tokenizer.eos_token_id]
                 for prompt, answer in zip(dialog[::2], dialog[1::2])
             ],
             [],
@@ -57,9 +60,9 @@ def format_tokens(dialogs, tokenizer):
         )
         prompt_tokens.append(dialog_tokens)
     return prompt_tokens
-        
+
 
 def read_dialogs_from_file(file_path):
-    with open(file_path, 'r') as file:
+    with open(file_path) as file:
         dialogs = json.load(file)
     return dialogs

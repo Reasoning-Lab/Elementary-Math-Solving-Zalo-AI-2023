@@ -4229,10 +4229,10 @@
          "id": "21",
          "question": "Phép chia 81 215 : 3 có số dư là:",
          "choices": [
-            "A.1",
-            "B.2",
-            "C.3",
-            "D.4"
+            "A. 1",
+            "B. 2",
+            "C. 3",
+            "D. 4"
          ],
          "answer": "B.2"
       },
@@ -5117,10 +5117,10 @@
          "id": "282",
          "question": "Chia đều 1 thanh gỗ dài 8,32m thành 4 đoạn thẳng bằng nhau. Tính độ dài mỗi đoạn gỗ ( Làm tròn kết quả đến hàng phần mười)",
          "choices": [
-            "A.2m",
-            "B.2,18m",
-            "C.2,1m",
-            "D.2,08m"
+            "A. 2m",
+            "B. 2,18m",
+            "C. 2,1m",
+            "D. 2,08m"
          ],
          "answer": "C.2,1m"
       },
@@ -6842,12 +6842,13 @@
          "id": "423",
          "question": "Diện tích của hình chữ nhật có chiều rộng bằng 4/5 chiều dài và chiều dài hơn chiều rộng 18cm là:",
          "choices": [
-            "A. 60cm2",
-            "B. 70cm2",
-            "C. 80cm2",
-            "D. 90cm2"
+            "A. 6420cm2",
+            "B. 7000cm2",
+            "C. 6480cm2",
+            "D. 6488cm2"
          ],
-         "answer": "C. 80cm2"
+         "answer": "C. 6480cm2",
+         "explanation": "Để giải bài toán này, ta sẽ sử dụng công thức tính diện tích của hình chữ nhật: Diện tích = Chiều dài x Chiều rộng.\n\nTheo đề bài, chiều rộng của hình chữ nhật bằng 4/5 chiều dài. Ta có thể gọi chiều dài là x, vậy chiều rộng sẽ là 4/5x.\n\nTiếp theo, đề bài cũng cho biết chiều dài hơn chiều rộng 18cm. Từ đó, ta có thể viết phương trình: x = 4/5x + 18.\n\nĐể giải phương trình này, ta nhân cả hai vế của phương trình với 5 để loại bỏ phân số: 5x = 4x + 90.\n\nTiếp theo, ta trừ cả hai vế của phương trình đi 4x để tách biệt x: x = 90.\n\nVậy chiều dài của hình chữ nhật là 90cm và chiều rộng là 4/5 x 90 = 72cm.\n\nCuối cùng, ta tính diện tích của hình chữ nhật bằng cách nhân chiều dài và chiều rộng: Diện tích = 90cm x 72cm = 6480cm2.\n\nVậy đáp án đúng là 6480cm2."
       },
       {
          "id": "424",
@@ -9145,10 +9146,10 @@
          "id": "608",
          "question": "Hình tam giác có cạnh đáy 42,5m và diện tích là 11050dm2. Chiều cao của hình tam giác là:",
          "choices": [
-            "A.51dm",
-            "B.50dm",
-            "C.53dm",
-            "D.52dm"
+            "A. 51dm",
+            "B. 50dm",
+            "C. 53dm",
+            "D. 52dm"
          ],
          "answer": "D.52dm"
       },
@@ -9913,7 +9914,7 @@
             "A. \\frac{1}{16}",
             "B. \\frac{1}{32}",
             "C. \\frac{-1}{16}",
-            "D.\\ frac{-1}{32}"
+            "D. \\ frac{-1}{32}"
          ],
          "answer": "D.\\ frac{-1}{32}"
       },
@@ -10032,12 +10033,12 @@
          "id": "679",
          "question": "Kết quả của phép tính 15kg + 24 yến + 3 tạ theo đơn vị ki-lô-gam là:",
          "choices": [
-            "A. 584kg",
+            "A. 555kg",
             "B. 529kg",
             "C. 548kg",
             "D. 555kg"
          ],
-         "answer": "A. 584kg"
+         "answer": "A. 555kg"
       },
       {
          "id": "68",
@@ -10079,7 +10080,7 @@
          "choices": [
             "A. 88206",
             "B. 88402",
-            "C.88266",
+            "C. 88266",
             "D. 88926"
          ],
          "answer": "A. 88206"
@@ -10156,7 +10157,7 @@
          "choices": [
             "A. 12527",
             "B. 12476",
-            "C.12548",
+            "C. 12548",
             "D. 13747"
          ],
          "answer": "B. 12476"
@@ -10580,7 +10581,7 @@
          "question": "Kết quả của phép tính 927 – 524 là:",
          "choices": [
             "A. 439",
-            "B.498",
+            "B. 498",
             "C. 403",
             "D. 462"
          ],
@@ -10736,10 +10737,10 @@
          "choices": [
             "A. 14",
             "B. 22",
-            "C. 25",
+            "C. 8",
             "D. 15"
          ],
-         "answer": "C. 25"
+         "answer": "C. 8"
       },
       {
          "id": "736",
@@ -11014,11 +11015,11 @@
          "question": "Một hình chữ nhật có chiều dài 327cm, chiều rộng bằng chiều dài. Diện tích của hình chữ nhật đó là:",
          "choices": [
             "A. 35543cm2",
-            "B. 35643cm2",
+            "B. 106929cm2",
             "C. 34643cm2",
             "D. 6213cm2"
          ],
-         "answer": "B. 35643cm2"
+         "answer": "B. 106929cm2"
       },
       {
          "id": "759",
@@ -11254,10 +11255,10 @@
          "id": "777",
          "question": "Làm tròn số 58 463 đến hàng nghìn ta được số:",
          "choices": [
-            "A.58 000",
-            "B.59 000",
-            "C.58 400",
-            "D.58 500"
+            "A. 58 000",
+            "B. 59 000",
+            "C. 58 400",
+            "D. 58 500"
          ],
          "answer": "A.58 000"
       },
@@ -12386,9 +12387,9 @@
          "question": "Một chiếc máy khâu được phát minh vào năm 1890. Hỏi chiếc máy khâu đó được phát minh vào thế kỉ nào?",
          "choices": [
             "A. Thế kỉ XVIII",
-            "B.Thế kì XX",
+            "B. Thế kì XX",
             "C. Thế kỉ XIX",
-            "D.Thế kỉ XXI"
+            "D. Thế kỉ XXI"
          ],
          "answer": "C. Thế kỉ XIX"
       },
@@ -12737,7 +12738,7 @@
             "C. 2 giờ 6 phút",
             "D. 2 giờ 10 phút"
          ],
-         "answer": "B. 2 giờ 5 phút"
+         "answer": "A. 1 giờ 45 phút"
       },
       {
          "id": "896",
@@ -12748,7 +12749,7 @@
             "C. 14 giờ 20 phút",
             "D. 14 giờ 10 phút"
          ],
-         "answer": "D. 14 giờ 10 phút"
+         "answer": "A. 13 giờ 20 phút"
       },
       {
          "id": "897",
@@ -12846,7 +12847,7 @@
          "choices": [
             "A. 16cm",
             "B. 14cm",
-            "C.12cm",
+            "C. 12cm",
             "D. 10cm"
          ],
          "answer": "A. 16cm"
@@ -12898,7 +12899,7 @@
          "id": "908",
          "question": "Một hình chữ nhật có chiều rộng 12cm và diện tích bằng 96cm2. Chiều dài của hình chữ nhật là:",
          "choices": [
-            "A.10cm",
+            "A. 10cm",
             "B. 8cm",
             "C. 12cm",
             "D. 14cm"
@@ -13023,7 +13024,7 @@
          "question": "Một hình lập phương có cạnh 2cm. Nếu gấp cạnh của hình lập phương lên 3 lần thì diện tích xung quanh và diện tích toàn phần tăng số lần lần lượt là:",
          "choices": [
             "A. 3 lần, 3 lần",
-            "B.6 lần, 9 lần",
+            "B. 6 lần, 9 lần",
             "C. 4 lần, 6 lần",
             "D. 9 lần, 9 lần"
          ],
@@ -13033,10 +13034,10 @@
          "id": "919",
          "question": "Một hình lập phương có chu vi đáy là 28dm. Diện tích toàn phần của hình lập phương đó là:",
          "choices": [
-            "A.196dm2",
-            "B.294dm2",
-            "C.3136dm2",
-            "D.4704dm2"
+            "A. 196dm2",
+            "B. 294dm2",
+            "C. 3136dm2",
+            "D. 4704dm2"
          ],
          "answer": "B.294dm2"
       },
@@ -13286,8 +13287,8 @@
          "id": "939",
          "question": "Một hình vuông có diện tích bằng 16cm2. Chu vi của hình vuông đó là:",
          "choices": [
-            "A.10cm",
-            "B.18cm",
+            "A. 10cm",
+            "B. 18cm",
             "C. 14cm",
             "D. 16cm"
          ],
@@ -13444,10 +13445,10 @@
          "choices": [
             "A. 24",
             "B. 15",
-            "C. 40",
+            "C. 39",
             "D. 360"
          ],
-         "answer": "C. 40"
+         "answer": "C. 39"
       },
       {
          "id": "953",

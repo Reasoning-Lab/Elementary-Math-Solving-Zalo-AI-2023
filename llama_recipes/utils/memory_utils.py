@@ -7,8 +7,11 @@ import threading
 
 import torch
 
+
 def byte2gb(x):
     return int(x / 2**30)
+
+
 # This context manager is used to track the peak memory usage of the process
 class MemoryTrace:
     def __enter__(self):

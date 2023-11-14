@@ -13,3 +13,7 @@ sentencepiece
 py7zr
 scipy
 optimum
+wandb
+pre-commit
+hydra-core
+omegaconf

@@ -7,7 +7,7 @@ import warnings
 
 
 # Class for performing safety checks using AuditNLG library
-class AuditNLGSensitiveTopics(object):
+class AuditNLGSensitiveTopics:
     def __init__(self):
         pass
 
@@ -15,9 +15,10 @@ class AuditNLGSensitiveTopics(object):
         try:
             from auditnlg.safety.exam import safety_scores
         except ImportError as e:
-            print("Could not import optional dependency: auditnlg\nPlease install manually with:\n pip install auditnlg\nFollowed by:\npip install -r requirements.txt")
+            print(
+                "Could not import optional dependency: auditnlg\nPlease install manually with:\n pip install auditnlg\nFollowed by:\npip install -r requirements.txt"
+            )
             raise e
-            
 
         data = [{"output": output_text}]
 
@@ -27,12 +28,26 @@ class AuditNLGSensitiveTopics(object):
         report = ""
         if not is_safe:
             report += f"Predicted class: {scores['pred_class']}\n"
-            report += "|" + "|".join(f"{n:^10}" for n in [list(k.keys())[0] for k in scores["class_scores"]]) + "|\n"
-            report += "|" + "|".join(f"{n:^10.5}" for n in [list(k.values())[0] for k in scores["class_scores"]]) + "|\n"
+            report += (
+                "|"
+                + "|".join(
+                    f"{n:^10}"
+                    for n in [list(k.keys())[0] for k in scores["class_scores"]]
+                )
+                + "|\n"
+            )
+            report += (
+                "|"
+                + "|".join(
+                    f"{n:^10.5}"
+                    for n in [list(k.values())[0] for k in scores["class_scores"]]
+                )
+                + "|\n"
+            )
         return "Sensitive Topics", is_safe, report
-    
-    
-class SalesforceSafetyChecker(object):
+
+
+class SalesforceSafetyChecker:
     def __init__(self):
         pass
 
@@ -40,13 +55,17 @@ class SalesforceSafetyChecker(object):
         from transformers import AutoModelForSeq2SeqLM, AutoTokenizer, AutoConfig
 
         config = AutoConfig.from_pretrained("Salesforce/safety-flan-t5-base")
-        tokenizer = AutoTokenizer.from_pretrained("Salesforce/safety-flan-t5-base") 
-        model = AutoModelForSeq2SeqLM.from_pretrained("Salesforce/safety-flan-t5-base", config=config)
+        tokenizer = AutoTokenizer.from_pretrained("Salesforce/safety-flan-t5-base")
+        model = AutoModelForSeq2SeqLM.from_pretrained(
+            "Salesforce/safety-flan-t5-base", config=config
+        )
         model.eval()
 
         prefix = "Is the <Text> field safe or unsafe?"
-        input_ids = tokenizer(prefix + " <Text> " + output_text + " <Context> ", return_tensors="pt").input_ids
-        
+        input_ids = tokenizer(
+            prefix + " <Text> " + output_text + " <Context> ", return_tensors="pt"
+        ).input_ids
+
         if len(input_ids[0]) > 512:
             warnings.warn(
                 "Input length is > 512 token. Safety check result could be incorrect."
@@ -58,22 +77,37 @@ class SalesforceSafetyChecker(object):
                 output_scores=True,
                 return_dict_in_generate=True,
                 max_new_tokens=20,
-                )
-        
-        is_safe = tokenizer.decode(outputs.sequences[0], skip_special_tokens=True).split(" ")[0] == "safe"    
-            
+            )
+
+        is_safe = (
+            tokenizer.decode(outputs.sequences[0], skip_special_tokens=True).split(" ")[
+                0
+            ]
+            == "safe"
+        )
+
         report = ""
         if not is_safe:
             true_false_ids = tokenizer("true false").input_ids[:2]
-            keys = ["toxicity", "hate", "identity", "violence", "physical", "sexual", "profanity", "biased"]
+            keys = [
+                "toxicity",
+                "hate",
+                "identity",
+                "violence",
+                "physical",
+                "sexual",
+                "profanity",
+                "biased",
+            ]
             scores = {}
-            for k, i in zip(keys, range(3,20,2)):
-                scores[k] = round(outputs.scores[i][0,true_false_ids].softmax(dim=0)[0].item(), 5)
-            
+            for k, i in zip(keys, range(3, 20, 2)):
+                scores[k] = round(
+                    outputs.scores[i][0, true_false_ids].softmax(dim=0)[0].item(), 5
+                )
+
             report += "|" + "|".join(f"{n:^10}" for n in scores.keys()) + "|\n"
             report += "|" + "|".join(f"{n:^10}" for n in scores.values()) + "|\n"
         return "Salesforce Content Safety Flan T5 Base", is_safe, report
-        
 
     def get_total_length(self, data):
         prefix = "Is the <Text> field safe or unsafe "
@@ -83,7 +117,7 @@ class SalesforceSafetyChecker(object):
 
 
 # Class for performing safety checks using Azure Content Safety service
-class AzureSaftyChecker(object):
+class AzureSaftyChecker:
     def __init__(self):
         try:
             from azure.ai.contentsafety import ContentSafetyClient
@@ -150,10 +184,11 @@ class AzureSaftyChecker(object):
 
 # Function to load the PeftModel for performance optimization
 # Function to determine which safety checker to use based on the options selected
-def get_safety_checker(enable_azure_content_safety,
-                       enable_sensitive_topics,
-                       enable_salesforce_content_safety,
-                       ):
+def get_safety_checker(
+    enable_azure_content_safety,
+    enable_sensitive_topics,
+    enable_salesforce_content_safety,
+):
     safety_checker = []
     if enable_azure_content_safety:
         safety_checker.append(AzureSaftyChecker())
@@ -162,8 +197,3 @@ def get_safety_checker(enable_azure_content_safety,
     if enable_salesforce_content_safety:
         safety_checker.append(SalesforceSafetyChecker())
     return safety_checker
-
-
-
-
-

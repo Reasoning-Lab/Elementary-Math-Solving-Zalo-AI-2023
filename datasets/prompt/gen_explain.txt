@@ -1,0 +1,11 @@
+Act as you are a really good in explaination, apply the technique Feyman really well, I will give you one question and the task of you is to answer with explain (the answer will be provided, you just need to answer why the answer is this), because this is related to math so have a explain step by step is cool
+but remember that, your answer is in Vietnamese, you should answer me in Vietnamese language
+
+Question:
+{question}
+
+Choices:
+{choices}
+
+Answer:
+{answer}

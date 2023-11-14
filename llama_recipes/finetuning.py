@@ -26,6 +26,9 @@ from configs import fsdp_config as FSDP_CONFIG
 from configs import train_config as TRAIN_CONFIG
 from data.concatenator import ConcatDataset
 from policies import AnyPrecisionAdamW, apply_fsdp_checkpointing
+import wandb
+from omegaconf import DictConfig, OmegaConf
+import hydra
 
 from utils import fsdp_auto_wrap_policy
 from utils.config_utils import (
@@ -43,8 +46,22 @@ from utils.train_utils import (
     setup_environ_flags,
     clear_gpu_cache,
     print_model_size,
-    get_policies
+    get_policies,
 )
+
+
+@hydra.main(version_base=None, config_path="../configs", config_name="config")
+def init_experiment(config):
+    configs = OmegaConf.to_container(config, resolve=True, throw_on_missing=True)
+    if configs["use_wandb"]:
+        wandb.login(key=os.environ["WANDB"])
+        wandb.init(
+            entity=config.wandb.entity,
+            project=config.wandb.project,
+            group="training_stage_1",
+            config=configs,
+        )
+    return wandb
 
 
 def main(**kwargs):
@@ -81,8 +98,10 @@ def main(**kwargs):
         v = packaging.version.parse(torch.__version__)
         verify_latest_nightly = v.is_devrelease and v.dev >= 20230701
         if not verify_latest_nightly:
-            raise Exception("latest pytorch nightly build is required to run with low_cpu_fsdp config, "
-                            "please install latest nightly.")
+            raise Exception(
+                "latest pytorch nightly build is required to run with low_cpu_fsdp config, "
+                "please install latest nightly."
+            )
         if rank == 0:
             # model = LlamaForCausalLM.from_pretrained(
             #     train_config.model_name,
@@ -123,9 +142,12 @@ def main(**kwargs):
         """
         try:
             from optimum.bettertransformer import BetterTransformer
+
             model = BetterTransformer.transform(model)
         except ImportError:
-            print("Module 'optimum' not found. Please install 'optimum' it before proceeding.")
+            print(
+                "Module 'optimum' not found. Please install 'optimum' it before proceeding."
+            )
 
     # Load the tokenizer and add special tokens
     tokenizer = LlamaTokenizer.from_pretrained(train_config.model_name)
@@ -146,10 +168,9 @@ def main(**kwargs):
         model = get_peft_model(model, peft_config)
         model.print_trainable_parameters()
 
-    #setting up FSDP if enable_fsdp is enabled
+    # setting up FSDP if enable_fsdp is enabled
     if train_config.enable_fsdp:
         if not train_config.use_peft and train_config.freeze_layers:
-
             freeze_transformer_layers(train_config.num_freeze_layers)
 
         mixed_precision_policy, wrapping_policy = get_policies(fsdp_config, rank)
@@ -157,15 +178,24 @@ def main(**kwargs):
 
         model = FSDP(
             model,
-            auto_wrap_policy= my_auto_wrapping_policy if train_config.use_peft else wrapping_policy,
-            cpu_offload=CPUOffload(offload_params=True) if fsdp_config.fsdp_cpu_offload else None,
-            mixed_precision=mixed_precision_policy if not fsdp_config.pure_bf16 else None,
+            auto_wrap_policy=my_auto_wrapping_policy
+            if train_config.use_peft
+            else wrapping_policy,
+            cpu_offload=CPUOffload(offload_params=True)
+            if fsdp_config.fsdp_cpu_offload
+            else None,
+            mixed_precision=mixed_precision_policy
+            if not fsdp_config.pure_bf16
+            else None,
             sharding_strategy=fsdp_config.sharding_strategy,
             device_id=torch.cuda.current_device(),
             limit_all_gathers=True,
             sync_module_states=train_config.low_cpu_fsdp,
-            param_init_fn=lambda module: module.to_empty(device=torch.device("cuda"), recurse=False)
-            if train_config.low_cpu_fsdp and rank != 0 else None,
+            param_init_fn=lambda module: module.to_empty(
+                device=torch.device("cuda"), recurse=False
+            )
+            if train_config.low_cpu_fsdp and rank != 0
+            else None,
         )
         if fsdp_config.fsdp_activation_checkpointing:
             apply_fsdp_checkpointing(model)
@@ -174,7 +204,7 @@ def main(**kwargs):
 
     dataset_config = generate_dataset_config(train_config, kwargs)
 
-     # Load and preprocess the dataset for training and validation
+    # Load and preprocess the dataset for training and validation
     dataset_train = get_preprocessed_dataset(
         tokenizer,
         dataset_config,
@@ -190,12 +220,16 @@ def main(**kwargs):
         split="test",
     )
     if not train_config.enable_fsdp or rank == 0:
-            print(f"--> Validation Set Length = {len(dataset_val)}")
+        print(f"--> Validation Set Length = {len(dataset_val)}")
 
     if train_config.batching_strategy == "packing":
-        dataset_train = ConcatDataset(dataset_train, chunk_size=train_config.context_length)
+        dataset_train = ConcatDataset(
+            dataset_train, chunk_size=train_config.context_length
+        )
 
-    train_dl_kwargs = get_dataloader_kwargs(train_config, dataset_train, tokenizer, "train")
+    train_dl_kwargs = get_dataloader_kwargs(
+        train_config, dataset_train, tokenizer, "train"
+    )
 
     # Create DataLoaders for the training and validation dataset
     train_dataloader = torch.utils.data.DataLoader(
@@ -208,9 +242,13 @@ def main(**kwargs):
     eval_dataloader = None
     if train_config.run_validation:
         if train_config.batching_strategy == "packing":
-            dataset_val = ConcatDataset(dataset_val, chunk_size=train_config.context_length)
+            dataset_val = ConcatDataset(
+                dataset_val, chunk_size=train_config.context_length
+            )
 
-        val_dl_kwargs = get_dataloader_kwargs(train_config, dataset_val, tokenizer, "val")
+        val_dl_kwargs = get_dataloader_kwargs(
+            train_config, dataset_val, tokenizer, "val"
+        )
 
         eval_dataloader = torch.utils.data.DataLoader(
             dataset_val,
@@ -251,8 +289,9 @@ def main(**kwargs):
         local_rank if train_config.enable_fsdp else None,
         rank if train_config.enable_fsdp else None,
     )
-    if not train_config.enable_fsdp or rank==0:
-        [print(f'Key: {k}, Value: {v}') for k, v in results.items()]
+    if not train_config.enable_fsdp or rank == 0:
+        [print(f"Key: {k}, Value: {v}") for k, v in results.items()]
+
 
 if __name__ == "__main__":
     fire.Fire(main)
