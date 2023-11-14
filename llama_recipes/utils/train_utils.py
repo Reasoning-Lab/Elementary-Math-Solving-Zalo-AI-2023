@@ -258,6 +258,7 @@ def train(
                     f"train_perplexity": train_perplexity,
                     f"train_epoch_loss": train_epoch_loss,
                     f"eval_epoch_loss": eval_epoch_loss,
+                    f"learning_rate": lr_scheduler.get_last_lr(),
                     f"epoch_end_time": epoch_end_time,
                 }
             )
