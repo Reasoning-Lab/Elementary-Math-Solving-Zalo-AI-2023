@@ -26,7 +26,7 @@ python llama_recipes/finetuning.py --use_peft --peft_method lora --quantization 
 ## Baseline zephyr-7b-alpha
 
 ```bash
-python llama_recipes/finetuning.py --use_peft --peft_method lora --quantization --model_name HuggingFaceH4/zephyr-7b-alpha --dataset zalo_math_fill_missing_explain_35 --output_dir outputs --use_wandb --wandb_entity baolocpham --wandb_key key
+python llama_recipes/finetuning.py --use_peft --peft_method lora --quantization --model_name HuggingFaceH4/zephyr-7b-alpha --dataset zalo_math_fill_missing_explain_35 --output_dir outputs --use_wandb --wandb_entity baolocpham --wandb_key 1f1a527a85be9d41cffc5b10cf8be3c701778886 --num_epochs 2
 ```
 
 # Inference

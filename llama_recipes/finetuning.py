@@ -53,7 +53,7 @@ def main(**kwargs):
     update_config((train_config, fsdp_config), **kwargs)
 
     if train_config.use_wandb:
-        wandb.login(key=os.environ["WANDB"] or train_config.wandb_key)
+        wandb.login(key=train_config.wandb_key)
         wandb.init(
             entity=train_config.wandb_entity,
             project=train_config.wandb_project,
