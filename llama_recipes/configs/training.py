@@ -30,6 +30,7 @@ class train_config:
     freeze_layers: bool = False
     num_freeze_layers: int = 1
     quantization: bool = False
+    load_in: str = "8bit"
     one_gpu: bool = False
     save_model: bool = True
     dist_checkpoint_root_folder: str = (
@@ -38,3 +39,8 @@ class train_config:
     dist_checkpoint_folder: str = "fine-tuned"  # will be used if using FSDP
     save_optimizer: bool = False  # will be used if using FSDP
     use_fast_kernels: bool = False  # Enable using SDPA from PyTroch Accelerated Transformers, make use Flash Attention and Xformer memory-efficient kernels
+    use_wandb: bool = False
+    wandb_project: str = "zaloai_2023_math_solving"
+    wandb_group: str = "finetuning_sft"
+    wandb_entity: str = "baolocpham"
+    wandb_key: str = "KEY"

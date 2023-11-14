@@ -1,7 +1,5 @@
 # ZAIC-2023-Elementary-Math-Solving
 
-Todo: config load_in_4bit and load_in_8bit flag
-
 # Cấu hình
 
 Pytorch: 2.1.0
@@ -26,9 +24,9 @@ python llama_recipes/finetuning.py --use_peft --peft_method lora --quantization 
 ```
 
 ## Baseline zephyr-7b-alpha
-
+with zalo_math_fill_missing_explain_4 (using GPT4)
 ```bash
-python llama_recipes/finetuning.py --use_peft --peft_method lora --quantization --model_name HuggingFaceH4/zephyr-7b-alpha --dataset zalo_math_fill_missing_explain_35 --output_dir outputs
+python llama_recipes/finetuning.py --use_peft --peft_method lora --quantization --model_name HuggingFaceH4/zephyr-7b-alpha --dataset zalo_math_fill_missing_explain_4 --output_dir outputs --use_wandb --wandb_entity baolocpham --wandb_key KEY --num_epochs 2
 ```
 
 # Inference
