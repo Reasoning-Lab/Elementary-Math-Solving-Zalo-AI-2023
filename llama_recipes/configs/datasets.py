@@ -39,3 +39,10 @@ class zalo_math_filter_explanation_dataset:
     train_split: str = "train"
     test_split: str = "validation"
     data_path: str = "datasets/filter_explanation_math_train.json"
+
+@dataclass
+class zalo_math_fill_missing_explain_35:
+    dataset: str = "zalo_math_dataset"
+    train_split: str = "train"
+    test_split: str = "validation"
+    data_path: str = "datasets/with-missing-explain-3.5.json"

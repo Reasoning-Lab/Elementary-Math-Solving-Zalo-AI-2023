@@ -9,7 +9,7 @@ def load_model(model_name, quantization):
     model = LlamaForCausalLM.from_pretrained(
         model_name,
         return_dict=True,
-        load_in_8bit=quantization,
+        load_in_4bit=quantization,
         device_map="auto",
         low_cpu_mem_usage=True,
     )

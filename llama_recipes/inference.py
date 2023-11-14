@@ -139,6 +139,11 @@ def main(
         print(f"the inference time is {e2e_inference_time} ms")
         output_text = tokenizer.decode(outputs[0], skip_special_tokens=True)
         gen_text = tokenizer.decode(outputs[0][input['input_ids'].shape[1]:], skip_special_tokens=True)
+
+        if (len(gen_text.split("###")) > 1):
+            answer_text = gen_text.split("###")[1]
+        else:
+            answer_text = gen_text
         
         print(f'Output text: {output_text}')
         print(f'Gen text {gen_text}')
@@ -147,7 +152,7 @@ def main(
         for choice in choices:
             full_answer = choice
             value_only = re.sub('[ABCD]. ', '', full_answer)
-            if full_answer in gen_text or value_only in gen_text:
+            if full_answer in answer_text or value_only in answer_text:
                 answer = choice
                 break
         print(f'Answer {answer}')

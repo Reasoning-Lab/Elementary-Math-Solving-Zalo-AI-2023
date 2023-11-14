@@ -10,10 +10,10 @@ class train_config:
     enable_fsdp: bool=False
     low_cpu_fsdp: bool=False
     run_validation: bool=True
-    batch_size_training: int=16
+    batch_size_training: int=4
     batching_strategy: str="padding" #alternative: padding
     context_length: int=1024
-    gradient_accumulation_steps: int=1
+    gradient_accumulation_steps: int=4
     num_epochs: int=6
     num_workers_dataloader: int=1
     lr: float=1e-4

@@ -56,7 +56,8 @@ DATASET_PREPROC = {
     "samsum_dataset": get_samsum_dataset,
     "custom_dataset": get_custom_dataset,
     "zalo_math_dataset": partial(get_zalo_math_dataset),
-    "zalo_math_filter_explanation_dataset": partial(get_zalo_math_dataset)
+    "zalo_math_filter_explanation_dataset": partial(get_zalo_math_dataset),
+    "zalo_math_fill_missing_explain_35": partial(get_zalo_math_dataset)
 }
 
 

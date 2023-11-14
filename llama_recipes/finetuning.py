@@ -20,6 +20,8 @@ from transformers import (
 )
 from transformers.models.llama.modeling_llama import LlamaDecoderLayer
 
+from transformers import AutoTokenizer, AutoModelForCausalLM
+
 from configs import fsdp_config as FSDP_CONFIG
 from configs import train_config as TRAIN_CONFIG
 from data.concatenator import ConcatDataset
@@ -82,9 +84,15 @@ def main(**kwargs):
             raise Exception("latest pytorch nightly build is required to run with low_cpu_fsdp config, "
                             "please install latest nightly.")
         if rank == 0:
-            model = LlamaForCausalLM.from_pretrained(
+            # model = LlamaForCausalLM.from_pretrained(
+            #     train_config.model_name,
+            #     load_in_8bit=True if train_config.quantization else None,
+            #     device_map="auto" if train_config.quantization else None,
+            #     use_cache=use_cache,
+            # )
+            model = AutoModelForCausalLM.from_pretrained(
                 train_config.model_name,
-                load_in_8bit=True if train_config.quantization else None,
+                load_in_4bit=True if train_config.quantization else None,
                 device_map="auto" if train_config.quantization else None,
                 use_cache=use_cache,
             )
@@ -95,9 +103,15 @@ def main(**kwargs):
                 model = LlamaForCausalLM(llama_config)
 
     else:
-        model = LlamaForCausalLM.from_pretrained(
+        # model = LlamaForCausalLM.from_pretrained(
+        #     train_config.model_name,
+        #     load_in_8bit=True if train_config.quantization else None,
+        #     device_map="auto" if train_config.quantization else None,
+        #     use_cache=use_cache,
+        # )
+        model = AutoModelForCausalLM.from_pretrained(
             train_config.model_name,
-            load_in_8bit=True if train_config.quantization else None,
+            load_in_4bit=True if train_config.quantization else None,
             device_map="auto" if train_config.quantization else None,
             use_cache=use_cache,
         )
