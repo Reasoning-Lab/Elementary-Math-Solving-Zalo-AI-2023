@@ -1,19 +1,12 @@
-project: ORGANIZATION/experiment-tracking
-name: experiment-tracking-default-risk
+project: zaloai_2023_math_solving
+name: experiment-tracking-zaloai_2023_math_solving
 wandb:
-  WANDB_API_KEY: YOUR_WANDB_API
-  entity: YOUR_WANDB_API
-  project: experiment-tracking
-  name: TEST
+  WANDB_API_KEY: WANDB_API_KEY
+  entity: yourname
+  project: zaloai_2023_math_solving
+  name: zaloai_2023_math_solving
+  group: zaloai_2023_math_solving_training
+  job_type: Finetuning
+use_wandb: False
 parameters:
-  # Data preparation
-  n_cv_splits: 5
-  validation_size: 0.2
-  stratified_cv: True
-  shuffle: 1
-  # Random forest
-  rf__n_estimators: 2000
-  rf__criterion: gini
-  rf__max_depth: 40
-  rf__class_weight: balanced
-  rf__max_features: 0.3
+  None: NaN

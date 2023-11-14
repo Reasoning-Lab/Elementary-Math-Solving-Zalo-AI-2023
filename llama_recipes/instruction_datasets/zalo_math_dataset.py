@@ -15,7 +15,7 @@ from typing import List
 
 class ZaloMathDataset(Dataset):
     def __init__(self, dataset_config, tokenizer, partition="train", max_words=224):
-        self.ann = json.load(open(dataset_config.data_path))['data']
+        self.ann = json.load(open(dataset_config.data_path))["data"]
         if partition == "train":
             self.ann = self.ann
         else:
@@ -31,11 +31,11 @@ class ZaloMathDataset(Dataset):
 
         ann = self.ann[index]
 
-        id = ann['id']
-        question = ann['question']
-        choices = ann['choices']
-        explanation = ann['explanation'] if 'explanation' in ann else ""
-        answer = ann['answer']
+        # id = ann["id"]
+        question = ann["question"]
+        choices = ann["choices"]
+        explanation = ann["explanation"] if "explanation" in ann else ""
+        answer = ann["answer"]
 
         # print(id, choices)
         text_choices = "\n".join(choices)
@@ -56,23 +56,16 @@ class ZaloMathDataset(Dataset):
 
         if explanation != "":
             output += f"### Giải thích: {explanation}\n"
-        output += (
-            f"### Đáp án: {answer}"
-            " }} </s>"
-        )
+        output += f"### Đáp án: {answer}" " }} </s>"
 
         example = prompt + output
 
         # print('check', example)
 
-        prompt = torch.tensor(
-            self.tokenizer.encode(prompt), dtype=torch.int64
-        )
+        prompt = torch.tensor(self.tokenizer.encode(prompt), dtype=torch.int64)
         example = self.tokenizer.encode(example)
         example.append(self.tokenizer.eos_token_id)
-        example = torch.tensor(
-            example, dtype=torch.int64
-        )
+        example = torch.tensor(example, dtype=torch.int64)
         labels = copy.deepcopy(example)
         labels[: len(prompt)] = -1
         example_mask = example.ge(0)
@@ -83,5 +76,5 @@ class ZaloMathDataset(Dataset):
         return {
             "input_ids": example.tolist(),
             "labels": labels.tolist(),
-            "attention_mask":example_mask.tolist(),
+            "attention_mask": example_mask.tolist(),
         }

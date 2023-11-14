@@ -17,7 +17,6 @@ class grammar(Dataset):
         tokenizer,
         csv_name=None,
     ):
-
         try:
             self.dataset = load_dataset(
                 "csv",
@@ -25,7 +24,9 @@ class grammar(Dataset):
                 delimiter=",",
             )
         except Exception as e:
-            print("Loading of grammar dataset failed! Please see recipes/ft_datasets/grammar_dataset/grammar_dataset_process.ipynb for details on how to download the dataset.")
+            print(
+                "Loading of grammar dataset failed! Please see recipes/ft_datasets/grammar_dataset/grammar_dataset_process.ipynb for details on how to download the dataset."
+            )
             raise e
 
         # self.dataset = load_dataset("wikihow", "all", data_dir="data/", split=type_path)
@@ -38,7 +39,6 @@ class grammar(Dataset):
         return self.dataset["train"].shape[0]
 
     def convert_to_features(self, example_batch):
-
         # Create prompt and tokenize contexts and questions
 
         if self.print_text:
@@ -48,13 +48,17 @@ class grammar(Dataset):
         target_ = example_batch["target"]
 
         prompt = f"Correct this to standard English: {input_}\n---\nCorrected: "
-        prompt_ids = self.tokenizer.encode(self.tokenizer.bos_token + prompt, add_special_tokens=False)
-        label_ids = self.tokenizer.encode(target_ + self.tokenizer.eos_token, add_special_tokens=False)
+        prompt_ids = self.tokenizer.encode(
+            self.tokenizer.bos_token + prompt, add_special_tokens=False
+        )
+        label_ids = self.tokenizer.encode(
+            target_ + self.tokenizer.eos_token, add_special_tokens=False
+        )
 
         sample = {
             "input_ids": prompt_ids + label_ids,
             "attention_mask": [1] * len(prompt_ids + label_ids),
-            "labels": [-100] * len(prompt_ids) + label_ids
+            "labels": [-100] * len(prompt_ids) + label_ids,
         }
 
         return sample
@@ -63,9 +67,7 @@ class grammar(Dataset):
         return self.convert_to_features(self.dataset["train"][int(index)])
 
 
-def get_dataset(
-    dataset_config, tokenizer, csv_name=None
-):
+def get_dataset(dataset_config, tokenizer, csv_name=None):
     """cover function for handling loading the working dataset"""
     """dataset loading"""
     if csv_name is None:
