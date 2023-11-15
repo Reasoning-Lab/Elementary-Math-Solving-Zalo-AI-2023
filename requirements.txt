@@ -19,3 +19,5 @@ hydra-core
 omegaconf
 loguru
 trl>=0.7.1
+scikit-learn
+tensorboard
