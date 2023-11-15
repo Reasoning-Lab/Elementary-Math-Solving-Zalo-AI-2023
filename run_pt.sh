@@ -2,7 +2,6 @@ python pretraining.py \
     --model_type auto \
     --model_name_or_path HuggingFaceH4/zephyr-7b-beta \
     --train_file_dir ./datasets/pretrain \
-    --validation_file_dir ./datasets/pretrain \
     --per_device_train_batch_size 4 \
     --per_device_eval_batch_size 4 \
     --do_train \
