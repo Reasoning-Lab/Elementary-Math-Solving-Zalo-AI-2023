@@ -9578,7 +9578,7 @@
             "choices_str": "['A.380 m', 'B.285 m', 'C.670 m', 'D.760 m']"
         },
         {
-            "id": "c",
+            "id": "1201",
             "question": "Chữ số 7 trong số thập phân 53,675 có giá trị là:",
             "choices": "['A: 7/10', 'B: 7/100', 'C: 70', 'D: 700']",
             "explanation": "Để giải thích câu trả lời này, chúng ta cần hiểu về cách đọc số thập phân. \n\nSố thập phân 53,675 có thể được đọc là \"năm mươi ba phẩy sáu bảy năm\". \n\nChữ số 7 ở đây nằm sau dấu phẩy, và nó là chữ số thứ hai sau dấu phẩy. Điều này có nghĩa là giá trị của nó không phải là 7, mà là 7 chia cho một số có hai chữ số 0. \n\nTrong trường hợp này, số đó là 100 (vì có hai chữ số sau dấu phẩy). \n\nVì vậy, giá trị của chữ số 7 trong số thập phân 53,675 là 7/100",
