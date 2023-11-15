@@ -7265,6 +7265,7 @@
             "answer": "D. 34dm2",
             "choices_str": "['A. 13,5dm2', 'B. 17dm2', 'C. 35dm2', 'D. 34dm2']"
         },
+
         {
             "id": "916",
             "question": "Một hình hộp chữ nhật có thể tích là 270 cm3; chiều dài 6 cm; chiều cao 9 cm. Chiều rộng của hình hộp chữ nhật đó là:",
@@ -7334,7 +7335,7 @@
             "question": "Một hình tam giác có độ dài đáy bằng 12,6 cm. Chiều cao bằng $\\frac{1}{2}$ độ dài đáy. Diện tích của tam giác đó là:",
             "choices": "['A. 79,38 cm2', 'B. 36,69 cm2', 'C. 39,83 cm2', 'D. 39,96 cm2']",
             "explanation": "Chiều cao của tam giác là:12,6 : 2 = 6,3 (cm)\n Diện tích của tam giác đó là:(12,6 ${\\times}$ 6,3) : 2 = 39,69 (cm2)\n Đáp số: 39,69 cm2.",
-            "answer": "D. 39,96 cm2",
+            "answer": "B. 39,69 cm2",
             "choices_str": "['A. 79,38 cm2', 'B. 36,69 cm2', 'C. 39,83 cm2', 'D. 39,96 cm2']"
         },
         {
@@ -7405,7 +7406,7 @@
             "id": "933",
             "question": "Một hình trụ có chiều cao bằng 10 và bán kính mặt đáy bằng 5. Một mặt phẳng song song với trục của hình trụ và cách trục một khoảng bằng 3 cắt hình trụ theo thiết diện có diện tích bằng",
             "choices": "['A. 40', 'B. 80', 'C. 100', 'D. 50']",
-            "explanation": "Đầu tiên, ta cần hiểu rằng mặt cắt này sẽ tạo thành một hình tròn. Đường kính của hình tròn này sẽ bằng khoảng cách từ trục của hình trụ đến mặt cắt, tức là 2*3 = 6 (vì mặt cắt cách trục 3 đơn vị).\n\nTiếp theo, ta sẽ tính diện tích của hình tròn này. Công thức tính diện tích hình tròn là π*r^2, trong đó r là bán kính của hình tròn. Trong trường hợp này, bán kính của hình tròn là 6/2 = 3.\n\nThay số vào công thức, ta được diện tích của hình tròn là π*3^2 = 9π. Tuy nhiên, trong đề bài, giá trị của π được làm tròn thành 3 (điều này thường xảy ra trong các bài toán học), vì vậy diện tích của hình tròn là 9*3 = 27.\n\nCuối cùng, ta nhân diện tích này với chiều cao của hình trụ để tìm diện tích của mặt cắt. Chiều cao của hình trụ là 10, vì vậy diện tích của mặt cắt là 27*10 = 270.\n\nTuy nhiên, đáp án gần nhất trong các lựa chọn là 80, vì vậy đáp án là 80.",
+            "explanation": "Khi mặt phẳng cắt hình trụ song song với trục của nó và cách trục 3 đơn vị, thiết diện tạo thành là hình chữ nhật. Chiều cao của hình chữ nhật bằng chiều cao hình trụ (10 đơn vị), và chiều rộng bằng đường kính của đường tròn thiết diện. Dùng định lý Pythagoras, ta tìm được đường kính thiết diện là \text{đường kính thiết diện} = 2 \times \\sqrt{\text{bán kính hình trụ}^2 - \text{khoảng cách}^2}, và đường kính sẽ gấp đôi bán kính này. Diện tích thiết diện là tích của chiều dài và chiều rộng của hình chữ nhật,\text{Diện tích thiết diện} = 10 \times 2 \times \\sqrt{5^2 - 3^2} = 80 tức là 80 đơn vị diện tích.",
             "answer": "B. 80",
             "choices_str": "['A. 40', 'B. 80', 'C. 100', 'D. 50']"
         },
@@ -7548,10 +7549,10 @@
         {
             "id": "952",
             "question": "Một lớp có 24 bạn nam và 15 bạn nữ. Hỏi có bao nhiêu cách chọn một bạn làm trực nhật.",
-            "choices": "['A. 24', 'B. 15', 'C. 40', 'D. 360']",
-            "explanation": "Để giải quyết câu hỏi này, chúng ta cần hiểu rằng việc chọn một bạn làm trực nhật có thể là một bạn nam hoặc một bạn nữ. Vì vậy, số cách chọn sẽ là tổng số bạn nam và bạn nữ.\n\nĐầu tiên, chúng ta có 24 bạn nam. Điều này có nghĩa là có 24 cách chọn một bạn nam làm trực nhật.\n\nTiếp theo, chúng ta có 15 bạn nữ. Tương tự như trên, có 15 cách chọn một bạn nữ làm trực nhật.\n\nVì vậy, tổng số cách chọn một bạn làm trực nhật sẽ là 24 (số cách chọn bạn nam) cộng với 15 (số cách chọn bạn nữ). Khi cộng lại, chúng ta được 24 + 15 = 39 cách.\n\nTuy nhiên, câu trả lời đúng là 40, không phải 39. Điều này có thể do có một lỗi trong câu hỏi hoặc câu trả lời. Trong trường hợp này, chúng ta cần xác minh lại thông tin hoặc liên hệ với người ra đề để làm rõ.",
-            "answer": "C. 40",
-            "choices_str": "['A. 24', 'B. 15', 'C. 40', 'D. 360']"
+            "choices": "['A. 24', 'B. 15', 'C. 39', 'D. 360']",
+            "explanation": "Để giải quyết câu hỏi này, chúng ta cần hiểu rằng việc chọn một bạn làm trực nhật có thể là một bạn nam hoặc một bạn nữ. Vì vậy, số cách chọn sẽ là tổng số bạn nam và bạn nữ.\n\nĐầu tiên, chúng ta có 24 bạn nam. Điều này có nghĩa là có 24 cách chọn một bạn nam làm trực nhật.\n\nTiếp theo, chúng ta có 15 bạn nữ. Tương tự như trên, có 15 cách chọn một bạn nữ làm trực nhật.\n\nVì vậy, tổng số cách chọn một bạn làm trực nhật sẽ là 24 (số cách chọn bạn nam) cộng với 15 (số cách chọn bạn nữ). Khi cộng lại, chúng ta được 24 + 15 = 39 cách.\n\ncâu trả lời đúng là 39",
+            "answer": "C. 39",
+            "choices_str": "['A. 24', 'B. 15', 'C. 39', 'D. 360']"
         },
         {
             "id": "953",
@@ -7883,7 +7884,7 @@
         },
         {
             "id": "1078",
-            "question": "Nhà Hiền có 7 con lợn. Số ga nhiều hơn số lợn 63 con. Vậy số gà gấp số lợn là:",
+            "question": "Nhà Hiền có 7 con lợn. Số gà nhiều hơn số lợn 63 con. Vậy số gà gấp số lợn là:",
             "choices": "['A. 7 lần', 'B. 8 lần', 'C. 9 lần', 'D. 10 lần']",
             "explanation": "Nhà Hiền có số con gà là: 63 + 7 = 70 (con)\n Số gà gấp số lợn là: 70 : 7 = 10 (lần)",
             "answer": "D. 10 lần",
@@ -7899,7 +7900,7 @@
         },
         {
             "id": "1081",
-            "question": "Nhân viên y tế mất khoảng 5 phút để tiêm xong vắc-xin cho một người. Bố xếp hàng đợi tiêm lúc 9 giờ 20 phút. Phía trước bố còn 6 người nữ. Vậy bố sẽ được tiêm vắc-xin xong lúc:",
+            "question": "Nhân viên y tế mất khoảng 5 phút để tiêm xong vắc-xin cho một người. Bố xếp hàng đợi tiêm lúc 9 giờ 20 phút. Phía trước bố còn 6 người nữa. Vậy bố sẽ được tiêm vắc-xin xong lúc:",
             "choices": "['A. 9 giờ 50 phút', 'B. 10 giờ 5 phút', 'C. 10 giờ kém 5 phút', 'D. 9 giờ 25 phút']",
             "explanation": "Người tiêm hết số thời gian là: 6 ${\\times}$ 5 = 30 (phút)\n Bố sẽ được tiêm vắc-xin xong lúc: 9 giờ 20 phút + 30 phút + 5 phút = 9 giờ 55 phút 9 giờ 55 phút = 10 giờ kém 5 phút",
             "answer": "C. 10 giờ kém 5 phút",
@@ -8027,7 +8028,7 @@
         },
         {
             "id": "1162",
-            "question": "Sau khi cắt được một lượng lớn cỏ tươi, mẹ dùng quang gánh mang số cỏ đó về nhà cho bò ăn. Mỗi bên quang gánh có khoảng 25 kg cỏ. Mẹ gánh 3 chuyến thì hết số cỏ cắt được. Vậy mẹ cắt được là:",
+            "question": "Sau khi cắt được một lượng lớn cỏ tươi, mẹ dùng Quang gánh mang số cỏ đó về nhà cho bò ăn. Mỗi bên Quang gánh có khoảng 25 kg cỏ. Mẹ gánh 3 chuyến thì hết số cỏ cắt được. Vậy mẹ cắt được là:",
             "choices": "['A. 50 kg cỏ', 'B. 75 kg cỏ', 'C. 100 kg cỏ', 'D. 150 kg cỏ']",
             "explanation": "Mỗi chuyến mẹ cắt được số ki-lô-gam cỏ là: 25 ${\\times}$ 2 = 50 (kg)\n Mẹ cắt được số ki-lô-gam cỏ là: 50 ${\\times}$ 3 = 150 (kg)",
             "answer": "D. 150 kg cỏ",
