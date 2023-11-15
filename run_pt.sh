@@ -3,15 +3,13 @@ python pretraining.py \
     --model_name_or_path HuggingFaceH4/zephyr-7b-beta \
     --train_file_dir ./datasets/pretrain \
     --validation_file_dir ./datasets/pretrain \
-    --per_device_train_batch_size 1 \
-    --per_device_eval_batch_size 1 \
+    --per_device_train_batch_size 4 \
+    --per_device_eval_batch_size 4 \
     --do_train \
     --do_eval \
     --use_peft True \
     --seed 42 \
     --fp16 \
-    --max_train_samples 10000 \
-    --max_eval_samples 10 \
     --num_train_epochs 1 \
     --learning_rate 2e-4 \
     --warmup_ratio 0.05 \
@@ -26,6 +24,7 @@ python pretraining.py \
     --gradient_accumulation_steps 1 \
     --preprocessing_num_workers 10 \
     --block_size 1024 \
+    --validation_split_percentage 10 \
     --output_dir outputs-pt-zephyr-beta-v1 \
     --overwrite_output_dir \
     --ddp_timeout 30000 \
