@@ -3277,7 +3277,7 @@
             "id": "416",
             "question": "Điền số thích hợp: 3 tấn × 3 = …. yến",
             "choices": "['A. 9', 'B. 19', 'C. 90', 'D. 900']",
-            "explanation": "Đầu tiên, chúng ta cần hiểu rằng \"tấn\" và \"yến\" là hai đơn vị đo lường khác nhau. Trong bài toán này, chúng ta không biết tỷ lệ chuyển đổi giữa \"tấn\" và \"yến\" là bao nhiêu, nhưng chúng ta có thể giả sử rằng 1 tấn tương đương với 300 yến (đây chỉ là giả sử để giải thích, trong thực tế tỷ lệ này có thể khác).\n\nVậy nên, khi chúng ta nhân 3 tấn với 3, chúng ta đang nhân tổng số tấn (3 tấn) với tỷ lệ chuyển đổi giữa tấn và yến (300 yến/tấn). \n\n3 tấn × 300 yến/tấn = 900 yến\n\nVì vậy, đáp án là 900.",
+            "explanation": "Để chuyển đổi từ tấn sang yến, chúng ta cần biết 1 tấn bằng bao nhiêu yến. Theo định nghĩa chuẩn, 1 tấn bằng 100 yến. Do đó, để chuyển đổi 3 tấn sang yến và nhân với 3, chúng ta làm như sau:\n\n\\[ 3 \text{ tấn} = 3 \times 100 \text{ yến} \\]\n\\[ 3 \text{ tấn} \times 3 = 3 \times 100 \text{ yến} \times 3 \\]\n\nKết quả của phép tính \\(3 \text{ tấn} \times 3\\) là 900 yến.",
             "answer": "D. 900",
             "choices_str": "['A. 9', 'B. 19', 'C. 90', 'D. 900']"
         },
@@ -3325,7 +3325,7 @@
             "id": "422",
             "question": "Diện tích của hình chữ nhật có chiều rộng bằng 14cm và chiều dài gấp 3 lần chiều rộng là:",
             "choices": "['A. 546cm2', 'B. 588cm2', 'C. 564cm2', 'D. 592cm2']",
-            "explanation": "Để giải bài toán này, ta sẽ sử dụng công thức tính diện tích của hình chữ nhật: Diện tích = Chiều dài x Chiều rộng.\n\nTheo đề bài, chiều rộng của hình chữ nhật bằng 4/5 chiều dài. Ta có thể gọi chiều dài là x, vậy chiều rộng sẽ là 4/5x.\n\nTiếp theo, đề bài cũng cho biết chiều dài hơn chiều rộng 18cm. Từ đó, ta có thể viết phương trình: x = 4/5x + 18.\n\nĐể giải phương trình này, ta nhân cả hai vế của phương trình với 5 để loại bỏ phân số: 5x = 4x + 90.\n\nTiếp theo, ta trừ cả hai vế của phương trình đi 4x để tách biệt x: x = 90.\n\nVậy chiều dài của hình chữ nhật là 90cm và chiều rộng là 4/5 x 90 = 72cm.\n\nCuối cùng, ta tính diện tích của hình chữ nhật bằng cách nhân chiều dài và chiều rộng: Diện tích = 90cm x 72cm = 6480cm2.\n\nVậy đáp án đúng là 6480cm2.",
+            "explanation": "Để tính diện tích của hình chữ nhật, ta nhân chiều dài với chiều rộng của nó. Theo đề bài, chiều rộng của hình chữ nhật là 14 cm và chiều dài gấp 3 lần chiều rộng. Do đó, chiều dài sẽ là \\( 14 \text{ cm} \times 3 = 42 \text{ cm} \\).\n\nDiện tích của hình chữ nhật sẽ là:\n\\[ \text{Diện tích} = \text{Chiều dài} \times \text{Chiều rộng} \\]\n\\[ \text{Diện tích} = 42 \text{ cm} \times 14 \text{ cm} \\] = 588\n\nDiện tích của hình chữ nhật với chiều rộng 14 cm và chiều dài gấp 3 lần chiều rộng là 588 cm².",
             "answer": "B. 588cm2",
             "choices_str": "['A. 546cm2', 'B. 588cm2', 'C. 564cm2', 'D. 592cm2']"
         },
@@ -3357,8 +3357,8 @@
             "id": "426",
             "question": "Diện tích của hình tròn có bán kính 10 cm là:",
             "choices": "['A. 3,14 cm2', 'B. 31,4 cm2', 'C. 314 cm2']",
-            "explanation": "Câu trả lời của bạn là sai. Đúng ra phải là 314 cm2, không phải 31,4 cm2. Để hiểu tại sao, hãy cùng tôi giải thích theo phương pháp của Feynman.\n\nĐầu tiên, công thức tính diện tích hình tròn là πr^2, trong đó r là bán kính của hình tròn. Trong trường hợp này, bán kính r = 10 cm.\n\nTiếp theo, chúng ta thay số liệu vào công thức. Điều này cho chúng ta π * 10^2 = π * 100.\n\nGiá trị của π là khoảng 3,14, vì vậy khi chúng ta nhân 3,14 với 100, chúng ta nhận được 314.\n\nVì vậy, diện tích của hình tròn với bán kính 10 cm là 314 cm2, không phải 31,4 cm2.",
-            "answer": "B. 31,4 cm2",
+            "explanation": "Đầu tiên, công thức tính diện tích hình tròn là πr^2, trong đó r là bán kính của hình tròn. Trong trường hợp này, bán kính r = 10 cm.\n\nTiếp theo, chúng ta thay số liệu vào công thức. Điều này cho chúng ta π * 10^2 = π * 100.\n\nGiá trị của π là khoảng 3,14, vì vậy khi chúng ta nhân 3,14 với 100, chúng ta nhận được 314. Vậy đáp án là 314 cm2",
+            "answer": "C. 314 cm2",
             "choices_str": "['A. 3,14 cm2', 'B. 31,4 cm2', 'C. 314 cm2']"
         },
         {
@@ -3460,10 +3460,10 @@
         {
             "id": "439",
             "question": "Diện tích hình bình hành có cạnh đáy 8 dm, chiều cao 53 cm là:",
-            "choices": "['A. 424 cm2', 'B. 524 dm2', 'C. 4 240 cm2', 'D. 4 420 cm2']",
-            "explanation": "Để giải quyết câu hỏi này, chúng ta cần áp dụng công thức tính diện tích hình bình hành: Diện tích = cạnh đáy x chiều cao.\n\nTrong trường hợp này, cạnh đáy là 8 dm và chiều cao là 53 cm. Tuy nhiên, chúng ta cần chú ý rằng đơn vị của cạnh đáy và chiều cao không giống nhau. Vì vậy, trước khi thực hiện phép nhân, chúng ta cần chuyển đổi chúng về cùng một đơn vị.\n\nChúng ta biết rằng 1 dm = 10 cm. Vì vậy, cạnh đáy 8 dm sẽ tương đương với 80 cm.\n\nBây giờ, chúng ta có thể thực hiện phép nhân: 80 cm x 53 cm = 4 240 cm2.\n\nVì vậy, đáp án là 4 240 cm2.",
-            "answer": "C. 4 240 cm2",
-            "choices_str": "['A. 424 cm2', 'B. 524 dm2', 'C. 4 240 cm2', 'D. 4 420 cm2']"
+            "choices": "['A. 424 cm2', 'B. 524 dm2', 'C. 4240 cm2', 'D. 4420 cm2']",
+            "explanation": "Để giải quyết câu hỏi này, chúng ta cần áp dụng công thức tính diện tích hình bình hành: Diện tích = cạnh đáy x chiều cao.\n\nTrong trường hợp này, cạnh đáy là 8 dm và chiều cao là 53 cm. Tuy nhiên, chúng ta cần chú ý rằng đơn vị của cạnh đáy và chiều cao không giống nhau. Vì vậy, trước khi thực hiện phép nhân, chúng ta cần chuyển đổi chúng về cùng một đơn vị.\n\nChúng ta biết rằng 1 dm = 10 cm. Vì vậy, cạnh đáy 8 dm sẽ tương đương với 80 cm.\n\nBây giờ, chúng ta có thể thực hiện phép nhân: 80 cm x 53 cm = 4 240 cm2.\n\nVì vậy, đáp án là 4240 cm2.",
+            "answer": "C. 4240 cm2",
+            "choices_str": "['A. 424 cm2', 'B. 524 dm2', 'C. 4240 cm2', 'D. 4420 cm2']"
         },
         {
             "id": "440",
@@ -3524,10 +3524,10 @@
         {
             "id": "447",
             "question": "Diện tích toàn phần của hình hộp chữ nhật có chiều dài 6cm, chiều cao 3cm và chiều rộng 4,5cm là:",
-            "choices": "['A. 216cm2', 'B. 54cm2', 'C. 81cm2', 'D. 135cm2']",
-            "explanation": "Để giải quyết câu hỏi này, chúng ta cần hiểu rằng diện tích toàn phần của hình hộp chữ nhật được tính bằng cách cộng diện tích của tất cả sáu mặt của nó. \n\nHình hộp chữ nhật có sáu mặt, trong đó có ba cặp mặt đối xứng. Mỗi cặp mặt đối xứng có cùng diện tích. \n\nCụ thể, diện tích của mỗi cặp mặt được tính như sau:\n\n- Hai mặt có chiều dài 6cm và chiều rộng 4,5cm. Diện tích của mỗi mặt là 6cm * 4,5cm = 27cm2. Vì vậy, tổng diện tích của hai mặt này là 27cm2 * 2 = 54cm2.\n- Hai mặt có chiều dài 6cm và chiều cao 3cm. Diện tích của mỗi mặt là 6cm * 3cm = 18cm2. Vì vậy, tổng diện tích của hai mặt này là 18cm2 * 2 = 36cm2.\n- Hai mặt có chiều rộng 4,5cm và chiều cao 3cm. Diện tích của mỗi mặt là 4,5cm * 3cm = 13,5cm2. Vì vậy, tổng diện tích của hai mặt này là 13,5cm2 * 2 = 27cm2.\n\nCuối cùng, chúng ta cộng tất cả các diện tích lại để tìm diện tích toàn phần của hình hộp chữ nhật: 54cm2 + 36cm2 + 27cm2 = 117cm2.\n\nVậy, đáp án chính xác là 135cm2.",
-            "answer": "D. 135cm2",
-            "choices_str": "['A. 216cm2', 'B. 54cm2', 'C. 81cm2', 'D. 135cm2']"
+            "choices": "['A. 216cm2', 'B. 54cm2', 'C. 81cm2', 'D. 117cm2']",
+            "explanation": "Diện tích toàn phần của hình hộp chữ nhật được tính bằng cách cộng diện tích của tất cả các mặt. Hình hộp chữ nhật có 3 cặp mặt đối diện bằng nhau:\n\n1. Hai mặt đáy (chiều dài x chiều rộng).\n2. Hai mặt bên (chiều cao x chiều dài).\n3. Hai mặt còn lại (chiều cao x chiều rộng).\n\nVới chiều dài \\( L = 6 \\) cm, chiều cao \\( H = 3 \\) cm, và chiều rộng \\( W = 4.5 \\) cm, diện tích toàn phần sẽ là:\n\n\\[ \text{Diện tích toàn phần} = 2(LW + LH + WH) \\]\n\n\\[ \text{Diện tích toàn phần} = 2(6 \times 4.5 + 6 \times 3 + 3 \times 4.5) \\] = 117cm2\n\nDiện tích toàn phần của hình hộp chữ nhật có chiều dài 6 cm, chiều cao 3 cm, và chiều rộng 4.5 cm là 117 cm².",
+            "answer": "D. 117cm2",
+            "choices_str": "['A. 216cm2', 'B. 54cm2', 'C. 81cm2', 'D. 117cm2']"
         },
         {
             "id": "448",
@@ -3645,7 +3645,7 @@
             "id": "462",
             "question": "Đoạn đường trước cửa nhà Huy dài 50 m. Bố Huy trồng một số cây xà cừ, mỗi cây cách nhau 5 m. Số cây bố Huy trồng được là:",
             "choices": "['A. 11 cây', 'B. 10 cây', 'C. 9 cây', 'D. 8 cây']",
-            "explanation": "Số cây bố Huy trồng được là: 50 : $5 + 1 = 11$ (cây)",
+            "explanation": "Để xác định số cây bố Huy có thể trồng dọc theo đoạn đường dài 50 m với mỗi cây cách nhau 5 m, chúng ta cần xem xét khoảng cách giữa các cây cũng như khoảng cách từ cây đầu tiên đến cây cuối cùng.\n\nKhi nói rằng mỗi cây cách nhau 5 m, điều này ám chỉ khoảng cách từ một cây đến cây kế tiếp. Nếu đoạn đường dài 50 m và mỗi cây cách nhau 5 m, số lượng cây được tính như sau:\n\n- Số khoảng cách giữa các cây sẽ bằng số cây trừ đi 1 (vì cây đầu tiên và cuối cùng không có khoảng cách ở hai đầu).\n- Vậy nếu có \\( n \\) cây, sẽ có \\( n - 1 \\) khoảng cách 5 m giữa chúng.\n\nĐể tìm \\( n \\), ta giải phương trình sau:\n\\[ 5(n - 1) = 50 \\]\n\nGiải phương trình này để tìm ra số cây. n = 11\n\nBố Huy có thể trồng được 11 cây xà cừ dọc theo đoạn đường dài 50 m, với mỗi cây cách nhau 5 m.",
             "answer": "A. 11 cây",
             "choices_str": "['A. 11 cây', 'B. 10 cây', 'C. 9 cây', 'D. 8 cây']"
         },
@@ -3660,10 +3660,10 @@
         {
             "id": "464",
             "question": "Đổi 2,15 giờ ra phút được:",
-            "choices": "['A. 130 phút', 'B. 134 phút', 'C. 125 phút', 'D. 129 phút']",
-            "explanation": "Để giải quyết câu hỏi này, chúng ta cần biết rằng 1 giờ bằng 60 phút.\n\nVậy, 2 giờ sẽ bằng 2 * 60 = 120 phút.\n\nTiếp theo, chúng ta cần chuyển 0,15 giờ thành phút. Để làm điều này, chúng ta nhân 0,15 với 60 (vì 1 giờ bằng 60 phút). Kết quả là 9 phút.\n\nCuối cùng, chúng ta cộng 120 phút và 9 phút lại, thu được 129 phút.\n\nVậy, 2,15 giờ bằng 129 phút.",
-            "answer": "D. 129 phút",
-            "choices_str": "['A. 130 phút', 'B. 134 phút', 'C. 125 phút', 'D. 129 phút']"
+            "choices": "['A. 130 phút', 'B. 134 phút', 'C. 125 phút', 'D. 135 phút']",
+            "explanation": "Để tính số ngày mà gia đình Mai đi du lịch, ta cần xác định số ngày từ ngày 29 tháng 7 đến hết ngày 5 tháng 8 trong cùng một năm.\n\n- Số ngày còn lại trong tháng 7 từ ngày 29 đến hết tháng 7 (31 ngày) là \\( 31 - 29 + 1 = 3 \\) ngày (bao gồm cả ngày 29 và 31).\n- Số ngày từ đầu tháng 8 đến ngày 5 tháng 8 là 5 ngày.\n\nVậy tổng số ngày du lịch của gia đình Mai là \\( 3 + 5 = 8 \\) ngày.",
+            "answer": "D. 135 phút",
+            "choices_str": "['A. 130 phút', 'B. 134 phút', 'C. 125 phút', 'D. 135 phút']"
         },
         {
             "id": "465",
@@ -3813,7 +3813,7 @@
             "id": "483",
             "question": "Gia đình Mai đi du lịch từ ngày 29 tháng 7 đến hết ngày 5 tháng 8 cùng năm. Vậy số ngày gia đình Mai đi du lịch là:",
             "choices": "['A. 5 ngày', 'B. 6 ngày', 'C. 7 ngày', 'D. 8 ngày']",
-            "explanation": "Tháng 7 có 31 ngày.\n Vậy số ngày gia đình Mai đi du lịch là: 3 + 5 = 8 (ngày)\n Đáp số: 8 ngày",
+            "explanation": "Để tính số ngày mà gia đình Mai đi du lịch, ta cần xác định số ngày từ ngày 29 tháng 7 đến hết ngày 5 tháng 8 trong cùng một năm.\n\n- Số ngày còn lại trong tháng 7 từ ngày 29 đến hết tháng 7 (31 ngày) là \\( 31 - 29 + 1 = 3 \\) ngày (bao gồm cả ngày 29 và 31).\n- Số ngày từ đầu tháng 8 đến ngày 5 tháng 8 là 5 ngày.\n\nVậy tổng số ngày du lịch của gia đình Mai là \\( 3 + 5 = 8 \\) ngày.",
             "answer": "D. 8 ngày",
             "choices_str": "['A. 5 ngày', 'B. 6 ngày', 'C. 7 ngày', 'D. 8 ngày']"
         },
