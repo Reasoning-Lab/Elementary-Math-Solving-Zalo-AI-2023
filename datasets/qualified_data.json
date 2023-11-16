@@ -2505,7 +2505,7 @@
             "choices": "['A. 6', 'B. 0,6', 'C. 0,06', 'D. 0,006']",
             "explanation": "Đầu tiên, chúng ta cần hiểu rằng số dư trong phép chia này không phải là số dư thông thường mà chúng ta thường nghĩ đến. Thông thường, số dư là phần còn lại sau khi chúng ta chia một số nguyên cho một số nguyên khác. Tuy nhiên, trong trường hợp này, chúng ta đang chia một số nguyên cho một số thập phân, và chúng ta chỉ lấy hai chữ số sau dấu phẩy thập phân của kết quả. Vì vậy, số dư ở đây thực sự là phần của kết quả mà chúng ta đã bỏ qua.\n\nBây giờ, hãy thực hiện phép chia. Khi chúng ta chia 357 cho 19,8, chúng ta nhận được kết quả là 18,030303... Số dư = 357 - 18.03(lấy đến hai chữ số phần thập phân) x 19,8 = 0,006",
             "answer": "D. 0,006",
-            "choices_str": "['A. 6', 'B. 0,6', 'C. 0,06', 'D. 0,006']"
+            "choices_str": "['A. 6', 'B. 0,6', 'C. 0,6', 'D. 0,006']"
         },
         {
             "id": "320",
@@ -2671,8 +2671,8 @@
             "id": "341",
             "question": "Chữ số 5 trong số 254,836 có giá trị là:",
             "choices": "['A. 50000', 'B. 5000', 'C. 500', 'D. 50']",
-            "explanation": "Chữ số 5 trong số 254,836 có giá trị là: 50.",
-            "answer": "D. 50",
+            "explanation": "Trong số 254,836, chữ số 5 nằm ở vị trí hàng chục nghìn. Trong hệ thập phân, giá trị của mỗi vị trí số được xác định dựa trên lũy thừa của 10:\n\n- Hàng đơn vị: \\( 10^0 = 1 \\).\n- Hàng chục: \\( 10^1 = 10 \\).\n- Hàng trăm: \\( 10^2 = 100 \\), và cứ thế tiếp tục.\n\nDo đó, chữ số 5 trong số 254,836 có giá trị là \\( 5 \times 10000 = 50000 \\).",
+            "answer": "A. 50000",
             "choices_str": "['A. 50000', 'B. 5000', 'C. 500', 'D. 50']"
         },
         {
@@ -7251,6 +7251,7 @@
             "answer": "D. 34dm2",
             "choices_str": "['A. 13,5dm2', 'B. 17dm2', 'C. 35dm2', 'D. 34dm2']"
         },
+
         {
             "id": "916",
             "question": "Một hình hộp chữ nhật có thể tích là 270 cm3; chiều dài 6 cm; chiều cao 9 cm. Chiều rộng của hình hộp chữ nhật đó là:",
