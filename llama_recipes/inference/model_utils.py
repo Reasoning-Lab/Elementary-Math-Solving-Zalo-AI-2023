@@ -6,11 +6,13 @@ from transformers import LlamaForCausalLM, LlamaConfig
 
 
 # Function to load the main model for text generation
-def load_model(model_name, quantization):
+def load_model(model_name, quantization, load_in):
     model = LlamaForCausalLM.from_pretrained(
         model_name,
         return_dict=True,
-        load_in_4bit=quantization,
+        # load_in_4bit=quantization,
+        load_in_4bit=True if load_in == "4bit" else None,
+        load_in_8bit=True if load_in == "8bit" else None,
         device_map="auto",
         low_cpu_mem_usage=True,
     )

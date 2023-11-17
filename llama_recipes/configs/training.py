@@ -12,7 +12,8 @@ class train_config:
     run_validation: bool = True
     batch_size_training: int = 4
     batching_strategy: str = "padding"  # alternative: padding
-    context_length: int = 1024
+    context_length: int | None = 1024
+    max_length: int = 2048
     gradient_accumulation_steps: int = 4
     num_epochs: int = 6
     num_workers_dataloader: int = 1

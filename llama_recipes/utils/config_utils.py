@@ -73,6 +73,8 @@ def generate_dataset_config(train_config, kwargs):
         train_config.dataset
     ]()
 
+    dataset_config["max_length"] = train_config.max_length
+
     update_config(dataset_config, **kwargs)
 
     return dataset_config

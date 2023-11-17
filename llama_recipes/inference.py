@@ -46,6 +46,8 @@ def main(
     model_name,
     peft_model: str = None,
     quantization: bool = False,
+    load_in: str = "4bit",
+    max_length: int = 2048,
     max_new_tokens=100,  # The maximum numbers of tokens to generate
     test_file: str = "datasets/math_test.json",
     seed: int = 42,  # seed value for reproducibility
@@ -71,7 +73,7 @@ def main(
     torch.cuda.manual_seed(seed)
     torch.manual_seed(seed)
 
-    model = load_model(model_name, quantization)
+    model = load_model(model_name, quantization, load_in)
     if peft_model:
         model = load_peft_model(model, peft_model)
 
@@ -122,7 +124,7 @@ def main(
         user_prompt = get_user_prompt(example)
         id = example["id"]
         choices = example["choices"]
-        input = tokenizer(user_prompt, return_tensors="pt")
+        input = tokenizer(user_prompt, max_length=max_length, return_tensors="pt")
 
         batch = {k: v.to("cuda") for k, v in input.items()}
         start = time.perf_counter()

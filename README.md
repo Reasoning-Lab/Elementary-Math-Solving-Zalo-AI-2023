@@ -39,7 +39,7 @@ python llama_recipes/finetuning.py --use_peft --peft_method lora --quantization 
 # Inference
 
 ```bash
-python llama_recipes/inference.py --quantization --model_name <model_name> --peft_model <output_dir> --max_new_tokens <max new tokens> --prompt_file test_prompt.txt
+python llama_recipes/inference.py --quantization --load_in 4bit --model_name <model_name> --peft_model <output_dir> --max_new_tokens <max new tokens>
 ```
 
 Template for my personal Experiment Tracking hyperparameters
