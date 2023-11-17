@@ -2,11 +2,11 @@ python sft.py \
     --model_name meta-llama/Llama-2-7b-hf \
     --dataset_path datasets/math_train.json \
     --batch_size 128 \
-    --seq_length 1024 \
+    --model_max_length 1024 \
     --gradient_accumulation_steps 1 \
     --load_in_8bit \
     --use_peft \
     --num_train_epochs 200  \
     --save_step 10 \
     --save_total_limit 3 \
-    --gradient_checkpointing \
+    --gradient_checkpointing
