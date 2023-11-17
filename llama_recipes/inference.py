@@ -47,7 +47,7 @@ def main(
     peft_model: str = None,
     quantization: bool = False,
     load_in: str = "4bit",
-    max_length: int = 2048,
+    max_length: int | None = None,
     max_new_tokens=100,  # The maximum numbers of tokens to generate
     test_file: str = "datasets/math_test.json",
     seed: int = 42,  # seed value for reproducibility
@@ -118,13 +118,18 @@ def main(
     #     sys.exit(1)  # Exit the program with an error status
 
     results = []
-
+    print(f"TOKENIZER max_length: {max_length}")
     for idx, example in enumerate(data):
         print(f"Processing {idx}")
         user_prompt = get_user_prompt(example)
         id = example["id"]
         choices = example["choices"]
-        input = tokenizer(user_prompt, max_length=max_length, return_tensors="pt")
+        input = tokenizer(
+            user_prompt,
+            max_length=max_length,
+            truncation=True if max_length != None else False,
+            return_tensors="pt",
+        )
 
         batch = {k: v.to("cuda") for k, v in input.items()}
         start = time.perf_counter()

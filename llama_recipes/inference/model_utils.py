@@ -7,6 +7,7 @@ from transformers import LlamaForCausalLM, LlamaConfig
 
 # Function to load the main model for text generation
 def load_model(model_name, quantization, load_in):
+    print(f"LOAD_IN model: {load_in}")
     model = LlamaForCausalLM.from_pretrained(
         model_name,
         return_dict=True,

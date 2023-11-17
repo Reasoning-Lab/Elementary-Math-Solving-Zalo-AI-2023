@@ -33,13 +33,13 @@ python llama_recipes/finetuning.py --use_peft --peft_method lora --quantization 
 ```
 
 ```bash
-python llama_recipes/finetuning.py --use_peft --peft_method lora --quantization --model_name HuggingFaceH4/zephyr-7b-alpha --dataset zalo_math_fill_missing_explain_4 --output_dir outputs --batching_strategy packing --num_epochs 6 --load_in 4bit --use_wandb --wandb_entity baolocpham --wandb_key KEY
+python llama_recipes/finetuning.py --use_peft --peft_method lora --quantization --model_name HuggingFaceH4/zephyr-7b-alpha --dataset zalo_math_fill_missing_explain_4 --output_dir outputs --max_length 2048 --num_epochs 6 --load_in 4bit --use_wandb --wandb_entity baolocpham --wandb_key KEY
 ```
 
 # Inference
 
 ```bash
-python llama_recipes/inference.py --quantization --load_in 4bit --model_name <model_name> --peft_model <output_dir> --max_new_tokens <max new tokens>
+python llama_recipes/inference.py --quantization --load_in 4bit --max_length 2048 --model_name <model_name> --peft_model <output_dir> --max_new_tokens <max new tokens>
 ```
 
 Template for my personal Experiment Tracking hyperparameters
