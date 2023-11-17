@@ -72,7 +72,7 @@ def generate_dataset_config(train_config, kwargs):
     dataset_config = {k: v for k, v in inspect.getmembers(datasets)}[
         train_config.dataset
     ]()
-
+    print(f"TOKENIZER max_length: {dataset_config.max_length}")
     update_config(dataset_config, **kwargs)
 
     return dataset_config
