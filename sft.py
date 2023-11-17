@@ -3,14 +3,17 @@ import os
 from dataclasses import dataclass, field
 from glob import glob
 from types import MethodType
-from typing import Literal, Optional, Tuple, List, Dict, Sequence
+from typing import Literal, Optional, Tuple, List, Dict, Sequence, Any, NewType
+import sys
+import logging
 
 import torch
 import torch.nn as nn
+import datasets
 from datasets import load_dataset
-from loguru import logger
 from accelerate import Accelerator
 from peft import LoraConfig, PeftConfig, TaskType, get_peft_model, PeftModel, prepare_model_for_kbit_training
+import transformers
 from transformers import (
     AutoConfig,
     BloomForCausalLM,
@@ -198,6 +201,21 @@ class DataArguments:
         if self.max_train_samples is not None and 0 < self.max_train_samples <= 1000:
             logger.warning("You may set max_train_samples = -1 to run all samples in production.")
 
+@dataclass
+class SFTConfig(transformers.TrainingArguments):
+    """
+    Arguments related to the training process itself. For all parameters, see: https://huggingface.co/docs/transformers/v4.26.1/en/main_classes/trainer#transformers.TrainingArguments
+    """
+
+    max_seq_length: Optional[int] = field(
+        default=None,
+        metadata={"help": ("Used by TRL for reward model training, which tries to read this parameter in init.")},
+    )
+    logging_first_step: bool = field(
+        default=True,
+        metadata={"help": ("Whether to log and evaluate the first global_step or not.")},
+    )
+    optim: Optional[str] = field(default="adamw_torch")
 
 @dataclass
 class ScriptArguments:
@@ -223,225 +241,6 @@ class ScriptArguments:
         metadata={"help": ("Model layers to unfreeze & train")},
     )
     peft_path: Optional[str] = field(default=None, metadata={"help": "The path to the peft model"})
-    qlora: bool = field(default=False, metadata={"help": "Whether to use qlora"})
-    model_max_length: int = field(
-        default=512,
-        metadata={"help": "Maximum model context length. suggest: 8192 * 4, 8192 * 2, 8192, 4096, 2048, 1024, 512"}
-    )
-
-    def __post_init__(self):
-        if self.model_max_length < 60:
-            raise ValueError("You must specify a valid model_max_length >= 60 to run training")
-
-
-# Copied from: https://github.com/hiyouga/LLaMA-Factory/blob/main/src/llmtuner/extras/patches/llama_patch.py
-class LlamaShiftShortAttention(LlamaAttention):
-
-    def forward(
-            self,
-            hidden_states: torch.Tensor,
-            attention_mask: Optional[torch.Tensor] = None,
-            position_ids: Optional[torch.LongTensor] = None,
-            past_key_value: Optional[Tuple[torch.Tensor]] = None,
-            output_attentions: bool = False,
-            use_cache: bool = False,
-            **kwargs
-    ) -> Tuple[torch.Tensor, Optional[torch.Tensor], Optional[Tuple[torch.Tensor]]]:
-        bsz, q_len, _ = hidden_states.size()
-
-        query_states = self.q_proj(hidden_states)
-        key_states = self.k_proj(hidden_states)
-        value_states = self.v_proj(hidden_states)
-
-        query_states = query_states.view(bsz, q_len, self.num_heads, self.head_dim).transpose(1, 2)
-        key_states = key_states.view(bsz, q_len, self.num_key_value_heads, self.head_dim).transpose(1, 2)
-        value_states = value_states.view(bsz, q_len, self.num_key_value_heads, self.head_dim).transpose(1, 2)
-
-        kv_seq_len = key_states.shape[-2]
-        if past_key_value is not None:
-            kv_seq_len += past_key_value[0].shape[-2]
-
-        cos, sin = self.rotary_emb(value_states, seq_len=kv_seq_len)
-        query_states, key_states = apply_rotary_pos_emb(query_states, key_states, cos, sin, position_ids)
-
-        if past_key_value is not None:  # reuse k, v, self_attention
-            key_states = torch.cat([past_key_value[0], key_states], dim=2)
-            value_states = torch.cat([past_key_value[1], value_states], dim=2)
-
-        past_key_value = (key_states, value_states) if use_cache else None
-
-        if getattr(self, "num_key_value_groups"):
-            key_states = repeat_kv(key_states, self.num_key_value_groups)
-            value_states = repeat_kv(value_states, self.num_key_value_groups)
-
-        if getattr(self.config, "group_size_ratio", None) and self.training:  # shift
-            groupsz = int(q_len * getattr(self.config, "group_size_ratio"))
-            assert q_len % groupsz == 0, "q_len {} should be divisible by group size {}.".format(q_len, groupsz)
-            num_groups = q_len // groupsz
-
-            def shift(state: torch.Tensor) -> torch.Tensor:
-                state = state.transpose(1, 2)  # output: (bsz, seq_len, n_heads, head_dim)
-                state = torch.cat((
-                    state[:, :, :self.num_heads // 2], state[:, :, self.num_heads // 2:].roll(-groupsz // 2, dims=1)
-                ), dim=2)
-                return state.reshape(bsz * num_groups, groupsz, self.num_heads, self.head_dim).transpose(1, 2)
-
-            query_states, key_states, value_states = shift(query_states), shift(key_states), shift(value_states)
-            if attention_mask is not None:
-                attention_mask = attention_mask[:, :, :groupsz, :groupsz].repeat(num_groups, 1, 1, 1)
-
-        attn_weights = torch.matmul(query_states, key_states.transpose(2, 3)) / math.sqrt(self.head_dim)
-
-        if attention_mask is not None:
-            attn_weights = attn_weights + attention_mask
-
-        # upcast attention to fp32
-        attn_weights = nn.functional.softmax(attn_weights, dim=-1, dtype=torch.float32).to(query_states.dtype)
-        attn_output = torch.matmul(attn_weights, value_states)  # (bsz, :, seq_len, :) or (bsz*n_group, :, groupsz, :)
-        attn_output = attn_output.transpose(1, 2).contiguous()
-
-        if getattr(self.config, "group_size_ratio", None) and self.training:  # shift back
-            groupsz = int(q_len * getattr(self.config, "group_size_ratio"))
-            attn_output.reshape(bsz, q_len, self.num_heads, self.head_dim)
-            attn_output = torch.cat((
-                attn_output[:, :, :self.num_heads // 2],
-                attn_output[:, :, self.num_heads // 2:].roll(groupsz // 2, dims=1)
-            ))
-
-        attn_output = attn_output.reshape(bsz, q_len, self.hidden_size)
-        attn_output = self.o_proj(attn_output)
-
-        if not output_attentions:
-            attn_weights = None
-
-        return attn_output, attn_weights, past_key_value
-
-
-class LlamaFlashAttention2(LlamaAttention):
-
-    def forward(
-            self,
-            hidden_states: torch.Tensor,
-            attention_mask: Optional[torch.Tensor] = None,
-            position_ids: Optional[torch.LongTensor] = None,
-            past_key_value: Optional[Tuple[torch.Tensor]] = None,
-            output_attentions: bool = False,
-            use_cache: bool = False,
-            **kwargs
-    ) -> Tuple[torch.Tensor, Optional[torch.Tensor], Optional[Tuple[torch.Tensor]]]:
-        # LlamaFlashAttention2 attention does not support output_attentions
-        output_attentions = False
-
-        bsz, q_len, _ = hidden_states.size()
-
-        query_states = self.q_proj(hidden_states)
-        key_states = self.k_proj(hidden_states)
-        value_states = self.v_proj(hidden_states)
-
-        # FlashAttention requires the input to have the shape (bsz, seq_len, n_heads, head_dim)
-        query_states = query_states.view(bsz, q_len, self.num_heads, self.head_dim).transpose(1, 2)
-        key_states = key_states.view(bsz, q_len, self.num_key_value_heads, self.head_dim).transpose(1, 2)
-        value_states = value_states.view(bsz, q_len, self.num_key_value_heads, self.head_dim).transpose(1, 2)
-
-        kv_seq_len = key_states.shape[-2]
-        if past_key_value is not None:
-            kv_seq_len += past_key_value[0].shape[-2]
-
-        cos, sin = self.rotary_emb(value_states, seq_len=kv_seq_len)
-        query_states, key_states = apply_rotary_pos_emb(query_states, key_states, cos, sin, position_ids)
-
-        if past_key_value is not None:  # reuse k, v, self_attention
-            key_states = torch.cat([past_key_value[0], key_states], dim=2)
-            value_states = torch.cat([past_key_value[1], value_states], dim=2)
-
-        past_key_value = (key_states, value_states) if use_cache else None
-
-        # cast to half precision
-        input_dtype = query_states.dtype
-        if input_dtype == torch.float32:
-            logger.warning("The input hidden states seems to be silently casted in float32.")
-            query_states = query_states.to(self.config.torch_dtype)
-            key_states = key_states.to(self.config.torch_dtype)
-            value_states = value_states.to(self.config.torch_dtype)
-
-        if getattr(self, "num_key_value_groups", None):
-            key_states = repeat_kv(key_states, self.num_key_value_groups)
-            value_states = repeat_kv(value_states, self.num_key_value_groups)
-
-        query_states = query_states.transpose(1, 2)  # (bsz, seq_len, n_heads, head_dim)
-        key_states = key_states.transpose(1, 2)  # (bsz, seq_len, n_heads, head_dim)
-        value_states = value_states.transpose(1, 2)  # (bsz, seq_len, n_heads, head_dim)
-
-        if getattr(self.config, "group_size_ratio", None) and self.training:  # shift
-            groupsz = int(q_len * getattr(self.config, "group_size_ratio"))
-            assert q_len % groupsz == 0, "q_len {} should be divisible by group size {}.".format(q_len, groupsz)
-            num_groups = q_len // groupsz
-
-            def shift(state: torch.Tensor) -> torch.Tensor:
-                state = torch.cat((
-                    state[:, :, :self.num_heads // 2], state[:, :, self.num_heads // 2:].roll(-groupsz // 2, dims=1)
-                ), dim=2)
-                return state.reshape(bsz * num_groups, groupsz, self.num_heads, self.head_dim)
-
-            query_states, key_states, value_states = shift(query_states), shift(key_states), shift(value_states)
-            if attention_mask is not None:
-                attention_mask = attention_mask.reshape(bsz * num_groups, groupsz)
-
-        if attention_mask is not None:
-            logger.warning("Padded sequences are less efficient in FlashAttention.")
-            # -q_len: assumes left padding when q_len != kv_len
-            unpadded_q, indices_q, cu_seqlens_q, max_seqlen_q = unpad_input(query_states, attention_mask[:, -q_len:])
-            unpadded_k, _, cu_seqlens_k, max_seqlen_k = unpad_input(key_states, attention_mask)
-            unpadded_v, _, _, _ = unpad_input(value_states, attention_mask)
-            attn_output_unpad = flash_attn_varlen_func(
-                unpadded_q,
-                unpadded_k,
-                unpadded_v,
-                cu_seqlens_q=cu_seqlens_q,
-                cu_seqlens_k=cu_seqlens_k,
-                max_seqlen_q=max_seqlen_q,
-                max_seqlen_k=max_seqlen_k,
-                dropout_p=0.0,
-                softmax_scale=None,
-                causal=True,
-            )
-            attn_output = pad_input(attn_output_unpad, indices_q, bsz, q_len)
-        else:
-            attn_output = flash_attn_func(
-                query_states, key_states, value_states, 0.0, softmax_scale=None, causal=True
-            )
-
-        if getattr(self.config, "group_size_ratio", None) and self.training:  # shift back
-            groupsz = int(q_len * getattr(self.config, "group_size_ratio"))
-            attn_output.reshape(bsz, q_len, self.num_heads, self.head_dim)
-            attn_output = torch.cat((
-                attn_output[:, :, :self.num_heads // 2],
-                attn_output[:, :, self.num_heads // 2:].roll(groupsz // 2, dims=1)
-            ))
-
-        attn_output = attn_output.reshape(bsz, q_len, self.hidden_size).contiguous()
-        attn_output = self.o_proj(attn_output)
-
-        if not output_attentions:
-            attn_weights = None
-
-        return attn_output, attn_weights, past_key_value
-
-
-# Disable the transformation of the attention mask in LlamaModel as flash attention
-# takes a boolean padding_mask. Fills in the past kv length for use in forward.
-def _prepare_decoder_attention_mask(
-        self,
-        attention_mask: torch.Tensor,
-        input_shape: torch.Tensor,
-        inputs_embeds: torch.Tensor,
-        past_key_values_length: int
-) -> torch.Tensor:
-    if attention_mask is not None and torch.all(attention_mask):
-        return None  # This uses the faster call when training with full samples
-
-    return attention_mask
-
 
 @dataclass
 class Conversation:
@@ -503,7 +302,6 @@ class Conversation:
     def append_message(self, query: str, answer: str):
         """Append a new message."""
         self.messages.append([query, answer])
-
 
 # A global registry for all conversation templates
 conv_templates: Dict[str, Conversation] = {}
@@ -808,91 +606,110 @@ def get_conv_template(name: str) -> Conversation:
     """Get a conversation template."""
     return conv_templates[name]
 
+DataClassType = NewType("DataClassType", Any)
 
-class SavePeftModelTrainer(Trainer):
-    """
-    Trainer for lora models
-    """
+class H4ArgumentParser(HfArgumentParser):
+    def parse_yaml_and_args(self, yaml_arg: str, other_args: Optional[List[str]] = None) -> List[dataclass]:
+        """
+        Parse a YAML file and overwrite the default/loaded values with the values provided to the command line.
 
-    def save_model(self, output_dir=None, _internal_call=False):
-        """Save the LoRA model."""
-        os.makedirs(output_dir, exist_ok=True)
-        torch.save(self.args, os.path.join(output_dir, TRAINING_ARGS_NAME))
-        self.model.save_pretrained(output_dir)
+        Args:
+            yaml_arg (`str`):
+                The path to the config file used
+            other_args (`List[str]`, *optional`):
+                A list of strings to parse as command line arguments, e.g. ['--arg=val', '--arg2=val2'].
 
+        Returns:
+            [`List[dataclass]`]: a list of dataclasses with the values from the YAML file and the command line
+        """
+        arg_list = self.parse_yaml_file(os.path.abspath(yaml_arg))
 
-def save_model(model, tokenizer, args):
-    """Save the model and the tokenizer."""
-    output_dir = args.output_dir
-    os.makedirs(output_dir, exist_ok=True)
+        outputs = []
+        # strip other args list into dict of key-value pairs
+        other_args = {arg.split("=")[0].strip("-"): arg.split("=")[1] for arg in other_args}
+        used_args = {}
 
-    # Take care of distributed/parallel training
-    model_to_save = model.module if hasattr(model, "module") else model
-    model_to_save.save_pretrained(output_dir)
-    tokenizer.save_pretrained(output_dir)
+        # overwrite the default/loaded value with the value provided to the command line
+        # adapted from https://github.com/huggingface/transformers/blob/d0b5002378daabf62769159add3e7d66d3f83c3b/src/transformers/hf_argparser.py#L327
+        for data_yaml, data_class in zip(arg_list, self.dataclass_types):
+            keys = {f.name for f in dataclasses.fields(data_yaml) if f.init}
+            inputs = {k: v for k, v in vars(data_yaml).items() if k in keys}
+            for arg, val in other_args.items():
+                # add only if in keys
+                if arg in keys:
+                    base_type = data_yaml.__dataclass_fields__[arg].type
+                    inputs[arg] = val
 
+                    # cast type for ints, floats (default to strings)
+                    if base_type in [int, float]:
+                        inputs[arg] = base_type(val)
 
-def save_model_zero3(model, tokenizer, args, trainer):
-    """Save the model for deepspeed zero3.
-    refer https://github.com/lm-sys/FastChat/blob/main/fastchat/train/train_lora.py#L209
-    """
-    output_dir = args.output_dir
-    os.makedirs(output_dir, exist_ok=True)
-    state_dict_zero3 = trainer.model_wrapped._zero3_consolidated_16bit_state_dict()
-    model_to_save = model.module if hasattr(model, "module") else model
-    model_to_save.save_pretrained(args.output_dir, state_dict=state_dict_zero3)
-    tokenizer.save_pretrained(output_dir)
+                    if base_type == List[str]:
+                        inputs[arg] = [str(v) for v in val.split(",")]
 
+                    # bool of a non-empty string is True, so we manually check for bools
+                    if base_type == bool:
+                        if val in ["true", "True"]:
+                            inputs[arg] = True
+                        else:
+                            inputs[arg] = False
 
-def print_trainable_parameters(model):
-    """
-    Prints the number of trainable parameters in the model.
-    """
-    trainable_params = 0
-    all_param = 0
-    for _, param in model.named_parameters():
-        all_param += param.numel()
-        if param.requires_grad:
-            trainable_params += param.numel()
-    print(
-        f"trainable params: {trainable_params} || all params: {all_param} || trainable%: {100 * trainable_params / all_param}"
-    )
+                    # add to used-args so we can check if double add
+                    if arg not in used_args:
+                        used_args[arg] = val
+                    else:
+                        raise ValueError(f"Duplicate argument provided: {arg}, may cause unexpected behavior")
 
+            obj = data_class(**inputs)
+            outputs.append(obj)
 
-def find_all_linear_names(peft_model, int4=False, int8=False):
-    """Find all linear layer names in the model. reference from qlora paper."""
-    cls = torch.nn.Linear
-    if int4 or int8:
-        import bitsandbytes as bnb
-        if int4:
-            cls = bnb.nn.Linear4bit
-        elif int8:
-            cls = bnb.nn.Linear8bitLt
-    lora_module_names = set()
-    for name, module in peft_model.named_modules():
-        if isinstance(module, cls):
-            # last layer is not add to lora_module_names
-            if 'lm_head' in name:
-                continue
-            if 'output_layer' in name:
-                continue
-            names = name.split('.')
-            lora_module_names.add(names[0] if len(names) == 1 else names[-1])
-    return sorted(lora_module_names)
+        return outputs
 
+    def parse(self) -> DataClassType | Tuple[DataClassType]:
+        if len(sys.argv) == 2 and sys.argv[1].endswith(".yaml"):
+            # If we pass only one argument to the script and it's the path to a YAML file,
+            # let's parse it to get our arguments.
+            output = self.parse_yaml_file(os.path.abspath(sys.argv[1]))
+        # parse command line args and yaml file
+        elif len(sys.argv) > 2 and sys.argv[1].endswith(".yaml"):
+            output = self.parse_yaml_and_args(os.path.abspath(sys.argv[1]), sys.argv[2:])
+        # parse command line args only
+        else:
+            output = self.parse_args_into_dataclasses()
+
+        if len(output) == 1:
+            output = output[0]
+        return output
+
+logger = logging.getLogger(__name__)
 
 def main():
-    parser = HfArgumentParser((ModelArguments, DataArguments, Seq2SeqTrainingArguments, ScriptArguments))
-    model_args, data_args, training_args, script_args = parser.parse_args_into_dataclasses()
+    parser = H4ArgumentParser((ModelArguments, DataArguments, SFTConfig, ScriptArguments))
+    model_args, data_args, training_args, script_args = parser.parse()
 
-    logger.info(f"Model args: {model_args}")
-    logger.info(f"Data args: {data_args}")
-    logger.info(f"Training args: {training_args}")
-    logger.info(f"Script args: {script_args}")
-    logger.info(
+    ###############
+    # Setup logging
+    ###############
+    logging.basicConfig(
+        format="%(asctime)s - %(levelname)s - %(name)s - %(message)s",
+        datefmt="%Y-%m-%d %H:%M:%S",
+        handlers=[logging.StreamHandler(sys.stdout)],
+    )
+    log_level = training_args.get_process_log_level()
+    logger.setLevel(log_level)
+    datasets.utils.logging.set_verbosity(log_level)
+    transformers.utils.logging.set_verbosity(log_level)
+    transformers.utils.logging.enable_default_handler()
+    transformers.utils.logging.enable_explicit_format()
+
+    # Log on each process a small summary
+    logger.warning(
         f"Process rank: {training_args.local_rank}, device: {training_args.device}, n_gpu: {training_args.n_gpu}"
         + f" distributed training: {bool(training_args.local_rank != -1)}, 16-bits training: {training_args.fp16}"
     )
+    logger.info(f"Model parameters {model_args}")
+    logger.info(f"Data parameters {data_args}")
+    logger.info(f"Training/evaluation parameters {training_args}")
 
     # Set seed before initializing model.
     set_seed(training_args.seed)
@@ -981,7 +798,7 @@ def main():
     logger.info(f"Raw datasets: {raw_datasets}")
 
     # Preprocessing the datasets
-    max_length = script_args.model_max_length
+    max_length = training_args.max_seq_length
 
     def preprocess_function(examples):
         """
@@ -1122,13 +939,13 @@ def main():
         model_args.torch_dtype if model_args.torch_dtype in ["auto", None] else getattr(torch, model_args.torch_dtype)
     )
 
-    # def get_current_device() -> int:
-    #     """Get the current device. For GPU we return the local process index to enable multiple GPU training."""
-    #     return Accelerator().local_process_index if torch.cuda.is_available() else "cpu"
+    def get_current_device() -> int:
+        """Get the current device. For GPU we return the local process index to enable multiple GPU training."""
+        return Accelerator().local_process_index if torch.cuda.is_available() else "cpu"
 
     def get_kbit_device_map() -> Dict[str, int] | None:
         """Useful for running inference with quantized models by setting `device_map=get_peft_device_map()`"""
-        return {"": "cuda:0"} if torch.cuda.is_available() else None
+        return {"": get_current_device()} if torch.cuda.is_available() else None
 
     def get_quantization_config(model_args) -> BitsAndBytesConfig | None:
         if model_args.load_in_4bit:
@@ -1218,6 +1035,25 @@ def main():
     logger.info("*** Save model ***")
     trainer.save_model(training_args.output_dir)
     logger.info(f"Model saved to {training_args.output_dir}")
+
+    # Save everything else on main process
+    if accelerator.is_main_process:
+        kwargs = {
+            "finetuned_from": model_args.model_name_or_path,
+            "dataset": list(data_args.dataset_mixer.keys()),
+            "dataset_tags": list(data_args.dataset_mixer.keys()),
+            "tags": ["alignment-handbook"],
+        }
+        trainer.create_model_card(**kwargs)
+        # Restore k,v cache for fast inference
+        trainer.model.config.use_cache = True
+        trainer.model.config.save_pretrained(training_args.output_dir)
+
+        if training_args.push_to_hub is True:
+            logger.info("Pushing to hub...")
+            trainer.push_to_hub()
+
+    accelerator.wait_for_everyone()
 
 
 if __name__ == "__main__":

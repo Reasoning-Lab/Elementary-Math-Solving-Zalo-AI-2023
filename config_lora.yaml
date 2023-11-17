@@ -1,30 +1,11 @@
+# Model arguments
 model_type: auto
 model_name_or_path: hllj/zephyr-7b-beta-vi-math
-train_file_dir: datasets/finetune
-per_device_train_batch_size: 4
-per_device_eval_batch_size: 4
-do_train: true
-do_eval: true
+device_map: auto
+torch_dtype: float16
+
+# LoRA arguments
 use_peft: true
-fp16: true
-model_max_length: 1024
-num_train_epochs: 1
-learning_rate: 2e-5
-warmup_ratio: 0.05
-weight_decay: 0.05
-logging_strategy: steps
-logging_steps: 10
-eval_steps: 50
-evaluation_strategy: steps
-save_steps: 500
-save_strategy: steps
-save_total_limit: 13
-gradient_accumulation_steps: 1
-preprocessing_num_workers: 4
-output_dir: outputs-sft-zephyr-beta-vi-math-v1
-overwrite_output_dir: true
-ddp_timeout: 30000
-logging_first_step: true
 lora_r: 16
 lora_alpha: 32
 lora_dropout: 0.05
@@ -34,9 +15,40 @@ lora_target_modules:
 - v_proj
 - o_proj
 
-torch_dtype: float16
-device_map: auto
+# Data training arguments
+train_file_dir: datasets/finetune
+preprocessing_num_workers: 4
+
+# SFT arguments
+max_seq_length: 1024
+per_device_train_batch_size: 1
+per_device_eval_batch_size: 1
+do_train: true
+do_eval: true
+use_peft: true
+fp16: true
+learning_rate: 2.0e-05
+log_level: info
+logging_strategy: steps
+lr_scheduler_type: cosine
+max_steps: -1
+num_train_epochs: 1
+warmup_ratio: 0.05
+weight_decay: 0.05
+logging_steps: 10
+eval_steps: 50
+evaluation_strategy: steps
+save_steps: 500
+save_strategy: steps
+save_total_limit: 13
+gradient_accumulation_steps: 1
+output_dir: outputs-sft-zephyr-beta-vi-math-v1
+overwrite_output_dir: true
+ddp_timeout: 30000
+logging_first_step: true
 report_to: tensorboard
 ddp_find_unused_parameters: false
 gradient_checkpointing: true
+gradient_checkpointing_kwargs:
+  use_reentrant: false
 cache_dir: ./cache
