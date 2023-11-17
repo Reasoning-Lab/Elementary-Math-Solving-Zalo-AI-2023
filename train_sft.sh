@@ -34,5 +34,6 @@ python sft.py \
     --device_map auto \
     --report_to tensorboard \
     --ddp_find_unused_parameters False \
-    --gradient_checkpointing False \
+    --gradient_checkpointing True \
+    --gradient_checkpointing_kwargs: use_reentrant: false \
     --cache_dir ./cache
