@@ -27,17 +27,15 @@ def get_user_prompt(example):
     text_choices = "\n".join(choices)
 
     user_prompt = (
-        "<s>[INST] <<SYS>>\n"
-        "{{ Trả lời câu hỏi sau bằng cách đưa ra đáp án chính xác nhất. Đáp án sẽ là một trong các lựa chọn A, B, C, D. Hãy suy nghĩ từng bước một. }}\n"
-        "<</SYS>>\n"
+        "<s>[INST]"
         "{{ "
-        f"### Câu hỏi: {question}\n"
+        f"\n01 Đề bài:\n {question}\n"
         "### Các lựa chọn: \n"
         f"{text_choices}"
         " }}"
         " [/INST]"
         " {{ "
-        "### Giải thích: "
+        "\n02 Bài giải:\n"
     )
     return user_prompt
 
@@ -166,9 +164,15 @@ def main(
         for choice in choices:
             full_answer = choice
             value_only = re.sub("[ABCD]. ", "", full_answer)
-            if full_answer in answer_text or value_only in answer_text:
+            if full_answer in answer_text:
                 answer = choice
                 break
+        if answer is None:
+            for choice in choices:
+                value_only = re.sub("[ABCD]. ", "", full_answer)
+                if value_only in answer_text:
+                    answer = choice
+                    break
         print(f"Answer {answer}")
         if answer is None:
             answer = random.choice(choices)
