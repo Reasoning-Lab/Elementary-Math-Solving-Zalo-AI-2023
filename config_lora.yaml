@@ -1,6 +1,6 @@
 # Model arguments
 model_type: auto
-model_name_or_path: hllj/zephyr-7b-beta-vi-math
+model_name_or_path: HuggingFaceH4/zephyr-7b-beta
 device_map: auto
 torch_dtype: float16
 

@@ -14,7 +14,7 @@ import random
 import pandas as pd
 
 import torch
-from transformers import LlamaTokenizer
+from transformers import LlamaTokenizer, AutoTokenizer
 
 from inference.safety_utils import get_safety_checker
 from inference.model_utils import load_model, load_peft_model
@@ -27,15 +27,10 @@ def get_user_prompt(example):
     text_choices = "\n".join(choices)
 
     user_prompt = (
-        "<s>[INST]"
-        "{{ "
-        f"\n01 Đề bài:\n {question}\n"
-        "### Các lựa chọn: \n"
-        f"{text_choices}"
-        " }}"
-        " [/INST]"
-        " {{ "
-        "\n02 Bài giải:\n"
+        f"### Question: {question}\n"
+        "### Choices: "
+        f"{text_choices}\n"
+        f"### Answer: "
     )
     return user_prompt
 
@@ -92,8 +87,8 @@ def main(
                 "Module 'optimum' not found. Please install 'optimum' it before proceeding."
             )
 
-    tokenizer = LlamaTokenizer.from_pretrained(model_name)
-    tokenizer.pad_token = tokenizer.eos_token
+    tokenizer = AutoTokenizer.from_pretrained(peft_model)
+    # tokenizer.pad_token = tokenizer.eos_token
 
     # safety_checker = get_safety_checker(enable_azure_content_safety,
     #                                     enable_sensitive_topics,
