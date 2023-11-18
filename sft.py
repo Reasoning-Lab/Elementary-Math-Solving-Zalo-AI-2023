@@ -187,7 +187,7 @@ class DataArguments:
         default=False, metadata={"help": "Overwrite the cached training and evaluation sets"}
     )
     validation_split_percentage: Optional[int] = field(
-        default=1,
+        default=10,
         metadata={
             "help": "The percentage of the train set used as validation set in case there's no validation split"
         },
@@ -687,6 +687,8 @@ def main():
     parser = H4ArgumentParser((ModelArguments, DataArguments, SFTConfig, ScriptArguments))
     model_args, data_args, training_args, script_args = parser.parse()
 
+    accelerator = Accelerator()
+    
     ###############
     # Setup logging
     ###############
@@ -824,11 +826,9 @@ def main():
             text_choices = "".join(choices)
 
             prompt = (
-                "<s>[INST] <<SYS>>\n"
-                "{{ Trả lời câu hỏi sau bằng cách đưa ra đáp án chính xác nhất. Đáp án sẽ là một trong các lựa chọn A, B, C, D. Hãy suy nghĩ từng bước một. }}\n"
-                "<</SYS>>\n"
+                "<s>[INST]"
                 "{{ "
-                f"### Câu hỏi: {question}\n"
+                f"\n01 Đề bài:\n {question}\n"
                 "### Các lựa chọn: \n"
                 f"{text_choices}"
                 " }}"
@@ -838,7 +838,7 @@ def main():
             output = " {{ "
 
             if explanation != "":
-                output += f"### Giải thích: {explanation}\n"
+                output += f"\n02 Bài giải:\n {explanation}\n"
             output += f"### Đáp án: {answer}" " }} </s>"
 
             text = prompt + output
@@ -991,7 +991,9 @@ def main():
     )
     logger.info("*** Model loaded! ***")
 
-    # training_args.optim = 'adamw_hf'
+    instruction_template = "\n01 Đề bài:\n"
+    response_template = "\n02 Bài giải:\n"
+    collator = DataCollatorForCompletionOnlyLM(instruction_template=instruction_template, response_template=response_template, tokenizer=tokenizer, mlm=False)
 
     trainer = SFTTrainer(
         model=model_args.model_name_or_path,
@@ -1003,7 +1005,9 @@ def main():
         max_seq_length=max_length,
         tokenizer=tokenizer,
         packing=True,
-        peft_config=get_peft_config(model_args)
+        peft_config=get_peft_config(model_args),
+        neftune_noise_alpha=5,
+        data_collator=collator,
     )
 
     ###############
@@ -1040,9 +1044,9 @@ def main():
     if accelerator.is_main_process:
         kwargs = {
             "finetuned_from": model_args.model_name_or_path,
-            "dataset": list(data_args.dataset_mixer.keys()),
-            "dataset_tags": list(data_args.dataset_mixer.keys()),
-            "tags": ["alignment-handbook"],
+            "dataset": list(data_args.train_file_dir),
+            "dataset_tags": list(data_args.train_file_dir),
+            "tags": ["zalo-math-dataset"],
         }
         trainer.create_model_card(**kwargs)
         # Restore k,v cache for fast inference

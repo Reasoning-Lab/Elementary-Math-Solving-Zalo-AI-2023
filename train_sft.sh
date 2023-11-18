@@ -2,8 +2,8 @@ python sft.py \
     --model_type auto \
     --model_name_or_path hllj/zephyr-7b-beta-vi-math \
     --train_file_dir datasets/finetune \
-    --per_device_train_batch_size 1 \
-    --per_device_eval_batch_size 1 \
+    --per_device_train_batch_size 4 \
+    --per_device_eval_batch_size 4 \
     --do_train \
     --do_eval \
     --use_peft True \
