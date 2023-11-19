@@ -14,7 +14,7 @@ import random
 import pandas as pd
 
 import torch
-from transformers import LlamaTokenizer
+from transformers import LlamaTokenizer, AutoTokenizer
 
 from inference.safety_utils import get_safety_checker
 from inference.model_utils import load_model, load_peft_model
@@ -27,17 +27,10 @@ def get_user_prompt(example):
     text_choices = "\n".join(choices)
 
     user_prompt = (
-        "<s>[INST] <<SYS>>\n"
-        "{{ Trả lời câu hỏi sau bằng cách đưa ra đáp án chính xác nhất. Đáp án sẽ là một trong các lựa chọn A, B, C, D. Hãy suy nghĩ từng bước một. }}\n"
-        "<</SYS>>\n"
-        "{{ "
-        f"### Câu hỏi: {question}\n"
-        "### Các lựa chọn: \n"
-        f"{text_choices}"
-        " }}"
-        " [/INST]"
-        " {{ "
-        "### Giải thích: "
+        f"### Question: {question}\n"
+        "### Choices: "
+        f"{text_choices}\n"
+        f"### Answer: "
     )
     return user_prompt
 
@@ -94,8 +87,8 @@ def main(
                 "Module 'optimum' not found. Please install 'optimum' it before proceeding."
             )
 
-    tokenizer = LlamaTokenizer.from_pretrained(model_name)
-    tokenizer.pad_token = tokenizer.eos_token
+    tokenizer = AutoTokenizer.from_pretrained(peft_model)
+    # tokenizer.pad_token = tokenizer.eos_token
 
     # safety_checker = get_safety_checker(enable_azure_content_safety,
     #                                     enable_sensitive_topics,
@@ -166,9 +159,15 @@ def main(
         for choice in choices:
             full_answer = choice
             value_only = re.sub("[ABCD]. ", "", full_answer)
-            if full_answer in answer_text or value_only in answer_text:
+            if full_answer in answer_text:
                 answer = choice
                 break
+        if answer is None:
+            for choice in choices:
+                value_only = re.sub("[ABCD]. ", "", full_answer)
+                if value_only in answer_text:
+                    answer = choice
+                    break
         print(f"Answer {answer}")
         if answer is None:
             answer = random.choice(choices)
