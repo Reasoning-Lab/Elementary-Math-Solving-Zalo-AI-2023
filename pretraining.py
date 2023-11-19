@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # Copyright 2023 XuMing(xuming624@qq.com) and The HuggingFace Inc. team. All rights reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -28,7 +27,13 @@ import numpy as np
 import torch
 from datasets import load_dataset
 from loguru import logger
-from peft import LoraConfig, TaskType, get_peft_model, PeftModel, prepare_model_for_kbit_training
+from peft import (
+    LoraConfig,
+    TaskType,
+    get_peft_model,
+    PeftModel,
+    prepare_model_for_kbit_training,
+)
 from sklearn.metrics import accuracy_score
 from transformers import (
     AutoConfig,
@@ -71,7 +76,10 @@ class ModelArguments:
 
     model_type: str = field(
         default=None,
-        metadata={"help": "Model type selected in the list: " + ", ".join(MODEL_CLASSES.keys())}
+        metadata={
+            "help": "Model type selected in the list: "
+            + ", ".join(MODEL_CLASSES.keys())
+        },
     )
     model_name_or_path: Optional[str] = field(
         default=None,
@@ -89,15 +97,25 @@ class ModelArguments:
             )
         },
     )
-    load_in_8bit: bool = field(default=False, metadata={"help": "Whether to load the model in 8bit mode or not."})
-    load_in_4bit: bool = field(default=False, metadata={"help": "Whether to load the model in 4bit mode or not."})
+    load_in_8bit: bool = field(
+        default=False,
+        metadata={"help": "Whether to load the model in 8bit mode or not."},
+    )
+    load_in_4bit: bool = field(
+        default=False,
+        metadata={"help": "Whether to load the model in 4bit mode or not."},
+    )
     cache_dir: Optional[str] = field(
         default=None,
-        metadata={"help": "Where do you want to store the pretrained models downloaded from huggingface.co"},
+        metadata={
+            "help": "Where do you want to store the pretrained models downloaded from huggingface.co"
+        },
     )
     use_fast_tokenizer: bool = field(
         default=False,
-        metadata={"help": "Whether to use one of the fast tokenizer (backed by the tokenizers library) or not."},
+        metadata={
+            "help": "Whether to use one of the fast tokenizer (backed by the tokenizers library) or not."
+        },
     )
     torch_dtype: Optional[str] = field(
         default=None,
@@ -111,20 +129,27 @@ class ModelArguments:
     )
     device_map: Optional[str] = field(
         default="auto",
-        metadata={"help": "Device to map model to. If `auto` is passed, the device will be selected automatically. "},
+        metadata={
+            "help": "Device to map model to. If `auto` is passed, the device will be selected automatically. "
+        },
     )
     trust_remote_code: bool = field(
         default=True,
-        metadata={"help": "Whether to trust remote code when loading a model from a remote checkpoint."},
+        metadata={
+            "help": "Whether to trust remote code when loading a model from a remote checkpoint."
+        },
     )
 
     def __post_init__(self):
         if self.model_type is None:
             raise ValueError(
-                "You must specify a valid model_type to run training. Available model types are " + ", ".join(
-                    MODEL_CLASSES.keys()))
+                "You must specify a valid model_type to run training. Available model types are "
+                + ", ".join(MODEL_CLASSES.keys())
+            )
         if self.model_name_or_path is None:
-            raise ValueError("You must specify a valid model_name_or_path to run training.")
+            raise ValueError(
+                "You must specify a valid model_name_or_path to run training."
+            )
 
 
 @dataclass
@@ -134,15 +159,23 @@ class DataArguments:
     """
 
     dataset_name: Optional[str] = field(
-        default=None, metadata={"help": "The name of the dataset to use (via the datasets library)."}
+        default=None,
+        metadata={"help": "The name of the dataset to use (via the datasets library)."},
     )
     dataset_config_name: Optional[str] = field(
-        default=None, metadata={"help": "The configuration name of the dataset to use (via the datasets library)."}
+        default=None,
+        metadata={
+            "help": "The configuration name of the dataset to use (via the datasets library)."
+        },
     )
-    train_file_dir: Optional[str] = field(default=None, metadata={"help": "The train text data file folder."})
+    train_file_dir: Optional[str] = field(
+        default=None, metadata={"help": "The train text data file folder."}
+    )
     validation_file_dir: Optional[str] = field(
         default=None,
-        metadata={"help": "An optional input evaluation data file to evaluate the perplexity on text file folder."},
+        metadata={
+            "help": "An optional input evaluation data file to evaluate the perplexity on text file folder."
+        },
     )
     max_train_samples: Optional[int] = field(
         default=None,
@@ -174,7 +207,8 @@ class DataArguments:
         },
     )
     overwrite_cache: bool = field(
-        default=False, metadata={"help": "Overwrite the cached training and evaluation sets"}
+        default=False,
+        metadata={"help": "Overwrite the cached training and evaluation sets"},
     )
     validation_split_percentage: Optional[int] = field(
         default=1,
@@ -187,12 +221,15 @@ class DataArguments:
         metadata={"help": "The number of processes to use for the preprocessing."},
     )
     keep_linebreaks: bool = field(
-        default=True, metadata={"help": "Whether to keep line breaks when using TXT files or not."}
+        default=True,
+        metadata={"help": "Whether to keep line breaks when using TXT files or not."},
     )
 
     def __post_init__(self):
         if self.streaming:
-            require_version("datasets>=2.0.0", "The streaming feature requires `datasets>=2.0.0`")
+            require_version(
+                "datasets>=2.0.0", "The streaming feature requires `datasets>=2.0.0`"
+            )
 
 
 @dataclass
@@ -209,7 +246,14 @@ class ScriptArguments:
 
 def accuracy(predictions, references, normalize=True, sample_weight=None):
     return {
-        "accuracy": float(accuracy_score(references, predictions, normalize=normalize, sample_weight=sample_weight))
+        "accuracy": float(
+            accuracy_score(
+                references,
+                predictions,
+                normalize=normalize,
+                sample_weight=sample_weight,
+            )
+        )
     }
 
 
@@ -239,7 +283,11 @@ def fault_tolerance_data_collator(features: List) -> Dict[str, Any]:
     # Special handling for labels.
     # Ensure that tensor is created with the correct type
     if "label" in first and first["label"] is not None:
-        label = first["label"].item() if isinstance(first["label"], torch.Tensor) else first["label"]
+        label = (
+            first["label"].item()
+            if isinstance(first["label"], torch.Tensor)
+            else first["label"]
+        )
         dtype = torch.long if isinstance(label, int) else torch.float
         batch["labels"] = torch.tensor([f["label"] for f in features], dtype=dtype)
     elif "label_ids" in first and first["label_ids"] is not None:
@@ -247,13 +295,19 @@ def fault_tolerance_data_collator(features: List) -> Dict[str, Any]:
             batch["labels"] = torch.stack([f["label_ids"] for f in features])
         else:
             dtype = torch.long if type(first["label_ids"][0]) is int else torch.float
-            batch["labels"] = torch.tensor([f["label_ids"] for f in features], dtype=dtype)
+            batch["labels"] = torch.tensor(
+                [f["label_ids"] for f in features], dtype=dtype
+            )
 
     # Handling of all other possible keys.
     # Again, we will use the first element to figure out which key/values are not None for this model.
     try:
         for k, v in first.items():
-            if k not in ("label", "label_ids") and v is not None and not isinstance(v, str):
+            if (
+                k not in ("label", "label_ids")
+                and v is not None
+                and not isinstance(v, str)
+            ):
                 if isinstance(v, torch.Tensor):
                     batch[k] = torch.stack([f[k] for f in features])
                 elif isinstance(v, np.ndarray):
@@ -262,7 +316,11 @@ def fault_tolerance_data_collator(features: List) -> Dict[str, Any]:
                     batch[k] = torch.tensor([f[k] for f in features])
     except ValueError:  # quick fix by simply take the first example
         for k, v in first.items():
-            if k not in ("label", "label_ids") and v is not None and not isinstance(v, str):
+            if (
+                k not in ("label", "label_ids")
+                and v is not None
+                and not isinstance(v, str)
+            ):
                 if isinstance(v, torch.Tensor):
                     batch[k] = torch.stack([features[0][k]] * len(features))
                 elif isinstance(v, np.ndarray):
@@ -289,8 +347,12 @@ class GroupTextsBuilder:
             total_length = (total_length // content_length) * content_length
         # Split by chunks of max_len.
         result = {
-            k: [[firsts[k]] + t[i: i + content_length] + [lasts[k]] for i in range(0, total_length, content_length)] for
-            k, t in contents.items()}
+            k: [
+                [firsts[k]] + t[i : i + content_length] + [lasts[k]]
+                for i in range(0, total_length, content_length)
+            ]
+            for k, t in contents.items()
+        }
         return result
 
 
@@ -349,6 +411,7 @@ def find_all_linear_names(peft_model, int4=False, int8=False):
     cls = torch.nn.Linear
     if int4 or int8:
         import bitsandbytes as bnb
+
         if int4:
             cls = bnb.nn.Linear4bit
         elif int8:
@@ -357,18 +420,25 @@ def find_all_linear_names(peft_model, int4=False, int8=False):
     for name, module in peft_model.named_modules():
         if isinstance(module, cls):
             # last layer is not add to lora_module_names
-            if 'lm_head' in name:
+            if "lm_head" in name:
                 continue
-            if 'output_layer' in name:
+            if "output_layer" in name:
                 continue
-            names = name.split('.')
+            names = name.split(".")
             lora_module_names.add(names[0] if len(names) == 1 else names[-1])
     return sorted(lora_module_names)
 
 
 def main():
-    parser = HfArgumentParser((ModelArguments, DataArguments, Seq2SeqTrainingArguments, ScriptArguments))
-    model_args, data_args, training_args, script_args = parser.parse_args_into_dataclasses()
+    parser = HfArgumentParser(
+        (ModelArguments, DataArguments, Seq2SeqTrainingArguments, ScriptArguments)
+    )
+    (
+        model_args,
+        data_args,
+        training_args,
+        script_args,
+    ) = parser.parse_args_into_dataclasses()
 
     logger.info(f"Model args: {model_args}")
     logger.info(f"Data args: {data_args}")
@@ -393,7 +463,9 @@ def main():
     tokenizer_name_or_path = model_args.tokenizer_name_or_path
     if not tokenizer_name_or_path:
         tokenizer_name_or_path = model_args.model_name_or_path
-    tokenizer = tokenizer_class.from_pretrained(tokenizer_name_or_path, **tokenizer_kwargs)
+    tokenizer = tokenizer_class.from_pretrained(
+        tokenizer_name_or_path, **tokenizer_kwargs
+    )
 
     # Preprocessing the datasets.
     def tokenize_function(examples):
@@ -426,7 +498,7 @@ def main():
             total_length = (total_length // block_size) * block_size
         # Split by chunks of max_len.
         result = {
-            k: [t[i: i + block_size] for i in range(0, total_length, block_size)]
+            k: [t[i : i + block_size] for i in range(0, total_length, block_size)]
             for k, t in concatenated_examples.items()
         }
         result["labels"] = result["input_ids"].copy()
@@ -467,27 +539,39 @@ def main():
     else:
         data_files = {}
         dataset_args = {}
-        if data_args.train_file_dir is not None and os.path.exists(data_args.train_file_dir):
-            train_data_files = glob(f'{data_args.train_file_dir}/**/*.txt', recursive=True) + glob(
-                f'{data_args.train_file_dir}/**/*.json', recursive=True) + glob(
-                f'{data_args.train_file_dir}/**/*.jsonl', recursive=True)
+        if data_args.train_file_dir is not None and os.path.exists(
+            data_args.train_file_dir
+        ):
+            train_data_files = (
+                glob(f"{data_args.train_file_dir}/**/*.txt", recursive=True)
+                + glob(f"{data_args.train_file_dir}/**/*.json", recursive=True)
+                + glob(f"{data_args.train_file_dir}/**/*.jsonl", recursive=True)
+            )
             logger.info(f"train files: {train_data_files}")
             # Train data files must be same type, e.g. all txt or all jsonl
-            types = [f.split('.')[-1] for f in train_data_files]
+            types = [f.split(".")[-1] for f in train_data_files]
             if len(set(types)) > 1:
-                raise ValueError(f"train files must be same type, e.g. all txt or all jsonl, but got {types}")
+                raise ValueError(
+                    f"train files must be same type, e.g. all txt or all jsonl, but got {types}"
+                )
             data_files["train"] = train_data_files
-        if data_args.validation_file_dir is not None and os.path.exists(data_args.validation_file_dir):
-            eval_data_files = glob(f'{data_args.validation_file_dir}/**/*.txt', recursive=True) + glob(
-                f'{data_args.validation_file_dir}/**/*.json', recursive=True) + glob(
-                f'{data_args.validation_file_dir}/**/*.jsonl', recursive=True)
+        if data_args.validation_file_dir is not None and os.path.exists(
+            data_args.validation_file_dir
+        ):
+            eval_data_files = (
+                glob(f"{data_args.validation_file_dir}/**/*.txt", recursive=True)
+                + glob(f"{data_args.validation_file_dir}/**/*.json", recursive=True)
+                + glob(f"{data_args.validation_file_dir}/**/*.jsonl", recursive=True)
+            )
             logger.info(f"eval files: {eval_data_files}")
             data_files["validation"] = eval_data_files
             # Train data files must be same type, e.g. all txt or all jsonl
-            types = [f.split('.')[-1] for f in eval_data_files]
+            types = [f.split(".")[-1] for f in eval_data_files]
             if len(set(types)) > 1:
-                raise ValueError(f"train files must be same type, e.g. all txt or all jsonl, but got {types}")
-        extension = "text" if data_files["train"][0].endswith('txt') else 'json'
+                raise ValueError(
+                    f"train files must be same type, e.g. all txt or all jsonl, but got {types}"
+                )
+        extension = "text" if data_files["train"][0].endswith("txt") else "json"
         if extension == "text":
             dataset_args["keep_linebreaks"] = data_args.keep_linebreaks
         raw_datasets = load_dataset(
@@ -554,14 +638,14 @@ def main():
     if training_args.do_train:
         if "train" not in tokenized_datasets:
             raise ValueError("--do_train requires a train dataset")
-        train_dataset = lm_datasets['train']
+        train_dataset = lm_datasets["train"]
         max_train_samples = len(train_dataset)
         if data_args.max_train_samples is not None and data_args.max_train_samples > 0:
             max_train_samples = min(len(train_dataset), data_args.max_train_samples)
             train_dataset = train_dataset.select(range(max_train_samples))
         logger.debug(f"Num train_samples: {len(train_dataset)}")
         logger.debug("Tokenized training example:")
-        logger.debug(tokenizer.decode(train_dataset[0]['input_ids']))
+        logger.debug(tokenizer.decode(train_dataset[0]["input_ids"]))
 
     eval_dataset = None
     max_eval_samples = 0
@@ -575,7 +659,7 @@ def main():
             eval_dataset = eval_dataset.select(range(max_eval_samples))
         logger.debug(f"Num eval_samples: {len(eval_dataset)}")
         logger.debug("Tokenized eval example:")
-        logger.debug(tokenizer.decode(eval_dataset[0]['input_ids']))
+        logger.debug(tokenizer.decode(eval_dataset[0]["input_ids"]))
 
     # Load model
     if model_args.model_type and model_args.model_name_or_path:
@@ -588,22 +672,26 @@ def main():
         ddp = world_size != 1
         if ddp:
             model_args.device_map = {"": int(os.environ.get("LOCAL_RANK", "0"))}
-        if script_args.qlora and (len(training_args.fsdp) > 0 or is_deepspeed_zero3_enabled()):
+        if script_args.qlora and (
+            len(training_args.fsdp) > 0 or is_deepspeed_zero3_enabled()
+        ):
             logger.warning("FSDP and ZeRO3 are both currently incompatible with QLoRA.")
 
         config = config_class.from_pretrained(
             model_args.model_name_or_path,
             torch_dtype=torch_dtype,
             trust_remote_code=model_args.trust_remote_code,
-            cache_dir=model_args.cache_dir
+            cache_dir=model_args.cache_dir,
         )
         load_in_4bit = model_args.load_in_4bit
         load_in_8bit = model_args.load_in_8bit
         load_in_8bit_skip_modules = None
         if load_in_8bit or load_in_4bit:
-            logger.info(f"Quantizing model, load_in_4bit: {load_in_4bit}, load_in_8bit: {load_in_8bit}")
+            logger.info(
+                f"Quantizing model, load_in_4bit: {load_in_4bit}, load_in_8bit: {load_in_8bit}"
+            )
             if script_args.modules_to_save is not None:
-                load_in_8bit_skip_modules = script_args.modules_to_save.split(',')
+                load_in_8bit_skip_modules = script_args.modules_to_save.split(",")
         model = model_class.from_pretrained(
             model_args.model_name_or_path,
             config=config,
@@ -620,26 +708,40 @@ def main():
                 bnb_4bit_use_double_quant=True,
                 bnb_4bit_quant_type="nf4",
                 bnb_4bit_compute_dtype=torch_dtype,
-            ) if script_args.qlora else None,
+            )
+            if script_args.qlora
+            else None,
         )
     else:
-        raise ValueError(f"Error, model_name_or_path is None, Continue PT must be loaded from a pre-trained model")
+        raise ValueError(
+            f"Error, model_name_or_path is None, Continue PT must be loaded from a pre-trained model"
+        )
 
     if script_args.use_peft:
         logger.info("Fine-tuning method: LoRA(PEFT)")
         if script_args.peft_path is not None:
             logger.info(f"Peft from pre-trained model: {script_args.peft_path}")
-            model = PeftModel.from_pretrained(model, script_args.peft_path, is_trainable=True)
+            model = PeftModel.from_pretrained(
+                model, script_args.peft_path, is_trainable=True
+            )
         else:
             logger.info("Init new peft model")
             if load_in_8bit or load_in_4bit:
-                model = prepare_model_for_kbit_training(model, training_args.gradient_checkpointing)
-            target_modules = script_args.target_modules.split(',') if script_args.target_modules else None
-            if target_modules and 'all' in target_modules:
-                target_modules = find_all_linear_names(model, int4=load_in_4bit, int8=load_in_8bit)
+                model = prepare_model_for_kbit_training(
+                    model, training_args.gradient_checkpointing
+                )
+            target_modules = (
+                script_args.target_modules.split(",")
+                if script_args.target_modules
+                else None
+            )
+            if target_modules and "all" in target_modules:
+                target_modules = find_all_linear_names(
+                    model, int4=load_in_4bit, int8=load_in_8bit
+                )
             modules_to_save = script_args.modules_to_save
             if modules_to_save is not None:
-                modules_to_save = modules_to_save.split(',')
+                modules_to_save = modules_to_save.split(",")
                 # Resize the embedding layer to match the new tokenizer
                 embedding_size = model.get_input_embeddings().weight.shape[0]
                 if len(tokenizer) > embedding_size:
@@ -653,7 +755,8 @@ def main():
                 r=script_args.lora_rank,
                 lora_alpha=script_args.lora_alpha,
                 lora_dropout=script_args.lora_dropout,
-                modules_to_save=modules_to_save)
+                modules_to_save=modules_to_save,
+            )
             model = get_peft_model(model, peft_config)
         model.print_trainable_parameters()
     else:
@@ -680,7 +783,9 @@ def main():
         eval_dataset=eval_dataset if training_args.do_eval else None,
         tokenizer=tokenizer,
         data_collator=fault_tolerance_data_collator,
-        compute_metrics=compute_metrics if training_args.do_eval and not is_torch_tpu_available() else None,
+        compute_metrics=compute_metrics
+        if training_args.do_eval and not is_torch_tpu_available()
+        else None,
         preprocess_logits_for_metrics=preprocess_logits_for_metrics
         if training_args.do_eval and not is_torch_tpu_available()
         else None,
@@ -689,7 +794,9 @@ def main():
     # Training
     if training_args.do_train:
         logger.info("*** Train ***")
-        logger.debug(f"Train dataloader example: {next(iter(trainer.get_train_dataloader()))}")
+        logger.debug(
+            f"Train dataloader example: {next(iter(trainer.get_train_dataloader()))}"
+        )
         checkpoint = None
         if training_args.resume_from_checkpoint is not None:
             checkpoint = training_args.resume_from_checkpoint
