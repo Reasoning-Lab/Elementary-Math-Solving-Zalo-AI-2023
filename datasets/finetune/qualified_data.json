@@ -1269,7 +1269,7 @@
         {
             "id": "162",
             "question": "50% của 149kg là:",
-            "choices": "['A. 74,4kg', 'B. 75,4kg', 'C. 75,5kg', 'D. 74,5kg']", 
+            "choices": "['A. 74,4kg', 'B. 75,4kg', 'C. 75,5kg', 'D. 74,5kg']",
             "explanation": "50% của 149kg là: 149 ${\\times}$ 50 : 100 = 74,5 (kg).",
             "answer": "D. 74,5kg",
             "choices_str": "['A. 74,4kg', 'B. 75,4kg', 'C. 75,5kg', 'D. 74,5kg']"
@@ -2122,7 +2122,7 @@
             "explanation": "Đáp án đúng là Một trăm năm mươi xăng ti mét vuông. \n\nLý do là vì 150cm2 là một đơn vị diện tích, nên cần phải được đọc là \"một trăm năm mươi xăng ti mét vuông\", không phải là \"một trăm năm mươi xăng ti mét\" vì \"mét\" là đơn vị đo chiều dài, không phải diện tích. \n\nĐồng thời, \"một trăm năm chục xăng ti mét vuông\" cũng không đúng vì \"năm chục\" không phải là cách đọc đúng của số 50. \n\nVậy nên, đáp án đúng là Một trăm năm mươi xăng ti mét vuông.",
             "answer": "B. Một trăm năm mươi xăng ti mét vuông",
             "choices_str": "['A. Một trăm năm mươi', 'B. Một trăm năm mươi xăng ti mét vuông', 'C. Một trăm năm mươi xăng ti mét', 'D. Một trăm năm chục xăng ti mét vuông']"
-        },     
+        },
         {
             "id": "272",
             "question": "Cách viết tập hợp nào sau đây là đúng?",
