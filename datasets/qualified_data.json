@@ -3647,8 +3647,8 @@
             "id": "464",
             "question": "Đổi 2,15 giờ ra phút được:",
             "choices": "['A. 130 phút', 'B. 134 phút', 'C. 125 phút', 'D. 135 phút']",
-            "explanation": "Để tính số ngày mà gia đình Mai đi du lịch, ta cần xác định số ngày từ ngày 29 tháng 7 đến hết ngày 5 tháng 8 trong cùng một năm.\n\n- Số ngày còn lại trong tháng 7 từ ngày 29 đến hết tháng 7 (31 ngày) là \\( 31 - 29 + 1 = 3 \\) ngày (bao gồm cả ngày 29 và 31).\n- Số ngày từ đầu tháng 8 đến ngày 5 tháng 8 là 5 ngày.\n\nVậy tổng số ngày du lịch của gia đình Mai là \\( 3 + 5 = 8 \\) ngày.",
-            "answer": "D. 135 phút",
+            "explanation": "Để chuyển đổi từ giờ sang phút, chúng ta nhân số giờ với 60 (vì mỗi giờ có 60 phút). Đối với 2,15 giờ, chúng ta cần lưu ý rằng phần thập phân (0,15 giờ) cần được chuyển đổi riêng biệt:\n\n- 2 giờ chuyển đổi sang phút là: \\( 2 \times 60 \\) phút = 120 phút.\n- 0,15 giờ chuyển đổi sang phút là: \\( 0,15 \times 60 \\) phút = 9 phút.\n\nSau khi tính toán cả hai phần, cộng kết quả lại để được tổng số phút. 120 + 9 = 129 phút.\n\n2.15 giờ tương đương với 129 phút.",
+            "answer": "D. 129 phút",
             "choices_str": "['A. 130 phút', 'B. 134 phút', 'C. 125 phút', 'D. 135 phút']"
         },
         {
@@ -3830,22 +3830,22 @@
         {
             "id": "487",
             "question": "Giá tiền của một cái ba lô cỡ nhỏ là 120 500 đồng, ba lô cỡ lớn có giá đắt hơn cỡ nhỏ là 24500 đồng. Ba lô cỡ lớn có giá tiền là:",
-            "choices": "['A. 145 000 đồng', 'B. 140 000 đồng', 'C. 145 000', 'D. 140 00']",
+            "choices": "['A. 145000 đồng', 'B. 140000 đồng', 'C. 145000', 'D. 14000']",
             "explanation": "Đầu tiên, chúng ta cần hiểu rõ câu hỏi đang yêu cầu gì. Câu hỏi đang hỏi về giá tiền của một cái ba lô cỡ lớn. Theo thông tin đã cho, chúng ta biết rằng ba lô cỡ lớn có giá đắt hơn cỡ nhỏ là 24500 đồng. \n\nĐể tìm ra giá tiền của ba lô cỡ lớn, chúng ta cần thực hiện các bước sau:\n\nBước 1: Xác định giá tiền của ba lô cỡ nhỏ. Theo thông tin đã cho, giá tiền của ba lô cỡ nhỏ là 120500 đồng.\n\nBước 2: Cộng giá tiền của ba lô cỡ nhỏ với số tiền mà ba lô cỡ lớn đắt hơn. Theo thông tin đã cho, ba lô cỡ lớn đắt hơn 24500 đồng so với cỡ nhỏ. Vậy, chúng ta cần cộng 120500 đồng với 24500 đồng.\n\nBước 3: Thực hiện phép cộng. Khi cộng 120500 đồng với 24500 đồng, chúng ta được 145000 đồng.\n\nVậy, giá tiền của ba lô cỡ lớn là 145000 đồng. Đáp án chính xác là 145 000 đồng.",
-            "answer": "A. 145 000 đồng",
-            "choices_str": "['A. 145 000 đồng', 'B. 140 000 đồng', 'C. 145 000', 'D. 140 00']"
+            "answer": "A. 145000 đồng",
+            "choices_str": "['A. 145000 đồng', 'B. 140000 đồng', 'C. 145000', 'D. 14000']"
         },
         {
             "id": "488",
-            "question": "Giá tiền của một số đồ dùng như sau:\n Bút máy 21 000 đồng\n Vở ô li 8 500 đồng\n Cặp sách 78 000 đồng\n Bộ thước ê-ke 12 000 đồng\n Nga có 100 000 đồng thì có thể mua những món đồ nào để số tiền phải trả là lớn nhất?",
+            "question": "Giá tiền của một số đồ dùng như sau:\n Bút máy 21000 đồng\n Vở ô li 8500 đồng\n Cặp sách 78000 đồng\n Bộ thước ê-ke 12000 đồng\n Nga có 100000 đồng thì có thể mua những món đồ nào để số tiền phải trả là lớn nhất?",
             "choices": "['A. Bút máy, vở ô li', 'B. Bút máy, cặp sách', 'C. Cặp sách, bộ ê-ke', 'D. Bộ ê-ke , bút máy']",
-            "explanation": "Để giải quyết câu hỏi này, chúng ta cần xác định tổng giá trị của mỗi cặp mặt hàng và so sánh chúng để xem cặp nào có giá trị lớn nhất mà Nga có thể mua với số tiền của mình.\n\nBút máy, vở ô li: 21 000 đồng + 8 500 đồng = 29 500 đồng\nBút máy, cặp sách: 21 000 đồng + 78 000 đồng = 99 000 đồng\nCặp sách, bộ ê-ke: 78 000 đồng + 12 000 đồng = 90 000 đồng\nBộ ê-ke , bút máy: 12 000 đồng + 21 000 đồng = 33 000 đồng\n\nNhư vậy, cặp mặt hàng có giá trị lớn nhất mà Nga có thể mua là Bút máy và Cặp sách với tổng giá trị là 99 000 đồng, vẫn nhỏ hơn số tiền Nga có là 100 000 đồng. Do đó, câu trả lời là Bút máy, cặp sách.",
+            "explanation": "Để giải quyết câu hỏi này, chúng ta cần xác định tổng giá trị của mỗi cặp mặt hàng và so sánh chúng để xem cặp nào có giá trị lớn nhất mà Nga có thể mua với số tiền của mình.\n\nBút máy, vở ô li: 21000 đồng + 8500 đồng = 29500 đồng\nBút máy, cặp sách: 21000 đồng + 78000 đồng = 99000 đồng\nCặp sách, bộ ê-ke: 78000 đồng + 12000 đồng = 90000 đồng\nBộ ê-ke , bút máy: 12000 đồng + 21000 đồng = 33000 đồng\n\nNhư vậy, cặp mặt hàng có giá trị lớn nhất mà Nga có thể mua là Bút máy và Cặp sách với tổng giá trị là 99000 đồng, vẫn nhỏ hơn số tiền Nga có là 100000 đồng. Do đó, câu trả lời là Bút máy, cặp sách.",
             "answer": "B. Bút máy, cặp sách",
             "choices_str": "['A. Bút máy, vở ô li', 'B. Bút máy, cặp sách', 'C. Cặp sách, bộ ê-ke', 'D. Bộ ê-ke , bút máy']"
         },
         {
             "id": "489",
-            "question": "Giá trị biểu thức ( 95 + 5) – 67 là:",
+            "question": "Giá trị biểu thức (95 + 5) – 67 là:",
             "choices": "['A. 36', 'B. 10', 'C. 33', 'D. 43']",
             "explanation": "Đầu tiên, chúng ta cần thực hiện phép cộng trong dấu ngoặc trước. Đó là 95 + 5. Kết quả của phép cộng này là 100.\n\nSau đó, chúng ta sẽ thực hiện phép trừ. Đó là 100 - 67. Kết quả của phép trừ này là 33.\n\nVậy, giá trị của biểu thức (95 + 5) – 67 là 33. Do đó, đáp án chính xác là 33.",
             "answer": "C. 33",
@@ -3869,11 +3869,11 @@
         },
         {
             "id": "492",
-            "question": "Giá trị chữ số 4 trong số 240 853 là:",
-            "choices": "['A. 4', 'B. 40', 'C. 40853', 'D. 40 000']",
-            "explanation": "Giá trị chữ số 4 trong số 240 853 là: 40 000",
-            "answer": "D. 40 000",
-            "choices_str": "['A. 4', 'B. 40', 'C. 40853', 'D. 40 000']"
+            "question": "Giá trị chữ số 4 trong số 240853 là:",
+            "choices": "['A. 4', 'B. 40', 'C. 40853', 'D. 40000']",
+            "explanation": "Trong số 240853, chữ số 4 nằm ở hàng chục nghìn. Trong hệ thập phân, giá trị của mỗi vị trí số được xác định dựa trên lũy thừa của 10:\n\n- Hàng đơn vị: \\( 10^0 = 1 \\).\n- Hàng chục: \\( 10^1 = 10 \\).\n- Hàng trăm: \\( 10^2 = 100 \\).\n- Hàng nghìn: \\( 10^3 = 1,000 \\).\n- Hàng chục nghìn: \\( 10^4 = 10,000 \\).\n\nVì vậy, chữ số 4 trong số 240853 có giá trị là \\( 4 \times 10,000 = 40,000 \\).",
+            "answer": "D. 40000",
+            "choices_str": "['A. 4', 'B. 40', 'C. 40853', 'D. 40000']"
         },
         {
             "id": "493",
@@ -3895,7 +3895,7 @@
             "id": "495",
             "question": "Giá trị của biểu thức \\frac{\\left(-4\\right)^2}{5} là:",
             "choices": "['A. \\\\frac{-16}{5}', 'B. \\\\frac{-8}{5}', 'C. \\\\frac{16}{5}', 'D. \\\\frac{16}{25}']",
-            "explanation": "Đầu tiên, ta cần hiểu rõ về thứ tự thực hiện các phép toán trong một biểu thức. Theo quy tắc BODMAS (hay BIDMAS), thứ tự thực hiện các phép toán là: Dấu ngoặc, Phép nhân và chia (từ trái sang phải), Phép cộng và trừ (từ trái sang phải). \n\nTrong biểu thức \\frac{\\left(-4\\right)^2}{5}, ta thấy có dấu ngoặc và phép nhân (bình phương là một dạng của phép nhân). Vì vậy, ta sẽ thực hiện phép toán trong dấu ngoặc trước.\n\n\\left(-4\\right)^2 = -4 * -4 = 16\n\nSau đó, ta thực hiện phép chia:\n\n\\frac{16}{5}\n\nVì vậy, giá trị của biểu thức \\frac{\\left(-4\\right)^2}{5} là \\frac{16}{5}, đáp án là C.",
+            "explanation": "Đầu tiên, ta cần hiểu rõ về thứ tự thực hiện các phép toán trong một biểu thức. Theo quy tắc BODMAS (hay BIDMAS), thứ tự thực hiện các phép toán là: Dấu ngoặc, Phép nhân và chia (từ trái sang phải), Phép cộng và trừ (từ trái sang phải). \n\nTrong biểu thức \\frac{\\left(-4\\right)^2}{5}, ta thấy có dấu ngoặc và phép nhân (bình phương là một dạng của phép nhân). Vì vậy, ta sẽ thực hiện phép toán trong dấu ngoặc trước.\n\n\\left(-4\\right)^2 = -4 * -4 = 16\n\nSau đó, ta thực hiện phép chia:\n\n\\frac{16}{5}\n\nVì vậy, giá trị của biểu thức \\frac{\\left(-4\\right)^2}{5} là \\frac{16}{5}",
             "answer": "C. \\frac{16}{5}",
             "choices_str": "['A. \\\\frac{-16}{5}', 'B. \\\\frac{-8}{5}', 'C. \\\\frac{16}{5}', 'D. \\\\frac{16}{25}']"
         },
@@ -3927,17 +3927,17 @@
             "id": "499",
             "question": "Giá trị của biểu thức 15 : 1,5 +  2,5${\\times}$ 0,2 là:",
             "choices": "['A. 1,05', 'B. 15', 'C. 10,05', 'D. 10,5']",
-            "explanation": "15 : 1,5 + 2,5 ${\\times}$ $0,2 = 10 + 0,5 = 10,5$\n Giá trị của biểu thức 15 : 1,5 + 2,5 ${\\times}$ 0,2 là: 10,5.",
+            "explanation": "Để tính giá trị của biểu thức \\( 15 : 1,5 + 2,5 \times 0,2 \\), chúng ta cần thực hiện các phép tính theo đúng thứ tự ưu tiên: nhân và chia trước, sau đó mới đến cộng và trừ.\n\n1. Tính \\( 15 : 1,5 \\) = 10.\n2. Tính \\( 2,5 \times 0,2 \\) = 0,5.\n3. Cộng kết quả của hai phép tính trên. 10 + 0,5 = 10,5.\n\nGiá trị của biểu thức \\( 15 : 1,5 + 2,5 \times 0,2 \\) là 10,5.",
             "answer": "D. 10,5",
             "choices_str": "['A. 1,05', 'B. 15', 'C. 10,05', 'D. 10,5']"
         },
         {
             "id": "500",
-            "question": "Giá trị của biểu thức 18 394 + 29 480 + 14 829 là:",
-            "choices": "['A. 62 703', 'B. 60 278', 'C. 61 283', 'D. 62 030']",
-            "explanation": "Để giải quyết bài toán này, chúng ta cần thực hiện phép cộng giữa các số 18 394, 29 480 và 14 829. \n\nBước 1: Cộng các số ở hàng đơn vị\n4 + 0 + 9 = 13. Vì số này lớn hơn 10, chúng ta sẽ giữ lại số 3 và nhớ số 1 cho hàng chục.\n\nBước 2: Cộng các số ở hàng chục\n9 + 8 + 2 + 1 (số nhớ từ bước 1) = 20. Vì số này lớn hơn 10, chúng ta sẽ giữ lại số 0 và nhớ số 2 cho hàng trăm.\n\nBước 3: Cộng các số ở hàng trăm\n3 + 4 + 8 + 2 (số nhớ từ bước 2) = 17. Vì số này lớn hơn 10, chúng ta sẽ giữ lại số 7 và nhớ số 1 cho hàng nghìn.\n\nBước 4: Cộng các số ở hàng nghìn\n1 + 9 + 1 (số nhớ từ bước 3) = 11. Vì số này lớn hơn 10, chúng ta sẽ giữ lại số 1 và nhớ số 1 cho hàng chục nghìn.\n\nBước 5: Cộng các số ở hàng chục nghìn\n8 + 2 + 4 + 1 (số nhớ từ bước 4) = 15. Vì số này lớn hơn 10, chúng ta sẽ giữ lại số 5 và nhớ số 1 cho hàng trăm nghìn.\n\nBước 6: Cộng các số ở hàng trăm nghìn\n1 + 2 + 1 (số nhớ từ bước 5) = 4.\n\nVậy, kết quả của phép cộng là 62 703. Do đó, đáp án chính xác là 62 703.",
+            "question": "Giá trị của biểu thức 18394 + 29480 + 14829 là:",
+            "choices": "['A. 62703', 'B. 60278', 'C. 61283', 'D. 62030']",
+            "explanation": "Để giải quyết bài toán này, chúng ta cần thực hiện phép cộng giữa các số 18394, 29480 và 14829. \n\nBước 1: Cộng các số ở hàng đơn vị\n4 + 0 + 9 = 13. Vì số này lớn hơn 10, chúng ta sẽ giữ lại số 3 và nhớ số 1 cho hàng chục.\n\nBước 2: Cộng các số ở hàng chục\n9 + 8 + 2 + 1 (số nhớ từ bước 1) = 20. Vì số này lớn hơn 10, chúng ta sẽ giữ lại số 0 và nhớ số 2 cho hàng trăm.\n\nBước 3: Cộng các số ở hàng trăm\n3 + 4 + 8 + 2 (số nhớ từ bước 2) = 17. Vì số này lớn hơn 10, chúng ta sẽ giữ lại số 7 và nhớ số 1 cho hàng nghìn.\n\nBước 4: Cộng các số ở hàng nghìn\n1 + 9 + 1 (số nhớ từ bước 3) = 11. Vì số này lớn hơn 10, chúng ta sẽ giữ lại số 1 và nhớ số 1 cho hàng chục nghìn.\n\nBước 5: Cộng các số ở hàng chục nghìn\n8 + 2 + 4 + 1 (số nhớ từ bước 4) = 15. Vì số này lớn hơn 10, chúng ta sẽ giữ lại số 5 và nhớ số 1 cho hàng trăm nghìn.\n\nBước 6: Cộng các số ở hàng trăm nghìn\n1 + 2 + 1 (số nhớ từ bước 5) = 4.\n\nVậy, kết quả của phép cộng là 62 703. Do đó, đáp án chính xác là 62703.",
             "answer": "A. 62 703",
-            "choices_str": "['A. 62 703', 'B. 60 278', 'C. 61 283', 'D. 62 030']"
+            "choices_str": "['A. 62703', 'B. 60278', 'C. 61283', 'D. 62030']"
         },
         {
             "id": "501",
@@ -3957,11 +3957,11 @@
         },
         {
             "id": "503",
-            "question": "Giá trị của biểu thức 2 413 x 4 – 2 055",
-            "choices": "['A. 7 597', 'B. 7 497', 'C. 7 697', 'D. 7 487']",
-            "explanation": "Đầu tiên, chúng ta cần thực hiện phép nhân trước phép trừ theo quy tắc BODMAS (Brackets, Orders, Division and Multiplication, Addition and Subtraction). Quy tắc này cho biết thứ tự các phép toán cần được thực hiện trong một biểu thức toán học.\n\nBắt đầu bằng cách nhân 2 413 với 4. Kết quả là 9 652.\n\nSau đó, chúng ta sẽ thực hiện phép trừ. Chúng ta sẽ trừ 2 055 từ 9 652.\n\nKết quả cuối cùng là 7 597, đây chính là đáp án A.",
-            "answer": "A. 7 597",
-            "choices_str": "['A. 7 597', 'B. 7 497', 'C. 7 697', 'D. 7 487']"
+            "question": "Giá trị của biểu thức 2413 x 4 – 2055",
+            "choices": "['A. 7597', 'B. 7497', 'C. 7697', 'D. 7487']",
+            "explanation": "Đầu tiên, chúng ta cần thực hiện phép nhân trước phép trừ theo quy tắc BODMAS (Brackets, Orders, Division and Multiplication, Addition and Subtraction). Quy tắc này cho biết thứ tự các phép toán cần được thực hiện trong một biểu thức toán học.\n\nBắt đầu bằng cách nhân 2413 với 4. Kết quả là 9652.\n\nSau đó, chúng ta sẽ thực hiện phép trừ. Chúng ta sẽ trừ 2055 từ 9652.\n\nKết quả cuối cùng là 7597",
+            "answer": "A. 7597",
+            "choices_str": "['A. 7597', 'B. 7497', 'C. 7697', 'D. 7487']"
         },
         {
             "id": "504",
@@ -3975,7 +3975,7 @@
             "id": "505",
             "question": "Giá trị của biểu thức 201 : 1,5 + 2,5 ${\\times}$ 0,9 là:",
             "choices": "['A. 359', 'B. 136,25', 'C. 15,65', 'D. 395']",
-            "explanation": "201 : 1,5 + 2,5 ${\\times}$ $0,9 = 134 + 2,25 = 136,25$ .",
+            "explanation": "201 : 1,5 + 2,5 ${\\times}$ 0,9 = 134 + 2,25 = 136,25.",
             "answer": "B. 136,25",
             "choices_str": "['A. 359', 'B. 136,25', 'C. 15,65', 'D. 395']"
         },
@@ -4023,7 +4023,7 @@
             "id": "511",
             "question": "Giá trị của biểu thức 47,2 ${\\times}$ 5 + 107,1 : 2,5 là:",
             "choices": "['A. 137,24', 'B. 1372,4', 'C. 278,84', 'D. 27,884']",
-            "explanation": "47,2 ${\\times}$ 5 + 107,1 : $2,5 = 236 + 42,84 = 278,84$ .\n Giá trị của biểu thức 47,2 ${\\times}$ 5 + 107,1 : 2,5 là: 278,84.",
+            "explanation": "47,2 ${\\times}$ 5 + 107,1 : 2,5 = 236 + 42,84 = 278,84.\n Giá trị của biểu thức 47,2 ${\\times}$ 5 + 107,1 : 2,5 là: 278,84.",
             "answer": "C. 278,84",
             "choices_str": "['A. 137,24', 'B. 1372,4', 'C. 278,84', 'D. 27,884']"
         },
@@ -4037,27 +4037,27 @@
         },
         {
             "id": "513",
-            "question": "Giá trị của biểu thức 59 468 + 6 092 : 4 là:",
-            "choices": "['A. 50 981', 'B. 60 991', 'C. 1 528', 'D. 60 992']",
-            "explanation": "Đầu tiên, chúng ta cần phải hiểu rõ về thứ tự thực hiện các phép tính trong toán học, còn được gọi là BODMAS hoặc PEMDAS. Theo đó, chúng ta sẽ thực hiện các phép tính theo thứ tự: Dấu ngoặc, Phép nhân và chia (từ trái sang phải), Phép cộng và trừ (từ trái sang phải).\n\nVới biểu thức 59 468 + 6 092 : 4, theo quy tắc trên, chúng ta sẽ thực hiện phép chia trước phép cộng.\n\nBắt đầu bằng việc chia 6 092 cho 4, kết quả là 1 523.\n\nSau đó, chúng ta cộng kết quả vừa tìm được với 59 468. Kết quả cuối cùng là 60 991.\n\nVì vậy, đáp án chính xác là 60 991.",
-            "answer": "B. 60 991",
-            "choices_str": "['A. 50 981', 'B. 60 991', 'C. 1 528', 'D. 60 992']"
+            "question": "Giá trị của biểu thức 59468 + 6092 : 4 là:",
+            "choices": "['A. 50981', 'B. 60991', 'C. 1528', 'D. 60992']",
+            "explanation": "Đầu tiên, chúng ta cần phải hiểu rõ về thứ tự thực hiện các phép tính trong toán học, còn được gọi là BODMAS hoặc PEMDAS. Theo đó, chúng ta sẽ thực hiện các phép tính theo thứ tự: Dấu ngoặc, Phép nhân và chia (từ trái sang phải), Phép cộng và trừ (từ trái sang phải).\n\nVới biểu thức 59468 + 6092 : 4, theo quy tắc trên, chúng ta sẽ thực hiện phép chia trước phép cộng.\n\nBắt đầu bằng việc chia 6092 cho 4, kết quả là 1523.\n\nSau đó, chúng ta cộng kết quả vừa tìm được với 59468. Kết quả cuối cùng là 60991.\n\nVì vậy, đáp án chính xác là 60991.",
+            "answer": "B. 60991",
+            "choices_str": "['A. 50981', 'B. 60991', 'C. 1528', 'D. 60992']"
         },
         {
             "id": "514",
             "question": "Giá trị của biểu thức 60 + 8 + 0,5 + 0,002 là:",
             "choices": "['A. 68,52', 'B. 68,205', 'C. 68,502', 'D. 608,502']",
-            "explanation": "60 + 8 + 0,5 + 0,002 \n = 68 + 0,5 + 0,002\n = 68,5 + 0,002\n = 68, 502.",
+            "explanation": "60 + 8 + 0,5 + 0,002 \n = 68 + 0,5 + 0,002\n = 68,5 + 0,002\n = 68,502.",
             "answer": "C. 68,502",
             "choices_str": "['A. 68,52', 'B. 68,205', 'C. 68,502', 'D. 608,502']"
         },
         {
             "id": "515",
             "question": "Giá trị của biểu thức 630 148 000 – 148 000 + 20 000 = … là:",
-            "choices": "['A. 630 020 000', 'B. 630 200 000', 'C. 632 000 000', 'D. 630 002 000']",
-            "explanation": "Đầu tiên, chúng ta cần thực hiện phép trừ 630 148 000 – 148 000. Để làm điều này, chúng ta cần nhớ rằng khi thực hiện phép trừ, chúng ta bắt đầu từ phía bên phải và đi qua bên trái. \n\nBắt đầu từ phía bên phải, chúng ta có 0 trừ đi 0 bằng 0, sau đó là 0 trừ đi 0 bằng 0, tiếp theo là 8 trừ đi 8 bằng 0, sau đó là 4 trừ đi 4 bằng 0, tiếp theo là 1 trừ đi 1 bằng 0, sau đó là 0 trừ đi 0 bằng 0, tiếp theo là 3 trừ đi 0 bằng 3, sau đó là 6 trừ đi 1 bằng 5, và cuối cùng là 0 trừ đi 0 bằng 0. \n\nVậy, kết quả của phép trừ 630 148 000 – 148 000 là 630 000 000.\n\nTiếp theo, chúng ta cần thực hiện phép cộng 630 000 000 + 20 000. Tương tự như phép trừ, chúng ta bắt đầu từ phía bên phải và đi qua bên trái. \n\nBắt đầu từ phía bên phải, chúng ta có 0 cộng với 0 bằng 0, sau đó là 0 cộng với 0 bằng 0, tiếp theo là 0 cộng với 0 bằng 0, sau đó là 0 cộng với 0 bằng 0, tiếp theo là 0 cộng với 2 bằng 2, và cuối cùng là 6, 3, 0 cộng với 0, 0, 0 bằng 6, 3, 0.\n\nVậy, kết quả của phép cộng 630 000 000 + 20 000 là 630 020 000.\n\nVì vậy, giá trị của biểu thức 630 148 000 – 148 000 + 20 000 là 630 020 000.",
+            "choices": "['A. 630020000', 'B. 630200000', 'C. 632000000', 'D. 630002000']",
+            "explanation": "Đầu tiên, chúng ta cần thực hiện phép trừ 630148000 – 148000. Để làm điều này, chúng ta cần nhớ rằng khi thực hiện phép trừ, chúng ta bắt đầu từ phía bên phải và đi qua bên trái. \n\nBắt đầu từ phía bên phải, chúng ta có 0 trừ đi 0 bằng 0, sau đó là 0 trừ đi 0 bằng 0, tiếp theo là 8 trừ đi 8 bằng 0, sau đó là 4 trừ đi 4 bằng 0, tiếp theo là 1 trừ đi 1 bằng 0, sau đó là 0 trừ đi 0 bằng 0, tiếp theo là 3 trừ đi 0 bằng 3, sau đó là 6 trừ đi 1 bằng 5, và cuối cùng là 0 trừ đi 0 bằng 0. \n\nVậy, kết quả của phép trừ 630148000 – 148000 là 630000000.\n\nTiếp theo, chúng ta cần thực hiện phép cộng 630000000 + 20000. Tương tự như phép trừ, chúng ta bắt đầu từ phía bên phải và đi qua bên trái. \n\nBắt đầu từ phía bên phải, chúng ta có 0 cộng với 0 bằng 0, sau đó là 0 cộng với 0 bằng 0, tiếp theo là 0 cộng với 0 bằng 0, sau đó là 0 cộng với 0 bằng 0, tiếp theo là 0 cộng với 2 bằng 2, và cuối cùng là 6, 3, 0 cộng với 0, 0, 0 bằng 6, 3, 0.\n\nVậy, kết quả của phép cộng 630000000 + 20000 là 630020000.\n\nVì vậy, giá trị của biểu thức 630148000 – 148000 + 20000 là 630020000.",
             "answer": "A. 630 020 000",
-            "choices_str": "['A. 630 020 000', 'B. 630 200 000', 'C. 632 000 000', 'D. 630 002 000']"
+            "choices_str": "['A. 630020000', 'B. 630200000', 'C. 632000000', 'D. 630002000']"
         },
         {
             "id": "516",
@@ -4071,7 +4071,7 @@
             "id": "517",
             "question": "Giá trị của biểu thức 88394 - 49350 - 14859 là:",
             "choices": "['A. 24747', 'B. 24185', 'C. 24285', 'D. 24386']",
-            "explanation": "Đầu tiên, chúng ta cần thực hiện phép trừ 88394 - 49350. Kết quả thu được là 39044.\n\nTiếp theo, chúng ta sẽ thực hiện phép trừ tiếp theo: 39044 - 14859. Kết quả cuối cùng thu được là 24185.\n\nVậy, giá trị của biểu thức 88394 - 49350 - 14859 là 24185. \n\nĐây là cách thực hiện các phép toán cơ bản trong toán học. Chúng ta chỉ cần thực hiện từng phép toán một, tuân theo thứ tự từ trái sang phải. Đầu tiên là phép trừ 88394 - 49350, sau đó là phép trừ 39044 - 14859. Kết quả cuối cùng chính là đáp án của chúng ta.",
+            "explanation": "Đầu tiên, chúng ta cần thực hiện phép trừ 88394 - 49350. Kết quả thu được là 39044.\n\nTiếp theo, chúng ta sẽ thực hiện phép trừ tiếp theo: 39044 - 14859. Kết quả cuối cùng thu được là 24185.\n\nVậy, giá trị của biểu thức 88394 - 49350 - 14859 là 24185.",
             "answer": "B. 24185",
             "choices_str": "['A. 24747', 'B. 24185', 'C. 24285', 'D. 24386']"
         },
@@ -4173,27 +4173,27 @@
         },
         {
             "id": "530",
-            "question": "Giá trị của chữ số 5 trong số 25 403 là:",
-            "choices": "['A. 5000', 'B. 50 000', 'C. 500', 'D. 50']",
+            "question": "Giá trị của chữ số 5 trong số 25403 là:",
+            "choices": "['A. 5000', 'B. 50000', 'C. 500', 'D. 50']",
             "explanation": "Để giải thích câu trả lời này, chúng ta cần hiểu về vị trí của các chữ số trong một số.\n\nTrong số 25 403, chữ số 5 đứng ở vị trí hàng nghìn. Điều này có nghĩa là giá trị thực của nó không phải là 5, mà là 5 nhân với 1000 (vì nó đứng ở vị trí hàng nghìn), tức là 5000.\n\nVì vậy, giá trị của chữ số 5 trong số 25 403 là 5000, đáp án là 5000.",
             "answer": "A. 5000",
-            "choices_str": "['A. 5000', 'B. 50 000', 'C. 500', 'D. 50']"
+            "choices_str": "['A. 5000', 'B. 50000', 'C. 500', 'D. 50']"
         },
         {
             "id": "531",
             "question": "Giá trị của chữ số 5 trong số 32,075 là:",
             "choices": "['A. $\\\\frac{5}{10}$', 'B. $\\\\frac{5}{100}$', 'C. $\\\\frac{5}{1000}$', 'D. $\\\\frac{5}{10000}$']",
             "explanation": "Giá trị của chữ số 5 trong số 32,075 là: $\\frac{5}{1000}$",
-            "answer": "D. $\\frac{5}{10000}$",
+            "answer": "C. $\\\\frac{5}{1000}$",
             "choices_str": "['A. $\\\\frac{5}{10}$', 'B. $\\\\frac{5}{100}$', 'C. $\\\\frac{5}{1000}$', 'D. $\\\\frac{5}{10000}$']"
         },
         {
             "id": "532",
-            "question": "Giá trị của chữ số 5 trong số 45 874 là:",
-            "choices": "['A. 50 000', 'B. 5 000', 'C. 500', 'D. 50']",
-            "explanation": "45 874 = 40 000 + 5 000 + 800 + 70 + 4\n Vậy giá trị của chữ số 5 trong số 45 874 là: 5 000",
-            "answer": "B. 5 000",
-            "choices_str": "['A. 50 000', 'B. 5 000', 'C. 500', 'D. 50']"
+            "question": "Giá trị của chữ số 5 trong số 45874 là:",
+            "choices": "['A. 50000', 'B. 5000', 'C. 500', 'D. 50']",
+            "explanation": "45874 = 40000 + 5000 + 800 + 70 + 4\n Vậy giá trị của chữ số 5 trong số 45874 là: 5000",
+            "answer": "B. 5000",
+            "choices_str": "['A. 50000', 'B. 5000', 'C. 500', 'D. 50']"
         },
         {
             "id": "533",
@@ -4453,19 +4453,19 @@
         },
         {
             "id": "566",
-            "question": "Hà mua 3 quyển vở và đưa cô bán hàng tờ 50 000 đồng. Cô bán hàng trả lại Hà 14 000 đồng. Vậy mỗi quyển vở có giá là:",
-            "choices": "['A. 12 000 đồng', 'B. 14 000 đồng', 'C. 13 000 đồng', 'D. 11 000 đồng']",
-            "explanation": "Hà mua 3 quyển vở hết số tiền là: 50 000 – 14 000 = 36 000 (đồng)\n Mỗi quyển vở có giá là: 36 000 : 3 = 12 000 (đồng)",
-            "answer": "A. 12 000 đồng",
-            "choices_str": "['A. 12 000 đồng', 'B. 14 000 đồng', 'C. 13 000 đồng', 'D. 11 000 đồng']"
+            "question": "Hà mua 3 quyển vở và đưa cô bán hàng tờ 50000 đồng. Cô bán hàng trả lại Hà 14000 đồng. Vậy mỗi quyển vở có giá là:",
+            "choices": "['A. 12000 đồng', 'B. 14000 đồng', 'C. 13000 đồng', 'D. 11000 đồng']",
+            "explanation": "Hà mua 3 quyển vở hết số tiền là: 50000 – 14000 = 36000 (đồng)\n Mỗi quyển vở có giá là: 36000 : 3 = 12000 (đồng)",
+            "answer": "A. 12000 đồng",
+            "choices_str": "['A. 12000 đồng', 'B. 14000 đồng', 'C. 13000 đồng', 'D. 11000 đồng']"
         },
         {
             "id": "567",
-            "question": "Hà mua 5 quyển vở, mỗi quyển giá 12 000 đồng. Hà đưa cô bán hàng 3 tờ tiền giống nhau thì vừa đủ. Vậy 3 tờ tiền Hà đưa cô bán hàng có mệnh giá là:",
-            "choices": "['A. 2 000 đồng', 'B. 5 000 đồng', 'C. 10 000 đồng', 'D. 20 000 đồng']",
-            "explanation": "5 quyển vở có giá là:12 000 ${\\times}$ 5 = 60 000 (đồng)\n 3 tờ tiền Hà đưa cô bán hàng có mệnh giá là: \n 60 000 : 3 = 20 000 (đồng)\n Đáp số: 20 000 đồng.",
-            "answer": "D. 20 000 đồng",
-            "choices_str": "['A. 2 000 đồng', 'B. 5 000 đồng', 'C. 10 000 đồng', 'D. 20 000 đồng']"
+            "question": "Hà mua 5 quyển vở, mỗi quyển giá 12000 đồng. Hà đưa cô bán hàng 3 tờ tiền giống nhau thì vừa đủ. Vậy 3 tờ tiền Hà đưa cô bán hàng có mệnh giá là:",
+            "choices": "['A. 2000 đồng', 'B. 5000 đồng', 'C. 10000 đồng', 'D. 20000 đồng']",
+            "explanation": "5 quyển vở có giá là: 12000 ${\\times}$ 5 = 60000 (đồng)\n 3 tờ tiền Hà đưa cô bán hàng có mệnh giá là: \n 60000 : 3 = 20 000 (đồng)\n Đáp số: 20000 đồng.",
+            "answer": "D. 20000 đồng",
+            "choices_str": "['A. 2000 đồng', 'B. 5000 đồng', 'C. 10000 đồng', 'D. 20000 đồng']"
         },
         {
             "id": "568",
@@ -4637,11 +4637,11 @@
         },
         {
             "id": "589",
-            "question": "Hiền mua 4 chiếc bút và đưa cô bán hàng tờ 100 000 đồng. Cô bán hàng trả lại Hiền 52 000 đồng. Vậy mỗi chiếc bút Hiền mua có giá là:",
-            "choices": "['A. 20 000 đồng', 'B. 13 000 đồng', 'C. 14 000 đồng', 'D. 12 000 đồng']",
-            "explanation": "Cô bán hàng trả lại Hiền số tiền là:100 000 – 52 000 = 48 000 (đồng)\n 4 chiếc bút có giá tiền là:48 000 : 4 = 12 000 (đồng)\n Đáp số: 12 000 đồng",
-            "answer": "D. 12 000 đồng",
-            "choices_str": "['A. 20 000 đồng', 'B. 13 000 đồng', 'C. 14 000 đồng', 'D. 12 000 đồng']"
+            "question": "Hiền mua 4 chiếc bút và đưa cô bán hàng tờ 100000 đồng. Cô bán hàng trả lại Hiền 52000 đồng. Vậy mỗi chiếc bút Hiền mua có giá là:",
+            "choices": "['A. 20000 đồng', 'B. 13000 đồng', 'C. 14000 đồng', 'D. 12000 đồng']",
+            "explanation": "Cô bán hàng trả lại Hiền số tiền là: 100000 – 52000 = 48000 (đồng)\n 4 chiếc bút có giá tiền là: 48000 : 4 = 12000 (đồng)\n Đáp số: 12000 đồng",
+            "answer": "D. 12000 đồng",
+            "choices_str": "['A. 20000 đồng', 'B. 13000 đồng', 'C. 14000 đồng', 'D. 12000 đồng']"
         },
         {
             "id": "590",
@@ -7251,7 +7251,6 @@
             "answer": "D. 34dm2",
             "choices_str": "['A. 13,5dm2', 'B. 17dm2', 'C. 35dm2', 'D. 34dm2']"
         },
-
         {
             "id": "916",
             "question": "Một hình hộp chữ nhật có thể tích là 270 cm3; chiều dài 6 cm; chiều cao 9 cm. Chiều rộng của hình hộp chữ nhật đó là:",
