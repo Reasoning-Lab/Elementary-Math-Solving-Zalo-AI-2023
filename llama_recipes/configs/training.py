@@ -14,6 +14,7 @@ class train_config:
     batching_strategy: str = "padding"  # alternative: padding
     context_length: int | None = 1024
     max_length: int = 2048
+    one_shot: bool = False
     gradient_accumulation_steps: int = 4
     num_epochs: int = 6
     num_workers_dataloader: int = 1

@@ -20,18 +20,41 @@ from inference.safety_utils import get_safety_checker
 from inference.model_utils import load_model, load_peft_model
 
 
-def get_user_prompt(example):
+def get_user_prompt(example, one_shot):
     question = example["question"]
     choices = example["choices"]
 
     text_choices = "\n".join(choices)
 
-    user_prompt = (
-        f"### Question: {question}\n"
-        "### Choices: "
-        f"{text_choices}\n"
-        f"### Answer: "
-    )
+    text_choices = "\n".join(choices)
+    if one_shot: 
+        user_prompt = (
+        "<s>[INST] <<SYS>>\n"
+        "{{ Trả lời câu hỏi sau bằng cách đưa ra đáp án chính xác nhất. Đáp án sẽ là một trong các lựa chọn A, B, C, D. Hãy suy nghĩ từng bước một. }}\n"
+        "<</SYS>>\n"
+        "{{ "
+        f"### Câu hỏi: {question}\n"
+        "### Các lựa chọn: \n"
+        f"{text_choices}"
+        " }}"
+        " [/INST]"
+        " {{ "
+        "### Đáp án: "
+        )
+    else:
+        user_prompt = (
+            "<s>[INST] <<SYS>>\n"
+            "{{ Trả lời câu hỏi sau bằng cách đưa ra đáp án chính xác nhất. Đáp án sẽ là một trong các lựa chọn A, B, C, D. Hãy suy nghĩ từng bước một. }}\n"
+            "<</SYS>>\n"
+            "{{ "
+            f"### Câu hỏi: {question}\n"
+            "### Các lựa chọn: \n"
+            f"{text_choices}"
+            " }}"
+            " [/INST]"
+            " {{ "
+            "### Giải thích: "
+        )
     return user_prompt
 
 
@@ -42,6 +65,7 @@ def main(
     load_in: str = "4bit",
     max_length: int | None = None,
     max_new_tokens=100,  # The maximum numbers of tokens to generate
+    one_shot: bool = False,
     test_file: str = "datasets/math_test.json",
     seed: int = 42,  # seed value for reproducibility
     do_sample: bool = True,  # Whether or not to use sampling ; use greedy decoding otherwise.

@@ -14,7 +14,7 @@ from typing import List
 
 
 class ZaloMathDataset(Dataset):
-    def __init__(self, dataset_config, tokenizer, partition="train", max_length=None):
+    def __init__(self, dataset_config, tokenizer, partition="train", max_length=None, one_shot=False):
         self.ann = json.load(open(dataset_config.data_path))["data"]
         if partition == "train":
             self.ann = self.ann
@@ -23,6 +23,7 @@ class ZaloMathDataset(Dataset):
 
         self.tokenizer = tokenizer
         self.max_length = dataset_config.max_length
+        self.one_shot = one_shot
 
     def __len__(self):
         return len(self.ann)
@@ -55,7 +56,7 @@ class ZaloMathDataset(Dataset):
 
         output = " {{ "
 
-        if explanation != "":
+        if self.one_shot == False and explanation != "":
             output += f"### Giải thích: {explanation}\n"
         output += f"### Đáp án: {answer}" " }} </s>"
 
