@@ -19,6 +19,26 @@ from transformers import LlamaTokenizer, AutoTokenizer
 from inference.safety_utils import get_safety_checker
 from inference.model_utils import load_model, load_peft_model
 
+import logging
+
+# Create a logger
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
+
+# Create a file handler and set the log file name
+file_handler = logging.FileHandler('inference.log')
+
+# Create a stream handler to display log messages on the console
+stream_handler = logging.StreamHandler()
+
+# Configure the log message format
+formatter = logging.Formatter('%(asctime)s - %(levelname)s: %(message)s')
+file_handler.setFormatter(formatter)
+stream_handler.setFormatter(formatter)
+
+# Add the handlers to the logger
+logger.addHandler(file_handler)
+logger.addHandler(stream_handler)
 
 def get_user_prompt(example, one_shot):
     question = example["question"]
@@ -27,6 +47,7 @@ def get_user_prompt(example, one_shot):
     text_choices = "\n".join(choices)
 
     text_choices = "\n".join(choices)
+    # logger.info(f"one_shot: {one_shot}")
     if one_shot: 
         user_prompt = (
         "<s>[INST] <<SYS>>\n"
@@ -39,7 +60,7 @@ def get_user_prompt(example, one_shot):
         " }}"
         " [/INST]"
         " {{ "
-        "### Đáp án: "
+        "### Đáp án (không cần giải thích): "
         )
     else:
         user_prompt = (
@@ -107,7 +128,7 @@ def main(
 
             model = BetterTransformer.transform(model)
         except ImportError:
-            print(
+            logger.info(
                 "Module 'optimum' not found. Please install 'optimum' it before proceeding."
             )
 
@@ -123,22 +144,22 @@ def main(
     # safety_results = [check(user_prompt) for check in safety_checker]
     # are_safe = all([r[1] for r in safety_results])
     # if are_safe:
-    #     print("User prompt deemed safe.")
-    #     print(f"User prompt:\n{user_prompt}")
+    #     logger.info("User prompt deemed safe.")
+    #     logger.info(f"User prompt:\n{user_prompt}")
     # else:
-    #     print("User prompt deemed unsafe.")
+    #     logger.info("User prompt deemed unsafe.")
     #     for method, is_safe, report in safety_results:
     #         if not is_safe:
-    #             print(method)
-    #             print(report)
-    #     print("Skipping the inference as the prompt is not safe.")
+    #             logger.info(method)
+    #             logger.info(report)
+    #     logger.info("Skipping the inference as the prompt is not safe.")
     #     sys.exit(1)  # Exit the program with an error status
 
     results = []
-    print(f"TOKENIZER max_length: {max_length}")
+    logger.info(f"TOKENIZER max_length: {max_length}")
     for idx, example in enumerate(data):
-        print(f"Processing {idx}")
-        user_prompt = get_user_prompt(example)
+        logger.info(f"Processing {idx}")
+        user_prompt = get_user_prompt(example, one_shot)
         id = example["id"]
         choices = example["choices"]
         input = tokenizer(
@@ -165,7 +186,7 @@ def main(
                 **kwargs,
             )
         e2e_inference_time = (time.perf_counter() - start) * 1000
-        print(f"the inference time is {e2e_inference_time} ms")
+        logger.info(f"the inference time is {e2e_inference_time} ms")
         output_text = tokenizer.decode(outputs[0], skip_special_tokens=True)
         gen_text = tokenizer.decode(
             outputs[0][input["input_ids"].shape[1] :], skip_special_tokens=True
@@ -175,27 +196,46 @@ def main(
             answer_text = gen_text.split("###")[1]
         else:
             answer_text = gen_text
+        answer_to_map = gen_text[:-3]
 
-        print(f"Output text: {output_text}")
-        print(f"Gen text {gen_text}")
+        logger.info(f"Output text: {output_text}")
+        logger.info(f"Gen text {answer_to_map}")
 
-        answer = None
+        # answer = None
+        # for choice in choices:
+        #     full_answer = choice
+        #     value_only = re.sub("[ABCD]. ", "", full_answer)
+        #     if full_answer in answer_text:
+        #         answer = choice
+        #         break
+        # Initialize a dictionary to map answers
+        answer_mapping = {}
+
+        # Iterate through choices and map the answer
         for choice in choices:
-            full_answer = choice
-            value_only = re.sub("[ABCD]. ", "", full_answer)
-            if full_answer in answer_text:
-                answer = choice
+            # Split the choice into option (e.g., "A.") and text (e.g., "24 phút")
+            option, text = choice.split(". ")
+            
+            # Store the mapping in the dictionary (with option as the key)
+            answer_mapping[option] = text
+
+        # Map the answer to the full choice
+        answer = None
+        for option, text in answer_mapping.items():
+            if text in answer_to_map:
+                answer = option + " " + text
                 break
-        if answer is None:
-            for choice in choices:
-                value_only = re.sub("[ABCD]. ", "", full_answer)
-                if value_only in answer_text:
-                    answer = choice
-                    break
-        print(f"Answer {answer}")
+
+        # if answer is None:
+        #     for choice in choices:
+        #         value_only = re.sub("[ABCD]. ", "", full_answer)
+        #         if value_only in answer_text:
+        #             answer = choice
+        #             break
+        logger.info(f"Answer {answer}")
         if answer is None:
             answer = random.choice(choices)
-            print(f"Random Answer {answer}")
+            logger.info(f"Random Answer {answer}")
         results.append({"id": id, "answer": answer})
 
     result_df = pd.DataFrame.from_dict(results)
@@ -205,14 +245,14 @@ def main(
     # safety_results = [check(output_text) for check in safety_checker]
     # are_safe = all([r[1] for r in safety_results])
     # if are_safe:
-    #     print("User input and model output deemed safe.")
-    #     print(f"Model output:\n{output_text}")
+    #     logger.info("User input and model output deemed safe.")
+    #     logger.info(f"Model output:\n{output_text}")
     # else:
-    #     print("Model output deemed unsafe.")
+    #     logger.info("Model output deemed unsafe.")
     #     for method, is_safe, report in safety_results:
     #         if not is_safe:
-    #             print(method)
-    #             print(report)
+    #             logger.info(method)
+    #             logger.info(report)
 
 
 if __name__ == "__main__":
