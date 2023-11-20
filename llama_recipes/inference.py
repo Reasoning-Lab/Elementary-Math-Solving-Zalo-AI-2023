@@ -111,8 +111,8 @@ def main(
                 "Module 'optimum' not found. Please install 'optimum' it before proceeding."
             )
 
-    tokenizer = AutoTokenizer.from_pretrained(peft_model)
-    # tokenizer.pad_token = tokenizer.eos_token
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
+    tokenizer.pad_token = tokenizer.eos_token
 
     # safety_checker = get_safety_checker(enable_azure_content_safety,
     #                                     enable_sensitive_topics,
