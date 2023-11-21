@@ -24,13 +24,19 @@ def get_user_prompt(example):
     question = example["question"]
     choices = example["choices"]
 
-    text_choices = "\n".join(choices)
+    text_choices = '['
+    for idx, choice in enumerate(choices):
+        text_choices += f"'{choice}'"
+        if idx != len(choices) - 1:
+            text_choices += ','
+    text_choices += ']'
 
     user_prompt = (
+        "Below is a math exercise. Provide a solution to that problem, if given multiple choices to answer; please give a final choice for solving that problem.\n"
         f"### Question: {question}\n"
         "### Choices: "
         f"{text_choices}\n"
-        f"### Answer: "
+        "### Explanation: "
     )
     return user_prompt
 
@@ -140,13 +146,19 @@ def main(
             outputs[0][input["input_ids"].shape[1] :], skip_special_tokens=True
         )
 
-        if len(gen_text.split("###")) > 1:
-            answer_text = gen_text.split("###")[1]
-        else:
+        answer_text = None
+
+        for text in gen_text.split("###"):
+            if 'Final choice' in text:
+                answer_text = text
+                break
+
+        if answer_text is None:
             answer_text = gen_text
 
         print(f"Output text: {output_text}")
         print(f"Gen text {gen_text}")
+        print(f"Answer text {answer_text}")
 
         answer = None
         for choice in choices:
