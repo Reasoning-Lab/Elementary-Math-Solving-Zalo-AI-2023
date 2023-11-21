@@ -2,7 +2,8 @@
 model_type: auto
 model_name_or_path: HuggingFaceH4/zephyr-7b-beta
 device_map: auto
-torch_dtype: float16
+# torch_dtype: float16
+load_in_4bit: true
 
 # LoRA arguments
 use_peft: true
@@ -21,17 +22,16 @@ preprocessing_num_workers: 4
 
 # SFT arguments
 max_seq_length: 1024
-per_device_train_batch_size: 4
-per_device_eval_batch_size: 4
+per_device_train_batch_size: 2
+per_device_eval_batch_size: 2
 do_train: true
 do_eval: true
-use_peft: true
-fp16: true
+# fp16: true
 learning_rate: 3.0e-05
 log_level: info
 logging_strategy: steps
 lr_scheduler_type: cosine
-max_steps: 1000
+num_train_epochs: 2
 warmup_ratio: 0.05
 weight_decay: 0.05
 logging_steps: 10

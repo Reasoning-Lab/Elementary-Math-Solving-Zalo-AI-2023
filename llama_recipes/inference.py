@@ -45,38 +45,20 @@ def get_user_prompt(example, one_shot):
     question = example["question"]
     choices = example["choices"]
 
-    text_choices = "\n".join(choices)
+    text_choices = '['
+    for idx, choice in enumerate(choices):
+        text_choices += f"'{choice}'"
+        if idx != len(choices) - 1:
+            text_choices += ','
+    text_choices += ']'
 
-    text_choices = "\n".join(choices)
-    # logger.info(f"one_shot: {one_shot}")
-    if one_shot:
-        user_prompt = (
-            "<s>[INST] <<SYS>>\n"
-            "{{ Trả lời câu hỏi sau bằng cách đưa ra đáp án chính xác nhất. Đáp án sẽ là một trong các lựa chọn A, B, C, D. Hãy suy nghĩ từng bước một. }}\n"
-            "<</SYS>>\n"
-            "{{ "
-            f"### Câu hỏi: {question}\n"
-            "### Các lựa chọn: \n"
-            f"{text_choices}"
-            " }}"
-            " [/INST]"
-            " {{ "
-            "### Đáp án (không cần giải thích): "
-        )
-    else:
-        user_prompt = (
-            "<s>[INST] <<SYS>>\n"
-            "{{ Trả lời câu hỏi sau bằng cách đưa ra đáp án chính xác nhất. Đáp án sẽ là một trong các lựa chọn A, B, C, D. Hãy suy nghĩ từng bước một. }}\n"
-            "<</SYS>>\n"
-            "{{ "
-            f"### Câu hỏi: {question}\n"
-            "### Các lựa chọn: \n"
-            f"{text_choices}"
-            " }}"
-            " [/INST]"
-            " {{ "
-            "### Giải thích: "
-        )
+    user_prompt = (
+        "Below is a math exercise. Provide a solution to that problem, if given multiple choices to answer; please give a final choice for solving that problem.\n"
+        f"### Question: {question}\n"
+        "### Choices: "
+        f"{text_choices}\n"
+        "### Explanation: "
+    )
     return user_prompt
 
 
@@ -178,10 +160,28 @@ def main(
             else:
                 answer_text = gen_text
 
-            print(f"Output text: {output_text}")
-            print(f"Gen text {gen_text}")
+        answer_text = None
 
-            answer = None
+        for text in gen_text.split("###"):
+            if 'Final choice' in text:
+                answer_text = text
+                break
+
+        if answer_text is None:
+            answer_text = gen_text
+
+        print(f"Output text: {output_text}")
+        print(f"Gen text {gen_text}")
+        print(f"Answer text {answer_text}")
+
+        answer = None
+        for choice in choices:
+            full_answer = choice
+            value_only = re.sub("[ABCD]. ", "", full_answer)
+            if full_answer in answer_text:
+                answer = choice
+                break
+        if answer is None:
             for choice in choices:
                 full_answer = choice
                 value_only = re.sub("[ABCD]. ", "", full_answer)

@@ -92,14 +92,12 @@ class ModelArguments:
             )
         },
     )
-    load_in_8bit: bool = field(
-        default=False,
-        metadata={"help": "Whether to load the model in 8bit mode or not."},
+    load_in_8bit: bool = field(default=False, metadata={"help": "Whether to load the model in 8bit mode or not."})
+    load_in_4bit: bool = field(default=False, metadata={"help": "Whether to load the model in 4bit mode or not."})
+    bnb_4bit_quant_type: Optional[str] = field(
+        default="nf4", metadata={"help": "precise the quantization type (fp4 or nf4)"}
     )
-    load_in_4bit: bool = field(
-        default=False,
-        metadata={"help": "Whether to load the model in 4bit mode or not."},
-    )
+    use_bnb_nested_quant: bool = field(default=False, metadata={"help": "use nested quantization"})
     tokenizer_name_or_path: Optional[str] = field(
         default=None,
         metadata={
@@ -869,7 +867,9 @@ def main():
             logger.info(f"eval files: {eval_data_files}")
             data_files["validation"] = eval_data_files
         raw_datasets = load_dataset(
-            "json", data_files=data_files, cache_dir=model_args.cache_dir, field="data"
+            'json',
+            data_files=data_files,
+            cache_dir=model_args.cache_dir,
         )
         # If no validation data is there, validation_split_percentage will be used to divide the dataset.
         if "validation" not in raw_datasets.keys():
@@ -878,14 +878,12 @@ def main():
                 data_files=data_files,
                 split=f"train[:{data_args.validation_split_percentage}%]",
                 cache_dir=model_args.cache_dir,
-                field="data",
             )
             raw_datasets["train"] = load_dataset(
                 "json",
                 data_files=data_files,
                 split=f"train[{data_args.validation_split_percentage}%:]",
                 cache_dir=model_args.cache_dir,
-                field="data",
             )
     logger.info(f"Raw datasets: {raw_datasets}")
 
@@ -919,18 +917,31 @@ def main():
             )
         ):
             text_choices = "".join(choices)
-
-            prompt = f"### Question: {question}\n" "### Choices: " f"{text_choices}\n"
+            
+            prompt = (
+                "Below is a math exercise. Provide a solution to that problem, if given multiple choices to answer; please give a final choice for solving that problem.\n"
+                f"### Question: {question}\n"
+            )
+            
+            if text_choices != "":
+                prompt += (
+                    "### Choices: "
+                    f"{text_choices}\n"
+                )
 
             output = ""
 
             if explanation != "":
-                output += f"### Answer: {explanation}\n"
-            output += f"### Đáp án: {answer}"
+                output += f"### Explanation: {explanation}\n"
+            if answer != "":
+                output += f"### Final choice: {answer}\n"
 
             text = prompt + output
 
-            print("check", text)
+            # if answer == "":
+            #     print('no answer', text)
+            # else:
+            #     print('answer', text)
             text_list.append(text)
 
         examples["text"] = text_list
