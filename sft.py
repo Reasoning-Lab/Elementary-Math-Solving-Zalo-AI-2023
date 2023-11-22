@@ -7,6 +7,7 @@ from typing import Literal, Optional, Tuple, List, Dict, Sequence, Any, NewType
 import sys
 import logging
 import yaml
+import random
 
 import torch
 import torch.nn as nn
@@ -363,8 +364,14 @@ def main():
     logger.info(f"Data parameters {data_args}")
     logger.info(f"Training/evaluation parameters {training_args}")
 
+    run = wandb.init(project="huggingface", name=training_args.run_name)
+
     # Set seed before initializing model.
     set_seed(training_args.seed)
+    torch.backends.cudnn.deterministic = True
+    random.seed(0)
+    torch.manual_seed(0)
+    torch.cuda.manual_seed_all(0)
 
     config_class, model_class, tokenizer_class = MODEL_CLASSES[model_args.model_type]
     # Load tokenizer
@@ -419,11 +426,17 @@ def main():
                 f'{data_args.train_file_dir}/**/*.jsonl', recursive=True)
             logger.info(f"train files: {train_data_files}")
             data_files["train"] = train_data_files
+            train_data_files_artifact = wandb.Artifact(name="train_datafiles", type="dataset")
+            train_data_files_artifact.add_dir(local_path=data_args.train_file_dir)
+            run.log_artifact(train_data_files_artifact)
         if data_args.validation_file_dir is not None and os.path.exists(data_args.validation_file_dir):
             eval_data_files = glob(f'{data_args.validation_file_dir}/**/*.json', recursive=True) + glob(
                 f'{data_args.validation_file_dir}/**/*.jsonl', recursive=True)
             logger.info(f"eval files: {eval_data_files}")
             data_files["validation"] = eval_data_files
+            eval_data_files_artifact = wandb.Artifact(name="eval_datafiles", type="dataset")
+            eval_data_files_artifact.add_dir(local_path=data_args.validation_file_dir)
+            run.log_artifact(eval_data_files_artifact)
         raw_datasets = load_dataset(
             'json',
             data_files=data_files,
@@ -642,6 +655,10 @@ def main():
     # Save config
     #############
     parser.save_yaml(training_args.output_dir)
+    config_path = parser.yaml_arg
+    config_artifact = wandb.Artifact("config", type="config")
+    config_artifact.add_file(local_path=config_path)
+    run.log_artifact(config_artifact)
 
 
     ##################################
@@ -655,8 +672,8 @@ def main():
     if accelerator.is_main_process:
         kwargs = {
             "finetuned_from": model_args.model_name_or_path,
-            "dataset": list(data_args.train_file_dir),
-            "dataset_tags": list(data_args.train_file_dir),
+            "dataset": data_args.train_file_dir,
+            "dataset_tags": data_args.train_file_dir,
             "tags": ["zalo-math-dataset"],
         }
         trainer.create_model_card(**kwargs)
