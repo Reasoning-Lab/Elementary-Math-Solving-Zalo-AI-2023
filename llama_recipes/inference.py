@@ -32,6 +32,7 @@ def get_user_prompt(example):
     text_choices += ']'
 
     user_prompt = (
+        "<s>\n"
         "Below is a math exercise. Provide a solution to that problem, if given multiple choices to answer; please give a final choice for solving that problem.\n"
         f"### Question: {question}\n"
         "### Choices: "
@@ -92,27 +93,6 @@ def main(
             )
 
     tokenizer = AutoTokenizer.from_pretrained(peft_model)
-    # tokenizer.pad_token = tokenizer.eos_token
-
-    # safety_checker = get_safety_checker(enable_azure_content_safety,
-    #                                     enable_sensitive_topics,
-    #                                     enable_salesforce_content_safety,
-    #                                     )
-
-    # # Safety check of the user prompt
-    # safety_results = [check(user_prompt) for check in safety_checker]
-    # are_safe = all([r[1] for r in safety_results])
-    # if are_safe:
-    #     print("User prompt deemed safe.")
-    #     print(f"User prompt:\n{user_prompt}")
-    # else:
-    #     print("User prompt deemed unsafe.")
-    #     for method, is_safe, report in safety_results:
-    #         if not is_safe:
-    #             print(method)
-    #             print(report)
-    #     print("Skipping the inference as the prompt is not safe.")
-    #     sys.exit(1)  # Exit the program with an error status
 
     results = []
 
@@ -181,19 +161,6 @@ def main(
 
     result_df = pd.DataFrame.from_dict(results)
     result_df.to_csv("submission.csv", index=False)
-
-    # # Safety check of the model output
-    # safety_results = [check(output_text) for check in safety_checker]
-    # are_safe = all([r[1] for r in safety_results])
-    # if are_safe:
-    #     print("User input and model output deemed safe.")
-    #     print(f"Model output:\n{output_text}")
-    # else:
-    #     print("Model output deemed unsafe.")
-    #     for method, is_safe, report in safety_results:
-    #         if not is_safe:
-    #             print(method)
-    #             print(report)
 
 
 if __name__ == "__main__":

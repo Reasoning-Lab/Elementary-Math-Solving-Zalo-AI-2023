@@ -7,8 +7,8 @@ load_in_4bit: true
 
 # LoRA arguments
 use_peft: true
-lora_r: 64
-lora_alpha: 16
+lora_r: 256
+lora_alpha: 128
 lora_dropout: 0.1
 lora_target_modules:
 - q_proj
@@ -21,9 +21,9 @@ train_file_dir: datasets/finetune
 preprocessing_num_workers: 4
 
 # SFT arguments
-max_seq_length: 1024
-per_device_train_batch_size: 2
-per_device_eval_batch_size: 2
+max_seq_length: 512
+per_device_train_batch_size: 4
+per_device_eval_batch_size: 4
 do_train: true
 do_eval: true
 # fp16: true
@@ -31,13 +31,14 @@ learning_rate: 3.0e-05
 log_level: info
 logging_strategy: steps
 lr_scheduler_type: cosine
-num_train_epochs: 2
+# num_train_epochs: 2
+max_steps: 50
 warmup_ratio: 0.05
 weight_decay: 0.05
 logging_steps: 10
-eval_steps: 50
+eval_steps: 25
 evaluation_strategy: steps
-save_steps: 500
+save_steps: 25
 save_strategy: steps
 save_total_limit: 13
 gradient_accumulation_steps: 1
@@ -45,7 +46,8 @@ output_dir: outputs-sft-zephyr-beta-v1
 overwrite_output_dir: true
 ddp_timeout: 30000
 logging_first_step: true
-report_to: tensorboard
+report_to: wandb
+run_name: sft-zephyr-7b-beta-v1
 ddp_find_unused_parameters: false
 gradient_checkpointing: true
 gradient_checkpointing_kwargs:
