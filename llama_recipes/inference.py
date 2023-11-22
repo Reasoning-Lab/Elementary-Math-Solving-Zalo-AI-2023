@@ -53,6 +53,7 @@ def get_user_prompt(example, one_shot):
     text_choices += ']'
 
     user_prompt = (
+        "<s>\n"
         "Below is a math exercise. Provide a solution to that problem, if given multiple choices to answer; please give a final choice for solving that problem.\n"
         f"### Question: {question}\n"
         "### Choices: "
@@ -115,8 +116,7 @@ def main(
                 "Module 'optimum' not found. Please install 'optimum' it before proceeding."
             )
 
-    tokenizer = AutoTokenizer.from_pretrained(model_name)
-    tokenizer.pad_token = tokenizer.eos_token
+    tokenizer = AutoTokenizer.from_pretrained(peft_model)
 
     results = []
     logger.info(f"TOKENIZER max_length: {max_length}")

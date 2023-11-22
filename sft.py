@@ -6,6 +6,7 @@ from types import MethodType
 from typing import Literal, Optional, Tuple, List, Dict, Sequence, Any, NewType
 import sys
 import logging
+import yaml
 
 import torch
 import torch.nn as nn
@@ -49,6 +50,8 @@ from transformers.trainer_pt_utils import LabelSmoother
 from trl import SFTTrainer, DataCollatorForCompletionOnlyLM
 from transformers import Trainer
 
+import wandb
+
 try:
     from transformers.integrations import is_deepspeed_zero3_enabled
 except ImportError:  # https://github.com/huggingface/transformers/releases/tag/v4.33.1
@@ -70,6 +73,7 @@ MODEL_CLASSES = {
     "auto": (AutoConfig, AutoModelForCausalLM, AutoTokenizer),
 }
 
+DataClassType = NewType("DataClassType", Any)
 
 @dataclass
 class ModelArguments:
@@ -207,6 +211,8 @@ class DataArguments:
     template_name: Optional[str] = field(
         default="vicuna", metadata={"help": "The prompt template name."}
     )
+    train_file_dir: Optional[str] = field(default=None, metadata={"help": "The train jsonl data file folder."})
+    validation_file_dir: Optional[str] = field(default=None, metadata={"help": "The evaluation jsonl file folder."})
     max_train_samples: Optional[int] = field(
         default=None,
         metadata={
@@ -304,377 +310,6 @@ class ScriptArguments:
     )
 
 
-@dataclass
-class Conversation:
-    """A class that manages prompt templates and keeps all conversation history."""
-
-    # The name of this template
-    name: str
-    # The system prompt
-    system_prompt: str
-    # All messages. format: list of [question, answer]
-    messages: Optional[List[Sequence[str]]]
-    # The roles of the speakers
-    roles: Optional[Sequence[str]]
-    # Conversation prompt
-    prompt: str
-    # Separator
-    sep: str
-    # Stop token, default is tokenizer.eos_token
-    stop_str: Optional[str] = "</s>"
-
-    def get_prompt(
-        self,
-        messages: Optional[List[Sequence[str]]] = None,
-        system_prompt: Optional[str] = "",
-    ) -> str:
-        """
-        Returns a string containing prompt without response.
-        """
-        return "".join(self._format_example(messages, system_prompt))
-
-    def get_dialog(
-        self,
-        messages: Optional[List[Sequence[str]]] = None,
-        system_prompt: Optional[str] = "",
-    ) -> List[str]:
-        """
-        Returns a list containing 2 * n elements where the 2k-th is a query and the (2k+1)-th is a response.
-        """
-        return self._format_example(messages, system_prompt)
-
-    def _format_example(
-        self,
-        messages: Optional[List[Sequence[str]]] = None,
-        system_prompt: Optional[str] = "",
-    ) -> List[str]:
-        system_prompt = system_prompt or self.system_prompt
-        system_prompt = (
-            system_prompt + self.sep if system_prompt else ""
-        )  # add separator for non-empty system prompt
-        messages = messages or self.messages
-        convs = []
-        for turn_idx, [user_query, bot_resp] in enumerate(messages):
-            if turn_idx == 0:
-                convs.append(system_prompt + self.prompt.format(query=user_query))
-                convs.append(bot_resp)
-            else:
-                convs.append(self.sep + self.prompt.format(query=user_query))
-                convs.append(bot_resp)
-        return convs
-
-    def append_message(self, query: str, answer: str):
-        """Append a new message."""
-        self.messages.append([query, answer])
-
-
-# A global registry for all conversation templates
-conv_templates: Dict[str, Conversation] = {}
-
-
-def register_conv_template(template: Conversation):
-    """Register a new conversation template."""
-    conv_templates[template.name] = template
-
-
-"""Vicuna v1.1 template
-Supports: https://huggingface.co/lmsys/vicuna-7b-delta-v1.1
-          https://huggingface.co/lmsys/vicuna-13b-delta-v1.1
-"""
-register_conv_template(
-    Conversation(
-        name="vicuna",
-        system_prompt="A chat between a curious user and an artificial intelligence assistant. "
-        "The assistant gives helpful, detailed, and polite answers to the user's questions.",
-        messages=[],
-        roles=("USER", "ASSISTANT"),
-        prompt="USER: {query} ASSISTANT:",
-        sep="</s>",
-    )
-)
-
-"""Alpaca template"""
-register_conv_template(
-    Conversation(
-        name="alpaca",
-        system_prompt="Below is an instruction that describes a task. "
-        "Write a response that appropriately completes the request.",
-        messages=[],
-        roles=("### Instruction", "### Response"),
-        prompt="### Instruction:\n{query}\n\n### Response:\n",
-        sep="\n\n",
-    )
-)
-
-"""Baichuan template
-source: https://huggingface.co/baichuan-inc/Baichuan-13B-Chat/blob/main/generation_utils.py#L31
-Support: https://huggingface.co/baichuan-inc/Baichuan-13B-Chat
-"""
-register_conv_template(
-    Conversation(
-        name="baichuan",
-        system_prompt="",
-        messages=[],
-        roles=("<reserved_102>", "<reserved_103>"),
-        prompt="<reserved_102>{query}<reserved_103>",
-        sep="</s>",
-    )
-)
-
-"""Baichuan2 template
-Support: https://huggingface.co/baichuan-inc/Baichuan2-7B-Chat
-         https://huggingface.co/baichuan-inc/Baichuan2-13B-Chat
-"""
-register_conv_template(
-    Conversation(
-        name="baichuan2",
-        system_prompt="",
-        messages=[],
-        roles=("<reserved_106>", "<reserved_107>"),
-        prompt="<reserved_106>{query}<reserved_107>",
-        sep="</s>",
-    )
-)
-
-"""ziya template"""
-register_conv_template(
-    Conversation(
-        name="ziya",
-        system_prompt="",
-        messages=[],
-        roles=("<human>", "<bot>"),
-        prompt="<human>:{query}\n<bot>:",
-        sep="\n",
-    )
-)
-
-"""Linly template"""
-register_conv_template(
-    Conversation(
-        name="linly",
-        system_prompt="",
-        messages=[],
-        roles=("User", "Bot"),
-        prompt="User: {query}\nBot: ",
-        sep="\n",
-    )
-)
-
-"""ChatGLM1 template
-Support: https://huggingface.co/THUDM/chatglm-6b
-source: https://huggingface.co/THUDM/chatglm-6b/blob/main/modeling_chatglm.py#L1307
-"""
-register_conv_template(
-    Conversation(
-        name="chatglm",
-        system_prompt="",
-        messages=[],
-        roles=("问", "答"),
-        prompt="问：{query}\n答：",
-        sep="\n",
-    )
-)
-
-"""ChatGLM2 template
-Support: https://huggingface.co/THUDM/chatglm2-6b
-source: https://huggingface.co/THUDM/chatglm2-6b/blob/main/modeling_chatglm.py#L1007
-"""
-register_conv_template(
-    Conversation(
-        name="chatglm2",
-        system_prompt="",
-        messages=[],
-        roles=("问", "答"),
-        prompt="问：{query}\n\n答：",
-        sep="\n\n",
-    )
-)
-
-"""ChatGLM3 template
-Support: https://huggingface.co/THUDM/chatglm3-6b
-source: https://huggingface.co/THUDM/chatglm3-6b/blob/main/tokenization_chatglm.py#L179
-"""
-register_conv_template(
-    Conversation(
-        name="chatglm3",
-        system_prompt="",
-        messages=[],
-        roles=("<|user|>", "<|assistant|>"),
-        prompt="<|user|>\n{query}<|assistant|>",
-        sep="\n",
-        stop_str="<|user|>",
-    )
-)
-
-"""Phoenix template"""
-register_conv_template(
-    Conversation(
-        name="phoenix",
-        system_prompt="A chat between a curious human and an artificial intelligence assistant. "
-        "The assistant gives helpful, detailed, and polite answers to the human's questions.\n\n",
-        messages=[],
-        roles=("Human", "Assistant"),
-        prompt="Human: <s>{query}</s>Assistant: ",
-        sep="</s>",
-    )
-)
-
-"""belle template
-Supports: https://huggingface.co/BelleGroup/BELLE-LLaMA-EXT-13B
-"""
-register_conv_template(
-    Conversation(
-        name="belle",
-        system_prompt="",
-        messages=[],
-        roles=("Human", "Belle"),
-        prompt="Human: {query}\n\nBelle: ",
-        sep="\n\n",
-    )
-)
-
-"""aquila template
-Supports: https://huggingface.co/qhduan/aquilachat-7b
-          https://huggingface.co/BAAI/AquilaChat2-34B
-"""
-register_conv_template(
-    Conversation(
-        name="aquila",
-        system_prompt="A chat between a curious human and an artificial intelligence assistant. "
-        "The assistant gives helpful, detailed, and polite answers to the human's questions.",
-        messages=[],
-        roles=("Human", "Assistant"),
-        prompt="Human: {query}###Assistant:",
-        sep="###",
-    )
-)
-
-"""intern template
-Supports: https://huggingface.co/internlm/internlm-chat-7b
-          https://huggingface.co/internlm/internlm-chat-20b
-"""
-register_conv_template(
-    Conversation(
-        name="intern",
-        system_prompt="",
-        messages=[],
-        roles=("<|User|>", "<|Bot|>"),
-        prompt="<|User|>:{query}<eoh>\n<|Bot|>:",
-        sep="<eoa>\n",
-        stop_str="<eoa>",
-    )
-)
-
-"""StarChat template
-Supports: https://huggingface.co/HuggingFaceH4/starchat-alpha
-          https://huggingface.co/HuggingFaceH4/starchat-beta
-"""
-register_conv_template(
-    Conversation(
-        name="starchat",
-        system_prompt="<system>\n",
-        messages=[],
-        roles=("<|user|>", "<|assistant|>"),
-        prompt="<|user|>\n{query}<|end|>\n<|assistant|>\n",
-        sep="<|end|>\n",
-        stop_str="<|end|>",
-    )
-)
-
-"""llama2 template
-Supports: https://huggingface.co/meta-llama/Llama-2-7b-chat-hf
-          https://huggingface.co/meta-llama/Llama-2-13b-chat-hf
-          https://huggingface.co/meta-llama/Llama-2-70b-chat-hf
-reference: https://github.com/facebookresearch/llama/blob/cfc3fc8c1968d390eb830e65c63865e980873a06/llama/generation.py#L212
-"""
-register_conv_template(
-    Conversation(
-        name="llama2",
-        system_prompt="<<SYS>>\nYou are a helpful, respectful and honest assistant. "
-        "Always answer as helpfully as possible, while being safe. "
-        "Your answers should not include any harmful, unethical, racist, sexist, "
-        "toxic, dangerous, or illegal content. "
-        "Please ensure that your responses are socially unbiased and positive in nature.\n\n"
-        "If a question does not make any sense, or is not factually coherent, "
-        "explain why instead of answering something not correct. "
-        "If you don't know the answer to a question, please don't share false information.\n<</SYS>>\n\n",
-        messages=[],
-        roles=("[INST]", "[/INST]"),
-        prompt="[INST] {query} [/INST]",
-        sep="</s>",
-    )
-)
-
-"""llama2-zh template
-source: https://github.com/ymcui/Chinese-LLaMA-Alpaca-2
-Supports: https://huggingface.co/ziqingyang/chinese-alpaca-2-7b
-"""
-register_conv_template(
-    Conversation(
-        name="llama2-zh",
-        system_prompt="[INST] <<SYS>>\nYou are a helpful assistant. 你是一个乐于助人的助手。\n<</SYS>>\n\n [/INST]",
-        messages=[],
-        roles=("[INST]", "[/INST]"),
-        prompt="[INST] {query} [/INST]",
-        sep="</s>",
-    )
-)
-
-"""mistral template
-Supports: https://huggingface.co/mistralai/Mistral-7B-v0.1
-          https://huggingface.co/HuggingFaceH4/zephyr-7b-beta
-source: https://docs.mistral.ai/llm/mistral-instruct-v0.1
-"""
-register_conv_template(
-    Conversation(
-        name="mistral",
-        system_prompt="<s>",
-        messages=[],
-        roles=("[INST]", "[/INST]"),
-        prompt="[INST] {query} [/INST]",
-        sep="</s>",
-    )
-)
-
-"""XVERSE template
-Supports: https://huggingface.co/xverse/XVERSE-13B-Chat
-"""
-register_conv_template(
-    Conversation(
-        name="xverse",
-        system_prompt="",
-        messages=[],
-        roles=("Human", "Assistant"),
-        prompt="Human: {query}\n\nAssistant: ",
-        sep="</s>",
-    )
-)
-
-"""Qwen template
-Supports: https://huggingface.co/Qwen/Qwen-7B-Chat
-chatml: https://xbot123.com/645a461b922f176d7cfdbc2d/
-"""
-register_conv_template(
-    Conversation(
-        name="chatml",
-        system_prompt="You are a helpful assistant.",
-        messages=[],
-        roles=("user", "assistant"),
-        prompt="<|im_start|>user\n{query}<|im_end|>\n<|im_start|>assistant\n",
-        sep="<|im_end|>\n",
-        stop_str="<|im_end|>",
-    )
-)
-
-
-def get_conv_template(name: str) -> Conversation:
-    """Get a conversation template."""
-    return conv_templates[name]
-
-
-DataClassType = NewType("DataClassType", Any)
-
-
 class H4ArgumentParser(HfArgumentParser):
     def parse_yaml_and_args(
         self, yaml_arg: str, other_args: Optional[List[str]] = None
@@ -691,6 +326,7 @@ class H4ArgumentParser(HfArgumentParser):
         Returns:
             [`List[dataclass]`]: a list of dataclasses with the values from the YAML file and the command line
         """
+        self.yaml_arg = yaml_arg
         arg_list = self.parse_yaml_file(os.path.abspath(yaml_arg))
 
         outputs = []
@@ -754,8 +390,15 @@ class H4ArgumentParser(HfArgumentParser):
 
         if len(output) == 1:
             output = output[0]
+        self.output = output
+        self.yaml_arg = sys.argv[1]
         return output
 
+    def save_yaml(self, output_dir):
+        with open(self.yaml_arg, 'r') as f:
+            config = yaml.safe_load(f)
+        with open(os.path.join(output_dir, 'config_argument.yaml'), 'w') as f:
+            yaml.dump(config, f, default_flow_style=False)
 
 logger = logging.getLogger(__name__)
 
@@ -805,13 +448,10 @@ def main():
     tokenizer_name_or_path = model_args.tokenizer_name_or_path
     if not tokenizer_name_or_path:
         tokenizer_name_or_path = model_args.model_name_or_path
-    tokenizer = tokenizer_class.from_pretrained(
-        tokenizer_name_or_path, **tokenizer_kwargs
-    )
-    prompt_template = get_conv_template(data_args.template_name)
+    tokenizer = tokenizer_class.from_pretrained(tokenizer_name_or_path, **tokenizer_kwargs)
     if tokenizer.eos_token_id is None:
-        tokenizer.eos_token = prompt_template.stop_str  # eos token is required for SFT
-        logger.info(f"Add eos token: {tokenizer.eos_token}")
+        tokenizer.eos_token = "</s>"  # eos token is required for SFT
+        logger.info("Add eos token: {}".format(tokenizer.eos_token))
     if tokenizer.pad_token_id is None:
         if tokenizer.unk_token_id is not None:
             tokenizer.pad_token = tokenizer.unk_token
@@ -893,7 +533,6 @@ def main():
     def preprocess_function(examples):
         """
         Preprocessing the datasets.
-            part of code modified from https://github.com/lm-sys/FastChat
         """
         input_ids_list = []
         attention_mask_list = []
@@ -919,6 +558,7 @@ def main():
             text_choices = "".join(choices)
             
             prompt = (
+                "<s>\n"
                 "Below is a math exercise. Provide a solution to that problem, if given multiple choices to answer; please give a final choice for solving that problem.\n"
                 f"### Question: {question}\n"
             )
@@ -935,6 +575,8 @@ def main():
                 output += f"### Explanation: {explanation}\n"
             if answer != "":
                 output += f"### Final choice: {answer}\n"
+            
+            output += "</s>"
 
             text = prompt + output
 
@@ -1103,6 +745,12 @@ def main():
         metrics["eval_samples"] = min(max_eval_samples, len(eval_dataset))
         trainer.log_metrics("eval", metrics)
         trainer.save_metrics("eval", metrics)
+
+    #############
+    # Save config
+    #############
+    parser.save_yaml(training_args.output_dir)
+
 
     ##################################
     # Save model and create model card
