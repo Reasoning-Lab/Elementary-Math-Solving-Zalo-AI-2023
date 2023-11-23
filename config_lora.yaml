@@ -26,7 +26,7 @@ per_device_eval_batch_size: 4
 do_train: true
 do_eval: true
 fp16: true
-learning_rate: 3.0e-05
+learning_rate: 5.0e-05
 log_level: info
 logging_strategy: steps
 lr_scheduler_type: cosine
@@ -40,12 +40,12 @@ save_steps: 500
 save_strategy: steps
 save_total_limit: 13
 gradient_accumulation_steps: 1
-output_dir: outputs-sft-zephyr-beta-v1
+output_dir: outputs-sft-zephyr-beta-v2
 overwrite_output_dir: true
 ddp_timeout: 30000
 logging_first_step: true
 report_to: wandb
-run_name: sft-zephyr-7b-beta-v1
+run_name: sft-zephyr-7b-beta-v2
 ddp_find_unused_parameters: false
 gradient_checkpointing: true
 gradient_checkpointing_kwargs:
@@ -53,5 +53,5 @@ gradient_checkpointing_kwargs:
 cache_dir: ./cache
 seed: 42
 push_to_hub: true
-hub_model_id: hllj/non-qa-sft-zephyr-7b-beta-v1
+hub_model_id: hllj/sft-zephyr-7b-beta-v2
 hub_strategy: every_save

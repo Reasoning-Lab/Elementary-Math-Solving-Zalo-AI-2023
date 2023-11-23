@@ -602,7 +602,8 @@ def main():
         )
 
         return peft_config
-    logger.info(f'info: {eval_dataset}')
+    logger.info(f'Train Dataset: {train_dataset}')
+    logger.info(f'Evaluation Dataset: {eval_dataset}')
     model_kwargs = dict(
         revision=model_args.model_revision,
         trust_remote_code=model_args.trust_remote_code,
