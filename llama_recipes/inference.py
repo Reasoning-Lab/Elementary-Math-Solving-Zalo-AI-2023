@@ -26,19 +26,20 @@ logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
 # Create a file handler and set the log file name
-file_handler = logging.FileHandler('inference.log')
+file_handler = logging.FileHandler("inference.log")
 
 # Create a stream handler to display log messages on the console
 stream_handler = logging.StreamHandler()
 
 # Configure the log message format
-formatter = logging.Formatter('%(asctime)s - %(levelname)s: %(message)s')
+formatter = logging.Formatter("%(asctime)s - %(levelname)s: %(message)s")
 file_handler.setFormatter(formatter)
 stream_handler.setFormatter(formatter)
 
 # Add the handlers to the logger
 logger.addHandler(file_handler)
 logger.addHandler(stream_handler)
+
 
 def get_user_prompt(example, one_shot):
     question = example["question"]
@@ -48,19 +49,19 @@ def get_user_prompt(example, one_shot):
 
     text_choices = "\n".join(choices)
     # logger.info(f"one_shot: {one_shot}")
-    if one_shot: 
+    if one_shot:
         user_prompt = (
-        "<s>[INST] <<SYS>>\n"
-        "{{ Trả lời câu hỏi sau bằng cách đưa ra đáp án chính xác nhất. Đáp án sẽ là một trong các lựa chọn A, B, C, D. Hãy suy nghĩ từng bước một. }}\n"
-        "<</SYS>>\n"
-        "{{ "
-        f"### Câu hỏi: {question}\n"
-        "### Các lựa chọn: \n"
-        f"{text_choices}"
-        " }}"
-        " [/INST]"
-        " {{ "
-        "### Đáp án (không cần giải thích): "
+            "<s>[INST] <<SYS>>\n"
+            "{{ Trả lời câu hỏi sau bằng cách đưa ra đáp án chính xác nhất. Đáp án sẽ là một trong các lựa chọn A, B, C, D. Hãy suy nghĩ từng bước một. }}\n"
+            "<</SYS>>\n"
+            "{{ "
+            f"### Câu hỏi: {question}\n"
+            "### Các lựa chọn: \n"
+            f"{text_choices}"
+            " }}"
+            " [/INST]"
+            " {{ "
+            "### Đáp án (không cần giải thích): "
         )
     else:
         user_prompt = (
@@ -135,26 +136,6 @@ def main(
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     tokenizer.pad_token = tokenizer.eos_token
 
-    # safety_checker = get_safety_checker(enable_azure_content_safety,
-    #                                     enable_sensitive_topics,
-    #                                     enable_salesforce_content_safety,
-    #                                     )
-
-    # # Safety check of the user prompt
-    # safety_results = [check(user_prompt) for check in safety_checker]
-    # are_safe = all([r[1] for r in safety_results])
-    # if are_safe:
-    #     logger.info("User prompt deemed safe.")
-    #     logger.info(f"User prompt:\n{user_prompt}")
-    # else:
-    #     logger.info("User prompt deemed unsafe.")
-    #     for method, is_safe, report in safety_results:
-    #         if not is_safe:
-    #             logger.info(method)
-    #             logger.info(report)
-    #     logger.info("Skipping the inference as the prompt is not safe.")
-    #     sys.exit(1)  # Exit the program with an error status
-
     results = []
     logger.info(f"TOKENIZER max_length: {max_length}")
     for idx, example in enumerate(data):
@@ -191,68 +172,60 @@ def main(
         gen_text = tokenizer.decode(
             outputs[0][input["input_ids"].shape[1] :], skip_special_tokens=True
         )
+        if not one_shot:
+            if len(gen_text.split("###")) > 1:
+                answer_text = gen_text.split("###")[1]
+            else:
+                answer_text = gen_text
 
-        if len(gen_text.split("###")) > 1:
-            answer_text = gen_text.split("###")[1]
-        else:
-            answer_text = gen_text
-        answer_to_map = gen_text[:-3]
+            print(f"Output text: {output_text}")
+            print(f"Gen text {gen_text}")
 
-        logger.info(f"Output text: {output_text}")
-        logger.info(f"Gen text {answer_to_map}")
+            answer = None
+            for choice in choices:
+                full_answer = choice
+                value_only = re.sub("[ABCD]. ", "", full_answer)
+                if full_answer in answer_text or value_only in answer_text:
+                    answer = choice
+                    break
+            print(f"Answer {answer}")
+            if answer is None:
+                answer = random.choice(choices)
+                print(f"Random Answer {answer}")
+        elif one_shot:
+            if len(gen_text.split("###")) > 1:
+                answer_text = gen_text.split("###")[1]
+            else:
+                answer_text = gen_text
+            answer_to_map = gen_text[:-3]
 
-        # answer = None
-        # for choice in choices:
-        #     full_answer = choice
-        #     value_only = re.sub("[ABCD]. ", "", full_answer)
-        #     if full_answer in answer_text:
-        #         answer = choice
-        #         break
-        # Initialize a dictionary to map answers
-        answer_mapping = {}
+            logger.info(f"Output text: {output_text}")
+            logger.info(f"Gen text {answer_to_map}")
+            # Initialize a dictionary to map answers
+            answer_mapping = {}
 
-        # Iterate through choices and map the answer
-        for choice in choices:
-            # Split the choice into option (e.g., "A.") and text (e.g., "24 phút")
-            option, text = choice.split(". ")
-            
-            # Store the mapping in the dictionary (with option as the key)
-            answer_mapping[option] = text
+            # Iterate through choices and map the answer
+            for choice in choices:
+                # Split the choice into option (e.g., "A.") and text (e.g., "24 phút")
+                option, text = choice.split(". ")
 
-        # Map the answer to the full choice
-        answer = None
-        for option, text in answer_mapping.items():
-            if text in answer_to_map:
-                answer = option + " " + text
-                break
+                # Store the mapping in the dictionary (with option as the key)
+                answer_mapping[option] = text
 
-        # if answer is None:
-        #     for choice in choices:
-        #         value_only = re.sub("[ABCD]. ", "", full_answer)
-        #         if value_only in answer_text:
-        #             answer = choice
-        #             break
-        logger.info(f"Answer {answer}")
-        if answer is None:
-            answer = random.choice(choices)
-            logger.info(f"Random Answer {answer}")
+            # Map the answer to the full choice
+            answer = None
+            for option, text in answer_mapping.items():
+                if text in answer_to_map:
+                    answer = option + " " + text
+                    break
+            logger.info(f"Answer {answer}")
+            if answer is None:
+                answer = random.choice(choices)
+                logger.info(f"Random Answer {answer}")
         results.append({"id": id, "answer": answer})
 
     result_df = pd.DataFrame.from_dict(results)
     result_df.to_csv("submission.csv", index=False)
-
-    # # Safety check of the model output
-    # safety_results = [check(output_text) for check in safety_checker]
-    # are_safe = all([r[1] for r in safety_results])
-    # if are_safe:
-    #     logger.info("User input and model output deemed safe.")
-    #     logger.info(f"Model output:\n{output_text}")
-    # else:
-    #     logger.info("Model output deemed unsafe.")
-    #     for method, is_safe, report in safety_results:
-    #         if not is_safe:
-    #             logger.info(method)
-    #             logger.info(report)
 
 
 if __name__ == "__main__":

@@ -80,8 +80,5 @@ def get_preprocessed_dataset(
         )
 
     return DATASET_PREPROC[dataset_config.dataset](
-        dataset_config,
-        tokenizer,
-        get_split(),
-        one_shot
+        dataset_config, tokenizer, get_split(), one_shot
     )

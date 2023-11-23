@@ -14,7 +14,14 @@ from typing import List
 
 
 class ZaloMathDataset(Dataset):
-    def __init__(self, dataset_config, tokenizer, partition="train", max_length=None, one_shot=False):
+    def __init__(
+        self,
+        dataset_config,
+        tokenizer,
+        partition="train",
+        max_length=None,
+        one_shot=False,
+    ):
         self.ann = json.load(open(dataset_config.data_path))["data"]
         if partition == "train":
             self.ann = self.ann
