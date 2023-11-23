@@ -397,801 +397,776 @@
             "id": "51",
             "question": "“1 giờ 36 phút = ……..giờ”. Số thập phân thích hợp cần điền vào chỗ chấm là:",
             "choices": "['A. 1,36', 'B. 13,6', 'C. 10,36', 'D. 1,6']",
-            "explanation": "1 giờ 36 phút = 1giờ + giờ = 1,6 giờ. Số thập phân thích hợp cần điền vào chỗ chấm là: 1,6.",
+            "explanation": "60 phút = 1 giờ \n Vậy 1 giờ 36 phút = 1giờ + 0.6 giờ = 1,6 giờ. Số thập phân thích hợp cần điền vào chỗ chấm là: 1,6.",
             "answer": "D. 1,6",
             "choices_str": "['A. 1,36', 'B. 13,6', 'C. 10,36', 'D. 1,6']"
         },
         {
-            "id": "52",
-            "question": "“1,5 giờ = …….phút”. Số thích hợp điền vào chỗ chấm là:",
-            "choices": "['A. 60', 'B. 90', 'C. 120', 'D. 150']",
-            "explanation": "1,5 giờ = 1,5 ${\\times}$ 60 phút = 90 phút. .",
-            "answer": "B. 90",
-            "choices_str": "['A. 60', 'B. 90', 'C. 120', 'D. 150']"
-        },
-        {
-            "id": "53",
-            "question": "“1,75m2 = …….cm2” Số thích hợp viết vào chỗ chấm là:",
-            "choices": "['A. 175', 'B. 1750', 'C. 17500', 'D. 17050']",
-            "explanation": "1,75m2 = 17500cm2. Số thích hợp viết vào chỗ chấm là: 17500.",
-            "answer": "C. 17500",
-            "choices_str": "['A. 175', 'B. 1750', 'C. 17500', 'D. 17050']"
-        },
-        {
-            "id": "54",
-            "question": "“19 m2 9 dm2 = …… m2”. Số thích hợp để điền vào chỗ chấm là:",
-            "choices": "['A. 19,9', 'B. 19,09', 'C. 199', 'D. 1909']",
-            "explanation": "Để giải quyết câu hỏi này, chúng ta cần hiểu rõ về đơn vị đo diện tích. \n\nTrong hệ thống đơn vị đo, 1 mét vuông (m2) bằng 100 decimet vuông (dm2). Điều này có nghĩa là, nếu chúng ta có 1 dm2, thì chúng ta chỉ có 0,01 m2. \n\nVậy nên, khi chúng ta có 9 dm2, chúng ta sẽ có 9 * 0,01 = 0,09 m2.\n\nVì vậy, khi cộng 19 m2 và 9 dm2 lại, chúng ta sẽ có 19 m2 + 0,09 m2 = 19,09 m2.\n\nVì vậy, đáp án chính xác là 19,09 m2.",
-            "answer": "B. 19,09",
-            "choices_str": "['A. 19,9', 'B. 19,09', 'C. 199', 'D. 1909']"
-        },
-        {
-            "id": "55",
-            "question": "“2 giờ = .... phút”. Số thích hợp điền vào chỗ chấm là:",
-            "choices": "['A. 60', 'B. 180', 'C. 90', 'D. 120']",
-            "explanation": "1 giờ = 60 phút\n Vậy 2 giờ = 60 phút × 2 = 120 phút.",
-            "answer": "D. 120",
-            "choices_str": "['A. 60', 'B. 180', 'C. 90', 'D. 120']"
-        },
-        {
-            "id": "56",
-            "question": "“2 giờ 30 phút = …..phút”. Số thích hợp cần điền vào chỗ chấm là:",
-            "choices": "['A. 2,5', 'B. 15,5', 'C. 150', 'D. 230']",
-            "explanation": "2 giờ 30 phút = 150 phút",
-            "answer": "C. 150",
-            "choices_str": "['A. 2,5', 'B. 15,5', 'C. 150', 'D. 230']"
-        },
-        {
-            "id": "57",
-            "question": "“2 giờ 6 phút = ……..giờ”. Số thích hợp cần điền vào chỗ chấm là:",
-            "choices": "['A. 126', 'B. 2,1', 'C. 2,6', 'D. 2,06']",
-            "explanation": "2 giờ 6 phút = 2 giờ + giờ = 2,1 giờ. Số thích hợp cần điền vào chỗ chấm là: 2,1.",
-            "answer": "B. 2,1",
-            "choices_str": "['A. 126', 'B. 2,1', 'C. 2,6', 'D. 2,06']"
-        },
-        {
-            "id": "58",
-            "question": "“2,3m3 = ……..l” Số thích hợp cần điền vào chỗ chấm là:",
-            "choices": "['A. 0,023', 'B. 23', 'C. 230', 'D. 2300']",
-            "explanation": "2,3m3 = 2300dm3 = 2300l",
-            "answer": "D. 2300",
-            "choices_str": "['A. 0,023', 'B. 23', 'C. 230', 'D. 2300']"
-        },
-        {
-            "id": "59",
-            "question": "“2800g = …..kg”. Số thích hợp điền vào chỗ chấm là:",
-            "choices": "['A. 28', 'B. 2,8', 'C. 0,28', 'D. 280']",
-            "explanation": "2800g = 2,8kg",
-            "answer": "B. 2,8",
-            "choices_str": "['A. 28', 'B. 2,8', 'C. 0,28', 'D. 280']"
-        },
-        {
-            "id": "60",
-            "question": "“3 giờ 35 phút = ……phút” Số thích hợp cần điền vào chỗ chấm là:",
-            "choices": "['A. 335', 'B. 3,35', 'C. 215', 'D. 225']",
-            "explanation": "3 giờ 35 phút = 215 phút",
-            "answer": "C. 215",
-            "choices_str": "['A. 335', 'B. 3,35', 'C. 215', 'D. 225']"
-        },
-        {
-            "id": "61",
-            "question": "“3 tạ 56kg = …..tạ”. Số thích hợp điền vào chỗ chấm là:",
-            "choices": "['A. 3056', 'B. 3,56', 'C. 35,6', 'D. 356']",
-            "explanation": "3 tạ 56kg = 3,56tạ",
-            "answer": "B. 3,56",
-            "choices_str": "['A. 3056', 'B. 3,56', 'C. 35,6', 'D. 356']"
-        },
-        {
-            "id": "62",
-            "question": "“3 tấn 250kg = ……..tấn”. Số cần điền vào chỗ chấm là:",
-            "choices": "['A. 3025', 'B. 3250', 'C. 3,025', 'D. 3,25']",
-            "explanation": "3 tấn 250kg = 3 tấn + tấn = 3,25 tấn",
-            "answer": "D. 3,25",
-            "choices_str": "['A. 3025', 'B. 3250', 'C. 3,025', 'D. 3,25']"
-        },
-        {
-            "id": "63",
-            "question": "“3,2m3 = …….dm3”. Số thích hợp điền vào chỗ chấm là:",
-            "choices": "['A. 32000', 'B. 3200', 'C. 320', 'D. 32']",
-            "explanation": "3,2m3 = 3,2 ${\\times}$ 1000 dm3 = 3200dm3.",
-            "answer": "B. 3200",
-            "choices_str": "['A. 32000', 'B. 3200', 'C. 320', 'D. 32']"
-        },
-        {
-            "id": "64",
-            "question": "“30m3 50dm3 = …...m3”. Số thích hợp cần điền vào chỗ chấm là:",
-            "choices": "['A. 3050', 'B. 30050', 'C. 30,05', 'D. 30,5']",
-            "explanation": "30m3 50dm3 = 30,05 m3",
-            "answer": "C. 30,05",
-            "choices_str": "['A. 3050', 'B. 30050', 'C. 30,05', 'D. 30,5']"
+        "id": "52",
+        "question": "“1,5 giờ = …….phút”. Số thích hợp điền vào chỗ chấm là:",
+        "choices": "['A. 60', 'B. 90', 'C. 120', 'D. 150']",
+        "explanation": "1 giờ = 60 phút\n Vậy 1,5 giờ = 1,5 ${\\times}$ 60 phút = 90 phút. .",
+        "answer": "B. 90",
+        "choices_str": "['A. 60', 'B. 90', 'C. 120', 'D. 150']"
+        },
+        {
+        "id": "53",
+        "question": "“1,75m2 = …….cm2” Số thích hợp viết vào chỗ chấm là:",
+        "choices": "['A. 175', 'B. 1750', 'C. 17500', 'D. 17050']",
+        "explanation": "1m2 = 10000cm2 \n Vậy1,75m2 = 1,75 × 10000cm2 = 17500cm2. Số thích hợp viết vào chỗ chấm là: 17500.",
+        "answer": "C. 17500",
+        "choices_str": "['A. 175', 'B. 1750', 'C. 17500', 'D. 17050']"
+        },
+        {
+        "id": "54",
+        "question": "“19 m2 9 dm2 = …… m2”. Số thích hợp để điền vào chỗ chấm là:",
+        "choices": "['A. 19,9', 'B. 19,09', 'C. 199', 'D. 1909']",
+        "explanation": " Ta có, 1m2 = 100 dm2. Hay 1 dm2 = 0,01 m2. \n 9 dm2 = 9 * 0,01m2 = 0,09 m2.\n\nVì vậy,19 m2 9 dm2 = 19 m2 + 0,09 m2 = 19,09 m2.\n\nVì vậy, đáp án chính xác là 19,09 m2.",
+        "answer": "B. 19,09",
+        "choices_str": "['A. 19,9', 'B. 19,09', 'C. 199', 'D. 1909']"
+        },
+        {
+        "id": "55",
+        "question": "“2 giờ = .... phút”. Số thích hợp điền vào chỗ chấm là:",
+        "choices": "['A. 60', 'B. 180', 'C. 90', 'D. 120']",
+        "explanation": "1 giờ = 60 phút\n Vậy 2 giờ = 60 phút × 2 = 120 phút.",
+        "answer": "D. 120",
+        "choices_str": "['A. 60', 'B. 180', 'C. 90', 'D. 120']"
+        },
+        {
+        "id": "56",
+        "question": "“2 giờ 30 phút = …..phút”. Số thích hợp cần điền vào chỗ chấm là:",
+        "choices": "['A. 2,5', 'B. 15,5', 'C. 150', 'D. 230']",
+        "explanation": "1 giờ = 60 phút\n 2 giờ 30 phút = 60 phút × 2 +30 phút = 150 phút",
+        "answer": "C. 150",
+        "choices_str": "['A. 2,5', 'B. 15,5', 'C. 150', 'D. 230']"
+        },
+        {
+        "id": "57",
+        "question": "“2 giờ 6 phút = ……..giờ”. Số thích hợp cần điền vào chỗ chấm là:",
+        "choices": "['A. 126', 'B. 2,1', 'C. 2,6', 'D. 2,06']",
+        "explanation": "1 giờ = 60 phút\n 2 giờ 6 phút = 2 giờ + 0,1 giờ = 2,1 giờ. Số thích hợp cần điền vào chỗ chấm là: 2,1.",
+        "answer": "B. 2,1",
+        "choices_str": "['A. 126', 'B. 2,1', 'C. 2,6', 'D. 2,06']"
+        },
+        {
+        "id": "58",
+        "question": "“2,3m3 = ……..l” Số thích hợp cần điền vào chỗ chấm là:",
+        "choices": "['A. 0,023', 'B. 23', 'C. 230', 'D. 2300']",
+        "explanation": "1m3 = 1000 dm3 \n 1 dm3 = 1l \n 2,3m3 = 2,3× 1000 dm3 = 2,3×1000l = 2300l",
+        "answer": "D. 2300",
+        "choices_str": "['A. 0,023', 'B. 23', 'C. 230', 'D. 2300']"
+        },
+        {
+        "id": "59",
+        "question": "“2800g = …..kg”. Số thích hợp điền vào chỗ chấm là:",
+        "choices": "['A. 28', 'B. 2,8', 'C. 0,28', 'D. 280']",
+        "explanation": "1000g = 1kg \n 2800g = 2,8kg",
+        "answer": "B. 2,8",
+        "choices_str": "['A. 28', 'B. 2,8', 'C. 0,28', 'D. 280']"
+        },
+        {
+        "id": "60",
+        "question": "“3 giờ 35 phút = ……phút” Số thích hợp cần điền vào chỗ chấm là:",
+        "choices": "['A. 335', 'B. 3,35', 'C. 215', 'D. 225']",
+        "explanation": "1 giờ = 60 phút\n 3 giờ 35 phút = 60 phút × 3 +35 phút = 215 phút",
+        "answer": "C. 215",
+        "choices_str": "['A. 335', 'B. 3,35', 'C. 215', 'D. 225']"
+        },
+        {
+        "id": "61",
+        "question": "“3 tạ 56kg = …..tạ”. Số thích hợp điền vào chỗ chấm là:",
+        "choices": "['A. 3056', 'B. 3,56', 'C. 35,6', 'D. 356']",
+        "explanation": "3 tạ 56kg = 3,56tạ",
+        "answer": "B. 3,56",
+        "choices_str": "['A. 3056', 'B. 3,56', 'C. 35,6', 'D. 356']"
+        },
+        {
+        "id": "62",
+        "question": "“3 tấn 250kg = ……..tấn”. Số cần điền vào chỗ chấm là:",
+        "choices": "['A. 3025', 'B. 3250', 'C. 3,025', 'D. 3,25']",
+        "explanation": "3 tấn 250kg = 3 tấn + 0,25 tấn = 3,25 tấn",
+        "answer": "D. 3,25",
+        "choices_str": "['A. 3025', 'B. 3250', 'C. 3,025', 'D. 3,25']"
+        },
+        {
+        "id": "63",
+        "question": "“3,2m3 = …….dm3”. Số thích hợp điền vào chỗ chấm là:",
+        "choices": "['A. 32000', 'B. 3200', 'C. 320', 'D. 32']",
+        "explanation": "3,2m3 = 3,2 ${\\times}$ 1000 dm3 = 3200dm3.",
+        "answer": "B. 3200",
+        "choices_str": "['A. 32000', 'B. 3200', 'C. 320', 'D. 32']"
+        },
+        {
+        "id": "64",
+        "question": "“30m3 50dm3 = …...m3”. Số thích hợp cần điền vào chỗ chấm là:",
+        "choices": "['A. 3050', 'B. 30050', 'C. 30,05', 'D. 30,5']",
+        "explanation": "30m3 50dm3 = 30,05 m3",
+        "answer": "C. 30,05",
+        "choices_str": "['A. 3050', 'B. 30050', 'C. 30,05', 'D. 30,5']"
         },
         {
-            "id": "65",
-            "question": "“3km 15m = …….km”. Số thích hợp cần điền vào chỗ chấm là:",
-            "choices": "['A. 3,15', 'B. 31,5', 'C. 3,015', 'D. 30,15']",
-            "explanation": "3km 15m = 3km + km = 3,015km.",
-            "answer": "C. 3,015",
-            "choices_str": "['A. 3,15', 'B. 31,5', 'C. 3,015', 'D. 30,15']"
+        "id": "65",
+        "question": "“3km 15m = …….km”. Số thích hợp cần điền vào chỗ chấm là:",
+        "choices": "['A. 3,15', 'B. 31,5', 'C. 3,015', 'D. 30,15']",
+        "explanation": "3km 15m = 3km + 0,015km = 3,015km.",
+        "answer": "C. 3,015",
+        "choices_str": "['A. 3,15', 'B. 31,5', 'C. 3,015', 'D. 30,15']"
         },
         {
-            "id": "66",
-            "question": "“3m3 76dm3 = ……..m3”. Số thích hợp điền vào chỗ chấm là:",
-            "choices": "['A. 3,76', 'B. 3,706', 'C. 37,6', 'D. 3,076']",
-            "explanation": "3m3 76dm3 = 3,076m3.",
-            "answer": "D. 3,076",
-            "choices_str": "['A. 3,76', 'B. 3,706', 'C. 37,6', 'D. 3,076']"
+        "id": "66",
+        "question": "“3m3 76dm3 = ……..m3”. Số thích hợp điền vào chỗ chấm là:",
+        "choices": "['A. 3,76', 'B. 3,706', 'C. 37,6', 'D. 3,076']",
+        "explanation": "3m3 76dm3 = 3,076m3.",
+        "answer": "D. 3,076",
+        "choices_str": "['A. 3,76', 'B. 3,706', 'C. 37,6', 'D. 3,076']"
         },
         {
-            "id": "67",
-            "question": "“4 ngày 18 giờ = ……….ngày”. Số thích hợp cần điền vào chỗ chấm là:",
-            "choices": "['A. 4,3', 'B. 4,75', 'C. 4,5', 'D. 4,18']",
-            "explanation": "4 ngày 18 giờ = 4,75 ngày",
-            "answer": "B. 4,75",
-            "choices_str": "['A. 4,3', 'B. 4,75', 'C. 4,5', 'D. 4,18']"
+        "id": "67",
+        "question": "“4 ngày 18 giờ = ……….ngày”. Số thích hợp cần điền vào chỗ chấm là:",
+        "choices": "['A. 4,3', 'B. 4,75', 'C. 4,5', 'D. 4,18']",
+        "explanation": "4 ngày 18 giờ = 4,75 ngày",
+        "answer": "B. 4,75",
+        "choices_str": "['A. 4,3', 'B. 4,75', 'C. 4,5', 'D. 4,18']"
         },
         {
-            "id": "68",
-            "question": "“4 tạ 3 yến = ….kg”. Số thích hợp cần điền vào chỗ chấm là:",
-            "choices": "['A. 43', 'B. 4300', 'C. 4,3', 'D. 430']",
-            "explanation": "4 tạ 3 yến = 430kg",
-            "answer": "D. 430",
-            "choices_str": "['A. 43', 'B. 4300', 'C. 4,3', 'D. 430']"
+        "id": "68",
+        "question": "“4 tạ 3 yến = ….kg”. Số thích hợp cần điền vào chỗ chấm là:",
+        "choices": "['A. 43', 'B. 4300', 'C. 4,3', 'D. 430']",
+        "explanation": "4 tạ 3 yến = 430kg",
+        "answer": "D. 430",
+        "choices_str": "['A. 43', 'B. 4300', 'C. 4,3', 'D. 430']"
         },
         {
-            "id": "69",
-            "question": "“45dm3 124cm3 = …..dm3” Số thích hợp cần điền vào chỗ chấm là:",
-            "choices": "['A. 45,124', 'B. 45124', 'C. 451,24', 'D. 0,45124']",
-            "explanation": "45dm3 124cm3 = 45,124dm3",
-            "answer": "A. 45,124",
-            "choices_str": "['A. 45,124', 'B. 45124', 'C. 451,24', 'D. 0,45124']"
+        "id": "69",
+        "question": "“45dm3 124cm3 = …..dm3” Số thích hợp cần điền vào chỗ chấm là:",
+        "choices": "['A. 45,124', 'B. 45124', 'C. 451,24', 'D. 0,45124']",
+        "explanation": "45dm3 124cm3 = 45,124dm3",
+        "answer": "A. 45,124",
+        "choices_str": "['A. 45,124', 'B. 45124', 'C. 451,24', 'D. 0,45124']"
         },
         {
-            "id": "70",
-            "question": "“4dam2 8m2 = …..dam2.” Số thích hợp điền vào cỗ chấm là:",
-            "choices": "['A. 48', 'B. 4,8', 'C. 4,008', 'D. 4,08']",
-            "explanation": "Đầu tiên, chúng ta cần hiểu rằng \"dam2\" và \"m2\" là các đơn vị đo diện tích. Trong hệ thống đơn vị đo lường, 1 dam2 tương đương với 100 m2.\n\nVậy nên, để chuyển đổi từ m2 sang dam2, chúng ta cần chia cho 100.\n\nTrong trường hợp này, chúng ta có 4 dam2 và 8 m2. Để chuyển 8 m2 sang dam2, chúng ta chia 8 cho 100, kết quả là 0,08 dam2.\n\nCuối cùng, chúng ta cộng 4 dam2 và 0,08 dam2 lại, kết quả là 4,08 dam2.\n\nVậy nên, đáp án chính xác là 4,08.",
-            "answer": "D. 4,08",
-            "choices_str": "['A. 48', 'B. 4,8', 'C. 4,008', 'D. 4,08']"
+        "id": "70",
+        "question": "“4dam2 8m2 = …..dam2.” Số thích hợp điền vào cỗ chấm là:",
+        "choices": "['A. 48', 'B. 4,8', 'C. 4,008', 'D. 4,08']",
+        "explanation": "Đầu tiên, chúng ta cần hiểu rằng \"dam2\" và \"m2\" là các đơn vị đo diện tích. Trong hệ thống đơn vị đo lường, 1 dam2 tương đương với 100 m2.\n\nVậy nên, để chuyển đổi từ m2 sang dam2, chúng ta cần chia cho 100.\n\nTrong trường hợp này, chúng ta có 4 dam2 và 8 m2. Để chuyển 8 m2 sang dam2, chúng ta chia 8 cho 100, kết quả là 0,08 dam2.\n\nCuối cùng, chúng ta cộng 4 dam2 và 0,08 dam2 lại, kết quả là 4,08 dam2.\n\nVậy nên, đáp án chính xác là 4,08.",
+        "answer": "D. 4,08",
+        "choices_str": "['A. 48', 'B. 4,8', 'C. 4,008', 'D. 4,08']"
         },
         {
-            "id": "71",
-            "question": "“4dam2 8m2 = …..dam2.” Số thích hợp điền vào cỗ chấm là:",
-            "choices": "['A. 48', 'B. 4,8', 'C. 4,008', 'D. 4,08']",
-            "explanation": "4dam2 8m2 = 4,08 dam2",
-            "answer": "D. 4,08",
-            "choices_str": "['A. 48', 'B. 4,8', 'C. 4,008', 'D. 4,08']"
+        "id": "72",
+        "question": "“4m3 45dm3 = ……..m3”. Số thích hợp để điền vào chỗ chấm là:",
+        "choices": "['A. 4,45', 'B. 4,450', 'C. 4,405', 'D. 4,045']",
+        "explanation": "4m3 45dm3 = 4,045m3. Số thích hợp để điền vào chỗ chấm là: 4,045.",
+        "answer": "D. 4,045",
+        "choices_str": "['A. 4,45', 'B. 4,450', 'C. 4,405', 'D. 4,045']"
         },
         {
-            "id": "72",
-            "question": "“4m3 45dm3 = ……..m3”. Số thích hợp để điền vào chỗ chấm là:",
-            "choices": "['A. 4,45', 'B. 4,450', 'C. 4,405', 'D. 4,045']",
-            "explanation": "4m3 45dm3 = 4,045m3. Số thích hợp để điền vào chỗ chấm là: 4,045.",
-            "answer": "D. 4,045",
-            "choices_str": "['A. 4,45', 'B. 4,450', 'C. 4,405', 'D. 4,045']"
+        "id": "73",
+        "question": "“5,4 phút = ……giây”. Số thích hợp cần điền vào chỗ chấm là:",
+        "choices": "['A. 54', 'B. 540', 'C. 192', 'D. 324']",
+        "explanation": "5,4 phút = 324 giây",
+        "answer": "D. 324",
+        "choices_str": "['A. 54', 'B. 540', 'C. 192', 'D. 324']"
         },
         {
-            "id": "73",
-            "question": "“5,4 phút = ……giây”. Số thích hợp cần điền vào chỗ chấm là:",
-            "choices": "['A. 54', 'B. 540', 'C. 192', 'D. 324']",
-            "explanation": "5,4 phút = 324 giây",
-            "answer": "D. 324",
-            "choices_str": "['A. 54', 'B. 540', 'C. 192', 'D. 324']"
+        "id": "74",
+        "question": "“5dm2 3cm2 = ……dm2”. Số thích hợp cần điền vào chỗ chấm là:",
+        "choices": "['A. 5,3', 'B. 5,03', 'C. 503', 'D. 53']",
+        "explanation": "5dm2 3cm2 = 5,03dm2",
+        "answer": "B. 5,03",
+        "choices_str": "['A. 5,3', 'B. 5,03', 'C. 503', 'D. 53']"
         },
         {
-            "id": "74",
-            "question": "“5dm2 3cm2 = ……dm2”. Số thích hợp cần điền vào chỗ chấm là:",
-            "choices": "['A. 5,3', 'B. 5,03', 'C. 503', 'D. 53']",
-            "explanation": "5dm2 3cm2 = 5,03dm2",
-            "answer": "B. 5,03",
-            "choices_str": "['A. 5,3', 'B. 5,03', 'C. 503', 'D. 53']"
+        "id": "75",
+        "question": "“5km 706m = …….hm” Số thích hợp điền vào chỗ chấm là:",
+        "choices": "['A. 50,706', 'B. 57,06', 'C. 5706', 'D. 50706']",
+        "explanation": "5km 706m = 50hm + 7,06hm = 57,06hm",
+        "answer": "B. 57,06",
+        "choices_str": "['A. 50,706', 'B. 57,06', 'C. 5706', 'D. 50706']"
         },
         {
-            "id": "75",
-            "question": "“5km 706m = …….hm” Số thích hợp điền vào chỗ chấm là:",
-            "choices": "['A. 50,706', 'B. 57,06', 'C. 5706', 'D. 50706']",
-            "explanation": "5km 706m = 50hm + 7,06hm = 57,06hm",
-            "answer": "B. 57,06",
-            "choices_str": "['A. 50,706', 'B. 57,06', 'C. 5706', 'D. 50706']"
+        "id": "76",
+        "question": "“8 dm2 9 cm2 = …… cm2.” Số thích hợp để điền vào chỗ chấm là:",
+        "choices": "['A. 8,9', 'B. 8,09', 'C. 809', 'D. 8009']",
+        "explanation": "Ta có 8 dm2 = 800 cm2.Nên 8 dm2 9 cm2 = 800 cm2 + 9 cm2 = 809 cm2.",
+        "answer": "C. 809",
+        "choices_str": "['A. 8,9', 'B. 8,09', 'C. 809', 'D. 8009']"
         },
         {
-            "id": "76",
-            "question": "“8 dm2 9 cm2 = …… cm2.” Số thích hợp để điền vào chỗ chấm là:",
-            "choices": "['A. 8,9', 'B. 8,09', 'C. 809', 'D. 8009']",
-            "explanation": "Ta có 8 dm2 = 800 cm2.Nên 8 dm2 9 cm2 = 800 cm2 + 9 cm2 = 809 cm2.",
-            "answer": "C. 809",
-            "choices_str": "['A. 8,9', 'B. 8,09', 'C. 809', 'D. 8009']"
+        "id": "77",
+        "question": "“8 m 9 cm = …… m”. Số thập phân thích hợp điền vào chỗ chấm là:",
+        "choices": "['A. 8,09', 'B. 8,009', 'C. 8,9', 'D. 809']",
+        "explanation": "Ta có 9 cm = 0,09 m Do đó 8 m 9 cm = 8 m + 0,09 m = 8,09 m.Vậy số thập phân thích hợp điền vào chỗ chấm là: 8,09.",
+        "answer": "A. 8,09",
+        "choices_str": "['A. 8,09', 'B. 8,009', 'C. 8,9', 'D. 809']"
         },
         {
-            "id": "77",
-            "question": "“8 m 9 cm = …… m”. Số thập phân thích hợp điền vào chỗ chấm là:",
-            "choices": "['A. 8,09', 'B. 8,009', 'C. 8,9', 'D. 809']",
-            "explanation": "Ta có 9 cm = 0,09 m Do đó 8 m 9 cm = 8 m + 0,09 m = 8,09 m.Vậy số thập phân thích hợp điền vào chỗ chấm là: 8,09.",
-            "answer": "A. 8,09",
-            "choices_str": "['A. 8,09', 'B. 8,009', 'C. 8,9', 'D. 809']"
+        "id": "78",
+        "question": "“8 m2 6 dm2 =…… m2.” Số thích hợp điền vào chỗ chấm là:",
+        "choices": "['A. 8,6', 'B. 86', 'C. 806', 'D. 8,06']",
+        "explanation": "Trong hệ thống đơn vị đo, 1 mét vuông (m2) bằng 100 decimet vuông (dm2). Điều này có nghĩa là, nếu chúng ta có 1 dm2, thì chúng ta có 0,01 m2. \n\nVậy nên, khi chúng ta có 6 dm2, chúng ta sẽ có 6 * 0,01 = 0,06 m2.\n\nVì vậy, 8 m2 6 dm2 sẽ tương đương với 8 m2 + 0,06 m2 = 8,06 m2.\n\nDo đó, đáp án chính xác là 8,06.",
+        "answer": "D. 8,06",
+        "choices_str": "['A. 8,6', 'B. 86', 'C. 806', 'D. 8,06']"
         },
         {
-            "id": "78",
-            "question": "“8 m2 6 dm2 =…… m2.” Số thích hợp điền vào chỗ chấm là:",
-            "choices": "['A. 8,6', 'B. 86', 'C. 806', 'D. 8,06']",
-            "explanation": "Để giải quyết câu hỏi này, chúng ta cần hiểu rõ về đơn vị đo diện tích. \n\nTrong hệ thống đơn vị đo, 1 mét vuông (m2) bằng 100 decimet vuông (dm2). Điều này có nghĩa là, nếu chúng ta có 1 dm2, thì chúng ta có 0,01 m2. \n\nVậy nên, khi chúng ta có 6 dm2, chúng ta sẽ có 6 * 0,01 = 0,06 m2.\n\nVì vậy, 8 m2 6 dm2 sẽ tương đương với 8 m2 + 0,06 m2 = 8,06 m2.\n\nDo đó, đáp án chính xác là 8,06.",
-            "answer": "D. 8,06",
-            "choices_str": "['A. 8,6', 'B. 86', 'C. 806', 'D. 8,06']"
+        "id": "79",
+        "question": "“9ha 7m2 = ………dam2”. Số thích hợp cần điền vào chỗ chấm là:",
+        "choices": "['A. 9,7', 'B. 9,07', 'C. 900,07', 'D. 90,07']",
+        "explanation": "9ha 7m2 = 900,07dam2",
+        "answer": "C. 900,07",
+        "choices_str": "['A. 9,7', 'B. 9,07', 'C. 900,07', 'D. 90,07']"
         },
         {
-            "id": "79",
-            "question": "“9ha 7m2 = ………dam2”. Số thích hợp cần điền vào chỗ chấm là:",
-            "choices": "['A. 9,7', 'B. 9,07', 'C. 900,07', 'D. 90,07']",
-            "explanation": "9ha 7m2 = 90,07dam2",
-            "answer": "D. 90,07",
-            "choices_str": "['A. 9,7', 'B. 9,07', 'C. 900,07', 'D. 90,07']"
+        "id": "80",
+        "question": "“Chiều dài phòng học của em khoảng 8….”. Tên đơn vị cần điền vào chỗ chấm là:",
+        "choices": "['A. m', 'B. dm', 'C. cm', 'D. mm']",
+        "explanation": "Đáp án là m\n\nGiải thích:\n\nTrong câu hỏi, chúng ta đang nói về chiều dài của một phòng học. Khi nói về các đơn vị đo lường trong thực tế, chúng ta thường sử dụng đơn vị phù hợp với kích thước của vật thể đang được đo. \n\nTrong trường hợp này, phòng học là một không gian lớn, do đó, đơn vị đo lường phù hợp nhất để đo chiều dài của nó là mét (m), chứ không phải decimet (dm), centimet (cm) hay milimet (mm) vì những đơn vị này thường được sử dụng để đo các vật thể nhỏ hơn nhiều.\n\nVì vậy, đáp án chính xác là \"m\".",
+        "answer": "A. m",
+        "choices_str": "['A. m', 'B. dm', 'C. cm', 'D. mm']"
         },
         {
-            "id": "80",
-            "question": "“Chiều dài phòng học của em khoảng 8….”. Tên đơn vị cần điền vào chỗ chấm là:",
-            "choices": "['A. m', 'B. dm', 'C. cm', 'D. mm']",
-            "explanation": "Đáp án là m\n\nGiải thích:\n\nTrong câu hỏi, chúng ta đang nói về chiều dài của một phòng học. Khi nói về các đơn vị đo lường trong thực tế, chúng ta thường sử dụng đơn vị phù hợp với kích thước của vật thể đang được đo. \n\nTrong trường hợp này, phòng học là một không gian lớn, do đó, đơn vị đo lường phù hợp nhất để đo chiều dài của nó là mét (m), chứ không phải decimet (dm), centimet (cm) hay milimet (mm) vì những đơn vị này thường được sử dụng để đo các vật thể nhỏ hơn nhiều.\n\nVì vậy, đáp án chính xác là \"m\".",
-            "answer": "A. m",
-            "choices_str": "['A. m', 'B. dm', 'C. cm', 'D. mm']"
+        "id": "81",
+        "question": "“Chín triệu bốn trăm sáu mươi bảy nghìn ba trăm hai mươi sáu” biểu thị số:",
+        "choices": "['A. 9 467 000', 'B. 9 467 326', 'C. 9 000 326', 'D. 9 476 362']",
+        "explanation": "Để giải thích câu trả lời này, chúng ta cần phân tích từng phần của câu hỏi.\n\nCâu hỏi đưa ra là \"Chín triệu bốn trăm sáu mươi bản nghìn ba trăm hai mươi sáu\" biểu thị số nào. Để hiểu rõ hơn, chúng ta cần chia câu hỏi thành từng phần nhỏ.\n\n1. \"Chín triệu\": Điều này có nghĩa là có 9 triệu, tức là 9,000,000.\n2. \"Bốn trăm sáu mươi bản nghìn\": Điều này có nghĩa là có 467 nghìn, tức là 467,000.\n3. \"Ba trăm hai mươi sáu\": Điều này có nghĩa là có 326.\n\nKhi kết hợp tất cả các phần này lại, chúng ta có số 9,467,326. \n\nVì vậy, câu trả lời chính xác là \"9 467 326\".",
+        "answer": "B. 9 467 326",
+        "choices_str": "['A. 9 467 000', 'B. 9 467 326', 'C. 9 000 326', 'D. 9 476 362']"
         },
         {
-            "id": "81",
-            "question": "“Chín triệu bốn trăm sáu mươi bảy nghìn ba trăm hai mươi sáu” biểu thị số:",
-            "choices": "['A. 9 467 000', 'B. 9 467 326', 'C. 9 000 326', 'D. 9 476 362']",
-            "explanation": "Để giải thích câu trả lời này, chúng ta cần phân tích từng phần của câu hỏi.\n\nCâu hỏi đưa ra là \"Chín triệu bốn trăm sáu mươi bản nghìn ba trăm hai mươi sáu\" biểu thị số nào. Để hiểu rõ hơn, chúng ta cần chia câu hỏi thành từng phần nhỏ.\n\n1. \"Chín triệu\": Điều này có nghĩa là có 9 triệu, tức là 9,000,000.\n2. \"Bốn trăm sáu mươi bản nghìn\": Điều này có nghĩa là có 467 nghìn, tức là 467,000.\n3. \"Ba trăm hai mươi sáu\": Điều này có nghĩa là có 326.\n\nKhi kết hợp tất cả các phần này lại, chúng ta có số 9,467,326. \n\nVì vậy, câu trả lời chính xác là \"9 467 326\".",
-            "answer": "B. 9 467 326",
-            "choices_str": "['A. 9 467 000', 'B. 9 467 326', 'C. 9 000 326', 'D. 9 476 362']"
+        "id": "82",
+        "question": "“Cho 1 giờ 35 phút = ……..phút”. Số thích hợp để điền vào chỗ chấm là:",
+        "choices": "['A. 95', 'B. 105', 'C. 135', 'D. 1,35']",
+        "explanation": "Cho 1 giờ 35 phút = 95 phút.",
+        "answer": "A. 95",
+        "choices_str": "['A. 95', 'B. 105', 'C. 135', 'D. 1,35']"
         },
         {
-            "id": "82",
-            "question": "“Cho 1 giờ 35 phút = ……..phút”. Số thích hợp để điền vào chỗ chấm là:",
-            "choices": "['A. 95', 'B. 105', 'C. 135', 'D. 1,35']",
-            "explanation": "Cho 1 giờ 35 phút = 95 phút.",
-            "answer": "A. 95",
-            "choices_str": "['A. 95', 'B. 105', 'C. 135', 'D. 1,35']"
+        "id": "83",
+        "question": "“Chữ số 5 trong số 162,57 thuộc ……………………….”.",
+        "choices": "['A. Hàng đơn vị và có giá trị $\\\\frac{5}{10}$ ', 'B. Hàng phần mười và có giá trị $\\\\frac{5}{10}$ ', 'C. Hàng đơn vị và có giá trị 5', 'D. 26 605 + 8 125']",
+        "explanation": "Trong số 162,57, chữ số 5 đứng sau dấu phẩy, nên nó thuộc hàng phần mười. \n\nVề giá trị của chữ số 5, chúng ta cần xem xét vị trí của nó trong số. Trong trường hợp này, chữ số 5 đứng ở vị trí sau dấu phẩy đầu tiên, nghĩa là nó đại diện cho $\\frac{5}{10}$ hoặc 0.5, chứ không phải là 5. \n\nVì vậy, câu trả lời chính xác là \"Hàng phần mười và có giá trị $\\frac{5}{10}$\".",
+        "answer": "B. Hàng phần mười và có giá trị $\\frac{5}{10}$",
+        "choices_str": "['A. Hàng đơn vị và có giá trị $\\\\frac{5}{10}$ ', 'B. Hàng phần mười và có giá trị $\\\\frac{5}{10}$ ', 'C. Hàng đơn vị và có giá trị 5', 'D. 26 605 + 8 125']"
         },
         {
-            "id": "83",
-            "question": "“Chữ số 5 trong số 162,57 thuộc ……………………….”.",
-            "choices": "['A. Hàng đơn vị và có giá trị $\\\\frac{5}{10}$ ', 'B. Hàng phần mười và có giá trị $\\\\frac{5}{10}$ ', 'C. Hàng đơn vị và có giá trị 5', 'D. 26 605 + 8 125']",
-            "explanation": "Trong số 162,57, chữ số 5 đứng sau dấu phẩy, nên nó thuộc hàng phần mười. \n\nVề giá trị của chữ số 5, chúng ta cần xem xét vị trí của nó trong số. Trong trường hợp này, chữ số 5 đứng ở vị trí sau dấu phẩy đầu tiên, nghĩa là nó đại diện cho $\\frac{5}{10}$ hoặc 0.5, chứ không phải là 5. \n\nVì vậy, câu trả lời chính xác là \"Hàng phần mười và có giá trị $\\frac{5}{10}$\".",
-            "answer": "B. Hàng phần mười và có giá trị $\\frac{5}{10}$",
-            "choices_str": "['A. Hàng đơn vị và có giá trị $\\\\frac{5}{10}$ ', 'B. Hàng phần mười và có giá trị $\\\\frac{5}{10}$ ', 'C. Hàng đơn vị và có giá trị 5', 'D. 26 605 + 8 125']"
+        "id": "84",
+        "question": "“Hai mươi tư đơn vị, một phần mười, tám phần trăm” được viết là:",
+        "choices": "['A. 24,18', 'B. 24,108', 'C. 24,018', 'D. 24,0108']",
+        "explanation": "Để giải thích câu trả lời này, chúng ta cần hiểu rõ về cách viết số thập phân.\n\n\"Hai mươi tư đơn vị\" có nghĩa 24 là phần số nguyên của số thập phân.\n\n\"Một phần mười\" có nghĩa là 1/10, khi chuyển sang dạng số thập phân, ta được 0,1. Đây là phần thập phân đầu tiên sau dấu phẩy.\n\n\"Tám phần trăm\" có nghĩa là 8/100, khi chuyển sang dạng số thập phân, ta được 0,08. Đây là phần thập phân tiếp theo sau \"một phần mười\".\n\nKhi kết hợp tất cả lại, ta được số thập phân 24,18. Vì vậy, câu trả lời đúng là 24,18.",
+        "answer": "A. 24,18",
+        "choices_str": "['A. 24,18', 'B. 24,108', 'C. 24,018', 'D. 24,0108']"
         },
         {
-            "id": "84",
-            "question": "“Hai mươi tư đơn vị, một phần mười, tám phần trăm” được viết là:",
-            "choices": "['A. 24,18', 'B. 24,108', 'C. 24,018', 'D. 24,0108']",
-            "explanation": "Để giải thích câu trả lời này, chúng ta cần hiểu rõ về cách viết số thập phân.\n\n\"Hai mươi tư đơn vị\" có nghĩa là số chính là 24. Đây là phần số nguyên của số thập phân.\n\n\"Một phần mười\" có nghĩa là 1/10, khi chuyển sang dạng số thập phân, ta được 0,1. Đây là phần thập phân đầu tiên sau dấu phẩy.\n\n\"Tám phần trăm\" có nghĩa là 8/100, khi chuyển sang dạng số thập phân, ta được 0,08. Đây là phần thập phân tiếp theo sau \"một phần mười\".\n\nKhi kết hợp tất cả lại, ta được số thập phân 24,18. Vì vậy, câu trả lời đúng là 24,18.",
-            "answer": "A. 24,18",
-            "choices_str": "['A. 24,18', 'B. 24,108', 'C. 24,018', 'D. 24,0108']"
+        "id": "85",
+        "question": "“Hình hộp chữ nhật có chiều dài 12cm; chiều rộng 8cm; chiều cao 2,5cm. Diện tích xung quanh của hình hộp chữ nhật đó bằng …..cm2.” Số cần điền vào chỗ chấm là:",
+        "choices": "['A. 50', 'B. 100', 'C. 2,4', 'D. 10']",
+        "explanation": "Để giải quyết câu hỏi này, chúng ta cần hiểu rằng diện tích xung quanh của hình hộp chữ nhật được tính bằng cách cộng diện tích của 4 mặt bên (không tính đáy và nắp). \n\nTrong trường hợp này, hình hộp chữ nhật có chiều dài là 12cm, chiều rộng là 8cm và chiều cao là 2,5cm. \n\nVậy, diện tích của mỗi mặt bên sẽ là chiều dài nhân với chiều cao, tức là 12cm x 2,5cm = 30cm2. \n\nVì hình hộp chữ nhật có 2 mặt bên có diện tích như vậy, nên tổng diện tích của 2 mặt này là 30cm2 x 2 = 60cm2.\n\nTiếp theo, diện tích của mỗi mặt đầu (mặt còn lại của hình hộp chữ nhật) sẽ là chiều rộng nhân với chiều cao, tức là 8cm x 2,5cm = 20cm2.\n\nVì hình hộp chữ nhật có 2 mặt đầu có diện tích như vậy, nên tổng diện tích của 2 mặt này là 20cm2 x 2 = 40cm2.\n\nCuối cùng, để tìm diện tích xung quanh của hình hộp chữ nhật, chúng ta cộng tổng diện tích của 2 mặt bên và 2 mặt đầu lại. Điều này cho ta 60cm2 + 40cm2 = 100cm2.\n\nVậy, đáp án cho câu hỏi này là 100.",
+        "answer": "B. 100",
+        "choices_str": "['A. 50', 'B. 100', 'C. 2,4', 'D. 10']"
         },
         {
-            "id": "85",
-            "question": "“Hình hộp chữ nhật có chiều dài 12cm; chiều rộng 8cm; chiều cao 2,5cm. Diện tích xung quanh của hình hộp chữ nhật đó bằng …..cm2.” Số cần điền vào chỗ chấm là:",
-            "choices": "['A. 50', 'B. 100', 'C. 2,4', 'D. 10']",
-            "explanation": "Để giải quyết câu hỏi này, chúng ta cần hiểu rằng diện tích xung quanh của hình hộp chữ nhật được tính bằng cách cộng diện tích của 4 mặt bên (không tính đáy và nắp). \n\nTrong trường hợp này, hình hộp chữ nhật có chiều dài là 12cm, chiều rộng là 8cm và chiều cao là 2,5cm. \n\nVậy, diện tích của mỗi mặt bên sẽ là chiều dài nhân với chiều cao, tức là 12cm x 2,5cm = 30cm2. \n\nVì hình hộp chữ nhật có 2 mặt bên có diện tích như vậy, nên tổng diện tích của 2 mặt này là 30cm2 x 2 = 60cm2.\n\nTiếp theo, diện tích của mỗi mặt đầu (mặt còn lại của hình hộp chữ nhật) sẽ là chiều rộng nhân với chiều cao, tức là 8cm x 2,5cm = 20cm2.\n\nVì hình hộp chữ nhật có 2 mặt đầu có diện tích như vậy, nên tổng diện tích của 2 mặt này là 20cm2 x 2 = 40cm2.\n\nCuối cùng, để tìm diện tích xung quanh của hình hộp chữ nhật, chúng ta cộng tổng diện tích của 2 mặt bên và 2 mặt đầu lại. Điều này cho ta 60cm2 + 40cm2 = 100cm2.\n\nVậy, đáp án cho câu hỏi này là 100.",
-            "answer": "B. 100",
-            "choices_str": "['A. 50', 'B. 100', 'C. 2,4', 'D. 10']"
+        "id": "86",
+        "question": "“Lớp 2A trồng được 5 hàng cây. Mỗi hàng có 7 cây. Hỏi lớp 2A trồng được bao nhiêu cây?”. Phép tính đúng với bài toán là:",
+        "choices": "['A. 7 ${\\\\times}$ 5 = 35', 'B. $7 + 5 = 12$', 'C. 5 ${\\\\times}$ 7 = 35', 'D. 7 – 5 = 2']",
+        "explanation": "Lớp 2A trồng được số cây là:7 ${\\times}$ 5 = 35 (cây)\n Vậy phép tính đúng với bài toán là: 7 ${\\times}$ 5 = 35",
+        "answer": "A. 7 ${\\times}$ 5 = 35",
+        "choices_str": "['A. 7 ${\\\\times}$ 5 = 35', 'B. $7 + 5 = 12$', 'C. 5 ${\\\\times}$ 7 = 35', 'D. 7 – 5 = 2']"
         },
         {
-            "id": "86",
-            "question": "“Lớp 2A trồng được 5 hàng cây. Mỗi hàng có 7 cây. Hỏi lớp 2A trồng được bao nhiêu cây?”. Phép tính đúng với bài toán là:",
-            "choices": "['A. 7 ${\\\\times}$ 5 = 35', 'B. $7 + 5 = 12$', 'C. 5 ${\\\\times}$ 7 = 35', 'D. 7 – 5 = 2']",
-            "explanation": "Lớp 2A trồng được số cây là:7 ${\\times}$ 5 = 35 (cây)\n Vậy phép tính đúng với bài toán là: 7 ${\\times}$ 5 = 35",
-            "answer": "A. 7 ${\\times}$ 5 = 35",
-            "choices_str": "['A. 7 ${\\\\times}$ 5 = 35', 'B. $7 + 5 = 12$', 'C. 5 ${\\\\times}$ 7 = 35', 'D. 7 – 5 = 2']"
+        "id": "88",
+        "question": "“Mẹ đi chợ mua 6 chai nước mắm. Mỗi chai đựng 2 l nước mắm. Hỏi mẹ đã mua bao nhiêu lít nước mắm?”. Phép tính đúng với bài toán là:",
+        "choices": "['A. 2 ${\\\\times}$ 6 = 12', 'B. $6 + 2 = 8$', 'C. 6 ${\\\\times}$ 2 = 12', 'D. 6 – 2 = 4']",
+        "explanation": "Để giải quyết câu hỏi này, chúng ta cần hiểu rằng mẹ đã mua 6 chai nước mắm và mỗi chai chứa 2 lít nước mắm. Vì vậy, để tìm ra tổng số lít nước mắm mà mẹ đã mua, chúng ta cần nhân số lượng chai (6) với số lít trong mỗi chai (2). \n\nĐiều này dẫn đến phép tính 2 nhân 6, tức là 2 ${\\times}$ 6. Kết quả của phép tính này là 12, nghĩa là mẹ đã mua tổng cộng 12 lít nước mắm. \n\nVì vậy, đáp án đúng cho câu hỏi này là \"2 ${\\times}$ 6 = 12\".",
+        "answer": "A. 2 ${\\times}$ 6 = 12",
+        "choices_str": "['A. 2 ${\\\\times}$ 6 = 12', 'B. $6 + 2 = 8$', 'C. 6 ${\\\\times}$ 2 = 12', 'D. 6 – 2 = 4']"
         },
         {
-            "id": "87",
-            "question": "“m3 = ……..m3”. Số thập phân thích hợp điền vào chỗ chấm là:",
-            "choices": "['A. 1,4', 'B. 0,25', 'C. 2,5', 'D. 0,14']",
-            "explanation": "m3 = 0,25m3. Số thập phân thích hợp điền vào chỗ chấm là: 0,25.",
-            "answer": "B. 0,25",
-            "choices_str": "['A. 1,4', 'B. 0,25', 'C. 2,5', 'D. 0,14']"
+        "id": "89",
+        "question": "“Mẹ mua 5 hộp bánh. Mỗi hộp bánh có 8 cái bánh. Hỏi mẹ đã mua bao nhiêu cái bánh?”. Phép tính đúng với bài toán là:",
+        "choices": "['A. 8 ${\\\\times}$ 5 = 40', 'B. $5 + 8 = 13$', 'C. 5 ${\\\\times}$ 8 = 40', 'D. 8 – 5 = 3']",
+        "explanation": "Mẹ đã mua số cái bánh là:8 ${\\times}$ 5 = 40 (cái bánh)\n Vậy phép tính đúng với bài toán là: 8 ${\\times}$ 5 = 40",
+        "answer": "A. 8 ${\\times}$ 5 = 40",
+        "choices_str": "['A. 8 ${\\\\times}$ 5 = 40', 'B. $5 + 8 = 13$', 'C. 5 ${\\\\times}$ 8 = 40', 'D. 8 – 5 = 3']"
         },
         {
-            "id": "88",
-            "question": "“Mẹ đi chợ mua 6 chai nước mắm. Mỗi chai đựng 2 l nước mắm. Hỏi mẹ đã mua bao nhiêu lít nước mắm?”. Phép tính đúng với bài toán là:",
-            "choices": "['A. 2 ${\\\\times}$ 6 = 12', 'B. $6 + 2 = 8$', 'C. 6 ${\\\\times}$ 2 = 12', 'D. 6 – 2 = 4']",
-            "explanation": "Để giải quyết câu hỏi này, chúng ta cần hiểu rằng mẹ đã mua 6 chai nước mắm và mỗi chai chứa 2 lít nước mắm. Vì vậy, để tìm ra tổng số lít nước mắm mà mẹ đã mua, chúng ta cần nhân số lượng chai (6) với số lít trong mỗi chai (2). \n\nĐiều này dẫn đến phép tính 2 nhân 6, tức là 2 ${\\times}$ 6. Kết quả của phép tính này là 12, nghĩa là mẹ đã mua tổng cộng 12 lít nước mắm. \n\nVì vậy, đáp án đúng cho câu hỏi này là \"2 ${\\times}$ 6 = 12\".",
-            "answer": "A. 2 ${\\times}$ 6 = 12",
-            "choices_str": "['A. 2 ${\\\\times}$ 6 = 12', 'B. $6 + 2 = 8$', 'C. 6 ${\\\\times}$ 2 = 12', 'D. 6 – 2 = 4']"
+        "id": "90",
+        "question": "“Một trăm hai mươi lăm mét vuông” được viết là:",
+        "choices": "['A. 125m2', 'B. 125m', 'C. 152m', 'D. 152m2']",
+        "explanation": "Đáp án đúng là 125m2. \n\nGiải thích: \n\nTrước hết, ta cần hiểu rằng \"một trăm hai mươi lăm\" trong tiếng Việt tương ứng với số 125 trong hệ thống số. \n\nTiếp theo, \"mét vuông\" là đơn vị đo diện tích. Trong toán học và vật lý, mét vuông (ký hiệu là m2) được sử dụng để đo diện tích của một hình vuông có cạnh dài 1 mét. \n\nVì vậy, khi kết hợp số 125 với đơn vị đo mét vuông, ta được 125m2. \n\nCác lựa chọn khác không đúng vì: \n- 125m là đơn vị đo chiều dài, không phải diện tích.\n- 152m và 152m2 đều không đúng vì số được viết không phải là 125.",
+        "answer": "A. 125m2",
+        "choices_str": "['A. 125m2', 'B. 125m', 'C. 152m', 'D. 152m2']"
         },
         {
-            "id": "89",
-            "question": "“Mẹ mua 5 hộp bánh. Mỗi hộp bánh có 8 cái bánh. Hỏi mẹ đã mua bao nhiêu cái bánh?”. Phép tính đúng với bài toán là:",
-            "choices": "['A. 8 ${\\\\times}$ 5 = 40', 'B. $5 + 8 = 13$', 'C. 5 ${\\\\times}$ 8 = 40', 'D. 8 – 5 = 3']",
-            "explanation": "Mẹ đã mua số cái bánh là:8 ${\\times}$ 5 = 40 (cái bánh)\n Vậy phép tính đúng với bài toán là: 8 ${\\times}$ 5 = 40",
-            "answer": "A. 8 ${\\times}$ 5 = 40",
-            "choices_str": "['A. 8 ${\\\\times}$ 5 = 40', 'B. $5 + 8 = 13$', 'C. 5 ${\\\\times}$ 8 = 40', 'D. 8 – 5 = 3']"
+        "id": "91",
+        "question": "“Thể tích của hình lập phương có cạnh 1,2dm bằng …......dm3. ” Số cần điền vào chỗ chấm là:",
+        "choices": "['A. 1,44', 'B. 1,728', 'C. 8,64', 'D. 5,76']",
+        "explanation": "Để giải quyết câu hỏi này, chúng ta cần hiểu rằng thể tích của một hình lập phương được tính bằng cách nhân ba cạnh lại với nhau. Trong trường hợp này, tất cả ba cạnh đều có độ dài là 1,2dm.\n\nVậy nên, thể tích của hình lập phương sẽ là 1,2dm * 1,2dm * 1,2dm = 1,728dm^3.\n\nVì vậy, đáp án chính xác là 1,728.",
+        "answer": "B. 1,728",
+        "choices_str": "['A. 1,44', 'B. 1,728', 'C. 8,64', 'D. 5,76']"
         },
         {
-            "id": "90",
-            "question": "“Một trăm hai mươi lăm mét vuông” được viết là:",
-            "choices": "['A. 125m2', 'B. 125m', 'C. 152m', 'D. 152m2']",
-            "explanation": "Đáp án đúng là 125m2. \n\nGiải thích: \n\nTrước hết, ta cần hiểu rằng \"một trăm hai mươi lăm\" trong tiếng Việt tương ứng với số 125 trong hệ thống số. \n\nTiếp theo, \"mét vuông\" là đơn vị đo diện tích. Trong toán học và vật lý, mét vuông (ký hiệu là m2) được sử dụng để đo diện tích của một hình vuông có cạnh dài 1 mét. \n\nVì vậy, khi kết hợp số 125 với đơn vị đo mét vuông, ta được 125m2. \n\nCác lựa chọn khác không đúng vì: \n- 125m là đơn vị đo chiều dài, không phải diện tích.\n- 152m và 152m2 đều không đúng vì số được viết không phải là 125.",
-            "answer": "A. 125m2",
-            "choices_str": "['A. 125m2', 'B. 125m', 'C. 152m', 'D. 152m2']"
+        "id": "92",
+        "question": "“Thể tích hình lập phương có cạnh 5cm bằng …..cm3.” Số thích hợp điền vào chỗ chấm là:",
+        "choices": "['A. 150', 'B. 30', 'C. 100', 'D. 125']",
+        "explanation": "Để giải quyết câu hỏi này, chúng ta cần hiểu rằng thể tích của một hình lập phương được tính bằng cách nhân ba cạnh lại với nhau. Trong trường hợp này, mỗi cạnh của hình lập phương đều có độ dài là 5cm.\n\nVì vậy, chúng ta sẽ tính thể tích bằng cách nhân 5cm x 5cm x 5cm. \n\nKhi thực hiện phép nhân này, chúng ta nhận được kết quả là 125cm3.\n\nVì vậy, đáp án chính xác cho câu hỏi này là \"125\".",
+        "answer": "D. 125",
+        "choices_str": "['A. 150', 'B. 30', 'C. 100', 'D. 125']"
         },
         {
-            "id": "91",
-            "question": "“Thể tích của hình lập phương có cạnh 1,2dm bằng …......dm3. ” Số cần điền vào chỗ chấm là:",
-            "choices": "['A. 1,44', 'B. 1,728', 'C. 8,64', 'D. 5,76']",
-            "explanation": "Để giải quyết câu hỏi này, chúng ta cần hiểu rằng thể tích của một hình lập phương được tính bằng cách nhân ba cạnh lại với nhau. Trong trường hợp này, tất cả ba cạnh đều có độ dài là 1,2dm.\n\nVậy nên, thể tích của hình lập phương sẽ là 1,2dm * 1,2dm * 1,2dm = 1,728dm^3.\n\nVì vậy, đáp án chính xác là 1,728.",
-            "answer": "B. 1,728",
-            "choices_str": "['A. 1,44', 'B. 1,728', 'C. 8,64', 'D. 5,76']"
+        "id": "93",
+        "question": "“Trong số thập phân 135,43 chữ số 3 ở phần nguyên gấp … lần chữ số 3 ở phần thập phân.” Số thích hợp điền vào chỗ chấm là:",
+        "choices": "['A. 10', 'B. 100', 'C. 1 000', 'D. 10 000']",
+        "explanation": "Số thập phân 135,43 được chia thành hai phần: phần nguyên là 135 và phần thập phân là 43. \n\nChúng ta thấy rằng chữ số 3 xuất hiện một lần trong phần nguyên (135) và một lần trong phần thập phân (43). \n\nTuy nhiên, chúng ta cần lưu ý rằng giá trị của chữ số 3 trong phần nguyên và phần thập phân không giống nhau. \n\nTrong phần nguyên, chữ số 3 đứng ở vị trí hàng chục, nghĩa là giá trị thực của nó là 3*10 = 30. \n\nTrong phần thập phân, chữ số 3 đứng ở vị trí hàng phần nghìn, nghĩa là giá trị thực của nó là 3/1000 = 0.003.\n\nVậy, chữ số 3 ở phần nguyên có giá trị gấp 30/0.003 = 10,000 lần chữ số 3 ở phần thập phân. \n\nTuy nhiên, câu hỏi hỏi về số lần chữ số 3 ở phần nguyên gấp chữ số 3 ở phần thập phân, không phải giá trị của chúng. \n\nDo đó, chúng ta cần chia giá trị của chữ số 3 ở phần nguyên cho giá trị của chữ số 3 ở phần thập phân. \n\nKết quả là 1/0.001 = 1,000. \n\nVậy, chữ số 3 ở phần nguyên gấp 1,000 lần chữ số 3 ở phần thập phân. \n\nVì vậy, đáp án đúng là 1 000.",
+        "answer": "C. 1 000",
+        "choices_str": "['A. 10', 'B. 100', 'C. 1 000', 'D. 10 000']"
         },
         {
-            "id": "92",
-            "question": "“Thể tích hình lập phương có cạnh 5cm bằng …..cm3.” Số thích hợp điền vào chỗ chấm là:",
-            "choices": "['A. 150', 'B. 30', 'C. 100', 'D. 125']",
-            "explanation": "Để giải quyết câu hỏi này, chúng ta cần hiểu rằng thể tích của một hình lập phương được tính bằng cách nhân ba cạnh lại với nhau. Trong trường hợp này, mỗi cạnh của hình lập phương đều có độ dài là 5cm.\n\nVì vậy, chúng ta sẽ tính thể tích bằng cách nhân 5cm x 5cm x 5cm. \n\nKhi thực hiện phép nhân này, chúng ta nhận được kết quả là 125cm3.\n\nVì vậy, đáp án chính xác cho câu hỏi này là \"125\".",
-            "answer": "D. 125",
-            "choices_str": "['A. 150', 'B. 30', 'C. 100', 'D. 125']"
+        "id": "94",
+        "question": "1 giờ 15 phút = … phút",
+        "choices": "['A. 115 phút', 'B. 615 phút', 'C. 65 phút', 'D. 75 phút']",
+        "explanation": " 1 giờ bằng 60 phút. Vì vậy, 1 giờ 15 phút sẽ bằng 60 phút (tương ứng với 1 giờ) cộng thêm 15 phút. \n\nBước 1: Chuyển 1 giờ thành phút\n1 giờ = 60 phút\n\nBước 2: Cộng thêm 15 phút\n60 phút + 15 phút = 75 phút\n\nVậy, 1 giờ 15 phút sẽ bằng 75 phút. Do đó, câu trả lời chính xác là 75 phút.",
+        "answer": "D. 75 phút",
+        "choices_str": "['A. 115 phút', 'B. 615 phút', 'C. 65 phút', 'D. 75 phút']"
         },
         {
-            "id": "93",
-            "question": "“Trong số thập phân 135,43 chữ số 3 ở phần nguyên gấp … lần chữ số 3 ở phần thập phân.” Số thích hợp điền vào chỗ chấm là:",
-            "choices": "['A. 10', 'B. 100', 'C. 1 000', 'D. 10 000']",
-            "explanation": "Để giải quyết câu hỏi này, chúng ta cần hiểu rõ về cách chia phần nguyên và phần thập phân của một số.\n\nSố thập phân 135,43 được chia thành hai phần: phần nguyên là 135 và phần thập phân là 43. \n\nChúng ta thấy rằng chữ số 3 xuất hiện một lần trong phần nguyên (135) và một lần trong phần thập phân (43). \n\nTuy nhiên, chúng ta cần lưu ý rằng giá trị của chữ số 3 trong phần nguyên và phần thập phân không giống nhau. \n\nTrong phần nguyên, chữ số 3 đứng ở vị trí hàng chục, nghĩa là giá trị thực của nó là 3*10 = 30. \n\nTrong phần thập phân, chữ số 3 đứng ở vị trí hàng phần nghìn, nghĩa là giá trị thực của nó là 3/1000 = 0.003.\n\nVậy, chữ số 3 ở phần nguyên có giá trị gấp 30/0.003 = 10,000 lần chữ số 3 ở phần thập phân. \n\nTuy nhiên, câu hỏi hỏi về số lần chữ số 3 ở phần nguyên gấp chữ số 3 ở phần thập phân, không phải giá trị của chúng. \n\nDo đó, chúng ta cần chia giá trị của chữ số 3 ở phần nguyên cho giá trị của chữ số 3 ở phần thập phân. \n\nKết quả là 1/0.001 = 1,000. \n\nVậy, chữ số 3 ở phần nguyên gấp 1,000 lần chữ số 3 ở phần thập phân. \n\nVì vậy, đáp án đúng là 1 000.",
-            "answer": "C. 1 000",
-            "choices_str": "['A. 10', 'B. 100', 'C. 1 000', 'D. 10 000']"
+        "id": "95",
+        "question": "1 giờ 40 phút = ... ?",
+        "choices": "['A. 1,40 giờ', 'B. 140 phút', 'C. 100 phút', 'D. $\\\\frac{5}{3}$ giờ']",
+        "explanation": "1 giờ bằng 60 phút. Vì vậy, 1 giờ 40 phút sẽ bằng 60 phút (tương ứng với 1 giờ) cộng thêm 40 phút nữa. Khi cộng lại, ta được tổng cộng là 100 phút.\n\nVậy nên, câu trả lời chính xác cho câu hỏi này là 100 phút.",
+        "answer": "C. 100 phút",
+        "choices_str": "['A. 1,40 giờ', 'B. 140 phút', 'C. 100 phút', 'D. $\\\\frac{5}{3}$ giờ']"
         },
         {
-            "id": "94",
-            "question": "1 giờ 15 phút = … phút",
-            "choices": "['A. 115 phút', 'B. 615 phút', 'C. 65 phút', 'D. 75 phút']",
-            "explanation": "Để giải quyết câu hỏi này, chúng ta cần biết rằng 1 giờ bằng 60 phút. Vì vậy, 1 giờ 15 phút sẽ bằng 60 phút (tương ứng với 1 giờ) cộng thêm 15 phút. \n\nBước 1: Chuyển 1 giờ thành phút\n1 giờ = 60 phút\n\nBước 2: Cộng thêm 15 phút\n60 phút + 15 phút = 75 phút\n\nVậy, 1 giờ 15 phút sẽ bằng 75 phút. Do đó, câu trả lời chính xác là 75 phút.",
-            "answer": "D. 75 phút",
-            "choices_str": "['A. 115 phút', 'B. 615 phút', 'C. 65 phút', 'D. 75 phút']"
+        "id": "96",
+        "question": "1 kg bằng:",
+        "choices": "['A. 1000 g', 'B. 100 g', 'C. 10 g']",
+        "explanation": "Đáp án đúng là 1000 g. Lý do là vì trong hệ thống đơn vị quốc tế (SI), kilogram (kg) và gram (g) là hai đơn vị đo khối lượng phổ biến. Theo đó, 1 kilogram tương đương với 1000 gram. \n\nĐể hiểu rõ hơn, hãy tưởng tượng rằng bạn có một cân. Bạn đặt một vật lên cân và nó cho kết quả là 1 kg. Nếu bạn thay đổi đơn vị đo từ kg sang g, thì kết quả sẽ là 1000 g. Điều này chứng tỏ rằng 1 kg bằng 1000 g. \n\nVậy nên, đáp án 1000 g là đáp án chính xác.",
+        "answer": "A. 1000 g",
+        "choices_str": "['A. 1000 g', 'B. 100 g', 'C. 10 g']"
         },
         {
-            "id": "95",
-            "question": "1 giờ 40 phút = ... ?",
-            "choices": "['A. 1,40 giờ', 'B. 140 phút', 'C. 100 phút', 'D. $\\\\frac{5}{3}$ giờ']",
-            "explanation": "Để giải thích câu trả lời này, chúng ta cần hiểu rõ về cách chuyển đổi giữa đơn vị giờ và phút.\n\n1 giờ bằng 60 phút. Vì vậy, 1 giờ 40 phút sẽ bằng 60 phút (tương ứng với 1 giờ) cộng thêm 40 phút nữa. Khi cộng lại, ta được tổng cộng là 100 phút.\n\nVậy nên, câu trả lời chính xác cho câu hỏi này là 100 phút.",
-            "answer": "C. 100 phút",
-            "choices_str": "['A. 1,40 giờ', 'B. 140 phút', 'C. 100 phút', 'D. $\\\\frac{5}{3}$ giờ']"
+        "id": "97",
+        "question": "1 km = … m. Số thích hợp để điền vào chỗ chấm là:",
+        "choices": "['A. 1 000', 'B. 100', 'C. 10', 'D. 1']",
+        "explanation": "Câu trả lời đúng là 1 000. \n\nĐể giải thích tại sao câu trả lời lại là như vậy, chúng ta cần hiểu về hệ thống đơn vị đo lường. Trong hệ thống đơn vị đo lường quốc tế (SI), \"kilo-\" là tiền tố biểu thị một đơn vị lớn hơn 1000 lần so với đơn vị gốc. \n\nVì vậy, khi chúng ta nói 1 kilômét (km), chúng ta thực sự đang nói về 1000 mét (m). Đó là lý do tại sao chúng ta điền 1 000 vào chỗ chấm. \n\nNói cách khác, bạn có thể tưởng tượng rằng mỗi bước chân bạn đi tương đương với một mét, vậy thì sau 1000 bước, bạn đã đi được một kilômét. \n\nVậy nên, câu trả lời đúng là 1 000.",
+        "answer": "A. 1 000",
+        "choices_str": "['A. 1 000', 'B. 100', 'C. 10', 'D. 1']"
         },
         {
-            "id": "96",
-            "question": "1 kg bằng:",
-            "choices": "['A. 1000 g', 'B. 100 g', 'C. 10 g']",
-            "explanation": "Đáp án đúng là 1000 g. Lý do là vì trong hệ thống đơn vị quốc tế (SI), kilogram (kg) và gram (g) là hai đơn vị đo khối lượng phổ biến. Theo đó, 1 kilogram tương đương với 1000 gram. \n\nĐể hiểu rõ hơn, hãy tưởng tượng rằng bạn có một cân. Bạn đặt một vật lên cân và nó cho kết quả là 1 kg. Nếu bạn thay đổi đơn vị đo từ kg sang g, thì kết quả sẽ là 1000 g. Điều này chứng tỏ rằng 1 kg bằng 1000 g. \n\nVậy nên, đáp án 1000 g là đáp án chính xác.",
-            "answer": "A. 1000 g",
-            "choices_str": "['A. 1000 g', 'B. 100 g', 'C. 10 g']"
+        "id": "98",
+        "question": "1/2 của một giờ bằng bao nhiêu phút?",
+        "choices": "['A. 12 phút', 'B. 30 phút', 'C. 10 phút', 'D. 20 phút']",
+        "explanation": "Để giải thích câu trả lời này, chúng ta cần hiểu rõ về cách chúng ta đo thời gian. \n\nThời gian được đo bằng nhiều đơn vị khác nhau như giây, phút, giờ, ngày, tuần, tháng, năm, v.v. Trong trường hợp này, chúng ta đang nói về giờ và phút.\n\nMột giờ bao gồm 60 phút. Đây là một sự thật mà chúng ta đều biết. \n\nVậy nếu chúng ta lấy một nửa (1/2) của một giờ, chúng ta sẽ phải chia số phút trong một giờ (60 phút) cho 2. \n\nKhi chúng ta chia 60 cho 2, chúng ta nhận được 30. \n\nVì vậy, 1/2 giờ bằng 30 phút. \n\nĐó là lý do tại sao câu trả lời là \"30 phút\".",
+        "answer": "B. 30 phút",
+        "choices_str": "['A. 12 phút', 'B. 30 phút', 'C. 10 phút', 'D. 20 phút']"
         },
         {
-            "id": "97",
-            "question": "1 km = … m. Số thích hợp để điền vào chỗ chấm là:",
-            "choices": "['A. 1 000', 'B. 100', 'C. 10', 'D. 1']",
-            "explanation": "Câu trả lời đúng là 1 000. \n\nĐể giải thích tại sao câu trả lời lại là như vậy, chúng ta cần hiểu về hệ thống đơn vị đo lường. Trong hệ thống đơn vị đo lường quốc tế (SI), \"kilo-\" là tiền tố biểu thị một đơn vị lớn hơn 1000 lần so với đơn vị gốc. \n\nVì vậy, khi chúng ta nói 1 kilômét (km), chúng ta thực sự đang nói về 1000 mét (m). Đó là lý do tại sao chúng ta điền 1 000 vào chỗ chấm. \n\nNói cách khác, bạn có thể tưởng tượng rằng mỗi bước chân bạn đi tương đương với một mét, vậy thì sau 1000 bước, bạn đã đi được một kilômét. \n\nVậy nên, câu trả lời đúng là 1 000.",
-            "answer": "A. 1 000",
-            "choices_str": "['A. 1 000', 'B. 100', 'C. 10', 'D. 1']"
+        "id": "99",
+        "question": "10 là tích của hai số nào?",
+        "choices": "['A. 5 và 5', 'B. 2 và 4', 'C. 5 và 2', 'D. 2 và 7']",
+        "explanation": "Đáp án là 5 và 2. Lý do là vì khi nhân 5 với 2, ta sẽ được kết quả là 10. \n\nĐể hiểu rõ hơn, ta có thể xem xét các phép nhân trong các lựa chọn khác:\n\n- 5 nhân 5 bằng 25, không phải 10.\n- 2 nhân 4 bằng 8, không phải 10.\n- 2 nhân 7 bằng 14, không phải 10.\n\nVì vậy, chỉ có lựa chọn 5 nhân 2 mới cho kết quả là 10. Đó chính là lý do tại sao đáp án là 5 và 2.",
+        "answer": "C. 5 và 2",
+        "choices_str": "['A. 5 và 5', 'B. 2 và 4', 'C. 5 và 2', 'D. 2 và 7']"
         },
         {
-            "id": "98",
-            "question": "1/2 của một giờ bằng bao nhiêu phút?",
-            "choices": "['A. 12 phút', 'B. 30 phút', 'C. 10 phút', 'D. 20 phút']",
-            "explanation": "Để giải thích câu trả lời này, chúng ta cần hiểu rõ về cách chúng ta đo thời gian. \n\nThời gian được đo bằng nhiều đơn vị khác nhau như giây, phút, giờ, ngày, tuần, tháng, năm, v.v. Trong trường hợp này, chúng ta đang nói về giờ và phút.\n\nMột giờ bao gồm 60 phút. Đây là một sự thật mà chúng ta đều biết. \n\nVậy nếu chúng ta lấy một nửa (1/2) của một giờ, chúng ta sẽ phải chia số phút trong một giờ (60 phút) cho 2. \n\nKhi chúng ta chia 60 cho 2, chúng ta nhận được 30. \n\nVì vậy, 1/2 giờ bằng 30 phút. \n\nĐó là lý do tại sao câu trả lời là \"30 phút\".",
-            "answer": "B. 30 phút",
-            "choices_str": "['A. 12 phút', 'B. 30 phút', 'C. 10 phút', 'D. 20 phút']"
+        "id": "100",
+        "question": "10% của 11,5m2 là:",
+        "choices": "['A. 10,15dm2', 'B. 1,5m2', 'C. 15,5m2', 'D. 1,15m2']",
+        "explanation": "10% của 11,5m2 là: 11,5 ${\\times}$ 10 : 100 = 1,15 (m2).",
+        "answer": "D. 1,15m2",
+        "choices_str": "['A. 10,15dm2', 'B. 1,5m2', 'C. 15,5m2', 'D. 1,15m2']"
         },
         {
-            "id": "99",
-            "question": "10 là tích của hai số nào?",
-            "choices": "['A. 5 và 5', 'B. 2 và 4', 'C. 5 và 2', 'D. 2 và 7']",
-            "explanation": "Đáp án là 5 và 2. Lý do là vì khi nhân 5 với 2, ta sẽ được kết quả là 10. \n\nĐể hiểu rõ hơn, ta có thể xem xét các phép nhân trong các lựa chọn khác:\n\n- 5 nhân 5 bằng 25, không phải 10.\n- 2 nhân 4 bằng 8, không phải 10.\n- 2 nhân 7 bằng 14, không phải 10.\n\nVì vậy, chỉ có lựa chọn 5 nhân 2 mới cho kết quả là 10. Đó chính là lý do tại sao đáp án là 5 và 2.",
-            "answer": "C. 5 và 2",
-            "choices_str": "['A. 5 và 5', 'B. 2 và 4', 'C. 5 và 2', 'D. 2 và 7']"
+        "id": "101",
+        "question": "10% của 5dm là:",
+        "choices": "['A. 0,5 m', 'B. 5 dm', 'C. 5 cm', 'D. 50 cm']",
+        "explanation": "Để giải thích câu trả lời này, chúng ta cần hiểu rõ về cách chuyển đổi đơn vị trong hệ thống đo lường. \n\nTrước hết, chúng ta cần biết rằng 1dm (decimet) tương đương với 10cm (centimet). Điều này có nghĩa là, nếu chúng ta có 5dm, chúng ta sẽ có 50cm.\n\nTiếp theo, câu hỏi đang yêu cầu chúng ta tìm 10% của 5dm. Để làm điều này, chúng ta cần lấy 10% của tổng số cm mà chúng ta đã chuyển đổi ở trên. \n\nVì vậy, chúng ta sẽ lấy 10% của 50cm. Khi tính toán, chúng ta sẽ nhận được kết quả là 5cm.\n\nVì vậy, câu trả lời cho câu hỏi này là \"5 cm\".",
+        "answer": "C. 5 cm",
+        "choices_str": "['A. 0,5 m', 'B. 5 dm', 'C. 5 cm', 'D. 50 cm']"
         },
         {
-            "id": "100",
-            "question": "10% của 11,5m2 là:",
-            "choices": "['A. 10,15dm2', 'B. 1,5m2', 'C. 15,5m2', 'D. 1,15m2']",
-            "explanation": "10% của 11,5m2 là: 11,5 ${\\times}$ 10 : 100 = 1,15 (m2).",
-            "answer": "D. 1,15m2",
-            "choices_str": "['A. 10,15dm2', 'B. 1,5m2', 'C. 15,5m2', 'D. 1,15m2']"
+        "id": "102",
+        "question": "10% của 8 dm là",
+        "choices": "['A. 10 cm', 'B. 70 cm', 'C. 8 cm', 'D. 0,8 cm']",
+        "explanation": "Để giải quyết câu hỏi này, chúng ta cần hiểu rõ về cách tính phần trăm của một số. \n\nKhi chúng ta nói 10% của một số, chúng ta đang nói về một phần mười của số đó. \n\nVì vậy, để tìm 10% của 8 dm, chúng ta sẽ chia 8 dm cho 10. \n\n8 dm / 10 = 0,8 dm\n\nTuy nhiên, câu trả lời cần phải được đưa ra ở đơn vị cm, không phải dm. \n\nChúng ta biết rằng 1 dm = 10 cm, vì vậy chúng ta cần chuyển đổi 0,8 dm thành cm. \n\n0,8 dm * 10 = 8 cm\n\nVì vậy, 10% của 8 dm là 8 cm. \n\nĐáp án đúng là 8 cm.",
+        "answer": "C. 8 cm",
+        "choices_str": "['A. 10 cm', 'B. 70 cm', 'C. 8 cm', 'D. 0,8 cm']"
         },
         {
-            "id": "101",
-            "question": "10% của 5dm là:",
-            "choices": "['A. 0,5 m', 'B. 5 dm', 'C. 5 cm', 'D. 50 cm']",
-            "explanation": "Để giải thích câu trả lời này, chúng ta cần hiểu rõ về cách chuyển đổi đơn vị trong hệ thống đo lường. \n\nTrước hết, chúng ta cần biết rằng 1dm (decimet) tương đương với 10cm (centimet). Điều này có nghĩa là, nếu chúng ta có 5dm, chúng ta sẽ có 50cm.\n\nTiếp theo, câu hỏi đang yêu cầu chúng ta tìm 10% của 5dm. Để làm điều này, chúng ta cần lấy 10% của tổng số cm mà chúng ta đã chuyển đổi ở trên. \n\nVì vậy, chúng ta sẽ lấy 10% của 50cm. Khi tính toán, chúng ta sẽ nhận được kết quả là 5cm.\n\nVì vậy, câu trả lời cho câu hỏi này là \"5 cm\".",
-            "answer": "C. 5 cm",
-            "choices_str": "['A. 0,5 m', 'B. 5 dm', 'C. 5 cm', 'D. 50 cm']"
+        "id": "103",
+        "question": "12m2 35dm2 = …… m2. Số thích hợp để điền vào chỗ chấm là:",
+        "choices": "['A. 1235', 'B. 12,35', 'C. 123,5', 'D. 1,235']",
+        "explanation": " Trong hệ thống đo lường, 1 mét vuông (m2) bằng 100 decimet vuông (dm2). Điều này có nghĩa là, nếu chúng ta có một số lượng decimet vuông, chúng ta có thể chuyển đổi nó thành mét vuông bằng cách chia cho 100.\n\nVậy nên, để chuyển 35dm2 thành m2, chúng ta chia 35 cho 100, kết quả là 0,35m2.\n\nVậy, 12m2 35dm2 sẽ bằng 12m2 cộng với 0,35m2, tức là 12,35m2.\n\nVì vậy, đáp án chính xác là 12,35.",
+        "answer": "B. 12,35",
+        "choices_str": "['A. 1235', 'B. 12,35', 'C. 123,5', 'D. 1,235']"
         },
         {
-            "id": "102",
-            "question": "10% của 8 dm là",
-            "choices": "['A. 10 cm', 'B. 70 cm', 'C. 8 cm', 'D. 0,8 cm']",
-            "explanation": "Để giải quyết câu hỏi này, chúng ta cần hiểu rõ về cách tính phần trăm của một số. \n\nKhi chúng ta nói 10% của một số, chúng ta đang nói về một phần mười của số đó. \n\nVì vậy, để tìm 10% của 8 dm, chúng ta sẽ chia 8 dm cho 10. \n\n8 dm / 10 = 0,8 dm\n\nTuy nhiên, câu trả lời cần phải được đưa ra ở đơn vị cm, không phải dm. \n\nChúng ta biết rằng 1 dm = 10 cm, vì vậy chúng ta cần chuyển đổi 0,8 dm thành cm. \n\n0,8 dm * 10 = 8 cm\n\nVì vậy, 10% của 8 dm là 8 cm. \n\nĐáp án đúng là 8 cm.",
-            "answer": "C. 8 cm",
-            "choices_str": "['A. 10 cm', 'B. 70 cm', 'C. 8 cm', 'D. 0,8 cm']"
+        "id": "104",
+        "question": "12m7dm = … dm. Số thích hợp điền vào chỗ chấm là:",
+        "choices": "['A. 1 207 dm', 'B. 127 dm', 'C. 1 270 dm', 'D. 1 027 dm']",
+        "explanation": "Trong hệ thống này, 1 mét (m) tương đương với 10 decimet (dm). \n\nVậy nên, khi chúng ta có 12 mét, chúng ta sẽ có 12 * 10 = 120 decimet. \n\nTiếp theo, chúng ta cần cộng thêm số decimet đã cho, tức là 7dm. \n\nVậy, tổng cộng chúng ta có 120dm + 7dm = 127dm. \n\nVì vậy, đáp án chính xác là 127 dm.",
+        "answer": "B. 127 dm",
+        "choices_str": "['A. 1 207 dm', 'B. 127 dm', 'C. 1 270 dm', 'D. 1 027 dm']"
         },
         {
-            "id": "103",
-            "question": "12m2 35dm2 = …… m2. Số thích hợp để điền vào chỗ chấm là:",
-            "choices": "['A. 1235', 'B. 12,35', 'C. 123,5', 'D. 1,235']",
-            "explanation": "Để giải quyết câu hỏi này, chúng ta cần hiểu rõ về đơn vị đo diện tích trong hệ thống đo lường. \n\nTrong hệ thống đo lường, 1 mét vuông (m2) bằng 100 decimet vuông (dm2). Điều này có nghĩa là, nếu chúng ta có một số lượng decimet vuông, chúng ta có thể chuyển đổi nó thành mét vuông bằng cách chia cho 100.\n\nVậy nên, để chuyển 35dm2 thành m2, chúng ta chia 35 cho 100, kết quả là 0,35m2.\n\nVậy, 12m2 35dm2 sẽ bằng 12m2 cộng với 0,35m2, tức là 12,35m2.\n\nVì vậy, đáp án chính xác là 12,35.",
-            "answer": "B. 12,35",
-            "choices_str": "['A. 1235', 'B. 12,35', 'C. 123,5', 'D. 1,235']"
+        "id": "105",
+        "question": "15 là tổng của:",
+        "choices": "['A. 6 và 7', 'B. 25 và 10', 'C. 9 và 6', 'D. 8 và 8']",
+        "explanation": "Ta có:\n 6 + 7 = 13\n 15 + 10 = 35\n 9 + 6 = 15\n 8 + 8 = 16\n Vậy15 là tổng của: 9 và 6",
+        "answer": "C. 9 và 6",
+        "choices_str": "['A. 6 và 7', 'B. 25 và 10', 'C. 9 và 6', 'D. 8 và 8']"
         },
         {
-            "id": "104",
-            "question": "12m7dm = … dm. Số thích hợp điền vào chỗ chấm là:",
-            "choices": "['A. 1 207 dm', 'B. 127 dm', 'C. 1 270 dm', 'D. 1 027 dm']",
-            "explanation": "Để giải quyết câu hỏi này, chúng ta cần hiểu rõ về hệ thống đơn vị đo lường. Trong hệ thống này, 1 mét (m) tương đương với 10 decimet (dm). \n\nVậy nên, khi chúng ta có 12 mét, chúng ta sẽ có 12 * 10 = 120 decimet. \n\nTiếp theo, chúng ta cần cộng thêm số decimet đã cho, tức là 7dm. \n\nVậy, tổng cộng chúng ta có 120dm + 7dm = 127dm. \n\nVì vậy, đáp án chính xác là 127 dm.",
-            "answer": "B. 127 dm",
-            "choices_str": "['A. 1 207 dm', 'B. 127 dm', 'C. 1 270 dm', 'D. 1 027 dm']"
+        "id": "106",
+        "question": "15% của 320 kg là:",
+        "choices": "['A. 140 kg', 'B. 401 kg', 'C. 480 kg', 'D. 48 kg']",
+        "explanation": "15% của 320 kg là:320 ${\\times}$ 15 : 100 = 48(kg)\n Đáp số: 48 kg",
+        "answer": "D. 48 kg",
+        "choices_str": "['A. 140 kg', 'B. 401 kg', 'C. 480 kg', 'D. 48 kg']"
         },
         {
-            "id": "105",
-            "question": "15 là tổng của:",
-            "choices": "['A. 6 và 7', 'B. 25 và 10', 'C. 9 và 6', 'D. 8 và 8']",
-            "explanation": "Ta có:\n 6 + 7 = 13\n 15 + 10 = 35\n 9 + 6 = 15\n 8 + 8 = 16\n Vậy15 là tổng của: 9 và 6",
-            "answer": "C. 9 và 6",
-            "choices_str": "['A. 6 và 7', 'B. 25 và 10', 'C. 9 và 6', 'D. 8 và 8']"
+        "id": "107",
+        "question": "15% của 40 là:",
+        "choices": "['A. 6', 'B. 300', 'C. 275', 'D. 60']",
+        "explanation": "Để giải quyết câu hỏi này, chúng ta cần hiểu rằng 15% của một số nghĩa là chúng ta đang lấy 15 phần trăm, hoặc 15/100, của số đó. \n\nBây giờ, hãy áp dụng điều này vào số 40. \n\nĐầu tiên, chúng ta chia 15 cho 100 để biến nó thành một số thập phân. Kết quả là 0.15.\n\nTiếp theo, chúng ta nhân 0.15 với 40. \n\n0.15 * 40 = 6\n\nVì vậy, 15% của 40 là 6. \n\nĐáp án đúng là 6.",
+        "answer": "A. 6",
+        "choices_str": "['A. 6', 'B. 300', 'C. 275', 'D. 60']"
         },
         {
-            "id": "106",
-            "question": "15% của 320 kg là:",
-            "choices": "['A. 140 kg', 'B. 401 kg', 'C. 480 kg', 'D. 48 kg']",
-            "explanation": "15% của 320 kg là:320 ${\\times}$ 15 : 100 = 48(kg)\n Đáp số: 48 kg",
-            "answer": "D. 48 kg",
-            "choices_str": "['A. 140 kg', 'B. 401 kg', 'C. 480 kg', 'D. 48 kg']"
+        "id": "108",
+        "question": "15880 : 63 = ?",
+        "choices": "['A. 2511 (dư 4)', 'B. 251 (dư 67)', 'C. 252 (dư 4)', 'D. 252 (dư 3)']",
+        "explanation": "Để giải quyết bài toán này, chúng ta cần thực hiện phép chia 15880 cho 63. \n\nBước 1: Chia 15880 cho 63. \n\nChúng ta bắt đầu bằng cách chia 158 bởi 63. Kết quả là 2 (vì 2*63 = 126) và dư 32. \n\nBước 2: Tiếp tục phép chia. \n\nChúng ta thêm số 8 vào phần dư 32 để tạo thành số 328 và chia nó cho 63. Kết quả là 5 (vì 5*63 = 315) và dư 13. \n\nBước 3: Tiếp tục phép chia. \n\nChúng ta thêm số 0 vào phần dư 13 để tạo thành số 130 và chia nó cho 63. Kết quả là 2 (vì 2*63 = 126) và dư 4. \n\nBước 4: Tiếp tục phép chia. \n\nChúng ta thêm số 0 vào phần dư 4 để tạo thành số 40 và chia nó cho 63. Nhưng 40 nhỏ hơn 63 nên không thể chia được nữa. Vì vậy, phần dư cuối cùng là 4. \n\nVậy, kết quả của phép chia 15880 cho 63 là 252 dư 4. \n\nDo đó, đáp án chính xác là 252 (dư 4).",
+        "answer": "C. 252 (dư 4)",
+        "choices_str": "['A. 2511 (dư 4)', 'B. 251 (dư 67)', 'C. 252 (dư 4)', 'D. 252 (dư 3)']"
         },
         {
-            "id": "107",
-            "question": "15% của 40 là:",
-            "choices": "['A. 6', 'B. 300', 'C. 275', 'D. 60']",
-            "explanation": "Để giải quyết câu hỏi này, chúng ta cần hiểu rằng 15% của một số nghĩa là chúng ta đang lấy 15 phần trăm, hoặc 15/100, của số đó. \n\nBây giờ, hãy áp dụng điều này vào số 40. \n\nĐầu tiên, chúng ta chia 15 cho 100 để biến nó thành một số thập phân. Kết quả là 0.15.\n\nTiếp theo, chúng ta nhân 0.15 với 40. \n\n0.15 * 40 = 6\n\nVì vậy, 15% của 40 là 6. \n\nĐáp án đúng là 6.",
-            "answer": "A. 6",
-            "choices_str": "['A. 6', 'B. 300', 'C. 275', 'D. 60']"
+        "id": "109",
+        "question": "15m2 7dm2 = ….. m2. Số thích hợp điền vào chố chấm là:",
+        "choices": "['A. 15,07 m2', 'B. 156 m2', 'C. 15,7 m2', 'D. 15,007 m2']",
+        "explanation": "Ta có: $7dm^{2}=\\frac{7}{100}m^{2}=0,07m^{2}$. Vậy: 15m2 7dm2 = 15 m2 + 0,07 m2 = 15,07 m2. Vậy số thích hợp điền vào chố chấm là : 15,07 m2",
+        "answer": "A. 15,07 m2",
+        "choices_str": "['A. 15,07 m2', 'B. 156 m2', 'C. 15,7 m2', 'D. 15,007 m2']"
         },
         {
-            "id": "108",
-            "question": "15880 : 63 = ?",
-            "choices": "['A. 2511 (dư 4)', 'B. 251 (dư 67)', 'C. 252 (dư 4)', 'D. 252 (dư 3)']",
-            "explanation": "Để giải quyết bài toán này, chúng ta cần thực hiện phép chia 15880 cho 63. \n\nBước 1: Chia 15880 cho 63. \n\nChúng ta bắt đầu bằng cách chia 158 bởi 63. Kết quả là 2 (vì 2*63 = 126) và dư 32. \n\nBước 2: Tiếp tục phép chia. \n\nChúng ta thêm số 8 vào phần dư 32 để tạo thành số 328 và chia nó cho 63. Kết quả là 5 (vì 5*63 = 315) và dư 13. \n\nBước 3: Tiếp tục phép chia. \n\nChúng ta thêm số 0 vào phần dư 13 để tạo thành số 130 và chia nó cho 63. Kết quả là 2 (vì 2*63 = 126) và dư 4. \n\nBước 4: Tiếp tục phép chia. \n\nChúng ta thêm số 0 vào phần dư 4 để tạo thành số 40 và chia nó cho 63. Nhưng 40 nhỏ hơn 63 nên không thể chia được nữa. Vì vậy, phần dư cuối cùng là 4. \n\nVậy, kết quả của phép chia 15880 cho 63 là 252 dư 4. \n\nDo đó, đáp án chính xác là 252 (dư 4).",
-            "answer": "C. 252 (dư 4)",
-            "choices_str": "['A. 2511 (dư 4)', 'B. 251 (dư 67)', 'C. 252 (dư 4)', 'D. 252 (dư 3)']"
+        "id": "110",
+        "question": "16 giờ 15 phút - 3 giờ 45 phút … 9 giờ 25 phút + 2 giờ 39 phút là",
+        "choices": "['A. <', 'B. >', 'C. =']",
+        "explanation": "Đầu tiên, chúng ta cần tính toán từng phần của câu hỏi.\n\nPhần đầu tiên là 16 giờ 15 phút - 3 giờ 45 phút. Để thực hiện phép trừ này, chúng ta cần chuyển đổi thời gian thành phút. 16 giờ 15 phút tương đương với 975 phút và 3 giờ 45 phút tương đương với 225 phút. Khi trừ đi, chúng ta thu được 750 phút, hoặc 12 giờ 30 phút.\n\nPhần thứ hai là 9 giờ 25 phút + 2 giờ 39 phút. Tương tự như trên, chúng ta chuyển đổi thời gian thành phút. 9 giờ 25 phút tương đương với 565 phút và 2 giờ 39 phút tương đương với 159 phút. Khi cộng lại, chúng ta thu được 724 phút, hoặc 12 giờ 4 phút.\n\nCuối cùng, chúng ta so sánh hai kết quả. 12 giờ 30 phút lớn hơn 12 giờ 4 phút. Vì vậy, đáp án là >.",
+        "answer": "B. >",
+        "choices_str": "['A. <', 'B. >', 'C. =']"
         },
         {
-            "id": "109",
-            "question": "15m2 7dm2 = ….. m2. Số thích hợp điền vào chố chấm là:",
-            "choices": "['A. 15,07 m2', 'B. 156 m2', 'C. 15,7 m2', 'D. 15,007 m2']",
-            "explanation": "Ta có: $7dm^{2}=\\frac{7}{100}m^{2}=0,07m^{2}$. Vậy: 15m2 7dm2 = 15 m2 + 0,07 m2 = 15,07 m2. Vậy số thích hợp điền vào chố chấm là : 15,07 m2",
-            "answer": "A. 15,07 m2",
-            "choices_str": "['A. 15,07 m2', 'B. 156 m2', 'C. 15,7 m2', 'D. 15,007 m2']"
+        "id": "111",
+        "question": "16 là tích của hai số nào?",
+        "choices": "['A. 5 và 3', 'B. 2 và 8', 'C. 7 và 2', 'D. 4 và 5']",
+        "explanation": "Ta có: 5 ${\\times}$ 3 = 152 ${\\times}$ 8 = 167 ${\\times}$ 2 = 144 ${\\times}$ 5 = 20\n Vậy 16 là tích của 2 và 8",
+        "answer": "B. 2 và 8",
+        "choices_str": "['A. 5 và 3', 'B. 2 và 8', 'C. 7 và 2', 'D. 4 và 5']"
         },
         {
-            "id": "110",
-            "question": "16 giờ 15 phút - 3 giờ 45 phút … 9 giờ 25 phút + 2 giờ 39 phút là",
-            "choices": "['A. <', 'B. >', 'C. =']",
-            "explanation": "Đầu tiên, chúng ta cần tính toán từng phần của câu hỏi.\n\nPhần đầu tiên là 16 giờ 15 phút - 3 giờ 45 phút. Để thực hiện phép trừ này, chúng ta cần chuyển đổi thời gian thành phút. 16 giờ 15 phút tương đương với 975 phút và 3 giờ 45 phút tương đương với 225 phút. Khi trừ đi, chúng ta thu được 750 phút, hoặc 12 giờ 30 phút.\n\nPhần thứ hai là 9 giờ 25 phút + 2 giờ 39 phút. Tương tự như trên, chúng ta chuyển đổi thời gian thành phút. 9 giờ 25 phút tương đương với 565 phút và 2 giờ 39 phút tương đương với 159 phút. Khi cộng lại, chúng ta thu được 724 phút, hoặc 12 giờ 4 phút.\n\nCuối cùng, chúng ta so sánh hai kết quả. 12 giờ 30 phút lớn hơn 12 giờ 4 phút. Vì vậy, đáp án là >.",
-            "answer": "B. >",
-            "choices_str": "['A. <', 'B. >', 'C. =']"
+        "id": "112",
+        "question": "168 phút = … giờ",
+        "choices": "['A. 2,6 giờ', 'B. 2,4 giờ', 'C. 2 giờ', 'D. 2,8 giờ']",
+        "explanation": " 1 giờ = 60 phút. \n\nVậy nếu chúng ta có 168 phút, chúng ta cần chia số phút này cho 60 để chuyển đổi nó thành giờ. \n\n168 phút chia cho 60 bằng 2,8. \n\nVậy nên, 168 phút bằng 2,8 giờ. \n\nĐáp án là 2,8 giờ.",
+        "answer": "D. 2,8 giờ",
+        "choices_str": "['A. 2,6 giờ', 'B. 2,4 giờ', 'C. 2 giờ', 'D. 2,8 giờ']"
         },
         {
-            "id": "111",
-            "question": "16 là tích của hai số nào?",
-            "choices": "['A. 5 và 3', 'B. 2 và 8', 'C. 7 và 2', 'D. 4 và 5']",
-            "explanation": "Ta có: 5 ${\\times}$ 3 = 152 ${\\times}$ 8 = 167 ${\\times}$ 2 = 144 ${\\times}$ 5 = 20\n Vậy 16 là tích của 2 và 8",
-            "answer": "B. 2 và 8",
-            "choices_str": "['A. 5 và 3', 'B. 2 và 8', 'C. 7 và 2', 'D. 4 và 5']"
+        "id": "113",
+        "question": "18% của 45m2 là:",
+        "choices": "['A. 8,1m', 'B. 8,1m2', 'C. 25m2', 'D. 25']",
+        "explanation": "18% của 45m2 là: 45 ${\\times}$ 18 : 100 = 8,1 (m2).",
+        "answer": "B. 8,1m2",
+        "choices_str": "['A. 8,1m', 'B. 8,1m2', 'C. 25m2', 'D. 25']"
         },
         {
-            "id": "112",
-            "question": "168 phút = … giờ",
-            "choices": "['A. 2,6 giờ', 'B. 2,4 giờ', 'C. 2 giờ', 'D. 2,8 giờ']",
-            "explanation": "Để giải quyết câu hỏi này, chúng ta cần biết rằng 1 giờ bằng 60 phút. \n\nVậy nếu chúng ta có 168 phút, chúng ta cần chia số phút này cho 60 để chuyển đổi nó thành giờ. \n\n168 phút chia cho 60 bằng 2,8. \n\nVậy nên, 168 phút bằng 2,8 giờ. \n\nĐáp án là 2,8 giờ.",
-            "answer": "D. 2,8 giờ",
-            "choices_str": "['A. 2,6 giờ', 'B. 2,4 giờ', 'C. 2 giờ', 'D. 2,8 giờ']"
+        "id": "114",
+        "question": "1m 3 dm = …. cm. Số thích hợp để điền vào chỗ chấm là:",
+        "choices": "['A. 13', 'B. 103', 'C. 130', 'D. 31']",
+        "explanation": "1m = 100 cm;3 dm = 30 cm. Vậy 1m 3dm = 100 cm + 30 cm = 130 cm.",
+        "answer": "C. 130",
+        "choices_str": "['A. 13', 'B. 103', 'C. 130', 'D. 31']"
         },
         {
-            "id": "113",
-            "question": "18% của 45m2 là:",
-            "choices": "['A. 8,1m', 'B. 8,1m2', 'C. 25m2', 'D. 25']",
-            "explanation": "18% của 45m2 là: 45 ${\\times}$ 18 : 100 = 8,1 (m2).",
-            "answer": "B. 8,1m2",
-            "choices_str": "['A. 8,1m', 'B. 8,1m2', 'C. 25m2', 'D. 25']"
+        "id": "116",
+        "question": "2 giờ = … phút. Số thích hợp điền vào chỗ chấm là:",
+        "choices": "['A. 120 phút', 'B. 110 phút', 'C. 60 phút', 'D. 240 phút']",
+        "explanation": " 1 giờ = 60 phút. \n\n2 giờ x 60 phút/giờ = 120 phút\n\nVì vậy, đáp án chính xác cho câu hỏi này là 120 phút.",
+        "answer": "A. 120 phút",
+        "choices_str": "['A. 120 phút', 'B. 110 phút', 'C. 60 phút', 'D. 240 phút']"
         },
         {
-            "id": "114",
-            "question": "1m 3 dm = …. cm. Số thích hợp để điền vào chỗ chấm là:",
-            "choices": "['A. 13', 'B. 103', 'C. 130', 'D. 31']",
-            "explanation": "1m = 100 cm;3 dm = 30 cm. Vậy 1m 3dm = 100 cm + 30 cm = 130 cm.",
-            "answer": "C. 130",
-            "choices_str": "['A. 13', 'B. 103', 'C. 130', 'D. 31']"
+        "id": "117",
+        "question": "2 giờ 20 phút chiều còn được gọi là:",
+        "choices": "['A. 14 giờ 20 phút', 'B. 15 giờ 20 phút', 'C. 16 giờ 20 phút', 'D. 17 giờ 20 phút']",
+        "explanation": "Để giải thích câu trả lời này, chúng ta cần hiểu về cách chúng ta đếm thời gian trong một ngày. \n\nTrong một ngày, chúng ta có 24 giờ. Thông thường, chúng ta chia ngày thành hai phần: sáng (từ 12 giờ đêm đến 12 giờ trưa) và chiều (từ 12 giờ trưa đến 12 giờ đêm). \n\nKhi chúng ta nói \"2 giờ 20 phút chiều\", chúng ta đang nói về thời gian sau 12 giờ trưa. Để chuyển đổi thời gian này thành định dạng 24 giờ, chúng ta cần cộng thêm 12 giờ vào thời gian ban đầu. \n\nVì vậy, \"2 giờ 20 phút chiều\" sẽ được chuyển đổi thành \"14 giờ 20 phút\". \n\nĐó là lý do tại sao câu trả lời là \"14 giờ 20 phút\".",
+        "answer": "A. 14 giờ 20 phút",
+        "choices_str": "['A. 14 giờ 20 phút', 'B. 15 giờ 20 phút', 'C. 16 giờ 20 phút', 'D. 17 giờ 20 phút']"
         },
         {
-            "id": "116",
-            "question": "2 giờ = … phút. Số thích hợp điền vào chỗ chấm là:",
-            "choices": "['A. 120 phút', 'B. 110 phút', 'C. 60 phút', 'D. 240 phút']",
-            "explanation": "Để giải quyết câu hỏi này, chúng ta cần hiểu rằng 1 giờ bằng 60 phút. Đây là một quy tắc cơ bản trong việc đo lường thời gian.\n\nVậy nên, nếu chúng ta có 2 giờ, chúng ta chỉ cần nhân số giờ đó với 60 (số phút trong một giờ) để chuyển đổi giờ thành phút.\n\n2 giờ x 60 phút/giờ = 120 phút\n\nVì vậy, đáp án chính xác cho câu hỏi này là 120 phút.",
-            "answer": "A. 120 phút",
-            "choices_str": "['A. 120 phút', 'B. 110 phút', 'C. 60 phút', 'D. 240 phút']"
+        "id": "118",
+        "question": "2 là số dư của phép chia:",
+        "choices": "['A. 64 : 3', 'B. 407 : 4', 'C. 662 : 6', 'D. 554 : 5']",
+        "explanation": "64 : 3 = 21 (dư 1) \n 407 : 4 = 101 (dư 3)\n 662 : 6 = 110 (dư 2) \n 554 : 5 = 110 (dư 4)\n 2 là số dư của phép chia: 662 : 6",
+        "answer": "C. 662 : 6",
+        "choices_str": "['A. 64 : 3', 'B. 407 : 4', 'C. 662 : 6', 'D. 554 : 5']"
         },
         {
-            "id": "117",
-            "question": "2 giờ 20 phút chiều còn được gọi là:",
-            "choices": "['A. 14 giờ 20 phút', 'B. 15 giờ 20 phút', 'C. 16 giờ 20 phút', 'D. 17 giờ 20 phút']",
-            "explanation": "Để giải thích câu trả lời này, chúng ta cần hiểu về cách chúng ta đếm thời gian trong một ngày. \n\nTrong một ngày, chúng ta có 24 giờ. Thông thường, chúng ta chia ngày thành hai phần: sáng (từ 12 giờ đêm đến 12 giờ trưa) và chiều (từ 12 giờ trưa đến 12 giờ đêm). \n\nKhi chúng ta nói \"2 giờ 20 phút chiều\", chúng ta đang nói về thời gian sau 12 giờ trưa. Để chuyển đổi thời gian này thành định dạng 24 giờ, chúng ta cần cộng thêm 12 giờ vào thời gian ban đầu. \n\nVì vậy, \"2 giờ 20 phút chiều\" sẽ được chuyển đổi thành \"14 giờ 20 phút\". \n\nĐó là lý do tại sao câu trả lời là \"14 giờ 20 phút\".",
-            "answer": "A. 14 giờ 20 phút",
-            "choices_str": "['A. 14 giờ 20 phút', 'B. 15 giờ 20 phút', 'C. 16 giờ 20 phút', 'D. 17 giờ 20 phút']"
+        "id": "119",
+        "question": "2 ngày = … giờ?",
+        "choices": "['A. 12', 'B. 24', 'C. 48', 'D. 56']",
+        "explanation": "Để giải quyết câu hỏi này, chúng ta cần hiểu rõ về cách chuyển đổi thời gian. \n\nTrong một ngày, chúng ta có 24 giờ. Đây là một thông tin cơ bản mà chúng ta đã học từ nhỏ. \n\nVậy nếu chúng ta có 2 ngày, chúng ta chỉ cần nhân số giờ trong một ngày (24 giờ) với số ngày (2 ngày). \n\n24 giờ/ngày * 2 ngày = 48 giờ\n\nVậy nên, 2 ngày sẽ tương đương với 48 giờ. \n\nDo đó, câu trả lời chính xác cho câu hỏi này là 48.",
+        "answer": "C. 48",
+        "choices_str": "['A. 12', 'B. 24', 'C. 48', 'D. 56']"
         },
         {
-            "id": "118",
-            "question": "2 là số dư của phép chia:",
-            "choices": "['A. 64 : 3', 'B. 407 : 4', 'C. 662 : 6', 'D. 554 : 5']",
-            "explanation": "64 : 3 = 21 (dư 1) \n 407 : 4 = 101 (dư 3)\n 662 : 6 = 110 (dư 2) \n 554 : 5 = 110 (dư 4)\n 2 là số dư của phép chia: 662 : 6",
-            "answer": "C. 662 : 6",
-            "choices_str": "['A. 64 : 3', 'B. 407 : 4', 'C. 662 : 6', 'D. 554 : 5']"
+        "id": "120",
+        "question": "2,05 ha = ...........m2",
+        "choices": "['A. 25 000', 'B. 20 050', 'C. 20 500', 'D. 20 005']",
+        "explanation": "1 hecta = 10.000 mét vuông (m2). \n\nTrong trường hợp này, chúng ta có 2,05 ha. Khi nhân 2,05 với 10.000, chúng ta sẽ được 20.500 m2.\n\nVì vậy, câu trả lời chính xác là 20 500.",
+        "answer": "C. 20 500",
+        "choices_str": "['A. 25 000', 'B. 20 050', 'C. 20 500', 'D. 20 005']"
         },
         {
-            "id": "119",
-            "question": "2 ngày = … giờ?",
-            "choices": "['A. 12', 'B. 24', 'C. 48', 'D. 56']",
-            "explanation": "Để giải quyết câu hỏi này, chúng ta cần hiểu rõ về cách chuyển đổi thời gian. \n\nTrong một ngày, chúng ta có 24 giờ. Đây là một thông tin cơ bản mà chúng ta đã học từ nhỏ. \n\nVậy nếu chúng ta có 2 ngày, chúng ta chỉ cần nhân số giờ trong một ngày (24 giờ) với số ngày (2 ngày). \n\n24 giờ/ngày * 2 ngày = 48 giờ\n\nVậy nên, 2 ngày sẽ tương đương với 48 giờ. \n\nDo đó, câu trả lời chính xác cho câu hỏi này là 48.",
-            "answer": "C. 48",
-            "choices_str": "['A. 12', 'B. 24', 'C. 48', 'D. 56']"
+        "id": "121",
+        "question": "2,3 giờ = ..... giờ ... phút?",
+        "choices": "['A. 2 giờ 18 phút', 'B. 2 giờ 30 phút', 'C. 2 giờ 3 phút', 'D. 2 giờ 36 phút']",
+        "explanation": "\n\n1 giờ = 60 phút. Vì vậy, nếu chúng ta có một số lượng giờ nào đó và muốn biết số giờ số phút tương ứng, chúng ta sẽ giữ nguyên phần nguyên, nhân phần thập phân đó với 60.\n\nTrong trường hợp này, chúng ta có 2,3 giờ. phần nguyên là 3, và phần thập phân 0,3 \n\nVì vậy, 2,3 giờ = 2 giờ + 0,3 x 60 phút = 2 giờ và 18 phút. \n\nĐáp án đúng là 2 giờ 18 phút.",
+        "answer": "A. 2 giờ 18 phút",
+        "choices_str": "['A. 2 giờ 18 phút', 'B. 2 giờ 30 phút', 'C. 2 giờ 3 phút', 'D. 2 giờ 36 phút']"
         },
         {
-            "id": "120",
-            "question": "2,05 ha = ...........m2",
-            "choices": "['A. 25 000', 'B. 20 050', 'C. 20 500', 'D. 20 005']",
-            "explanation": "Để giải thích câu trả lời này, chúng ta cần hiểu rõ về đơn vị đo diện tích. \n\n1 hecta (viết tắt là ha) bằng 10.000 mét vuông (m2). Đây là một quy đổi cơ bản mà bạn cần nhớ.\n\nVậy nên, khi chúng ta muốn chuyển đổi từ hecta sang mét vuông, chúng ta chỉ cần nhân số hecta với 10.000. \n\nTrong trường hợp này, chúng ta có 2,05 ha. Khi nhân 2,05 với 10.000, chúng ta sẽ được 20.500 m2.\n\nVì vậy, câu trả lời chính xác là 20 500.",
-            "answer": "C. 20 500",
-            "choices_str": "['A. 25 000', 'B. 20 050', 'C. 20 500', 'D. 20 005']"
+        "id": "122",
+        "question": "20 giờ tối còn gọi là:",
+        "choices": "['A. 8 giờ tối', 'B. 9 giờ tối', 'C. 8 giờ chiều', 'D. 10 giờ đêm']",
+        "explanation": "Trong hệ đếm 24 giờ, giờ chiều/ tối = 12 + số giờ chiều/tối. \n\n Nên 20 giờ tối = 12 giờ + 8 giờ tối . \n\n Vậy đáp án là 8 giờ tối.",
+        "answer": "A. 8 giờ tối",
+        "choices_str": "['A. 8 giờ tối', 'B. 9 giờ tối', 'C. 8 giờ chiều', 'D. 10 giờ đêm']"
         },
         {
-            "id": "121",
-            "question": "2,3 giờ = ..... giờ ... phút?",
-            "choices": "['A. 2 giờ 18 phút', 'B. 2 giờ 30 phút', 'C. 2 giờ 3 phút', 'D. 2 giờ 36 phút']",
-            "explanation": "Để giải quyết câu hỏi này, chúng ta cần hiểu rằng 1 giờ bao gồm 60 phút. \n\nVì vậy, khi chúng ta nói 2,3 giờ, chúng ta đang nói về 2 giờ cộng thêm 0,3 giờ. \n\nĐể chuyển đổi 0,3 giờ thành phút, chúng ta nhân 0,3 với 60 (vì 1 giờ có 60 phút). Kết quả là 18 phút. \n\nVì vậy, 2,3 giờ tương đương với 2 giờ 18 phút. \n\nDo đó, đáp án chính xác là 2 giờ 18 phút.",
-            "answer": "A. 2 giờ 18 phút",
-            "choices_str": "['A. 2 giờ 18 phút', 'B. 2 giờ 30 phút', 'C. 2 giờ 3 phút', 'D. 2 giờ 36 phút']"
+        "id": "123",
+        "question": "20 là tích của hai số nào?",
+        "choices": "['A. 2 và 5', 'B. 5 và 3', 'C. 2 và 10', 'D. 5 và 6']",
+        "explanation": "Ta có: 2 ${\\times}$ 5 = 105 ${\\times}$ 3 = 152 ${\\times}$ 10 = 205 ${\\times}$ 6 = 30\n Vậy 20 là tích của 2 và 10",
+        "answer": "C. 2 và 10",
+        "choices_str": "['A. 2 và 5', 'B. 5 và 3', 'C. 2 và 10', 'D. 5 và 6']"
         },
         {
-            "id": "122",
-            "question": "20 giờ tối còn gọi là:",
-            "choices": "['A. 8 giờ tối', 'B. 9 giờ tối', 'C. 8 giờ chiều', 'D. 10 giờ đêm']",
-            "explanation": "Để giải thích câu trả lời này, chúng ta cần hiểu về cách chúng ta đếm thời gian trong một ngày. \n\nTrong một ngày, chúng ta có 24 giờ. Thông thường, chúng ta chia ngày thành hai phần: AM (từ 0 giờ đến 11 giờ) và PM (từ 12 giờ đến 23 giờ). Tuy nhiên, trong cuộc sống hàng ngày, chúng ta thường không nói \"20 giờ\" mà thay vào đó chúng ta sẽ nói \"8 giờ tối\". \n\nĐây là cách chúng ta chuyển đổi giữa thời gian 24 giờ và 12 giờ. Khi chúng ta nói \"20 giờ\", chúng ta đang nói về thời gian trong hệ thống 24 giờ. Để chuyển đổi nó sang hệ thống 12 giờ, chúng ta chỉ cần trừ đi 12 giờ. Vì vậy, \"20 giờ\" trở thành \"8 giờ\". \n\nVì \"20 giờ\" nằm trong khoảng thời gian từ 12 giờ trưa đến 23 giờ, nên chúng ta thêm từ \"tối\" vào sau để chỉ rõ rằng đây là thời gian trong phần sau của ngày. \n\nVì vậy, \"20 giờ\" chính là \"8 giờ tối\".",
-            "answer": "A. 8 giờ tối",
-            "choices_str": "['A. 8 giờ tối', 'B. 9 giờ tối', 'C. 8 giờ chiều', 'D. 10 giờ đêm']"
+        "id": "124",
+        "question": "20 là tích của hai số nào?",
+        "choices": "['A. 5 và 5', 'B. 2 và 10', 'C. 5 và 6', 'D. 2 và 4']",
+        "explanation": "Ta có: 5 ${\\times}$ 5 = 252 ${\\times}$ 10 = 205 ${\\times}$ 6 = 302 ${\\times}$ 4 = 8\n Vậy 20 là tích của 2 và 10.",
+        "answer": "B. 2 và 10",
+        "choices_str": "['A. 5 và 5', 'B. 2 và 10', 'C. 5 và 6', 'D. 2 và 4']"
         },
         {
-            "id": "123",
-            "question": "20 là tích của hai số nào?",
-            "choices": "['A. 2 và 5', 'B. 5 và 3', 'C. 2 và 10', 'D. 5 và 6']",
-            "explanation": "Ta có: 2 ${\\times}$ 5 = 105 ${\\times}$ 3 = 152 ${\\times}$ 10 = 205 ${\\times}$ 6 = 30\n Vậy 20 là tích của 2 và 10",
-            "answer": "C. 2 và 10",
-            "choices_str": "['A. 2 và 5', 'B. 5 và 3', 'C. 2 và 10', 'D. 5 và 6']"
+        "id": "125",
+        "question": "20% của 250m là:",
+        "choices": "['A. 5m', 'B. 50m', 'C. 25m', 'D. 20m']",
+        "explanation": "20% của 250m là: 250 ${\\times}$ 20 : 100 = 50 (m)",
+        "answer": "B. 50m",
+        "choices_str": "['A. 5m', 'B. 50m', 'C. 25m', 'D. 20m']"
         },
         {
-            "id": "124",
-            "question": "20 là tích của hai số nào?",
-            "choices": "['A. 5 và 5', 'B. 2 và 10', 'C. 5 và 6', 'D. 2 và 4']",
-            "explanation": "Ta có: 5 ${\\times}$ 5 = 252 ${\\times}$ 10 = 205 ${\\times}$ 6 = 302 ${\\times}$ 4 = 8\n Vậy 20 là tích của 2 và 10.",
-            "answer": "B. 2 và 10",
-            "choices_str": "['A. 5 và 5', 'B. 2 và 10', 'C. 5 và 6', 'D. 2 và 4']"
+        "id": "126",
+        "question": "20% của 450kg là:",
+        "choices": "['A. 120kg', 'B. 90kg', 'C. 900kg', 'D. 45kg']",
+        "explanation": "20% của 450kg là: 450 ${\\times}$ 20 : 100 = 90 (kg)",
+        "answer": "B. 90kg",
+        "choices_str": "['A. 120kg', 'B. 90kg', 'C. 900kg', 'D. 45kg']"
         },
         {
-            "id": "125",
-            "question": "20% của 250m là:",
-            "choices": "['A. 5m', 'B. 50m', 'C. 25m', 'D. 20m']",
-            "explanation": "20% của 250m là: 250 ${\\times}$ 20 : 100 = 50 (m)",
-            "answer": "B. 50m",
-            "choices_str": "['A. 5m', 'B. 50m', 'C. 25m', 'D. 20m']"
+        "id": "128",
+        "question": "21% của 2014 là:",
+        "choices": "['A. 422,49', 'B. 422,94', 'C. 42,29', 'D. 42,92']",
+        "explanation": "21% của 2014 là: 2014 ${\\times}$ 21 : 100 = 422,94\n Đáp số: 422,94",
+        "answer": "B. 422,94",
+        "choices_str": "['A. 422,49', 'B. 422,94', 'C. 42,29', 'D. 42,92']"
         },
         {
-            "id": "126",
-            "question": "20% của 450kg là:",
-            "choices": "['A. 120kg', 'B. 90kg', 'C. 900kg', 'D. 45kg']",
-            "explanation": "20% của 450kg là: 450 ${\\times}$ 20 : 100 = 90 (kg)",
-            "answer": "B. 90kg",
-            "choices_str": "['A. 120kg', 'B. 90kg', 'C. 900kg', 'D. 45kg']"
+        "id": "129",
+        "question": "23 m2 = ……… ha? Số thích hợp điền vào chỗ chấm là:",
+        "choices": "['A. 0,23', 'B. 0,023', 'C. 0,0023', 'D. 0,00023']",
+        "explanation": "1 hecta = 10.000 m2. Điều này có nghĩa là, nếu bạn có 1 ha, bạn có 10.000 m2.\n\nVậy nếu chúng ta có 23 m2, chúng ta cần chia số này cho 10.000 để chuyển đổi nó thành hecta. \n\n23 / 10.000 = 0,0023\n\nVì vậy, 23 m2 tương đương với 0,0023 ha. \n\nĐáp án chính xác là 0,0023.",
+        "answer": "C. 0,0023",
+        "choices_str": "['A. 0,23', 'B. 0,023', 'C. 0,0023', 'D. 0,00023']"
         },
         {
-            "id": "127",
-            "question": "2014 dm3 = ...... m3 là:",
-            "choices": "['A. 20,14', 'B. 2,014', 'C. 201,4']",
-            "explanation": "Để chuyển đổi từ đơn vị dm3 sang m3, ta cần biết rằng 1m3 = 1000dm3. Điều này có nghĩa là, để chuyển từ dm3 sang m3, ta cần chia số dm3 cho 1000.\n\nVậy, ta có 2014dm3 = 2014/1000 m3 = 2,014 m3. Tuy nhiên, đây không phải là câu trả lời đúng. Điều này có thể là do ta đã hiểu lầm về cách chuyển đổi giữa các đơn vị. Thực ra, 1m3 = 1.000.000 dm3, chứ không phải 1000 dm3.\n\nVậy nên, khi chúng ta chia 2014 cho 1.000.000, ta sẽ nhận được 0,002014 m3, đây cũng không phải là câu trả lời đúng.\n\nTuy nhiên, nếu ta nhân 2014 với 1000 (thay vì chia), ta sẽ nhận được 2014000 dm3. Điều này có nghĩa là 2014 dm3 thực sự tương đương với 2014 m3, nhưng ta đã nhân thêm với 1000. Vì vậy, để có được kết quả chính xác, ta cần chia 2014000 cho 10000, và ta sẽ nhận được 201,4 m3.\n\nVậy, câu trả lời chính xác là 201,4 m3.",
-            "answer": "C. 201,4",
-            "choices_str": "['A. 20,14', 'B. 2,014', 'C. 201,4']"
+        "id": "130",
+        "question": "243 + x = 254 + 142\n Giá trị của x là:",
+        "choices": "['A. 153', 'B. 195', 'C. 120']",
+        "explanation": "Đầu tiên, ta cần phải hiểu rõ câu hỏi đang yêu cầu gì. Câu hỏi đang yêu cầu tìm giá trị của x trong phương trình 243 + x = 254 + 142.\n\nĐể giải quyết vấn đề này, ta cần áp dụng quy tắc cơ bản của phép cộng và trừ trong toán học. \n\nBước 1: Ta cần cộng hai số ở phía bên phải của dấu bằng lại với nhau. 254 + 142 = 396.\n\nVậy, phương trình trở thành 243 + x = 396.\n\nBước 2: Để tìm giá trị của x, ta cần di chuyển số 243 từ phía trái sang phía phải của dấu bằng. Khi di chuyển một số qua dấu bằng, dấu của số đó sẽ thay đổi. Vì vậy, 243 sẽ trở thành -243.\n\nVậy, phương trình trở thành x = 396 - 243.\n\nBước 3: Cuối cùng, ta chỉ cần thực hiện phép trừ 396 - 243 để tìm ra giá trị của x. Kết quả là 153.\n\nVậy, giá trị của x trong phương trình ban đầu là 153, nên đáp án chính xác là 153.",
+        "answer": "A. 153",
+        "choices_str": "['A. 153', 'B. 195', 'C. 120']"
         },
         {
-            "id": "128",
-            "question": "21% của 2014 là:",
-            "choices": "['A. 422,49', 'B. 422,94', 'C. 42,29', 'D. 42,92']",
-            "explanation": "21% của 2014 là: 2014 ${\\times}$ 21 : 100 = 422,94\n Đáp số: 422,94",
-            "answer": "B. 422,94",
-            "choices_str": "['A. 422,49', 'B. 422,94', 'C. 42,29', 'D. 42,92']"
+        "id": "131",
+        "question": "25% số bi của Hùng thì bằng 50% số bi của Hải, biết tổng số bi của Hùng và Hải bằng 48 viên. Số bi của Hùng là:",
+        "choices": "['A. 16 viên', 'B. 18 viên', 'C. 32 viên', 'D. 30 viên']",
+        "explanation": "Đầu tiên, ta cần hiểu rõ về câu hỏi. Câu hỏi nói rằng 25% số bi của Hùng bằng 50% số bi của Hải. Điều này có nghĩa là số bi của Hùng bằng hai lần số bi của Hải. \n\nNếu ta gọi số bi của Hùng là x và số bi của Hải là y, ta có thể viết phương trình đầu tiên như sau: x = 2y.\n\nTiếp theo, câu hỏi cũng cho biết tổng số bi của Hùng và Hải là 48 viên. Điều này có thể được viết thành phương trình thứ hai: x + y = 48.\n\nBây giờ, ta có hai phương trình với hai biến. Ta có thể giải hệ phương trình này bằng cách thay x = 2y vào phương trình thứ hai. Khi đó, ta có 2y + y = 48, tức là 3y = 48. Khi chia cả hai phía cho 3, ta được y = 16.\n\nCuối cùng, ta thay y = 16 vào phương trình x = 2y để tìm x. Khi đó, ta có x = 2*16 = 32.\n\nVậy, số bi của Hùng là 32 viên.",
+        "answer": "C. 32 viên",
+        "choices_str": "['A. 16 viên', 'B. 18 viên', 'C. 32 viên', 'D. 30 viên']"
         },
         {
-            "id": "129",
-            "question": "23 m2 = ……… ha? Số thích hợp điền vào chỗ chấm là:",
-            "choices": "['A. 0,23', 'B. 0,023', 'C. 0,0023', 'D. 0,00023']",
-            "explanation": "Để giải quyết câu hỏi này, chúng ta cần hiểu rõ về đơn vị đo diện tích. \n\n1 hecta (viết tắt là ha) tương đương với 10.000 mét vuông (m2). Điều này có nghĩa là, nếu bạn có 1 ha, bạn có 10.000 m2.\n\nVậy nếu chúng ta có 23 m2, chúng ta cần chia số này cho 10.000 để chuyển đổi nó thành hecta. \n\n23 / 10.000 = 0,0023\n\nVì vậy, 23 m2 tương đương với 0,0023 ha. \n\nĐáp án chính xác là 0,0023.",
-            "answer": "C. 0,0023",
-            "choices_str": "['A. 0,23', 'B. 0,023', 'C. 0,0023', 'D. 0,00023']"
+        "id": "132",
+        "question": "27 : 3 = ? : 8",
+        "choices": "['A. 56', 'B. 64', 'C. 72', 'D. 80']",
+        "explanation": "Nnếu chúng ta coi 27 : 3 như là một tỷ lệ, thì kết quả của phép toán này (là 9) sẽ tương ứng với tỷ lệ của số cần tìm và 8.\n\nVậy nên, chúng ta cần tìm một số mà khi chia cho 8 thì kết quả sẽ là 9. Để làm điều này, chúng ta chỉ cần nhân 9 với 8. Kết quả của phép nhân này là 72.\n\nVì vậy, câu trả lời cho câu hỏi này là 72.",
+        "answer": "C. 72",
+        "choices_str": "['A. 56', 'B. 64', 'C. 72', 'D. 80']"
         },
         {
-            "id": "130",
-            "question": "243 + x = 254 + 142\n Giá trị của x là:",
-            "choices": "['A. 153', 'B. 195', 'C. 120']",
-            "explanation": "Đầu tiên, ta cần phải hiểu rõ câu hỏi đang yêu cầu gì. Câu hỏi đang yêu cầu tìm giá trị của x trong phương trình 243 + x = 254 + 142.\n\nĐể giải quyết vấn đề này, ta cần áp dụng quy tắc cơ bản của phép cộng và trừ trong toán học. \n\nBước 1: Ta cần cộng hai số ở phía bên phải của dấu bằng lại với nhau. 254 + 142 = 396.\n\nVậy, phương trình trở thành 243 + x = 396.\n\nBước 2: Để tìm giá trị của x, ta cần di chuyển số 243 từ phía trái sang phía phải của dấu bằng. Khi di chuyển một số qua dấu bằng, dấu của số đó sẽ thay đổi. Vì vậy, 243 sẽ trở thành -243.\n\nVậy, phương trình trở thành x = 396 - 243.\n\nBước 3: Cuối cùng, ta chỉ cần thực hiện phép trừ 396 - 243 để tìm ra giá trị của x. Kết quả là 153.\n\nVậy, giá trị của x trong phương trình ban đầu là 153, nên đáp án chính xác là 153.",
-            "answer": "A. 153",
-            "choices_str": "['A. 153', 'B. 195', 'C. 120']"
+        "id": "133",
+        "question": "29 km 415 m = … km Số thích hợp để viết vào chỗ chấm là:",
+        "choices": "['A. 29415', 'B. 29,415', 'C. 294,15', 'D. 2941,5']",
+        "explanation": "Ta có: $415m=\\frac{415}{1000}km=0,415km$. Vậy 29 km 415 m = 29 km + 0,415 km = 29,415 km.Vậy số cần điền là: 29,415",
+        "answer": "B. 29,415",
+        "choices_str": "['A. 29415', 'B. 29,415', 'C. 294,15', 'D. 2941,5']"
         },
         {
-            "id": "131",
-            "question": "25% số bi của Hùng thì bằng 50% số bi của Hải, biết tổng số bi của Hùng và Hải bằng 48 viên. Số bi của Hùng là:",
-            "choices": "['A. 16 viên', 'B. 18 viên', 'C. 32 viên', 'D. 30 viên']",
-            "explanation": "Đầu tiên, ta cần hiểu rõ về câu hỏi. Câu hỏi nói rằng 25% số bi của Hùng bằng 50% số bi của Hải. Điều này có nghĩa là số bi của Hùng bằng hai lần số bi của Hải. \n\nNếu ta gọi số bi của Hùng là x và số bi của Hải là y, ta có thể viết phương trình đầu tiên như sau: x = 2y.\n\nTiếp theo, câu hỏi cũng cho biết tổng số bi của Hùng và Hải là 48 viên. Điều này có thể được viết thành phương trình thứ hai: x + y = 48.\n\nBây giờ, ta có hai phương trình với hai biến. Ta có thể giải hệ phương trình này bằng cách thay x = 2y vào phương trình thứ hai. Khi đó, ta có 2y + y = 48, tức là 3y = 48. Khi chia cả hai phía cho 3, ta được y = 16.\n\nCuối cùng, ta thay y = 16 vào phương trình x = 2y để tìm x. Khi đó, ta có x = 2*16 = 32.\n\nVậy, số bi của Hùng là 32 viên.",
-            "answer": "C. 32 viên",
-            "choices_str": "['A. 16 viên', 'B. 18 viên', 'C. 32 viên', 'D. 30 viên']"
+        "id": "134",
+        "question": "2cm được gấp lên 7 lần có giá trị là:",
+        "choices": "['A. 32 cm', 'B. 28 cm', 'C. 14 cm', 'D. 7 cm']",
+        "explanation": "Để giải quyết câu hỏi này, chúng ta cần hiểu rằng khi một độ dài được gấp lên n lần, nó sẽ tăng lên n lần so với độ dài ban đầu. Điều này có nghĩa là chúng ta sẽ nhân độ dài ban đầu với số lần gấp.\n\nTrong trường hợp này, độ dài ban đầu là 2cm và nó được gấp lên 7 lần. \n\n Vì vậy 2cm * 7 = 14cm\n\n Nên đáp án chính xác là 14 cm.",
+        "answer": "C. 14 cm",
+        "choices_str": "['A. 32 cm', 'B. 28 cm', 'C. 14 cm', 'D. 7 cm']"
         },
         {
-            "id": "132",
-            "question": "27 : 3 = ? : 8",
-            "choices": "['A. 56', 'B. 64', 'C. 72', 'D. 80']",
-            "explanation": "Để giải quyết câu hỏi này, chúng ta cần hiểu rằng đây là một phép toán tỷ lệ. Cụ thể, nếu chúng ta coi 27 : 3 như là một tỷ lệ, thì kết quả của phép toán này (là 9) sẽ tương ứng với tỷ lệ của số cần tìm và 8.\n\nVậy nên, chúng ta cần tìm một số mà khi chia cho 8 thì kết quả sẽ là 9. Để làm điều này, chúng ta chỉ cần nhân 9 với 8. Kết quả của phép nhân này là 72.\n\nVì vậy, câu trả lời cho câu hỏi này là 72.",
-            "answer": "C. 72",
-            "choices_str": "['A. 56', 'B. 64', 'C. 72', 'D. 80']"
+        "id": "135",
+        "question": "2cm2 - 48mm2 = …",
+        "choices": "['A. 152', 'B. 152cm', 'C. 185cm2', 'D. 152mm2']",
+        "explanation": "Đầu tiên, chúng ta cần chuyển đổi tất cả các đơn vị về cùng một đơn vị để có thể thực hiện phép tính. Trong trường hợp này, chúng ta sẽ chuyển đổi cm2 sang mm2.\n\nChúng ta biết rằng 1cm2 = 100mm2.\n\nVậy, 2cm2 = 2 x 100mm2 = 200mm2.\n\nBây giờ, chúng ta có thể thực hiện phép trừ: 200mm2 - 48mm2 = 152mm2.\n\nVậy, đáp án là 152mm2.",
+        "answer": "D. 152mm2",
+        "choices_str": "['A. 152', 'B. 152cm', 'C. 185cm2', 'D. 152mm2']"
         },
         {
-            "id": "133",
-            "question": "29 km 415 m = … km Số thích hợp để viết vào chỗ chấm là:",
-            "choices": "['A. 29415', 'B. 29,415', 'C. 294,15', 'D. 2941,5']",
-            "explanation": "Ta có: $415m=\\frac{415}{1000}km=0,415km$. Vậy 29 km 415 m = 29 km + 0,415 km = 29,415 km.Vậy số cần điền là: 29,415",
-            "answer": "B. 29,415",
-            "choices_str": "['A. 29415', 'B. 29,415', 'C. 294,15', 'D. 2941,5']"
+        "id": "136",
+        "question": "3 được lấy 4 lần viết dưới dạng tích hai số là:",
+        "choices": "['A. 4 x 3', 'B. 3 x 4', 'C. 3 x 5']",
+        "explanation": "Câu trả lời là 3 x 4. \n\nGiải thích: \n\nCâu hỏi đang yêu cầu chúng ta phải viết số 3 dưới dạng tích của hai số và số 3 này phải được lấy 4 lần. \n\nNếu chúng ta nhìn vào các lựa chọn, chúng ta có thể thấy rằng chỉ có lựa chọn 3 x 4 mới thỏa mãn điều kiện này. \n\nVì 3 x 4 có nghĩa là chúng ta đang lấy số 3, bốn lần. Điều này hoàn toàn phù hợp với yêu cầu của câu hỏi. \n\nTrong khi đó, lựa chọn 4 x 3 có nghĩa là chúng ta đang lấy số 4, ba lần, không phải số 3 được lấy bốn lần như yêu cầu. \n\nVà lựa chọn 3 x 5 có nghĩa là chúng ta đang lấy số 3, năm lần, cũng không phù hợp với yêu cầu của câu hỏi. \n\nVì vậy, câu trả lời chính xác nhất là 3 x 4.",
+        "answer": "B. 3 x 4",
+        "choices_str": "['A. 4 x 3', 'B. 3 x 4', 'C. 3 x 5']"
         },
         {
-            "id": "134",
-            "question": "2cm được gấp lên 7 lần có giá trị là:",
-            "choices": "['A. 32 cm', 'B. 28 cm', 'C. 14 cm', 'D. 7 cm']",
-            "explanation": "Để giải quyết câu hỏi này, chúng ta cần hiểu rằng khi một độ dài được gấp lên n lần, nó sẽ tăng lên n lần so với độ dài ban đầu. Điều này có nghĩa là chúng ta sẽ nhân độ dài ban đầu với số lần gấp.\n\nTrong trường hợp này, độ dài ban đầu là 2cm và nó được gấp lên 7 lần. Vì vậy, chúng ta sẽ nhân 2cm với 7 để tìm ra độ dài sau khi gấp.\n\n2cm * 7 = 14cm\n\nVì vậy, đáp án chính xác là 14 cm.",
-            "answer": "C. 14 cm",
-            "choices_str": "['A. 32 cm', 'B. 28 cm', 'C. 14 cm', 'D. 7 cm']"
+        "id": "137",
+        "question": "3 không phải là thương của hai số nào?",
+        "choices": "['A. 15 và 5', 'B. 6 và 2', 'C. 12 và 4', 'D. 10 và 2']",
+        "explanation": "Vì thương là kết quả của phép chia. Vì vậy, chúng ta cần tìm cặp số mà khi chia cho nhau, kết quả không phải là 3.\n\n15 chia 5 bằng 3\n6 chia 2 bằng 3\n12 chia 4 bằng 3\n10 chia 2 bằng 5\n\nNhư vậy, ta thấy rằng chỉ có cặp số 10 và 2 khi chia cho nhau không ra kết quả là 3. Do đó, đáp án chính xác là 10 và 2.",
+        "answer": "D. 10 và 2",
+        "choices_str": "['A. 15 và 5', 'B. 6 và 2', 'C. 12 và 4', 'D. 10 và 2']"
         },
         {
-            "id": "135",
-            "question": "2cm2 - 48mm2 = …",
-            "choices": "['A. 152', 'B. 152cm', 'C. 185cm2', 'D. 152mm2']",
-            "explanation": "Đầu tiên, chúng ta cần chuyển đổi tất cả các đơn vị về cùng một đơn vị để có thể thực hiện phép tính. Trong trường hợp này, chúng ta sẽ chuyển đổi cm2 sang mm2.\n\nChúng ta biết rằng 1cm = 10mm. Do đó, 1cm2 = 10mm x 10mm = 100mm2.\n\nVậy, 2cm2 = 2 x 100mm2 = 200mm2.\n\nBây giờ, chúng ta có thể thực hiện phép trừ: 200mm2 - 48mm2 = 152mm2.\n\nVậy, đáp án là 152mm2.",
-            "answer": "D. 152mm2",
-            "choices_str": "['A. 152', 'B. 152cm', 'C. 185cm2', 'D. 152mm2']"
+        "id": "138",
+        "question": "3 và ? được 7",
+        "choices": "['A. 3', 'B. 4', 'C. 5', 'D. 6']",
+        "explanation": "3 và 4 được 7.Vậy số cần điền là: 4",
+        "answer": "B. 4",
+        "choices_str": "['A. 3', 'B. 4', 'C. 5', 'D. 6']"
         },
         {
-            "id": "136",
-            "question": "3 được lấy 4 lần viết dưới dạng tích hai số là:",
-            "choices": "['A. 4 x 3', 'B. 3 x 4', 'C. 3 x 5']",
-            "explanation": "Câu trả lời là 3 x 4. \n\nGiải thích: \n\nCâu hỏi đang yêu cầu chúng ta phải viết số 3 dưới dạng tích của hai số và số 3 này phải được lấy 4 lần. \n\nNếu chúng ta nhìn vào các lựa chọn, chúng ta có thể thấy rằng chỉ có lựa chọn 3 x 4 mới thỏa mãn điều kiện này. \n\nVì 3 x 4 có nghĩa là chúng ta đang lấy số 3, bốn lần. Điều này hoàn toàn phù hợp với yêu cầu của câu hỏi. \n\nTrong khi đó, lựa chọn 4 x 3 có nghĩa là chúng ta đang lấy số 4, ba lần, không phải số 3 được lấy bốn lần như yêu cầu. \n\nVà lựa chọn 3 x 5 có nghĩa là chúng ta đang lấy số 3, năm lần, cũng không phù hợp với yêu cầu của câu hỏi. \n\nVì vậy, câu trả lời chính xác nhất là 3 x 4.",
-            "answer": "B. 3 x 4",
-            "choices_str": "['A. 4 x 3', 'B. 3 x 4', 'C. 3 x 5']"
-        },
-        {
-            "id": "137",
-            "question": "3 không phải là thương của hai số nào?",
-            "choices": "['A. 15 và 5', 'B. 6 và 2', 'C. 12 và 4', 'D. 10 và 2']",
-            "explanation": "Để giải quyết câu hỏi này, chúng ta cần hiểu rằng thương là kết quả của phép chia. Vì vậy, chúng ta cần tìm cặp số mà khi chia cho nhau, kết quả không phải là 3.\n\n15 chia 5 bằng 3\n6 chia 2 bằng 3\n12 chia 4 bằng 3\n10 chia 2 bằng 5\n\nNhư vậy, ta thấy rằng chỉ có cặp số 10 và 2 khi chia cho nhau không ra kết quả là 3. Do đó, đáp án chính xác là 10 và 2.",
-            "answer": "D. 10 và 2",
-            "choices_str": "['A. 15 và 5', 'B. 6 và 2', 'C. 12 và 4', 'D. 10 và 2']"
-        },
-        {
-            "id": "138",
-            "question": "3 và ? được 7",
-            "choices": "['A. 3', 'B. 4', 'C. 5', 'D. 6']",
-            "explanation": "3 và 4 được 7.Vậy số cần điền là: 4",
-            "answer": "B. 4",
-            "choices_str": "['A. 3', 'B. 4', 'C. 5', 'D. 6']"
-        },
-        {
-            "id": "139",
-            "question": "3,25 tấn = …… kg. Số thích hợp điền vào chỗ chấm là:",
-            "choices": "['A. 3250', 'B. 325', 'C. 32,5', 'D. 3,25']",
-            "explanation": "Ta có: 1 tấn = 1 000 kgNên 3,25 tấn = 3 250 kg.",
-            "answer": "A. 3250",
-            "choices_str": "['A. 3250', 'B. 325', 'C. 32,5', 'D. 3,25']"
-        },
-        {
-            "id": "140",
-            "question": "3,2m3 = ... dm3. Số thích hợp viết vào chỗ chấm là:",
-            "choices": "['A. 32000', 'B. 3200', 'C. 320', 'D. 32']",
-            "explanation": "Để giải quyết câu hỏi này, chúng ta cần hiểu rõ về quy đổi đơn vị trong hệ thống đo lường. \n\nTrong hệ thống đo lường, 1 mét khối (m3) tương đương với 1000 decimet khối (dm3). Điều này có nghĩa là, nếu chúng ta có một khối lượng 1m3, chúng ta có thể chia nó thành 1000 khối nhỏ hơn, mỗi khối có thể tính bằng 1dm3.\n\nVậy nên, để chuyển đổi từ mét khối sang decimet khối, chúng ta chỉ cần nhân số lượng mét khối với 1000. \n\nTrong trường hợp này, chúng ta có 3,2 mét khối. Khi nhân 3,2 với 1000, chúng ta được 3200. \n\nVì vậy, 3,2 mét khối tương đương với 3200 decimet khối. \n\nĐáp án chính xác là 3200.",
-            "answer": "B. 3200",
-            "choices_str": "['A. 32000', 'B. 3200', 'C. 320', 'D. 32']"
-        },
-        {
-            "id": "141",
-            "question": "3,3 giờ = .....giờ......phút.",
-            "choices": "['A. 3 giờ 30 phút', 'B. 3 giờ 15 phút', 'C. 3 giờ 18 phút', 'D. 3 giờ 12 phút']",
-            "explanation": "Để giải thích câu trả lời này, chúng ta cần hiểu rõ về cách chuyển đổi giữa giờ và phút. \n\n1 giờ bằng 60 phút. Vì vậy, nếu chúng ta có một số lượng giờ nào đó và muốn biết số phút tương ứng, chúng ta sẽ nhân số giờ đó với 60.\n\nTrong trường hợp này, chúng ta có 3,3 giờ. Số giờ là 3, và phần thập phân 0,3 chính là phần của giờ mà chúng ta cần chuyển đổi thành phút.\n\nĐể chuyển đổi 0,3 giờ thành phút, chúng ta nhân 0,3 với 60 (vì 1 giờ bằng 60 phút). Kết quả là 18 phút.\n\nVì vậy, 3,3 giờ chính là 3 giờ và 18 phút. \n\nĐáp án đúng là 3 giờ 18 phút.",
-            "answer": "C. 3 giờ 18 phút",
-            "choices_str": "['A. 3 giờ 30 phút', 'B. 3 giờ 15 phút', 'C. 3 giờ 18 phút', 'D. 3 giờ 12 phút']"
-        },
-        {
-            "id": "142",
-            "question": "30% của 40 tạ là:",
-            "choices": "['A. 7 tạ', 'B. 12 tạ', 'C. 28 tạ', 'D. 120 tạ']",
-            "explanation": "30% của 40 tạ là: 40 ${\\times}$ 30 : 100 = 12 (tạ).",
-            "answer": "B. 12 tạ",
-            "choices_str": "['A. 7 tạ', 'B. 12 tạ', 'C. 28 tạ', 'D. 120 tạ']"
-        },
-        {
-            "id": "143",
-            "question": "30% của 80 là:",
-            "choices": "['A. 24', 'B. 42', 'C. 240', 'D. 2 400']",
-            "explanation": "Để giải quyết câu hỏi này, chúng ta cần áp dụng kiến thức về phần trăm. \n\nPhần trăm là một cách biểu thị một phần của một số dưới dạng một phần của 100. Ví dụ, 30% tương đương với 30/100 hoặc 0.3.\n\nVậy, để tìm 30% của 80, chúng ta cần nhân 80 với 0.3.\n\nCụ thể, chúng ta thực hiện như sau:\n\n80 * 0.3 = 24\n\nVậy, 30% của 80 là 24. \n\nDo đó, đáp án chính xác là 24.",
-            "answer": "A. 24",
-            "choices_str": "['A. 24', 'B. 42', 'C. 240', 'D. 2 400']"
-        },
-        {
-            "id": "144",
-            "question": "31, 146, 41, 147, 51, 148, 61, 149, … là:",
-            "choices": "['A. 81', 'B. 71', 'C. 61', 'D. 51']",
-            "explanation": "Để giải quyết câu hỏi này, chúng ta cần nhìn vào mô hình của dãy số. \n\nDãy số được cung cấp là: 31, 146, 41, 147, 51, 148, 61, 149, ...\n\nNếu chúng ta chia dãy số này thành hai dãy con, một dãy bao gồm các số đầu tiên trong mỗi cặp và một dãy khác bao gồm các số thứ hai trong mỗi cặp, chúng ta sẽ có:\n\nDãy 1: 31, 41, 51, 61, ...\nDãy 2: 146, 147, 148, 149, ...\n\nDãy số thứ nhất tăng 10 đơn vị sau mỗi bước, trong khi dãy số thứ hai tăng 1 đơn vị sau mỗi bước. \n\nVì vậy, số tiếp theo trong dãy số thứ nhất sẽ là 61 + 10 = 71. \n\nVì vậy, câu trả lời là 71.",
-            "answer": "B. 71",
-            "choices_str": "['A. 81', 'B. 71', 'C. 61', 'D. 51']"
-        },
-        {
-            "id": "145",
-            "question": "35 là số liền sau của:",
-            "choices": "['A. 36', 'B. 34', 'C. 37', 'D. 33']",
-            "explanation": "Số cần tìm là số liền trước của 35\n Muốn tìm số liền trước của một số, ta lấy số đó trừ đi 1 đơn vị.\n Vậy 35 là số liền sau của: 35 – 1 = 34",
-            "answer": "B. 34",
-            "choices_str": "['A. 36', 'B. 34', 'C. 37', 'D. 33']"
-        },
-        {
-            "id": "146",
-            "question": "36 + 15 5 ${\\times}$ ? 70 – 21",
-            "choices": "['A. 7', 'B. 8', 'C. 9', 'D. 10']",
-            "explanation": "36 + 15 5 ${\\times}$ ? 70 – 21Ta có:$36 + 15 = 51$70 – 21 = 49\n Ta có: 51 5 ${\\times}$ ? 49Vậy 5 ${\\times}$ ? = 50\n Vậy số cần điền là: 10",
-            "answer": "D. 10",
-            "choices_str": "['A. 7', 'B. 8', 'C. 9', 'D. 10']"
-        },
-        {
-            "id": "147",
-            "question": "38mm2 đọc là:",
-            "choices": "['A. Ba tám mi-li-mét vuông', 'B. Ba mươi tám mi-li-mét', 'C. Ba mươi tám mi-li-mét vuông', 'D. Ba tám mi-li-mét']",
-            "explanation": "Câu trả lời đúng là \"Ba mươi tám mi-li-mét vuông\". \n\nĐầu tiên, chúng ta cần hiểu rằng \"mm2\" là đơn vị đo diện tích. \"mm\" là viết tắt của \"milimet\", một đơn vị đo chiều dài trong hệ mét. Khi chúng ta thêm \"2\" vào sau, nó biểu thị cho \"vuông\", tức là chúng ta đang đo diện tích, không phải chiều dài. \n\nVì vậy, \"38mm2\" nghĩa là \"ba mươi tám milimet vuông\", không phải \"ba tám milimet\" hay \"ba tám milimet vuông\". \n\nĐiều này cũng giống như cách chúng ta đọc \"38cm2\" là \"ba mươi tám centimet vuông\", không phải \"ba tám centimet\" hay \"ba tám centimet vuông\". \n\nVì vậy, câu trả lời đúng là \"Ba mươi tám mi-li-mét vuông\".",
-            "answer": "C. Ba mươi tám mi-li-mét vuông",
-            "choices_str": "['A. Ba tám mi-li-mét vuông', 'B. Ba mươi tám mi-li-mét', 'C. Ba mươi tám mi-li-mét vuông', 'D. Ba tám mi-li-mét']"
-        },
-        {
-            "id": "148",
-            "question": "3km 48m = ……..km.",
-            "choices": "['A. 3,48', 'B. 3,048', 'C. 348', 'D. 3048']",
-            "explanation": "Để giải quyết câu hỏi này, chúng ta cần hiểu rằng 1km bằng 1000m. Vì vậy, khi chúng ta muốn chuyển đổi từ mét sang km, chúng ta cần chia cho 1000.\n\nTrong trường hợp này, chúng ta có 3km và 48m. 3km chúng ta giữ nguyên là 3km. Tuy nhiên, 48m cần được chuyển đổi sang km.\n\nĐể làm điều này, chúng ta chia 48 cho 1000 (vì 1km = 1000m). Kết quả là 0,048km.\n\nVì vậy, khi cộng 3km và 0,048km lại, chúng ta được 3,048km.\n\nVì vậy, câu trả lời cho câu hỏi này là 3,048km.",
-            "answer": "B. 3,048",
-            "choices_str": "['A. 3,48', 'B. 3,048', 'C. 348', 'D. 3048']"
-        },
-        {
-            "id": "149",
-            "question": "3m 15 cm = ……… cm. Số thích hợp điền vào chỗ chấm là:",
-            "choices": "['A. 0,315', 'B. 3,15', 'C. 31,5', 'D. 315']",
-            "explanation": "Để giải quyết câu hỏi này, chúng ta cần biết cách chuyển đổi từ mét sang centimet. \n\n1 mét bằng 100 centimet. Vì vậy, nếu chúng ta có 3 mét, chúng ta sẽ có 3 * 100 = 300 centimet.\n\nBên cạnh đó, chúng ta cũng có thêm 15 centimet. \n\nVì vậy, tổng số centimet chúng ta có là 300 + 15 = 315 centimet.\n\nVì vậy, đáp án chính xác là 315.",
-            "answer": "D. 315",
-            "choices_str": "['A. 0,315', 'B. 3,15', 'C. 31,5', 'D. 315']"
-        },
-        {
-            "id": "150",
-            "question": "3m2 46dm2 = ……… dm2. Số cần điền vào chỗ chấm là:",
-            "choices": "['A. 300 046', 'B. 30 046', 'C. 3 046', 'D. 346']",
-            "explanation": "Để giải quyết câu hỏi này, chúng ta cần hiểu rõ về đơn vị đo diện tích trong hệ thống đơn vị đo lường.\n\nTrước hết, chúng ta cần biết rằng 1 mét vuông (m2) bằng 100 decimet vuông (dm2). Điều này có nghĩa là, nếu chúng ta muốn chuyển đổi từ mét vuông sang decimet vuông, chúng ta cần nhân số mét vuông với 100.\n\nVậy nên, 3 mét vuông sẽ bằng 3 * 100 = 300 decimet vuông.\n\nTiếp theo, chúng ta cần cộng số decimet vuông vừa tính được với số decimet vuông đã cho sẵn trong câu hỏi, đó là 46 decimet vuông.\n\nVậy, 300 decimet vuông + 46 decimet vuông = 346 decimet vuông.\n\nVì vậy, số cần điền vào chỗ chấm là 346, nên đáp án chính xác là 346.",
-            "answer": "D. 346",
-            "choices_str": "['A. 300 046', 'B. 30 046', 'C. 3 046', 'D. 346']"
-        },
-        {
-            "id": "151",
-            "question": "4 giờ 15 phút chiều còn được gọi là:",
-            "choices": "['A. 15 giờ 15 phút', 'B. 16 giờ 15 phút', 'C. 17 giờ 15 phút', 'D. 15 giờ 5 phút']",
-            "explanation": "4 giờ 15 phút chiều còn được gọi là: 16 giờ 15 phút.",
-            "answer": "B. 16 giờ 15 phút",
-            "choices_str": "['A. 15 giờ 15 phút', 'B. 16 giờ 15 phút', 'C. 17 giờ 15 phút', 'D. 15 giờ 5 phút']"
+        "id": "139",
+        "question": "3,25 tấn = …… kg. Số thích hợp điền vào chỗ chấm là:",
+        "choices": "['A. 3250', 'B. 325', 'C. 32,5', 'D. 3,25']",
+        "explanation": "Ta có: 1 tấn =  1 000 kg \n Nên 3,25 tấn = 3,25 x 1000kg = 3 250 kg.",
+        "answer": "A. 3250",
+        "choices_str": "['A. 3250', 'B. 325', 'C. 32,5', 'D. 3,25']"
+        },
+        {
+        "id": "140",
+        "question": "3,2m3 = ... dm3. Số thích hợp viết vào chỗ chấm là:",
+        "choices": "['A. 32000', 'B. 3200', 'C. 320', 'D. 32']",
+        "explanation": " 1 m3 = 1000 dm3. \n\n Chúng ta có 3,2 mét khối. Khi nhân 3,2 với 1000, chúng ta được 3200. \n\nVì vậy, 3,2 mét khối tương đương với 3200 decimet khối. \n\nĐáp án chính xác là 3200.",
+        "answer": "B. 3200",
+        "choices_str": "['A. 32000', 'B. 3200', 'C. 320', 'D. 32']"
+        },
+        {
+        "id": "141",
+        "question": "3,3 giờ = .....giờ......phút.",
+        "choices": "['A. 3 giờ 30 phút', 'B. 3 giờ 15 phút', 'C. 3 giờ 18 phút', 'D. 3 giờ 12 phút']",
+        "explanation": "\n\n1 giờ = 60 phút. Vì vậy, nếu chúng ta có một số lượng giờ nào đó và muốn biết số giờ số phút tương ứng, chúng ta sẽ giữ nguyên phần nguyên, nhân phần thập phân đó với 60.\n\nTrong trường hợp này, chúng ta có 3,3 giờ. phần nguyên là 3, và phần thập phân 0,3 \n\nVì vậy, 3,3 giờ = 3 giờ + 0,3 x 60 phút = 3 giờ và 18 phút. \n\nĐáp án đúng là 3 giờ 18 phút.",
+        "answer": "C. 3 giờ 18 phút",
+        "choices_str": "['A. 3 giờ 30 phút', 'B. 3 giờ 15 phút', 'C. 3 giờ 18 phút', 'D. 3 giờ 12 phút']"
+        },
+        {
+        "id": "142",
+        "question": "30% của 40 tạ là:",
+        "choices": "['A. 7 tạ', 'B. 12 tạ', 'C. 28 tạ', 'D. 120 tạ']",
+        "explanation": "30% của 40 tạ là: 40 ${\\times}$ 30 : 100 = 12 (tạ).",
+        "answer": "B. 12 tạ",
+        "choices_str": "['A. 7 tạ', 'B. 12 tạ', 'C. 28 tạ', 'D. 120 tạ']"
+        },
+        {
+        "id": "143",
+        "question": "30% của 80 là:",
+        "choices": "['A. 24', 'B. 42', 'C. 240', 'D. 2 400']",
+        "explanation": "Phần trăm là một cách biểu thị một phần của một số dưới dạng một phần của 100. Ví dụ, 30% tương đương với 30/100 hoặc 0.3.\n\nVậy, để tìm 30% của 80, chúng ta thực hiện như sau:\n\n80 * 0.3 = 24\n\nVậy, 30% của 80 là 24. \n\nDo đó, đáp án chính xác là 24.",
+        "answer": "A. 24",
+        "choices_str": "['A. 24', 'B. 42', 'C. 240', 'D. 2 400']"
+        },
+        {
+        "id": "144",
+        "question": "31, 146, 41, 147, 51, 148, 61, 149, … là:",
+        "choices": "['A. 81', 'B. 71', 'C. 61', 'D. 51']",
+        "explanation": "Để giải quyết câu hỏi này, chúng ta cần nhìn vào quy luật của dãy số. \n\nDãy số được cung cấp là: 31, 146, 41, 147, 51, 148, 61, 149, ...\n\nNếu chúng ta chia dãy số này thành hai dãy con, một dãy bao gồm các số đầu tiên trong mỗi cặp và một dãy khác bao gồm các số thứ hai trong mỗi cặp, chúng ta sẽ có:\n\nDãy 1: 31, 41, 51, 61, ...\nDãy 2: 146, 147, 148, 149, ...\n\nDãy số thứ nhất tăng 10 đơn vị sau mỗi bước, trong khi dãy số thứ hai tăng 1 đơn vị sau mỗi bước. \n\nVì vậy, số tiếp theo trong dãy số thứ nhất sẽ là 61 + 10 = 71. \n\nVì vậy, câu trả lời là 71.",
+        "answer": "B. 71",
+        "choices_str": "['A. 81', 'B. 71', 'C. 61', 'D. 51']"
+        },
+        {
+        "id": "145",
+        "question": "35 là số liền sau của:",
+        "choices": "['A. 36', 'B. 34', 'C. 37', 'D. 33']",
+        "explanation": "Số cần tìm là số liền trước của 35\n Muốn tìm số liền trước của một số, ta lấy số đó trừ đi 1 đơn vị.\n Vậy 35 là số liền sau của: 35 – 1 = 34",
+        "answer": "B. 34",
+        "choices_str": "['A. 36', 'B. 34', 'C. 37', 'D. 33']"
+        },
+        {
+        "id": "146",
+        "question": "36 + 15 5 ${\\times}$ ? 70 – 21",
+        "choices": "['A. 7', 'B. 8', 'C. 9', 'D. 10']",
+        "explanation": "36 + 15 5 ${\\times}$ ? 70 – 21Ta có:$36 + 15 = 51$70 – 21 = 49\n Ta có: 51 5 ${\\times}$ ? 49Vậy 5 ${\\times}$ ? = 50\n Vậy số cần điền là: 10",
+        "answer": "D. 10",
+        "choices_str": "['A. 7', 'B. 8', 'C. 9', 'D. 10']"
+        },
+        {
+        "id": "147",
+        "question": "38mm2 đọc là:",
+        "choices": "['A. Ba tám mi-li-mét vuông', 'B. Ba mươi tám mi-li-mét', 'C. Ba mươi tám mi-li-mét vuông', 'D. Ba tám mi-li-mét']",
+        "explanation": "Câu trả lời đúng là \"Ba mươi tám mi-li-mét vuông\". \"mm2\" là viết tắt của \"milimet vuông\". \n\n Vì vậy, \"38mm2\" nghĩa là \"ba mươi tám milimet vuông\". \n\nVì vậy, câu trả lời đúng là \"Ba mươi tám mi-li-mét vuông\".",
+        "answer": "C. Ba mươi tám mi-li-mét vuông",
+        "choices_str": "['A. Ba tám mi-li-mét vuông', 'B. Ba mươi tám mi-li-mét', 'C. Ba mươi tám mi-li-mét vuông', 'D. Ba tám mi-li-mét']"
+        },
+        {
+        "id": "148",
+        "question": "3km 48m = ……..km.",
+        "choices": "['A. 3,48', 'B. 3,048', 'C. 348', 'D. 3048']",
+        "explanation": "Vì 1km = 1000m. Vì vậy, 1m = 0,001km \n\n Nên 3km 48m = 3km + 48 x 0,001km =3, 048km. Vậy đáp án là 3,048",
+        "choices_str": "['A. 3,48', 'B. 3,048', 'C. 348', 'D. 3048']"
+        },
+        {
+        "id": "149",
+        "question": "3m 15 cm = ……… cm. Số thích hợp điền vào chỗ chấm là:",
+        "choices": "['A. 0,315', 'B. 3,15', 'C. 31,5', 'D. 315']",
+        "explanation": "Vì 1m = 100cm.  \n\n Nên 3m 15 cm = 3 x 100cm + 15cm = 315cm. Vậy đáp án là 315.",
+        "answer": "D. 315",
+        "choices_str": "['A. 0,315', 'B. 3,15', 'C. 31,5', 'D. 315']"
+        },
+        {
+        "id": "150",
+        "question": "3m2 46dm2 = ……… dm2. Số cần điền vào chỗ chấm là:",
+        "choices": "['A. 300 046', 'B. 30 046', 'C. 3 046', 'D. 346']",
+        "explanation": "\nTa có 1 m2=100 dm2. \n\n Vậy nên, 3m2 46dm2 = 3 x 100dm2 +46dm2= 346dm2  nên đáp án chính xác là 346.",
+        "answer": "D. 346",
+        "choices_str": "['A. 300 046', 'B. 30 046', 'C. 3 046', 'D. 346']"
+        },
+        {
+        "id": "151",
+        "question": "4 giờ 15 phút chiều còn được gọi là:",
+        "choices": "['A. 15 giờ 15 phút', 'B. 16 giờ 15 phút', 'C. 17 giờ 15 phút', 'D. 15 giờ 5 phút']",
+        "explanation": "Trong hệ đếm 24 giờ, giờ chiều = 12 +số giờ. \n\n Nên 4 giờ 15 phút chiều = 12 giờ + 4 giờ 15 phút = 16 giờ 15 phút.",
+        "answer": "B. 16 giờ 15 phút",
+        "choices_str": "['A. 15 giờ 15 phút', 'B. 16 giờ 15 phút', 'C. 17 giờ 15 phút', 'D. 15 giờ 5 phút']"
         },
         {
             "id": "152",
@@ -2743,7 +2718,7 @@
             "id": "350",
             "question": "Chữ số 6 trong số 32,569 thuộc hàng:",
             "choices": "['A. Chục', 'B. Trăm', 'C. Phần mười', 'D. Phần trăm']",
-            "explanation": "Để giải thích câu trả lời này, chúng ta cần hiểu về cách đọc và phân loại các chữ số trong một số.\n\nSố 32,569 được đọc là \"Ba mươi hai nghìn năm trăm sáu mươi chín\". \n\n- Chữ số 3 đứng ở hàng nghìn.\n- Chữ số 2 đứng ở hàng trăm.\n- Chữ số 5 đứng ở hàng chục.\n- Chữ số 6 đứng ở hàng đơn vị.\n- Chữ số 9 đứng ở hàng phần mười.\n\nTuy nhiên, ở đây có dấu phẩy sau chữ số 2, nghĩa là chúng ta đang xem xét một số thập phân. Trong số thập phân, vị trí sau dấu phẩy được đọc là phần mười, phần trăm, phần nghìn, v.v...\n\nVì vậy, chữ số 6 trong số 32,569 đứng sau dấu phẩy và nằm ở vị trí thứ hai sau dấu phẩy, nên nó thuộc hàng phần trăm. \n\nVậy câu trả lời là Phần trăm.",
+            "explanation": "Để giải thích câu trả lời này, chúng ta cần hiểu về cách đọc số thập phân ở đây có dấu phẩy sau chữ số 2, nghĩa là chúng ta đang xem xét một số thập phân. Trong số thập phân, vị trí sau dấu phẩy được đọc là phần mười, phần trăm, phần nghìn, v.v...\n\nVì vậy, chữ số 6 trong số 32,569 đứng sau dấu phẩy và nằm ở vị trí thứ hai sau dấu phẩy, nên nó thuộc hàng phần trăm. \n\nVậy câu trả lời là Phần trăm.",
             "answer": "D. Phần trăm",
             "choices_str": "['A. Chục', 'B. Trăm', 'C. Phần mười', 'D. Phần trăm']"
         },
@@ -2751,7 +2726,7 @@
             "id": "351",
             "question": "Chữ số 7 trong chữ số thập phân 15, 726 có giá trị là:",
             "choices": "['A. $\\\\frac{7}{10}$ ', 'B. $\\\\frac{7}{100}$ ', 'C. $\\\\frac{7}{1000}$ ', 'D. $\\\\frac{7}{726}$ ']",
-            "explanation": "Để giải thích câu trả lời này, chúng ta cần hiểu về cách chúng ta đọc và hiểu giá trị của các chữ số trong một số thập phân.\n\nSố thập phân 15,726 gồm 5 chữ số: 1, 5, 7, 2 và 6. Mỗi chữ số có một vị trí cụ thể và giá trị của nó phụ thuộc vào vị trí đó.\n\nChữ số 1 đứng ở hàng nghìn, nên giá trị của nó là 1*1000 = 1000.\nChữ số 5 đứng ở hàng trăm, nên giá trị của nó là 5*100 = 500.\nChữ số 7 đứng ở hàng chục, nên giá trị của nó là 7*10 = 70.\nChữ số 2 đứng ở hàng đơn vị, nên giá trị của nó là 2*1 = 2.\nChữ số 6 đứng ở hàng phần mười, nên giá trị của nó là 6/10 = 0.6.\n\nVậy, chữ số 7 trong số thập phân 15,726 có giá trị là 7/10. Đây chính là lựa chọn $\\frac{7}{10}$.\n\nĐiều này có nghĩa là, nếu bạn lấy số thập phân 15,726 và chia nó thành các phần bằng nhau, mỗi phần sẽ có giá trị là 7/10.",
+            "explanation": "Chữ số 7 trong số 15,726 thuộc phần mười.Vậy chữ số 7 trong số 15, 726 có giá trị là: $\\frac{7}{10}$.",
             "answer": "A. $\\frac{7}{10}$",
             "choices_str": "['A. $\\\\frac{7}{10}$ ', 'B. $\\\\frac{7}{100}$ ', 'C. $\\\\frac{7}{1000}$ ', 'D. $\\\\frac{7}{726}$ ']"
         },
@@ -3646,10 +3621,10 @@
         {
             "id": "464",
             "question": "Đổi 2,15 giờ ra phút được:",
-            "choices": "['A. 130 phút', 'B. 134 phút', 'C. 125 phút', 'D. 135 phút']",
-            "explanation": "Để tính số ngày mà gia đình Mai đi du lịch, ta cần xác định số ngày từ ngày 29 tháng 7 đến hết ngày 5 tháng 8 trong cùng một năm.\n\n- Số ngày còn lại trong tháng 7 từ ngày 29 đến hết tháng 7 (31 ngày) là \\( 31 - 29 + 1 = 3 \\) ngày (bao gồm cả ngày 29 và 31).\n- Số ngày từ đầu tháng 8 đến ngày 5 tháng 8 là 5 ngày.\n\nVậy tổng số ngày du lịch của gia đình Mai là \\( 3 + 5 = 8 \\) ngày.",
-            "answer": "D. 135 phút",
-            "choices_str": "['A. 130 phút', 'B. 134 phút', 'C. 125 phút', 'D. 135 phút']"
+            "choices": "['A. 129 phút', 'B. 134 phút', 'C. 125 phút', 'D. 135 phút']",
+            "explanation": "Để chuyển đổi từ giờ sang phút, chúng ta nhân số giờ với 60 (vì mỗi giờ có 60 phút). Đối với 2,15 giờ, chúng ta cần lưu ý rằng phần thập phân (0,15 giờ) cần được chuyển đổi riêng biệt:\n\n- 2 giờ chuyển đổi sang phút là: \\( 2 \times 60 \\) phút = 120 phút.\n- 0,15 giờ chuyển đổi sang phút là: \\( 0,15 \times 60 \\) phút = 9 phút.\n\nSau khi tính toán cả hai phần, cộng kết quả lại để được tổng số phút. 120 + 9 = 129 phút.\n\n2.15 giờ tương đương với 129 phút.",
+            "answer": "D. 129 phút",
+            "choices_str": "['A. 129 phút', 'B. 134 phút', 'C. 125 phút', 'D. 135 phút']"
         },
         {
             "id": "465",
@@ -3869,11 +3844,11 @@
         },
         {
             "id": "492",
-            "question": "Giá trị chữ số 4 trong số 240 853 là:",
-            "choices": "['A. 4', 'B. 40', 'C. 40853', 'D. 40 000']",
-            "explanation": "Giá trị chữ số 4 trong số 240 853 là: 40 000",
-            "answer": "D. 40 000",
-            "choices_str": "['A. 4', 'B. 40', 'C. 40853', 'D. 40 000']"
+            "question": "Giá trị chữ số 4 trong số 240853 là:",
+            "choices": "['A. 4', 'B. 40', 'C. 40853', 'D. 40000']",
+            "explanation": "Trong số 240853, chữ số 4 nằm ở hàng chục nghìn. Trong hệ thập phân, giá trị của mỗi vị trí số được xác định dựa trên lũy thừa của 10:\n\n- Hàng đơn vị: \\( 10^0 = 1 \\).\n- Hàng chục: \\( 10^1 = 10 \\).\n- Hàng trăm: \\( 10^2 = 100 \\).\n- Hàng nghìn: \\( 10^3 = 1,000 \\).\n- Hàng chục nghìn: \\( 10^4 = 10,000 \\).\n\nVì vậy, chữ số 4 trong số 240853 có giá trị là \\( 4 \times 10,000 = 40,000 \\).",
+            "answer": "D. 40000",
+            "choices_str": "['A. 4', 'B. 40', 'C. 40853', 'D. 40000']"
         },
         {
             "id": "493",
@@ -3895,7 +3870,7 @@
             "id": "495",
             "question": "Giá trị của biểu thức \\frac{\\left(-4\\right)^2}{5} là:",
             "choices": "['A. \\\\frac{-16}{5}', 'B. \\\\frac{-8}{5}', 'C. \\\\frac{16}{5}', 'D. \\\\frac{16}{25}']",
-            "explanation": "Đầu tiên, ta cần hiểu rõ về thứ tự thực hiện các phép toán trong một biểu thức. Theo quy tắc BODMAS (hay BIDMAS), thứ tự thực hiện các phép toán là: Dấu ngoặc, Phép nhân và chia (từ trái sang phải), Phép cộng và trừ (từ trái sang phải). \n\nTrong biểu thức \\frac{\\left(-4\\right)^2}{5}, ta thấy có dấu ngoặc và phép nhân (bình phương là một dạng của phép nhân). Vì vậy, ta sẽ thực hiện phép toán trong dấu ngoặc trước.\n\n\\left(-4\\right)^2 = -4 * -4 = 16\n\nSau đó, ta thực hiện phép chia:\n\n\\frac{16}{5}\n\nVì vậy, giá trị của biểu thức \\frac{\\left(-4\\right)^2}{5} là \\frac{16}{5}, đáp án là C.",
+            "explanation": "Đầu tiên, ta cần hiểu rõ về thứ tự thực hiện các phép toán trong một biểu thức. Theo quy tắc BODMAS (hay BIDMAS), thứ tự thực hiện các phép toán là: Dấu ngoặc, Phép nhân và chia (từ trái sang phải), Phép cộng và trừ (từ trái sang phải). \n\nTrong biểu thức \\frac{\\left(-4\\right)^2}{5}, ta thấy có dấu ngoặc và phép nhân (bình phương là một dạng của phép nhân). Vì vậy, ta sẽ thực hiện phép toán trong dấu ngoặc trước.\n\n\\left(-4\\right)^2 = -4 * -4 = 16\n\nSau đó, ta thực hiện phép chia:\n\n\\frac{16}{5}\n\nVì vậy, giá trị của biểu thức \\frac{\\left(-4\\right)^2}{5} là \\frac{16}{5}",
             "answer": "C. \\frac{16}{5}",
             "choices_str": "['A. \\\\frac{-16}{5}', 'B. \\\\frac{-8}{5}', 'C. \\\\frac{16}{5}', 'D. \\\\frac{16}{25}']"
         },
@@ -4037,11 +4012,11 @@
         },
         {
             "id": "513",
-            "question": "Giá trị của biểu thức 59 468 + 6 092 : 4 là:",
-            "choices": "['A. 50 981', 'B. 60 991', 'C. 1 528', 'D. 60 992']",
-            "explanation": "Đầu tiên, chúng ta cần phải hiểu rõ về thứ tự thực hiện các phép tính trong toán học, còn được gọi là BODMAS hoặc PEMDAS. Theo đó, chúng ta sẽ thực hiện các phép tính theo thứ tự: Dấu ngoặc, Phép nhân và chia (từ trái sang phải), Phép cộng và trừ (từ trái sang phải).\n\nVới biểu thức 59 468 + 6 092 : 4, theo quy tắc trên, chúng ta sẽ thực hiện phép chia trước phép cộng.\n\nBắt đầu bằng việc chia 6 092 cho 4, kết quả là 1 523.\n\nSau đó, chúng ta cộng kết quả vừa tìm được với 59 468. Kết quả cuối cùng là 60 991.\n\nVì vậy, đáp án chính xác là 60 991.",
-            "answer": "B. 60 991",
-            "choices_str": "['A. 50 981', 'B. 60 991', 'C. 1 528', 'D. 60 992']"
+            "question": "Giá trị của biểu thức 59468 + 6092 : 4 là:",
+            "choices": "['A. 50981', 'B. 60991', 'C. 1528', 'D. 60992']",
+            "explanation": "Đầu tiên, chúng ta cần phải hiểu rõ về thứ tự thực hiện các phép tính trong toán học, còn được gọi là BODMAS hoặc PEMDAS. Theo đó, chúng ta sẽ thực hiện các phép tính theo thứ tự: Dấu ngoặc, Phép nhân và chia (từ trái sang phải), Phép cộng và trừ (từ trái sang phải).\n\nVới biểu thức 59468 + 6092 : 4, theo quy tắc trên, chúng ta sẽ thực hiện phép chia trước phép cộng.\n\nBắt đầu bằng việc chia 6092 cho 4, kết quả là 1523.\n\nSau đó, chúng ta cộng kết quả vừa tìm được với 59468. Kết quả cuối cùng là 60991.\n\nVì vậy, đáp án chính xác là 60991.",
+            "answer": "B. 60991",
+            "choices_str": "['A. 50981', 'B. 60991', 'C. 1528', 'D. 60992']"
         },
         {
             "id": "514",
@@ -4054,8 +4029,8 @@
         {
             "id": "515",
             "question": "Giá trị của biểu thức 630 148 000 – 148 000 + 20 000 = … là:",
-            "choices": "['A. 630 020 000', 'B. 630 200 000', 'C. 632 000 000', 'D. 630 002 000']",
-            "explanation": "Đầu tiên, chúng ta cần thực hiện phép trừ 630 148 000 – 148 000. Để làm điều này, chúng ta cần nhớ rằng khi thực hiện phép trừ, chúng ta bắt đầu từ phía bên phải và đi qua bên trái. \n\nBắt đầu từ phía bên phải, chúng ta có 0 trừ đi 0 bằng 0, sau đó là 0 trừ đi 0 bằng 0, tiếp theo là 8 trừ đi 8 bằng 0, sau đó là 4 trừ đi 4 bằng 0, tiếp theo là 1 trừ đi 1 bằng 0, sau đó là 0 trừ đi 0 bằng 0, tiếp theo là 3 trừ đi 0 bằng 3, sau đó là 6 trừ đi 1 bằng 5, và cuối cùng là 0 trừ đi 0 bằng 0. \n\nVậy, kết quả của phép trừ 630 148 000 – 148 000 là 630 000 000.\n\nTiếp theo, chúng ta cần thực hiện phép cộng 630 000 000 + 20 000. Tương tự như phép trừ, chúng ta bắt đầu từ phía bên phải và đi qua bên trái. \n\nBắt đầu từ phía bên phải, chúng ta có 0 cộng với 0 bằng 0, sau đó là 0 cộng với 0 bằng 0, tiếp theo là 0 cộng với 0 bằng 0, sau đó là 0 cộng với 0 bằng 0, tiếp theo là 0 cộng với 2 bằng 2, và cuối cùng là 6, 3, 0 cộng với 0, 0, 0 bằng 6, 3, 0.\n\nVậy, kết quả của phép cộng 630 000 000 + 20 000 là 630 020 000.\n\nVì vậy, giá trị của biểu thức 630 148 000 – 148 000 + 20 000 là 630 020 000.",
+            "choices": "['A. 630020000', 'B. 630200000', 'C. 632000000', 'D. 630002000']",
+            "explanation": "Đầu tiên, chúng ta cần thực hiện phép trừ 630148000 – 148000. Để làm điều này, chúng ta cần nhớ rằng khi thực hiện phép trừ, chúng ta bắt đầu từ phía bên phải và đi qua bên trái. \n\nBắt đầu từ phía bên phải, chúng ta có 0 trừ đi 0 bằng 0, sau đó là 0 trừ đi 0 bằng 0, tiếp theo là 8 trừ đi 8 bằng 0, sau đó là 4 trừ đi 4 bằng 0, tiếp theo là 1 trừ đi 1 bằng 0, sau đó là 0 trừ đi 0 bằng 0, tiếp theo là 3 trừ đi 0 bằng 3, sau đó là 6 trừ đi 1 bằng 5, và cuối cùng là 0 trừ đi 0 bằng 0. \n\nVậy, kết quả của phép trừ 630148000 – 148000 là 630000000.\n\nTiếp theo, chúng ta cần thực hiện phép cộng 630000000 + 20000. Tương tự như phép trừ, chúng ta bắt đầu từ phía bên phải và đi qua bên trái. \n\nBắt đầu từ phía bên phải, chúng ta có 0 cộng với 0 bằng 0, sau đó là 0 cộng với 0 bằng 0, tiếp theo là 0 cộng với 0 bằng 0, sau đó là 0 cộng với 0 bằng 0, tiếp theo là 0 cộng với 2 bằng 2, và cuối cùng là 6, 3, 0 cộng với 0, 0, 0 bằng 6, 3, 0.\n\nVậy, kết quả của phép cộng 630000000 + 20000 là 630020000.\n\nVì vậy, giá trị của biểu thức 630148000 – 148000 + 20000 là 630020000.",
             "answer": "A. 630 020 000",
             "choices_str": "['A. 630 020 000', 'B. 630 200 000', 'C. 632 000 000', 'D. 630 002 000']"
         },
@@ -4071,7 +4046,7 @@
             "id": "517",
             "question": "Giá trị của biểu thức 88394 - 49350 - 14859 là:",
             "choices": "['A. 24747', 'B. 24185', 'C. 24285', 'D. 24386']",
-            "explanation": "Đầu tiên, chúng ta cần thực hiện phép trừ 88394 - 49350. Kết quả thu được là 39044.\n\nTiếp theo, chúng ta sẽ thực hiện phép trừ tiếp theo: 39044 - 14859. Kết quả cuối cùng thu được là 24185.\n\nVậy, giá trị của biểu thức 88394 - 49350 - 14859 là 24185. \n\nĐây là cách thực hiện các phép toán cơ bản trong toán học. Chúng ta chỉ cần thực hiện từng phép toán một, tuân theo thứ tự từ trái sang phải. Đầu tiên là phép trừ 88394 - 49350, sau đó là phép trừ 39044 - 14859. Kết quả cuối cùng chính là đáp án của chúng ta.",
+            "explanation": "Đầu tiên, chúng ta cần thực hiện phép trừ 88394 - 49350. Kết quả thu được là 39044.\n\nTiếp theo, chúng ta sẽ thực hiện phép trừ tiếp theo: 39044 - 14859. Kết quả cuối cùng thu được là 24185.\n\nVậy, giá trị của biểu thức 88394 - 49350 - 14859 là 24185.",
             "answer": "B. 24185",
             "choices_str": "['A. 24747', 'B. 24185', 'C. 24285', 'D. 24386']"
         },
@@ -4189,11 +4164,11 @@
         },
         {
             "id": "532",
-            "question": "Giá trị của chữ số 5 trong số 45 874 là:",
-            "choices": "['A. 50 000', 'B. 5 000', 'C. 500', 'D. 50']",
-            "explanation": "45 874 = 40 000 + 5 000 + 800 + 70 + 4\n Vậy giá trị của chữ số 5 trong số 45 874 là: 5 000",
-            "answer": "B. 5 000",
-            "choices_str": "['A. 50 000', 'B. 5 000', 'C. 500', 'D. 50']"
+            "question": "Giá trị của chữ số 5 trong số 45874 là:",
+            "choices": "['A. 50000', 'B. 5000', 'C. 500', 'D. 50']",
+            "explanation": "45874 = 40000 + 5000 + 800 + 70 + 4\n Vậy giá trị của chữ số 5 trong số 45874 là: 5000",
+            "answer": "B. 5000",
+            "choices_str": "['A. 50000', 'B. 5000', 'C. 500', 'D. 50']"
         },
         {
             "id": "533",
@@ -4453,19 +4428,19 @@
         },
         {
             "id": "566",
-            "question": "Hà mua 3 quyển vở và đưa cô bán hàng tờ 50 000 đồng. Cô bán hàng trả lại Hà 14 000 đồng. Vậy mỗi quyển vở có giá là:",
-            "choices": "['A. 12 000 đồng', 'B. 14 000 đồng', 'C. 13 000 đồng', 'D. 11 000 đồng']",
-            "explanation": "Hà mua 3 quyển vở hết số tiền là: 50 000 – 14 000 = 36 000 (đồng)\n Mỗi quyển vở có giá là: 36 000 : 3 = 12 000 (đồng)",
-            "answer": "A. 12 000 đồng",
-            "choices_str": "['A. 12 000 đồng', 'B. 14 000 đồng', 'C. 13 000 đồng', 'D. 11 000 đồng']"
+            "question": "Hà mua 3 quyển vở và đưa cô bán hàng tờ 50000 đồng. Cô bán hàng trả lại Hà 14000 đồng. Vậy mỗi quyển vở có giá là:",
+            "choices": "['A. 12000 đồng', 'B. 14000 đồng', 'C. 13000 đồng', 'D. 11000 đồng']",
+            "explanation": "Hà mua 3 quyển vở hết số tiền là: 50000 – 14000 = 36000 (đồng)\n Mỗi quyển vở có giá là: 36000 : 3 = 12000 (đồng)",
+            "answer": "A. 12000 đồng",
+            "choices_str": "['A. 12000 đồng', 'B. 14000 đồng', 'C. 13000 đồng', 'D. 11000 đồng']"
         },
         {
             "id": "567",
-            "question": "Hà mua 5 quyển vở, mỗi quyển giá 12 000 đồng. Hà đưa cô bán hàng 3 tờ tiền giống nhau thì vừa đủ. Vậy 3 tờ tiền Hà đưa cô bán hàng có mệnh giá là:",
-            "choices": "['A. 2 000 đồng', 'B. 5 000 đồng', 'C. 10 000 đồng', 'D. 20 000 đồng']",
-            "explanation": "5 quyển vở có giá là:12 000 ${\\times}$ 5 = 60 000 (đồng)\n 3 tờ tiền Hà đưa cô bán hàng có mệnh giá là: \n 60 000 : 3 = 20 000 (đồng)\n Đáp số: 20 000 đồng.",
-            "answer": "D. 20 000 đồng",
-            "choices_str": "['A. 2 000 đồng', 'B. 5 000 đồng', 'C. 10 000 đồng', 'D. 20 000 đồng']"
+            "question": "Hà mua 5 quyển vở, mỗi quyển giá 12000 đồng. Hà đưa cô bán hàng 3 tờ tiền giống nhau thì vừa đủ. Vậy 3 tờ tiền Hà đưa cô bán hàng có mệnh giá là:",
+            "choices": "['A. 2000 đồng', 'B. 5000 đồng', 'C. 10000 đồng', 'D. 20000 đồng']",
+            "explanation": "5 quyển vở có giá là: 12000 ${\\times}$ 5 = 60000 (đồng)\n 3 tờ tiền Hà đưa cô bán hàng có mệnh giá là: \n 60000 : 3 = 20 000 (đồng)\n Đáp số: 20000 đồng.",
+            "answer": "D. 20000 đồng",
+            "choices_str": "['A. 2000 đồng', 'B. 5000 đồng', 'C. 10000 đồng', 'D. 20000 đồng']"
         },
         {
             "id": "568",
@@ -4637,11 +4612,11 @@
         },
         {
             "id": "589",
-            "question": "Hiền mua 4 chiếc bút và đưa cô bán hàng tờ 100 000 đồng. Cô bán hàng trả lại Hiền 52 000 đồng. Vậy mỗi chiếc bút Hiền mua có giá là:",
-            "choices": "['A. 20 000 đồng', 'B. 13 000 đồng', 'C. 14 000 đồng', 'D. 12 000 đồng']",
-            "explanation": "Cô bán hàng trả lại Hiền số tiền là:100 000 – 52 000 = 48 000 (đồng)\n 4 chiếc bút có giá tiền là:48 000 : 4 = 12 000 (đồng)\n Đáp số: 12 000 đồng",
-            "answer": "D. 12 000 đồng",
-            "choices_str": "['A. 20 000 đồng', 'B. 13 000 đồng', 'C. 14 000 đồng', 'D. 12 000 đồng']"
+            "question": "Hiền mua 4 chiếc bút và đưa cô bán hàng tờ 100000 đồng. Cô bán hàng trả lại Hiền 52000 đồng. Vậy mỗi chiếc bút Hiền mua có giá là:",
+            "choices": "['A. 20000 đồng', 'B. 13000 đồng', 'C. 14000 đồng', 'D. 12000 đồng']",
+            "explanation": "Cô bán hàng trả lại Hiền số tiền là: 100000 – 52000 = 48000 (đồng)\n 4 chiếc bút có giá tiền là: 48000 : 4 = 12000 (đồng)\n Đáp số: 12000 đồng",
+            "answer": "D. 12000 đồng",
+            "choices_str": "['A. 20000 đồng', 'B. 13000 đồng', 'C. 14000 đồng', 'D. 12000 đồng']"
         },
         {
             "id": "590",
