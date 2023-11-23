@@ -7,16 +7,6 @@ import re
 import random
 import logging
 
-logging.basicConfig(
-    filename='log.txt',
-    filemode='a',
-    format='%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s',
-    datefmt='%H:%M:%S',
-    level=logging.DEBUG
-)
-
-log = logging.getLogger(__name__)
-
 import pandas as pd
 
 import torch
@@ -83,8 +73,18 @@ def main(
     enable_salesforce_content_safety: bool = True,  # Enable safety check with Salesforce safety flan t5
     max_padding_length: int = None,  # the max padding length to be used with tokenizer padding the prompts.
     use_fast_kernels: bool = False,  # Enable using SDPA from PyTroch Accelerated Transformers, make use Flash Attention and Xformer memory-efficient kernels
+    log_filename: str = "log.txt",
     **kwargs,
 ):
+    logging.basicConfig(
+        filename=log_filename,
+        filemode='a',
+        format='%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s',
+        datefmt='%H:%M:%S',
+        level=logging.DEBUG
+    )
+
+    log = logging.getLogger(__name__)
     with open(test_file) as f:
         data = json.load(f)["data"]
 
