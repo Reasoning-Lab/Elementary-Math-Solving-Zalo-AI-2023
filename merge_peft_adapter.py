@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 @author:XuMing(xuming624@qq.com)
 @description:
@@ -37,6 +38,7 @@ MODEL_CLASSES = {
 
 def main():
     parser = argparse.ArgumentParser()
+<<<<<<< HEAD
     parser.add_argument("--model_type", default=None, type=str, required=True)
     parser.add_argument(
         "--base_model",
@@ -64,6 +66,17 @@ def main():
         help="Whether to resize model token embeddings",
     )
     parser.add_argument("--output_dir", default="./merged", type=str)
+=======
+    parser.add_argument('--model_type', default=None, type=str, required=True)
+    parser.add_argument('--base_model', default=None, required=True, type=str,
+                        help="Base model name or path")
+    parser.add_argument('--tokenizer_path', default=None, type=str,
+                        help="Please specify tokenization path.")
+    parser.add_argument('--lora_model', default=None, required=True, type=str,
+                        help="Please specify LoRA model to be merged.")
+    parser.add_argument('--resize_emb', action='store_true', help='Whether to resize model token embeddings')
+    parser.add_argument('--output_dir', default='./merged', type=str)
+>>>>>>> 65636c514a83106e43469c01aa719d45b2a0d1ed
     args = parser.parse_args()
     print(args)
 
@@ -96,6 +109,7 @@ def main():
             device_map="auto",
         )
     if args.tokenizer_path:
+<<<<<<< HEAD
         tokenizer = tokenizer_class.from_pretrained(
             args.tokenizer_path, trust_remote_code=True
         )
@@ -103,6 +117,11 @@ def main():
         tokenizer = tokenizer_class.from_pretrained(
             base_model_path, trust_remote_code=True
         )
+=======
+        tokenizer = tokenizer_class.from_pretrained(args.tokenizer_path, trust_remote_code=True)
+    else:
+        tokenizer = tokenizer_class.from_pretrained(base_model_path, trust_remote_code=True)
+>>>>>>> 65636c514a83106e43469c01aa719d45b2a0d1ed
     if args.resize_emb:
         base_model_token_size = base_model.get_input_embeddings().weight.size(0)
         if base_model_token_size != len(tokenizer):
@@ -122,10 +141,10 @@ def main():
     print("Saving to Hugging Face format...")
     # tokenizer.save_pretrained(output_dir)
     # base_model.save_pretrained(output_dir, safe_serialization=False)  # max_shard_size='10GB'
-    tokenizer.push_to_hub("BaoLocTown/zephyr-7b-beta-vi-math-v2", private=True)
-    base_model.push_to_hub("BaoLocTown/zephyr-7b-beta-vi-math-v2", private=True)
+    tokenizer.push_to_hub('hllj/zephyr-7b-beta-vi-math', private=True)
+    base_model.push_to_hub('hllj/zephyr-7b-beta-vi-math', private=True)
     print(f"Done! model saved to {output_dir}")
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
