@@ -561,7 +561,7 @@
                 "C. 40%",
                 "D. 80%"
             ],
-            "answer": NaN
+            "answer": "B. 60%"
         },
         {
             "index": 47,
@@ -809,7 +809,7 @@
                 "C. 48 dm^{2}",
                 "D. 0,48 dm^{2}"
             ],
-            "answer": NaN
+            "answer": "D. 0,48 dm^{2}"
         },
         {
             "index": 68,
@@ -972,7 +972,7 @@
                 "B. 9,80",
                 "C. 9,08"
             ],
-            "answer": NaN
+            "answer": "C. 9,08"
         },
         {
             "index": 82,
@@ -1028,7 +1028,7 @@
                 "C. 9 chục",
                 "D. 9 phần trăm"
             ],
-            "answer": NaN
+            "answer": "D. 9 phần trăm"
         },
         {
             "index": 87,
@@ -1564,7 +1564,7 @@
                 "C. 115 giây",
                 "D. 1,25 giây"
             ],
-            "answer": NaN
+            "answer": "B. 1,25 phút"
         },
         {
             "index": 132,
