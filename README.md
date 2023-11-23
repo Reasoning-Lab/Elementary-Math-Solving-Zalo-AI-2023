@@ -37,12 +37,6 @@ python llama_recipes/finetuning.py --use_peft --peft_method lora --quantization 
 python llama_recipes/finetuning.py --use_peft --peft_method lora --quantization --model_name HuggingFaceH4/zephyr-7b-alpha --dataset zalo_math_fill_missing_explain_4 --output_dir outputs --max_length 2048 --num_epochs 6 --load_in 4bit --use_wandb --wandb_entity baolocpham --wandb_key KEY
 ```
 
-one_shot learning: Given `question`, `choices`, only output the correct `answer`, neglecting the `explanantion`
-
-```bash
-python llama_recipes/finetuning.py --use_peft --peft_method lora --quantization --model_name HuggingFaceH4/zephyr-7b-alpha --dataset zalo_math_fill_missing_explain_4 --output_dir outputs --max_length 2048 --one-shot --num_epochs 6 --load_in 4bit --use_wandb --wandb_entity baolocpham --wandb_key KEY
-```
-
 ## Pretraining
 
 ```bash

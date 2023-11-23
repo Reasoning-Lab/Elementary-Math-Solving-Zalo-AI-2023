@@ -54,4 +54,8 @@ cache_dir: ./cache
 seed: 42
 push_to_hub: true
 hub_model_id: hllj/sft-zephyr-7b-beta-v2
+<<<<<<< HEAD
 hub_strategy: every_save
+=======
+hub_strategy: every_save
+>>>>>>> 65636c514a83106e43469c01aa719d45b2a0d1ed

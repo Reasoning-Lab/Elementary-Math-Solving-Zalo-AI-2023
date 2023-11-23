@@ -162,6 +162,8 @@ def main(
 
         answer_text = None
 
+        answer_text = None
+
         for text in gen_text.split("###"):
             if 'Final choice' in text:
                 answer_text = text
@@ -181,6 +183,13 @@ def main(
             if full_answer in answer_text:
                 answer = choice
                 break
+        if answer is None:
+            for choice in choices:
+                value_only = re.sub("[ABCD]. ", "", full_answer)
+                if value_only in answer_text:
+                    answer = choice
+                    break
+        print(f"Answer {answer}")
         if answer is None:
             for choice in choices:
                 full_answer = choice
