@@ -137,6 +137,7 @@ def main(
     tokenizer.pad_token = tokenizer.eos_token
 
     results = []
+    results_debug = []
     logger.info(f"TOKENIZER max_length: {max_length}")
     for idx, example in enumerate(data):
         logger.info(f"Processing {idx}")
@@ -198,7 +199,7 @@ def main(
             else:
                 answer_text = gen_text
             answer_to_map = gen_text[:-3]
-
+            answer_text = answer_to_map
             logger.info(f"Output text: {output_text}")
             logger.info(f"Gen text {answer_to_map}")
             # Initialize a dictionary to map answers
@@ -222,10 +223,14 @@ def main(
             if answer is None:
                 answer = random.choice(choices)
                 logger.info(f"Random Answer {answer}")
+        results_debug.append({"id": id, "answer": answer, "answer_text": answer_text})
         results.append({"id": id, "answer": answer})
 
     result_df = pd.DataFrame.from_dict(results)
     result_df.to_csv("submission.csv", index=False)
+
+    result_debug_df = pd.DataFrame.from_dict(results_debug)
+    result_debug_df.to_csv("submission_debug.csv", index=False)
 
 
 if __name__ == "__main__":
