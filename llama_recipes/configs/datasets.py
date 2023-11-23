@@ -26,6 +26,7 @@ class alpaca_dataset:
     train_split: str = "train"
     test_split: str = "val"
     data_path: str = "src/llama_recipes/datasets/alpaca_data.json"
+    max_length: int = 2048
 
 
 @dataclass
@@ -34,6 +35,7 @@ class zalo_math_dataset:
     train_split: str = "train"
     test_split: str = "validation"
     data_path: str = "datasets/math_train.json"
+    max_length: int = 2048
 
 
 @dataclass
@@ -42,6 +44,7 @@ class zalo_math_filter_explanation_dataset:
     train_split: str = "train"
     test_split: str = "validation"
     data_path: str = "datasets/filter_explanation_math_train.json"
+    max_length: int = 2048
 
 
 @dataclass
@@ -50,6 +53,7 @@ class zalo_math_fill_missing_explain_35:
     train_split: str = "train"
     test_split: str = "validation"
     data_path: str = "datasets/with-missing-explain-3.5.json"
+    max_length: int = 2048
 
 
 @dataclass
@@ -57,4 +61,5 @@ class zalo_math_fill_missing_explain_4:
     dataset: str = "zalo_math_dataset"
     train_split: str = "train"
     test_split: str = "validation"
-    data_path: str = "datasets/with-missing-explain-4.json"
+    data_path: str = "datasets/qualified_data.json"
+    max_length: int = 2048

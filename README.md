@@ -13,6 +13,7 @@ pip install -r requirements.txt
 
 ```bash
 huggingface-cli login
+wandb login
 ```
 
 # Huấn luyện
@@ -33,53 +34,29 @@ python llama_recipes/finetuning.py --use_peft --peft_method lora --quantization 
 ```
 
 ```bash
-python llama_recipes/finetuning.py --use_peft --peft_method lora --quantization --model_name HuggingFaceH4/zephyr-7b-alpha --dataset zalo_math_fill_missing_explain_4 --output_dir outputs --batching_strategy packing --num_epochs 6 --load_in 4bit --use_wandb --wandb_entity baolocpham --wandb_key KEY
+python llama_recipes/finetuning.py --use_peft --peft_method lora --quantization --model_name HuggingFaceH4/zephyr-7b-alpha --dataset zalo_math_fill_missing_explain_4 --output_dir outputs --max_length 2048 --num_epochs 6 --load_in 4bit --use_wandb --wandb_entity baolocpham --wandb_key KEY
+```
+
+## Pretraining
+
+```bash
+bash run_pt.sh
+```
+
+## Finetune - SFTTrainer
+
+```bash
+ACCELERATE_LOG_LEVEL=info accelerate launch --config_file <multi_gpu.yaml / deepspeed_zero3.yaml> --num_processes=1 sft.py config_lora.yaml
 ```
 
 # Inference
 
 ```bash
-python llama_recipes/inference.py --quantization --model_name <model_name> --peft_model <output_dir> --max_new_tokens <max new tokens> --prompt_file test_prompt.txt
+python inference.py --model_name hllj/zephyr-7b-beta-vi-math --peft_model outputs-sft-zephyr-beta-v1/checkpoint-1500/ --load_in 4bit --max_new_tokens 512 --temperature 0.1
 ```
 
-Template for my personal Experiment Tracking hyperparameters
-
-This project base on this NeptuneAI's blog about [the Experiment Tracking](https://neptune.ai/blog/experiment-management)
-
-Using [Hydra](https://hydra.cc) for reading config files and [WANDB](https://wandb.ai) for tracking experiments
-
-This will help reduce repeated taskes and tracking your experiment more effective.
-
-## Demo
-
-```
-python demo_hydra.py
-```
-
-Output:
-
-```
-project: ORGANIZATION/experiment-tracking
-name: experiment-tracking-default-risk
-wandb:
-  WANDB_API_KEY: YOUR_WANDB_API
-  entity: YOUR_WANDB_API
-  project: experiment-tracking
-  name: TEST
-parameters:
-  n_cv_splits: 5
-  validation_size: 0.2
-  stratified_cv: true
-  shuffle: 1
-  rf__n_estimators: 2000
-  rf__criterion: gini
-  rf__max_depth: 40
-  rf__class_weight: balanced
-  rf__max_features: 0.3
-```
-
-You can change your hyperparams in `cli` like this
-
-```
-python demo_hydra.py parameters.n_cv_splits=10 parameters.validation_size=0.9
-```
+- model_name: base model mình sử dụng để finetune
+- peft_model: thư mục chứa file LoRA đã finetune
+- load_in: 4bit / 8bit quantization
+- max_new_tokens: số lượng token generate tối đa.
+- temperature: temperature cho sampling, nên để 0.1 - 0.5

@@ -1,0 +1,61 @@
+# Model arguments
+model_type: auto
+model_name_or_path: hllj/zephyr-7b-beta-vi-math
+device_map: auto
+torch_dtype: float16
+
+# LoRA arguments
+use_peft: true
+lora_r: 256
+lora_alpha: 128
+lora_dropout: 0.05
+lora_target_modules:
+- q_proj
+- k_proj
+- v_proj
+- o_proj
+
+# Data training arguments
+train_file_dir: datasets/finetune
+preprocessing_num_workers: 4
+
+# SFT arguments
+max_seq_length: 512
+per_device_train_batch_size: 4
+per_device_eval_batch_size: 4
+do_train: true
+do_eval: true
+fp16: true
+learning_rate: 5.0e-05
+log_level: info
+logging_strategy: steps
+lr_scheduler_type: cosine
+num_train_epochs: 2
+warmup_ratio: 0.05
+weight_decay: 0.05
+logging_steps: 10
+eval_steps: 500
+evaluation_strategy: steps
+save_steps: 500
+save_strategy: steps
+save_total_limit: 13
+gradient_accumulation_steps: 1
+output_dir: outputs-sft-zephyr-beta-v2
+overwrite_output_dir: true
+ddp_timeout: 30000
+logging_first_step: true
+report_to: wandb
+run_name: sft-zephyr-7b-beta-v2
+ddp_find_unused_parameters: false
+gradient_checkpointing: true
+gradient_checkpointing_kwargs:
+  use_reentrant: false
+cache_dir: ./cache
+seed: 42
+push_to_hub: true
+hub_model_id: hllj/sft-zephyr-7b-beta-v2
+<<<<<<< HEAD
+hub_strategy: every_save
+=======
+hub_strategy: every_save
+>>>>>>> 65636c514a83106e43469c01aa719d45b2a0d1ed
