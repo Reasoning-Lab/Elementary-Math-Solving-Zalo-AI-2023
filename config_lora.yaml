@@ -1,6 +1,6 @@
 # Model arguments
 model_type: auto
-model_name_or_path: dongnguyen18891/zephyr-7b-beta-vi-math
+model_name_or_path: BaoLocTown/zephyr-7b-beta-vi-math-v2
 device_map: auto
 torch_dtype: float16
 
@@ -31,6 +31,7 @@ log_level: info
 logging_strategy: steps
 lr_scheduler_type: cosine
 num_train_epochs: 2
+# max_steps: 50
 warmup_ratio: 0.05
 weight_decay: 0.05
 logging_steps: 10
@@ -45,7 +46,7 @@ overwrite_output_dir: true
 ddp_timeout: 30000
 logging_first_step: true
 report_to: wandb
-run_name: sft-zephyr-7b-beta-v2
+run_name: sft-zephyr-7b-beta-v3
 ddp_find_unused_parameters: false
 gradient_checkpointing: true
 gradient_checkpointing_kwargs:
