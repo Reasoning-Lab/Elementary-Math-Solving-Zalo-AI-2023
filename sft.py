@@ -204,7 +204,6 @@ class DataArguments:
         default=None,
         metadata={"help": "The number of processes to use for the preprocessing."},
     )
-    optim: Optional[str] = field(default="adamw_torch")
 
     def __post_init__(self):
         if self.max_train_samples is not None and 0 < self.max_train_samples <= 1000:
