@@ -1,6 +1,6 @@
 # Model arguments
 model_type: auto
-model_name_or_path: hllj/zephyr-7b-beta-vi-math
+model_name_or_path: dongnguyen18891/zephyr-7b-beta-vi-math
 device_map: auto
 torch_dtype: float16
 
@@ -40,7 +40,7 @@ save_steps: 500
 save_strategy: steps
 save_total_limit: 13
 gradient_accumulation_steps: 1
-output_dir: outputs-sft-zephyr-beta-v2
+output_dir: outputs-sft-zephyr-beta-v3
 overwrite_output_dir: true
 ddp_timeout: 30000
 logging_first_step: true
@@ -53,9 +53,5 @@ gradient_checkpointing_kwargs:
 cache_dir: ./cache
 seed: 42
 push_to_hub: true
-hub_model_id: hllj/sft-zephyr-7b-beta-v2
-<<<<<<< HEAD
+hub_model_id: BaoLocTown/sft-zephyr-7b-beta-v3
 hub_strategy: every_save
-=======
-hub_strategy: every_save
->>>>>>> 65636c514a83106e43469c01aa719d45b2a0d1ed
