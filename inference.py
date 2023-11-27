@@ -114,7 +114,17 @@ def main(
             )
 
     tokenizer = AutoTokenizer.from_pretrained(peft_model)
-
+    if tokenizer.eos_token_id is None:
+        tokenizer.eos_token = "</s>"  # eos token is required for SFT
+        logger.info("Add eos token: {}".format(tokenizer.eos_token))
+    if tokenizer.pad_token_id is None:
+        if tokenizer.unk_token_id is not None:
+            tokenizer.pad_token = tokenizer.unk_token
+        else:
+            tokenizer.pad_token = tokenizer.eos_token
+        logger.info("Add pad token: {}".format(tokenizer.pad_token))
+    tokenizer.padding_side = 'right'
+    
     results = []
 
     for idx, example in enumerate(data):

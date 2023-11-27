@@ -123,8 +123,8 @@ def main():
     print("Saving to Hugging Face format...")
     # tokenizer.save_pretrained(output_dir)
     # base_model.save_pretrained(output_dir, safe_serialization=False)  # max_shard_size='10GB'
-    tokenizer.push_to_hub('hllj/zephyr-7b-beta-vi-math', private=True)
-    base_model.push_to_hub('hllj/zephyr-7b-beta-vi-math', private=True)
+    tokenizer.push_to_hub('hllj/mistral-vi-math', private=True)
+    base_model.push_to_hub('hllj/mistral-vi-math', private=True)
     print(f"Done! model saved to {output_dir}")
 
 
