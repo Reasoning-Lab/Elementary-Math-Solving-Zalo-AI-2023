@@ -13,6 +13,7 @@ import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from peft import PeftModel
 
+
 # Function to load the main model for text generation
 def load_model(model_name, quantization, load_in):
     model = AutoModelForCausalLM.from_pretrained(
@@ -25,21 +26,23 @@ def load_model(model_name, quantization, load_in):
     )
     return model
 
+
 # Function to load the PeftModel for performance optimization
 def load_peft_model(model, peft_model):
     peft_model = PeftModel.from_pretrained(model, peft_model)
     return peft_model
 
+
 def get_user_prompt(example):
     question = example["question"]
     choices = example["choices"]
 
-    text_choices = '['
+    text_choices = "["
     for idx, choice in enumerate(choices):
         text_choices += f"'{choice}'"
         if idx != len(choices) - 1:
-            text_choices += ','
-    text_choices += ']'
+            text_choices += ","
+    text_choices += "]"
 
     user_prompt = (
         "<s>\n"
@@ -78,10 +81,10 @@ def main(
 ):
     logging.basicConfig(
         filename=log_filename,
-        filemode='a',
-        format='%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s',
-        datefmt='%H:%M:%S',
-        level=logging.DEBUG
+        filemode="a",
+        format="%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s",
+        datefmt="%H:%M:%S",
+        level=logging.DEBUG,
     )
 
     log = logging.getLogger(__name__)
@@ -114,6 +117,16 @@ def main(
             )
 
     tokenizer = AutoTokenizer.from_pretrained(peft_model)
+    if tokenizer.eos_token_id is None:
+        tokenizer.eos_token = "</s>"  # eos token is required for SFT
+        logger.info(f"Add eos token: {tokenizer.eos_token}")
+    if tokenizer.pad_token_id is None:
+        if tokenizer.unk_token_id is not None:
+            tokenizer.pad_token = tokenizer.unk_token
+        else:
+            tokenizer.pad_token = tokenizer.eos_token
+        logger.info(f"Add pad token: {tokenizer.pad_token}")
+    tokenizer.padding_side = "right"
 
     results = []
 
@@ -150,7 +163,7 @@ def main(
         answer_text = None
 
         for text in gen_text.split("###"):
-            if 'Final choice' in text:
+            if "Final choice" in text:
                 answer_text = text
                 break
 

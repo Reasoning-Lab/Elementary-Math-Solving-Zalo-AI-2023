@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 @author:XuMing(xuming624@qq.com)
 @description:
@@ -123,10 +122,15 @@ def main():
     print("Saving to Hugging Face format...")
     # tokenizer.save_pretrained(output_dir)
     # base_model.save_pretrained(output_dir, safe_serialization=False)  # max_shard_size='10GB'
-    tokenizer.push_to_hub('hllj/zephyr-7b-beta-vi-math', private=True)
-    base_model.push_to_hub('hllj/zephyr-7b-beta-vi-math', private=True)
+<<<<<<< Updated upstream
+    tokenizer.push_to_hub('hllj/mistral-vi-math', private=True)
+    base_model.push_to_hub('hllj/mistral-vi-math', private=True)
+=======
+    tokenizer.push_to_hub("hllj/zephyr-7b-beta-vi-math", private=True)
+    base_model.push_to_hub("hllj/zephyr-7b-beta-vi-math", private=True)
+>>>>>>> Stashed changes
     print(f"Done! model saved to {output_dir}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
