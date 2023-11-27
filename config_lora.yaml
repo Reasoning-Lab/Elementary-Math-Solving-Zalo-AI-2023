@@ -1,6 +1,6 @@
 # Model arguments
 model_type: auto
-model_name_or_path: BaoLocTown/zephyr-7b-beta-vi-math-v2
+model_name_or_path: hllj/mistral-vi-math
 device_map: auto
 torch_dtype: float16
 
@@ -41,12 +41,12 @@ save_steps: 500
 save_strategy: steps
 save_total_limit: 13
 gradient_accumulation_steps: 1
-output_dir: outputs-sft-zephyr-beta-v3
+output_dir: outputs-sft-mistral-v01-v1
 overwrite_output_dir: true
 ddp_timeout: 30000
 logging_first_step: true
 report_to: wandb
-run_name: sft-zephyr-7b-beta-v3
+run_name: sft-mistral-7b-v01-v1
 ddp_find_unused_parameters: false
 gradient_checkpointing: true
 gradient_checkpointing_kwargs:
@@ -54,5 +54,5 @@ gradient_checkpointing_kwargs:
 cache_dir: ./cache
 seed: 42
 push_to_hub: true
-hub_model_id: BaoLocTown/sft-zephyr-7b-beta-v3
+hub_model_id: BaoLocTown/sft-mistral-7b-v01-v1
 hub_strategy: every_save
