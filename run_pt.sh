@@ -1,6 +1,6 @@
 python pretraining.py \
     --model_type auto \
-    --model_name_or_path HuggingFaceH4/zephyr-7b-beta \
+    --model_name_or_path mistralai/Mistral-7B-v0.1 \
     --train_file_dir ./datasets/pretrain \
     --per_device_train_batch_size 4 \
     --per_device_eval_batch_size 4 \
@@ -24,13 +24,13 @@ python pretraining.py \
     --preprocessing_num_workers 10 \
     --block_size 1024 \
     --validation_split_percentage 10 \
-    --output_dir outputs-pt-zephyr-beta-v1 \
+    --output_dir outputs-pt-mistral-v1 \
     --overwrite_output_dir \
     --ddp_timeout 30000 \
     --logging_first_step True \
     --target_modules all \
-    --lora_rank 8 \
-    --lora_alpha 16 \
+    --lora_rank 256 \
+    --lora_alpha 128 \
     --lora_dropout 0.05 \
     --torch_dtype float16 \
     --device_map auto \
