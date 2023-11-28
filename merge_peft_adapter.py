@@ -121,10 +121,10 @@ def main():
     base_model = new_model.merge_and_unload()
 
     print("Saving to Hugging Face format...")
-    # tokenizer.save_pretrained(output_dir)
-    # base_model.save_pretrained(output_dir, safe_serialization=False)  # max_shard_size='10GB'
-    tokenizer.push_to_hub('hllj/mistral-vi-math', private=True)
-    base_model.push_to_hub('hllj/mistral-vi-math', private=True)
+    tokenizer.save_pretrained(output_dir)
+    base_model.save_pretrained(output_dir, safe_serialization=False)  # max_shard_size='10GB'
+    # tokenizer.push_to_hub('hllj/mistral-vi-math', private=True)
+    # base_model.push_to_hub('hllj/mistral-vi-math', private=True)
     print(f"Done! model saved to {output_dir}")
 
 

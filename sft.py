@@ -81,6 +81,12 @@ class ModelArguments:
             )
         },
     )
+    token: Optional[str] = field(
+        default=None,
+        metadata={
+            "help": "HuggingFace access token read for load models"
+        }
+    )
     load_in_8bit: bool = field(default=False, metadata={"help": "Whether to load the model in 8bit mode or not."})
     load_in_4bit: bool = field(default=False, metadata={"help": "Whether to load the model in 4bit mode or not."})
     bnb_4bit_quant_type: Optional[str] = field(
@@ -611,6 +617,7 @@ def main():
         use_cache=False if training_args.gradient_checkpointing else True,
         device_map=get_kbit_device_map(),
         quantization_config=get_quantization_config(model_args),
+        token=model_args.token
     )
     logger.info("*** Model loaded! ***")
 
