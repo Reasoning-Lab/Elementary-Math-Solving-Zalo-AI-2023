@@ -14,25 +14,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 from peft import PeftModel
 from vllm import LLM, SamplingParams
 
-def get_user_prompt(example):
-    question = example["question"]
-    choices = example["choices"]
-
-    text_choices = '['
-    for idx, choice in enumerate(choices):
-        text_choices += f"'{choice}'"
-        if idx != len(choices) - 1:
-            text_choices += ','
-    text_choices += ']'
-
-    user_prompt = (
-        "Below is a math exercise. Provide a solution to that problem, if given multiple choices to answer; please give a final choice for solving that problem.\n"
-        f"### Question: {question}\n"
-        "### Choices: "
-        f"{text_choices}\n"
-        "### Explanation: "
-    )
-    return user_prompt
+from inference_utils import get_user_prompt, post_processing_answer
 
 
 def main(
@@ -123,19 +105,8 @@ def main(
         log.info(f"Gen text {gen_text}")
         log.info(f"Answer text {answer_text}")
 
-        answer = None
-        for choice in choices:
-            full_answer = choice
-            value_only = re.sub("[ABCD]. ", "", full_answer)
-            if full_answer in answer_text:
-                answer = choice
-                break
-        if answer is None:
-            for choice in choices:
-                value_only = re.sub("[ABCD]. ", "", full_answer)
-                if value_only in answer_text:
-                    answer = choice
-                    break
+        answer = post_processing_answer(answer_text, choices)
+
         e2e_inference_time = (time.perf_counter() - start) * 1000
         log.info(f'Inference time: {e2e_inference_time}')
         log.info(f"Answer {answer}")
