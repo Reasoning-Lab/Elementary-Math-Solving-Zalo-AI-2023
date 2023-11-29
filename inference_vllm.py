@@ -26,7 +26,6 @@ def get_user_prompt(example):
     text_choices += ']'
 
     user_prompt = (
-        "<s>\n"
         "Below is a math exercise. Provide a solution to that problem, if given multiple choices to answer; please give a final choice for solving that problem.\n"
         f"### Question: {question}\n"
         "### Choices: "

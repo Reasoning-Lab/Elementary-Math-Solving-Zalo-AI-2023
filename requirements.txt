@@ -22,3 +22,4 @@ trl>=0.7.1
 scikit-learn
 tensorboard
 # deepspeed
+vllm
