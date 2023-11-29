@@ -39,9 +39,10 @@ def post_processing_answer(answer_text, choices):
                 break
     
     if answer is None:
-        for choie in choices:
+        for choice in choices:
             tag_only = choice.split('.')[0].strip()
-            print('check', tag_only)
+            print('*' * 10)
+            print('check tag', tag_only)
             if tag_only in answer_text:
                 print('tag only process', tag_only)
                 answer = choice
