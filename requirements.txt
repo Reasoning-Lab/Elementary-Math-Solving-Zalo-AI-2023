@@ -21,8 +21,4 @@ loguru
 trl>=0.7.1
 scikit-learn
 tensorboard
-<<<<<<< Updated upstream
-# deepspeed
-=======
 deepspeed
->>>>>>> Stashed changes
