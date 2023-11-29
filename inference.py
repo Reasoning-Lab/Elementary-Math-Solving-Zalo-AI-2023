@@ -149,6 +149,10 @@ def main(
 
         answer = post_processing_answer(answer_text, choices)
         
+        log.info(f"Output text: {user_prompt + gen_text}")
+        log.info(f"Gen text {gen_text}")
+        log.info(f"Answer text {answer_text}")
+
         e2e_inference_time = (time.perf_counter() - start) * 1000
         log.info(f"the inference time is {e2e_inference_time} ms")
         log.info(f"Answer {answer}")

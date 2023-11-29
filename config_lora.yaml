@@ -3,6 +3,7 @@ model_type: auto
 model_name_or_path: hllj/mistral-vi-math
 device_map: auto
 torch_dtype: float16
+token: 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
 
 # LoRA arguments
 use_peft: true
@@ -17,6 +18,7 @@ lora_target_modules:
 
 # Data training arguments
 train_file_dir: datasets/finetune
+validation_file_dir: datasets/validation
 preprocessing_num_workers: 4
 
 # SFT arguments
@@ -26,7 +28,7 @@ per_device_eval_batch_size: 4
 do_train: true
 do_eval: true
 fp16: true
-learning_rate: 5.0e-05
+learning_rate: 3.0e-05
 log_level: info
 logging_strategy: steps
 lr_scheduler_type: cosine
@@ -34,18 +36,18 @@ num_train_epochs: 2
 warmup_ratio: 0.05
 weight_decay: 0.05
 logging_steps: 10
-eval_steps: 500
+eval_steps: 1000
 evaluation_strategy: steps
-save_steps: 500
+save_steps: 1000
 save_strategy: steps
 save_total_limit: 13
 gradient_accumulation_steps: 1
-output_dir: outputs-sft-mistral-v1
+output_dir: outputs-sft-mistral-v1-clean-valid
 overwrite_output_dir: true
 ddp_timeout: 30000
 logging_first_step: true
 report_to: wandb
-run_name: sft-mistral-v1
+run_name: sft-mistral-v1-clean-valid
 ddp_find_unused_parameters: false
 gradient_checkpointing: true
 gradient_checkpointing_kwargs:
@@ -53,5 +55,5 @@ gradient_checkpointing_kwargs:
 cache_dir: ./cache
 seed: 42
 push_to_hub: true
-hub_model_id: hllj/sft-mistral-v1
+hub_model_id: hllj/sft-mistral-v1-clean-valid
 hub_strategy: every_save
