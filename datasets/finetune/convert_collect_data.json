@@ -1,0 +1,982 @@
+[
+    {
+        "id": 0,
+        "question": "Giá một chiếc mũ bảo hiểm là 108 000 đồng. Để thu hút khách hàng, người ta quyết định hạ giá 17,5%. Tính giá của chiếc mũ bảo hiểm sau khi hạ giá.",
+        "choices": "['A. 90 000 đồng', 'B. 91 000 đồng', 'C. 89 100 đồng.', 'D. 92 000 đồng']",
+        "explanation": "Số tiền hạ giá của một chiếc mũ là :\n\n108000 : 100 x 17,5 = 18900 (đồng)\n\nGiá bán chiếc mũ là :\n\n108000 – 18900 = 89100 (đồng)\n\nĐáp số : 89 100 đồng.",
+        "answer": "C. 89 100 đồng."
+    },
+    {
+        "id": 1,
+        "question": "Một người bán chiếc quạt với giá 300 000 đồng thì được lãi 10% trong giá bán. Hỏi để lãi 15% giá gốc thì phải bán chiếc quạt với giá bao nhiêu?",
+        "choices": "['A. 310 500 đồng', 'B. 310 000 đồng', 'C. 320 500 đồng', 'D. 300 500 đồng']",
+        "explanation": "Ban đầu người đó lãi số tiền là :\n\n300 000 x 10 : 100 = 30 000( đồng)\n\nGiá gốc chiếc quạt là :\n\n300 000 - 30 000 = 270 000 ( đồng)\n\n Nếu lãi 15% giá gốc thì số lãi thu được là :\n\n270 000 x 15 : 100 = 40 500 ( đồng)\n\nĐể lại 15% giá gốc thì phải bán chiếc quạt với giá :\n\n270 000 + 40500 = 310 500 ( đồng)",
+        "answer": "A. 310 500 đồng"
+    },
+    {
+        "id": 2,
+        "question": "Hai cửa hàng A và B cùng bán sách theo giá ghi trên bìa sách. Để thu hút khách hàng, cửa hàng A hạ giá 20% của giá ghi trên bìa ; cửa hàng B hạ giá hai lần, lần 1 hạ 10% của giá ghi trên bìa, lần 2 hạ tiếp 10% của giá trước đó. Nếu em đi mua sách thì em sẽ vào cửa hàng nào để mua được sách rẻ hơn ?",
+        "choices": "['A. Cửa hàng A', 'B. Cửa hàng B', 'C. Cả hai cửa hàng như nhau', 'D. Không có đáp án']",
+        "explanation": "Coi giá của mỗi quyển sách ghi trên bìa là 100%.\n\nGiá bán sách của cửa hàng A là :\n\n100% – 20% = 80% (giá ghi trên bìa)\n\nGiá của mỗi quyển sách ở cửa hàng B sau lần hạ giá thứ nhất là :\n\n100% – 10% = 90% (giá ghi trên bìa)\n\nGiá bán sách của cửa hàng B là :\n\n90% – 90% x 10 : 100 = 81% (giá ghi trên bìa)\n\nVì 80% < 81%, nên em sẽ vào cửa hàng A để mua sách.",
+        "answer": "A. Cửa hàng A"
+    },
+    {
+        "id": 3,
+        "question": "Giá một chiếc cặp học sinh là 45 000 đồng. Nhân ngày Quốc tế Thiếu nhi 1-6, cửa hàng hạ giá 16% ; tuy vậy, cửa hàng vẫn được lãi 5% (so với tiền vốn của chiếc cặp đó). Hỏi tiền vốn của chiếc cặp là bao nhiêu đồng ?",
+        "choices": "['A. 40 000 đồng', 'B. 38 000 đồng', 'C. 37 000 đồng', 'D. 36 000 đồng']",
+        "explanation": "Một chiếc cặp giảm số tiền là :\n\n45 000 x 16 : 100 = 7 200 ( đồng)                           \n\nGiá bán của chiếc cặp sau khi hạ giá là :\n\n45000 – 7200 = 37800 (đồng)\n\nCoi tiền vốn là 100%\n\nTỉ số phần trăm của số tiền bán và số tiền vốn là :\n\n 5% + 100% = 105% (tiền vốn)\n\nVì số tiền bán là 37 800 đồng nên số tiền vốn là :\n\n 37800 : 105 x 100 = 36000 (đồng)\n\nĐáp số : 36 000 đồng",
+        "answer": "D. 36 000 đồng"
+    },
+    {
+        "id": 4,
+        "question": "Một cửa hàng bán gạo, ngày thứ nhất bán được 500kg gạo, ngày thứ hai bán được bằng 95% số gạo bán được của ngày thứ nhất. Tổng số gạo bán trong hai ngày bằng 30% số gạo lúc đầu có trong cửa hàng. Hỏi lúc đầu cửa hàng có bao nhiêu tấn gạo?",
+        "choices": "['A. 3250 kg', 'B. 3.25 tấn', 'C. 975 kg', 'D. 475 kg']",
+        "explanation": "Đáp số: 3,25 tấn\nGiải thích:\nSố gạo ngày thứ hai bán được là:\n   500 x 95 : 100 = 475 (kg)\nSố gạo cả hai ngày bán được là:\n   500 + 475 = 975 (kg)\nSố gạo lúc đầu cửa hàng có là:\n   975 : 30 x 100 = 3250 (kg) = 3,25 tấn.",
+        "answer": "B. 3.25 tấn"
+    },
+    {
+        "id": 5,
+        "question": "Lúc 6 giờ 15 phút một người đi xe đạp từ A về B với vận tốc 12km/giờ, lúc 6 giờ 30 phút một người đi bộ từ B về A với vận tốc 4 km/giờ; hai người gặp nhau lúc 8h. Hỏi quãng đường từ A về B dài bao nhiêu km?",
+        "choices": "['A. 28 km', 'B. 16 km', 'C. 27 km', 'D. 24 km']",
+        "explanation": "Người đi xe đạp đã đi được một quãng đường lúc người đi bộ xuất phát là:\n12 x (6 giờ 30 phút – 6 giờ 15 phút) =  3 (km)\n\nThời gian hai người gặp nhau kể từ khi người đi bộ xuất phát là:\n8 giờ – 6 giờ 30 phút = 1 giờ 30 phút = 3/2 giờ.\n\nTổng vận tốc của người đi xe đạp và đi bộ là:\n12 + 4 = 16 (km/giờ)\n\nQuãng đường hai người đã đi được (Từ lúc người đi bộ xuất phát) là:\n16 x 3/2 = 24 (km).\n\nQuãng đường AB dài là:\n24 + 3 = 27 (km)\n\nĐáp số: Quãng đường AB dài 27km.",
+        "answer": "C. 27 km"
+    },
+    {
+        "id": 6,
+        "question": "Bạn An lúc 7 giờ đi từ A đến B với vận tốc 12 km/h, một giờ sau bạn Dũng đuổi theo với vận tốc 16 km/h. Đến mấy giờ thì bạn Dũng đuổi kịp bạn An ?",
+        "choices": "['A. 10 giờ', 'B. 3 giờ', 'C. 4 giờ', 'D. 9 giờ']",
+        "explanation": "An đi với vận tốc 12 km/h, 1 giờ sau Dũng đuổi theo có nghĩa là 1 giờ An cách Dũng 12 km.\n\nVận tốc của Dũng hơn vận tốc của An là:\n\n16 – 12 = 4 (km/h)\n\nThời gian để Dũng đuổi kịp An là:\n\n 12 : 4 = 3 ( giờ)\n\nDũng đuổi kịp An lúc:\n\n7 + 3 = 10 ( giờ)",
+        "answer": "A. 10 giờ"
+    },
+    {
+        "id": 7,
+        "question": "Một người đi xe đạp khởi hành từ A đến B với vận tốc 12 km/h. Sau 3 giờ một xe máy cũng đi từ A đến B với vận tốc 36 km/h. Hỏi kể từ lúc xr máy bắt đầu đi thì sau bao lâu xe máy đuổi kịp xe đạp?",
+        "choices": "['A. 3 giờ', 'B. 4 giờ', 'C. 2 giờ', 'D. 1.5 giờ']",
+        "explanation": "Sau 3 giờ thì quãng đường xe đạp đi được là:\n\n12 . 3 = 36 km\n\nHiệu hai vận tốc là:\n\n36 - 12 = 24 km/h\n\nThời gian xe máy đuổi kịp xe đạp là:\n\n36: 24 = 1,5 giờ\n\nĐáp số: 1,5 giờ",
+        "answer": "D. 1.5 giờ"
+    },
+    {
+        "id": 8,
+        "question": "An và bình đi xe đạp cùng lúc từ A đến B, An đi với vận tốc 12 km/giờ, Bình đi với vận tốc 10km/giờ. Đi được 1,5 giờ, để đợi Bình, An đã giảm vận tốc xuống còn 7km/giờ. Tính quãng đường AB, biết rằng lúc gặp nhau cũng là lúc An và Bình cùng đến B?",
+        "choices": "['A. 18 km', 'B. 15 km', 'C. 3 km', 'D. 25 km']",
+        "explanation": "Sau 1,5 giờ An đi được đoạn đường là: 12 x 1,5 = 18(km)\n\nSau 1,5 giờ Bình đi được đoạn đường là: 1,5 x 10 = 15 (km)\n\nSau 1,5 giờ An và Bình cách nhau là: 18 – 15 = 3 (km)\n\nLúc đó An đi với vận tốc 7km/giờ còn Bình đi với vận tốc 10 km/giờ nên thời gian chuyển động để\n\nBình đuổi kịp An là: 3 : (10 -7) = 1 (giờ)\n\nVì Bình đuổi kịp An tại B nên quãng đường AB dài là:\n\n18 + 7 x 1 = 25 (km)\n\n(Hoặc 15 + 10 x 1 = 25 (km)\n\nĐáp số: 25km",
+        "answer": "D. 25 km"
+    },
+    {
+        "id": 9,
+        "question": "Một xe máy đi từ A lúc 8 giờ 37 phút với vận tốc 36 km/giờ. Đến 11 giờ 7 phút một ô tô cũng đi từ A đuổi theo xe máy với vận tốc 54km/giờ. Hỏi ô tô đuổi kịp xe máy lúc mấy giờ ?",
+        "choices": "['A. 5 giờ', 'B. 16 giờ 7 phút', 'C. 16 giờ', 'D. 7 phút']",
+        "explanation": "xe máy đi trước ô tô là:\n\n11 giờ 7 phút - 8 giờ 37 phút = 2 giờ 30 phút = 2,5 giờ.\n\nKhoảng cách của hai xe lúc ô tô xuất phát:\n\n36 x 2,5 = 90 (km)\n\nHiệu vận tốc hai xe là:\n\n54 - 36 = 18 (km).\n\nô tô sẽ đuổi kịp xe máy sau:\n\n90 : 18 = 5 (giờ).\n\nÔ tô đuổi kịp xe máy lúc:\n\n11 giờ 7 phút + 5 giờ = 16 giờ 7 phút\n\nĐáp số: 16 giờ 7 phút.",
+        "answer": "B. 16 giờ 7 phút"
+    },
+    {
+        "id": 10,
+        "question": "Một người đi xe đạp từ A lúc 7 giờ với vận tốc 12km/h. Đến 8 giờ một người đi xe máy cũng từ A đuổi theo người đi xe đạp với vận tốc 42km/h. Hỏi người đi xe máy đuổi kịp người đi xe đạp lúc mấy giờ?",
+        "choices": "['A. 8 giờ 24 phút', 'B. 24 phút', 'C. 7 giờ 24 phút', 'D. 7 giờ']",
+        "explanation": "Người đi xe đạp đi trước người đi xe máy số thời gian là: 8 giờ  - 7 giờ = 1 giờ\nLúc 8 giờ thì người đi xe đạp đã đi được số ki-lô-mét là:12 x  1 = 12 (km)\n\nHiệu vận tốc giữa 2 người là: 42 - 12 = 30 (km/giờ)\n\nThời gian để người đi xe máy đuổi kịp người đi xe đạp là: 12 / 30 = 0,4 (giờ)\n\nĐổi: 0,4 giờ = 0.4 * 60 phút = 24 phút\n\nNgười đi xe máy đuổi kịp người đi xe đạp lúc: 8 giờ + 24 phút  = 8 giờ 24 phút.\nĐáp số: 8 giờ 24 phút",
+        "answer": "A. 8 giờ 24 phút"
+    },
+    {
+        "id": 11,
+        "question": "Diện tích toàn phần 1 cái hộp không có nắp hình lập phương là 500 cm2. Tính cạnh cái hộp đó. Nếu tăng cạnh hộp này lên 2 lần thì diện tích toàn phần tăng lên mấy lần ?",
+        "choices": "['A. 2 lần', 'B. 4 lần', 'C. 8 lần', 'D. 16 lần']",
+        "explanation": "Diện tích 1 mặt là : 500 : 5 = 100 (cm2)\n\n                   Vì 100 = 10 x 10 nên cạnh HLP là 10 cm :\n\n                   Cạnh hộp khi tăng lên 2 lần là : 10 x 2 = 20 (cm)\n\n                   Diện tích toàn phần của hộp mới là :\n\n                             (20 x 20) x 5 = 2000 (cm2)\n\n                   So với trước diện tích toàn phần tăng số lần là :\n\n                             2000 : 500 = 4 (lần)\n\n\\                                Đáp số 4 lần.",
+        "answer": "B. 4 lần"
+    },
+    {
+        "id": 12,
+        "question": "Một hình lập phương có cạnh 4 cm. Nếu cạnh hình lập phương tăng gấp 3 lần thì diện tích xung quanh và diện tích toàn phần của nó tăng gấp bao nhiêu lần? tại sao?",
+        "choices": "['A. 9 lần', 'B. 3 lần', 'C. 4 lần', 'D. 8 lần']",
+        "explanation": "Cạnh của hình lập phương mới dài:\n\n4 x 3 =12 (cm)\n\nDiện tích một mặt của hình lập phương mới là:\n\n12 x 12 = 144 (cm2)\n\nDiện tích một mặt của hình lập phương lúc đầu là:\n\n4 x 4 = 16 (cm2)\n\nDiện tích một mặt của hình lập phương mới so với diện tích một mặt của hình lập phương lúc đầu thì gấp:\n\n144 : 16 = 9 (lần)\n\nVậy diện tích xung quanh và diện tích toàn phần của hình lập phương sẽ tăng gấp 9 lần.\n\nĐáp số: 9 lần",
+        "answer": "A. 9 lần"
+    },
+    {
+        "id": 13,
+        "question": "Một hình lập phương có cạnh 2cm. Nếu gấp cạnh của hình lập phương lên 3 lần thì diện tích xung quanh và diện tích toàn phần tăng số lần lần lượt là:",
+        "choices": "['A. 3 lần; 9 lần', 'B. 8 lần; 3 lần', 'C. 3 lần; 4 lần', 'D. 9 lần; 9 lần']",
+        "explanation": "Độ dài cạnh hình lập phương khi gấp lên 3 lần là:               \n\n2 × 3 = 6 (cm)\n\nDiện tích một mặt của hình lập phương cạnh 2cm là:             \n\n2 × 2 = 4 (cm2)\n\nDiện tích xung quanh của hình lập phương cạnh 2cm là:               \n\n4 × 4 = 16 (cm2)\n\nDiện tích toàn phần của hình lập phương cạnh 2cm là:          \n\n4 × 6 = 24 (cm2)\n\nDiện tích một mặt của hình lập phương cạnh 6cm là:                       \n\n6 × 6 = 36 (cm2)\n\nDiện tích xung quanh của hình lập phương cạnh 6cm là:\n\n36 × 4 = 144 (cm2)\n\nDiện tích toàn phần của hình lập phương cạnh 6cm là:        \n\n36 × 6 = 216 (cm2)\n\nDiện tích xung quanh của hình lập phương cạnh 6cm gấp diện tích xung quanh của hình lập phương cạnh 2cm số lần là:\n\n144 : 16 = 9 (lần)\n\nDiện tích toàn phần của hình lập phương cạnh 6cm gấp diện tích toàn phần của hình lập phương cạnh 2cm số lần là:\n\n216 : 24 = 9 (lần)\n\nVậy nếu gấp cạnh của hình lập phương lên 3 lần thì diện tích xung quanh và diện tích toàn phần đều tăng lên 9 lần.\n\nĐáp án cần chọn là: D",
+        "answer": "D. 9 lần; 9 lần"
+    },
+    {
+        "id": 14,
+        "question": "Một hình lập phương có cạnh 5cm. Nếu cạnh của hình lập phương gấp lên 4 lần thì diện tích xung quanh ; diện tích toàn phần của nó gấp lên bao nhiêu lần ?",
+        "choices": "['A. 16 lần', 'B. 8 lần', 'C. 9 lần', 'D. 12 lần']",
+        "explanation": "- Hình lập phương lúc đầu: cạnh 5 cm\n\nDiện tích một mặt hình lập phương :\n\n5 ⨯ 5 = 25 (cm2)\nDiện tích xung quanh hình lập phương :\n\n25 ⨯ 4 = 100 (cm2)\nDiện tích toàn phần hình lập phương :\n\n25 ⨯ 6 = 150 (cm2)\n- Cạnh của hình lập phương sau khi tăng lên 4 lần:\n\n4 ⨯ 5 = 20 (cm)\n\nDiện tích một mặt hình lập phương mới :\n\n20 ⨯ 20 = 400 (cm2)\nDiện tích xung quanh hình lập phương mới :\n\n400 ⨯ 4 = 1600 (cm2)\nDiện tích toàn phần hình lập phương mới :\n\n400 ⨯ 6 = 2400 (cm2)\n\nĐể xác định số lần tăng lên là bao nhiêu, ta thực hiện : Lấy diện tích xung quanh (toàn phần) mới (sau khi tăng) chia cho diện tích xung quanh (toàn phần) cũ (trước khi tăng), ta được số lần tăng lên :\n\n1600 : 100 = 16 (lần)\n\n2400 : 150 = 16 (lần)\n\nVậy diện tích xung quanh, toàn phần sau khi cạnh đáy gấp lên 4 lần thì tăng 16 lần.",
+        "answer": "A. 16 lần"
+    },
+    {
+        "id": 15,
+        "question": "Cho hình lập phương có cạnh là 0,5m. Diện tích xung quanh của hình lập phương đó là:",
+        "choices": "['A. 1 dm2', 'B. 10 dm2', 'C. 100 dm2', 'D. 150 dm2']",
+        "explanation": "Diện tích một mặt của hình lập phương đó là:\n\n0,5 × 0,5 = 0,25 (m2)\n\nDiện tích xung quanh của hình lập phương đó là:\n\n 0,25 × 4 = 1 (m2)\n\n1m2 = 100dm2\nĐáp số: 100 dm2\n\nĐáp án C",
+        "answer": "C. 100 dm2"
+    },
+    {
+        "id": 16,
+        "question": "Một hình thửa ruộng hình thang có đáy bé 25m, đáy lớn dài hơn đáy bé 18m, chiều cao bằng \\frac{4}{5} đáy bé. Trung bình cứ mỗi 100m2 thu hoạch được 75kg thóc. Hỏi trên thửa ruộng đó thu hoạch được tất cả bao nhiêu tạ thóc?",
+        "choices": "['A. 43 tạ', 'B. 5.1 tạ', 'C. 510 kg', 'D. 680 kg']",
+        "explanation": "Đáy lớn thửa ruộng hình thang là:\n\n25 + 18 = 43 (m)\n\nChiều cao thửa ruộng hình thang là:\n\n25 x \\frac{4}{5} = 20 (m)\n\nDiện tích thửa ruộng hình thang là:\n\n(43 + 25) x 20 : 2 = 680 (m2)\n\nSố thóc thu hoạch được trên thửa ruộng đó là:\n\n75 x 680 : 100 = 510 (kg)\n\n510kg = 5,1 tạ.\n\nĐáp số: 5,1 tạ",
+        "answer": "B. 5.1 tạ"
+    },
+    {
+        "id": 17,
+        "question": "Một thửa ruộng hình thang có đáy bé dài 8m, đáy lớn dài 12m. Kéo dài đáy lớn thêm 5m thì diện tích thửa ruộng tăng thêm 25m2. Hỏi diện tích thửa ruộng tăng thêm bao nhiêu phần trăm?",
+        "choices": "['A. 20', 'B. 25', 'C. 30', 'D. 10']",
+        "explanation": "Chiều cao thửa ruộng là :\n\n(25 x 2) : 5  = 10 (m)\n\nDiện tích thửa ruộng là :\n\n(8 + 12) x 10 : 2 = 100 (m2)\n\nDiện tích hình thang khi đáy lớn thêm 5m là :\n\n(8 + 12 + 5) x 10 : 2 = 125 (m2)\n\nDiện tích thửa ruộng tăng lên số phần trăm là:\n\n(125 : 100 x 100) - 100% = 25%\n\n                    Đáp số : 25%    ",
+        "answer": "B. 25"
+    },
+    {
+        "id": 18,
+        "question": "Điền số thích hợp vào chỗ trống:\n\nCho hình thang có độ dài đáy lần lượt là 14cm và 18cm; chiều cao là 11cm.\n\nDiện tích hình thang đó là … cm2",
+        "choices": "['A. 176 cm2', 'B. 14 cm2', 'C. 18 cm2', 'D. 178 cm2']",
+        "explanation": "Diện tích hình thang đã cho là:\n\n(14 + 18) x 11 : 2 = 176 (cm2)\nĐáp số: 176 cm2.\n\nVậy đáp án đúng điền vào ô trống là 176.\n\nĐáp án cần chọn là: A",
+        "answer": "A. 176 cm2"
+    },
+    {
+        "id": 19,
+        "question": "Hình thang ABCD có chiều cao AH bằng 75cm; đáy bé bằng \\frac{2}{3}\n đáy lớn. Biết diện tích hình thang bằng diện tích hình chữ nhật có chiều dài 135cm; chiều rộng 50cm. Tính độ dài đáy lớn, đáy bé của hình thang.",
+        "choices": "['A. Đáy lớn 36cm; đáy bé 72cm.', 'B. Đáy lớn 6750cm; đáy bé 72cm.', 'C. Đáy lớn 180cm; đáy bé 72cm.', 'D. Đáy lớn 108cm; đáy bé 72cm.']",
+        "explanation": "Diện tích hình chữ nhật là:\n\n135 × 50 = 6750 (cm2)\n\nVậy hình thang có diện tích là 6750 cm2.\n\nTổng độ dài hai đáy của hình thang là:\n\n6750 × 2 : 75 = 180 (cm)\nTổng số phần bằng nhau là:\n\n2 + 3 = 5 (phần)\n\nGiá trị một phần là:\n\n180 : 5  =36 (cm)\n\nĐộ dài đáy lớn là:\n\n36 × 3 = 108 (cm)\n\nĐộ dài đáy bé là:\n\n180 – 108 = 72 (cm)\n\nĐáp số: Đáy lớn 108cm; đáy bé 72cm.\n\nĐáp án D",
+        "answer": "D. Đáy lớn 108cm; đáy bé 72cm."
+    },
+    {
+        "id": 20,
+        "question": "Điền số thích hợp vào ô trống:\n\nDiện tích hình thang có đáy lớn là 45dm, đáy bé là 25dm và chiều cao là 2m là ? dm2",
+        "choices": "['A. 700', 'B. 20', 'C. 45', 'D. 25']",
+        "explanation": "Đổi 2m = 20dm\n\nDiện tích hình thang đó là:\n\n(45 + 25) x 20 : 2 = 700 (dm2)\n\nĐáp số: 700 dm2\n\nVậy đáp án đúng điền vào ô trống là 700.",
+        "answer": "A. 700"
+    },
+    {
+        "id": 21,
+        "question": "Một đoàn tàu hoả chạy ngang qua một cây cột điện hết 15 giây. Với cùng vận tốc.đó, đoàn tàu chui qua một đường hầm dài 1200m hết 2 phút 15 giây. Tính chiều dài và vận tốc của đoàn tàu.\n",
+        "choices": "['A. Chiều dài: 200m; Vận tốc: 36km/giờ.', 'B. Chiều dài: 150m; Vận tốc: 36000km/giờ.', 'C. Chiều dài: 150m; Vận tốc: 36km/giờ.', 'D. Chiều dài: 200m; Vận tốc: 34km/giờ.']",
+        "explanation": "Đoàn tàu chạy ngang qua một cây cột điện hêt 15 giây. Suy ra, trong 15 giây đoàn tàu hoả đi được quãng dường bằng chính chiều dài đoàn tàu.\n\nĐoàn tàu hỏa vượt qua một đường hâm dài 1200m hết 2 phút 15 giây. Suy ra, trong 2 phút 15 giây đoàn tàu hoả đi được quãng đường bằng chiều dài đoàn tàu cộng với chiều dài chiếc hầm.\n\nVậy, thời gian để đoàn tàu đi được đoạn đường dài 1200m là:\n\n2 phút 15 giây – 15 giây = 2 (phút) = 120 (giây)\n\nVận tốc của đoàn tàu là: 1200 : 120 = 10 (m/giây)\n\n10m/giây = 36000m/giờ = 36km/giờ\n\nChiều dài đoàn tàu là:\n\n15 x 10= 150 (m)\n\nĐáp số: Chiều dài: 150m; Vận tốc: 36km/giờ.",
+        "answer": "C. Chiều dài: 150m; Vận tốc: 36km/giờ."
+    },
+    {
+        "id": 22,
+        "question": "Một xe lửa vượt qua cây cầu dài 450m mất 45 giây, vượt qua một trụ điện hết 15 giây. Tính chiều dài của xe lửa.",
+        "choices": "['A. 15 m', 'B. 225 m', 'C. 255m', 'D. 450m']",
+        "explanation": "Xe lửa vượt qua một trụ điện mất 15 giây, nghĩa là nó đi qua quãng đường bằng chiều dài của nó mất 15 giây.\n\nXe lửa vượt qua cây cầu hết 45 giây, nghĩa là nó đi qua quãng đường bằng tổng chiều dài của nó và cây cầu hết 45 giây.\n\nVậy xe lửa đi hết chiều dài của cây cầu trong: 45 – 15 = 30 (giây)\n\nVận tốc xe lửa là: 450 : 30 = 15 (m/giây)\n\nChiều dài xe lửa là: 15 x15 = 225 (m)\n\nĐáp số: 225 m",
+        "answer": "B. 225 m"
+    },
+    {
+        "id": 23,
+        "question": "Tính\n\na, 1 giờ 45 phút x 4\n\nb, 2 giờ 32 phút x 3",
+        "choices": "['A. 7 giờ và 7 giờ 36 phút', 'B. 6 giờ và 7 giờ 36 phút', 'C. 7 giờ và 6 giờ 36 phút', 'D. 6 giờ và 6 giờ 36 phút']",
+        "explanation": "a, 1 giờ 45 phút x 4 = 4 giờ + 180 phút = 4 giờ + 3 giờ = 7 giờ\n\nb, 2 giờ 32 phút x 3 = 6 giờ + 96 phút = 6 giờ + 1 giờ 36 phút = 7 giờ 36 phút",
+        "answer": "A. 7 giờ và 7 giờ 36 phút"
+    },
+    {
+        "id": 24,
+        "question": "Tính: 4 giờ 35 phút + 8 giờ 42 phút",
+        "choices": "['A. 1 giờ 17 phút', 'B. 12 giờ 77 phút', 'C. 77 phút', 'D. 13 giờ 17 phút']",
+        "explanation": "4 giờ 35 phút + 8 giờ 42 phút = 12 giờ 77 phút\nmà 77 phút = 1 giờ 17 phút\nnên 4 giờ 35 phút + 8 giờ 42 phút  = 12 giờ + 1 giờ 17 phút = 13 giờ 17 phút",
+        "answer": "D. 13 giờ 17 phút"
+    },
+    {
+        "id": 25,
+        "question": "May một cái áo hết 1 giờ 45 phút, may một cái quần hết 2 giờ 10 phút. Hỏi may 9 bộ quần áo như thế hết bao nhiêu thời gian ?",
+        "choices": "['A. 3 giờ 55 phút', 'B. 30 giờ 45 phút', 'C. 33 giờ 15 phút', 'D. 35 giờ 15 phút']",
+        "explanation": "Thời gian để may 1 bộ quần áo là:\n\n1 giờ 45 phút + 2 giờ 10 phút = 3 giờ 55 phút\n\nNgười thợ đó may 9 bộ quần áo hết số thời gian là:\n\n3 giờ 55 phút x 9 = 27 giờ 495 phút\n\nĐổi 27 giờ 495 phút = 35 giờ 15 phút  (vì 495 phút = 8 giờ 15 phút)\n\nĐáp số: 35 giờ 15 phút.\n\nĐáp án D",
+        "answer": "D. 35 giờ 15 phút"
+    },
+    {
+        "id": 26,
+        "question": "2 giờ 15 phút : 3 + 3 giờ 8 phút x 4 = ?",
+        "choices": "['A. 135 phút', 'B. 13 giờ 17 phút', 'C. 12 giờ 32 phút', 'D. 14 giờ 17 phút']",
+        "explanation": "2 giờ 15 phút : 3 + 3 giờ 8 phút x 4\n= 135 phút : 3 + 12 giờ 32 phút\n= 45 phút + 12 giờ 32 phút = 13 giờ 17 phút",
+        "answer": "B. 13 giờ 17 phút"
+    },
+    {
+        "id": 27,
+        "question": "Tính:\n\n12 phút 25 giây x 3 + 27 phút 32 giây x 4",
+        "choices": "['A. 4 giờ 19 phút 8 giây', 'B. 3 giờ 54 phút 15 giây', 'C. 2 giờ 18 phút 32 giây', 'D. 2 giờ 27 phút 23 giây']",
+        "explanation": "Ta có:\n\n12 phút 25 giây x 3 + 27 phút 32 giây x 4\n\n= 36 phút 75 giây + 108 phút 128 giây\n\n= 37 phút 15 giây + 110 phút 8 giây\n\n= 147 phút 23 giây\n\n= 2 giờ 27 phút 23 giây\n\nĐáp án D",
+        "answer": "D. 2 giờ 27 phút 23 giây"
+    },
+    {
+        "id": 28,
+        "question": "Viết các số sau:\n\n- Hai trăm bảy mươi lăm triệu.\n\n- Sáu trăm bốn mươi mốt triệu tám trăm hai mươi nghìn.\n\n- Chín trăm mười lăm triệu một trăm bốn mươi tư nghìn bốn trăm linh bảy.\n\n- Hai trăm linh bốn triệu năm trăm sáu mươi bảy nghìn hai trăm.",
+        "choices": "['A. 275 000 000; 641 820 000; 915 144 407; 204 567 200', 'B. 207 500 000; 641 820 000; 915 144 407; 204 567 200', 'C. 275 000 000; 641 082 000; 915 144 407; 204 567 200', 'D. 275 000 000; 641 820 000; 915 144 407; 204 562 700']",
+        "explanation": "Viết số:\n\n- Hai trăm bảy mươi lăm triệu: 275 000 000\n\n- Sáu trăm bốn mươi mốt triệu tám trăm hai mươi nghìn: 641 820 000\n\n- Chín trăm mười lăm triệu một trăm bốn mươi tư nghìn bốn trăm linh bảy:\n\n915 144 407\n\n- Hai trăm linh bốn triệu năm trăm sáu mươi bảy nghìn hai trăm: 204 567 200.",
+        "answer": "A. 275 000 000; 641 820 000; 915 144 407; 204 567 200"
+    },
+    {
+        "id": 29,
+        "question": "Đọc các số sau và cho biết chữ số 3 ở mỗi số đó thuộc hàng nào, lớp nào:\n\n46 307; 56 032; 123 517; 305 804; 960 783.",
+        "choices": "['A. Đơn vị, đơn vị, đơn vị, nghìn, nghìn', 'B. Đơn vị, đơn vị, đơn vị, nghìn, đơn vị', 'C. Đơn vị, nghìn, nghìn, nghìn, đơn vị', 'D. Đơn vị, đơn vị, nghìn, nghìn, đơn vị']",
+        "explanation": "46 307: bốn mươi sáu nghìn ba trăm linh bảy.\n\n56 032: năm mươi sáu nghìn không trăm ba mươi hai.\n\n123 517: một trăm hai mươi ba nghìn năm trăm mười bảy.\n\n305 804 đọc là: ba trăm linh năm nghìn tám trăm mười bảy.\n\n960 783 đọc là: chín trăm sáu mươi nghìn bảy trăm tám mươi ba.\n\nTừ trái qua phải, chữ số 3 thuộc hàng: Trăm, chục, nghìn, trăm nghìn, đơn vị\n\nThuộc lớp: Đơn vị, đơn vị, nghìn, nghìn, đơn vị",
+        "answer": "D. Đơn vị, đơn vị, nghìn, nghìn, đơn vị"
+    },
+    {
+        "id": 30,
+        "question": "Đọc số thập phân sau: 206,075",
+        "choices": "['A. Hai trăm sáu nghìn phẩy không trăm bảy mươi lăm.', 'B. Hai trăm linh sáu phẩy không trăm bảy mươi bảy.', 'C. Hai trăm linh sáu phẩy không trăm bảy mươi lăm.', 'D. Hai trăm linh sáu mươi phẩy không trăm bảy mươi lăm.']",
+        "explanation": "206,075 đọc là Hai trăm linh sáu phẩy không trăm bảy mươi lăm.\n\n",
+        "answer": "C. Hai trăm linh sáu phẩy không trăm bảy mươi lăm."
+    },
+    {
+        "id": 31,
+        "question": "Chữ số 7 trong chữ số thập phân 15, 726 có giá trị là:",
+        "choices": "['A. \\frac{7}{10000}', 'B. \\frac{7}{1000}', 'C. \\frac{7}{100}', 'D. \\frac{7}{10}']",
+        "explanation": "Đáp án đúng là A\n\nTa thấy chữ số 7 trong số thập phân 15, 726 ở hàng phần mười vậy nên:\n\nChữ số 7 trong chữ số thập phân 15, 726 có giá trị là: \\frac{7}{10}",
+        "answer": "D. \\frac{7}{10}"
+    },
+    {
+        "id": 32,
+        "question": "Chữ số 7 trong số 170 825  thuộc hàng nào, lớp nào?\n",
+        "choices": "['A. Hàng chục nghìn, lớp đơn vị', 'B. Hàng trăm nghìn, lớp nghìn', 'C. Hàng chục nghìn, lớp nghìn', 'D. Hàng nghìn, lớp nghìn']",
+        "explanation": "Chữ số 7 trong số 170825 nằm ở hàng chục nghìn nên chữ số 7 thuộc lớp nghìn.\n\nVậy chữ số 7 thuộc hàng chục nghìn, lớp nghìn.\n\nĐáp án C",
+        "answer": "C. Hàng chục nghìn, lớp nghìn"
+    },
+    {
+        "id": 33,
+        "question": "Nêu giá trị của chữ số 3, chữ số 7 và chữ số 9 trong số 95073200:",
+        "choices": "['A. 3000, 70 000, 90 000 000', 'B. 3000, 700 000, 90 000 000', 'C. 30 000, 70 000, 90 000 000', 'D. 3000, 70 000, 900 000 000']",
+        "explanation": "3000, 70 000, 90 000 000",
+        "answer": "A. 3000, 70 000, 90 000 000"
+    },
+    {
+        "id": 34,
+        "question": "Giá trị chữ số 5 trong số: 78,0056 là:",
+        "choices": "['A. \\frac{5}{100}', 'B. \\frac{5}{1000}', 'C. \\frac{5}{10}', 'D. \\frac{5}{10000}']",
+        "explanation": "5 ở hàng phần nghìn nên có giá trị là \\frac{5}{1000}",
+        "answer": "B. \\frac{5}{1000}"
+    },
+    {
+        "id": 35,
+        "question": "Giá trị của chữ số 5 trong số thập phân 879,457 có giá trị là:",
+        "choices": "['A. \\frac{5}{10}', 'B. \\frac{5}{1000}', 'C. \\frac{5}{10000}', 'D. \\frac{5}{100}']",
+        "explanation": "chữ số 5 ở hàng phần trăm nên có giá trị \\frac{5}{100}",
+        "answer": "D. \\frac{5}{100}"
+    },
+    {
+        "id": 36,
+        "question": "Chữ số 5 trong số 162,57 chỉ:",
+        "choices": "['A. A. 5 đơn vị', 'B. B. 5 phần trăm', 'C. C. 5 chục', 'D. D. 5 phần mười']",
+        "explanation": "ta có số 5 nằm ở hàng phần chục nên số 5 chỉ 5 phần mười",
+        "answer": "D. 5 phần mười"
+    },
+    {
+        "id": 37,
+        "question": "Viết số thích hợp vào chỗ chấm: 21 km/giờ = ... m/phút",
+        "choices": "['A. 450 m/phút', 'B. 350 km/phút', 'C. 21000 m/phút', 'D. 350 m/phút']",
+        "explanation": "đổi 21km/giờ = 21 000m/giờ = 21 000m / 60 phút = 350 m/phút",
+        "answer": "D. 350 m/phút"
+    },
+    {
+        "id": 38,
+        "question": "36 km/h = m/phút ? ",
+        "choices": "['A. 36000m/phút', 'B. 600m/phút', 'C. 60m/phút', 'D. 36m/phút']",
+        "explanation": "36km/h = 36000/60 là 36000 là m đổi 36 km = 36 000 m tương tự 1 giờ = 60 phút\n\nvậy 60 ' chạy đc 36 000 thì 1 phút : 60 = 600 => 600m/phút",
+        "answer": "B. 600m/phút"
+    },
+    {
+        "id": 39,
+        "question": "Nêu cách đổi 24 km/ giờ=? m/ phút",
+        "choices": "['A. 24m/phút', 'B. 0,4m/phút', 'C. 300m/phút', 'D. 400m/phút']",
+        "explanation": "24km/giờ = 0,4km/phút = 400m/phút",
+        "answer": "D. 400m/phút"
+    },
+    {
+        "id": 40,
+        "question": "“Đổi 72 km/giờ = … m/giây”. Số cần điền vào chỗ chấm là:",
+        "choices": "['A. 15', 'B. 20', 'C. 25', 'D. 30']",
+        "explanation": "72 km/giờ = (72 : 3,6) m/giây = 20 m/giây\n\nChọn B.",
+        "answer": "B. 20"
+    },
+    {
+        "id": 41,
+        "question": "1km/giờ = ? m/s",
+        "choices": "['A. 3600', 'B. 1', 'C. 27.777.777', 'D. 3.6']",
+        "explanation": "1 km = 1000 m\n\n1 giờ = 3600 giây\n\nNên:\n\n1 km/h = (1 km)/( 1 giờ) = (1000 m)/(3600 giây) = 1000/3600 (m/giây) = 1/3.6 (m/s) = 0.277777778 (m/s)",
+        "answer": "C. 0.27777777"
+    },
+    {
+        "id": 42,
+        "question": "5m3 19dm3\n = .......m3. Số  thích hợp viết vào chỗ chấm là:",
+        "choices": "['A. 5,19', 'B. 5,109', 'C. 5,019', 'D. 5019']",
+        "explanation": "ta có: 1m3 = 1000dm3 nên 1dm3 = 0,001m3, từ đó 19dm3 = 0,001 * 19 = 0,019m3\n5m3 19dm3 = 5m3 + 0,019m3 = 5,019m3",
+        "answer": "C. 5,019"
+    },
+    {
+        "id": 43,
+        "question": "1m 7dm = …..dm . Số thích hợp cần điền vào chỗ chấm là:",
+        "choices": "['A. 170', 'B. 17', 'C. 107', 'D. 1,07']",
+        "explanation": "1m = 10dm, 1m 7dm = 17dm",
+        "answer": "B. 17"
+    },
+    {
+        "id": 44,
+        "question": "Điền số thích hợp vào chỗ chấm:\n\na) 10cm = …. mm\n\nb) 19dm = …..cm\n\nc) 5m 5dm = … dm\n\nd) 31dm 5cm = … cm",
+        "choices": "['A. 100; 190; 55; 315', 'B. 1000; 190; 55; 315', 'C. 100; 19; 55; 315', 'D. 100; 190; 550; 315']",
+        "explanation": "a) 10cm = 100 mm\n\nb) 19dm = 190 cm\n\nc) 5m 5dm = 55 dm\n\nd) 31dm 5cm = 315 cm",
+        "answer": "A. 100; 190; 55; 315"
+    },
+    {
+        "id": 45,
+        "question": "Trong các số đo dưới đây, số đo bằng 2,14 dm3 là:",
+        "choices": "['A. 214cm3', 'B. 21400cm3', 'C. 21,40cm3', 'D. 2140cm3']",
+        "explanation": "1dm3 = 1000 cm3, nên 2,14 dm3 = 2,14 * 1000 cm3 = 2140 cm3. Đáp án là 2140cm3",
+        "answer": "D. 2140cm3"
+    },
+    {
+        "id": 46,
+        "question": "37,5% của một số là 1, 3875. Số đó là:",
+        "choices": "['A. 3,7', 'B. 3,8', 'C. 37,5', 'D. 1,3875']",
+        "explanation": "Số đó là :\n\n1,3875 : 37,5 x 100 = 3,7\n\nĐáp số : 3,7",
+        "answer": "A. 3,7"
+    },
+    {
+        "id": 47,
+        "question": "Số thích hợp điền vào chỗ chấm để 3tấn5kg = …… tấn là:",
+        "choices": "['A. 3,05 tấn', 'B. 3,5 tấn', 'C. 35 tấn', 'D. 3,005 tấn']",
+        "explanation": "ta có 1 tấn = 1000 kg, 1 kg = 0;001 tấn, vậy nên 5 kg = 0,005 tấn.\n3 tấn 5kg = 3 + 0,005 = 3,005 tấn.",
+        "answer": "D. 3,005 tấn"
+    },
+    {
+        "id": 48,
+        "question": "Điền số thích hợp vào ô trống:\n\n12 tấn 3kg = ? kg",
+        "choices": "['A. 1203', 'B. 123', 'C. 120003', 'D. 12003']",
+        "explanation": "Ta có 1 tấn = 1000kg nên 12 tấn  = 12000kg.\n\nDo đó 12 tấn 3kg = 12000kg + 3kg = 12003kg.\n\nVậy số thích hợp điền vào ô trống là 12003.",
+        "answer": "D. 12003"
+    },
+    {
+        "id": 49,
+        "question": "Điền số thích hợp vào ô trống:\n\n23458m = ? km ? m",
+        "choices": "['A. 23; 458', 'B. 230; 458', 'C. 23; 4580', 'D. 230; 4580']",
+        "explanation": "Ta có: \n23458m = 23000m + 458m\nVì 1km = 1000m nên 23000m = 23km\n\nDo đó, \n23458m = 23 km + 458m\nVậy đáp án đúng điền vào ô trống theo thứ tự từ trái sang phải là 23; 458.",
+        "answer": "A. 23; 458"
+    },
+    {
+        "id": 50,
+        "question": "Số thích hợp điền vào chỗ chấm để  5 tấn 3kg = …… kg là:\n\n",
+        "choices": "['A. 50030', 'B. 53', 'C. 503', 'D. 5003']",
+        "explanation": "5 tấn = 5000 kg nên 5 tấn 3 kg = 5003 kg.",
+        "answer": "D. 5003"
+    },
+    {
+        "id": 51,
+        "question": "Chọn số thích hợp để điền vào chỗ chấm:\n\n17m – 9mm = … mm",
+        "choices": "['A. 8', 'B. 161', 'C. 169', 'D. 16991']",
+        "explanation": "Ta có 1m = 1000mm nên 17m = 17000mm\n\nDo đó: 17m - 9mm = 17000mm - 9mm = 16991mm\n\nĐáp án D. 16991",
+        "answer": "D. 16991"
+    },
+    {
+        "id": 52,
+        "question": "Khoảng thời gian từ lúc 7 giờ kém 10 phút đến 7 giờ 30 phút là:",
+        "choices": "['A. 10 phút', 'B. 20 phút', 'C. 30 phút', 'D. 40 phút']",
+        "explanation": "- 7 giờ kém 10 phút tới 7 giờ mất 10 phút.\n- từ 7 giờ tới 7 giờ 30 phút mất 30 phút.\nVậy nên từ 7 giờ 10 phút tới 7 giờ 30 phút ta có khoảng thời gian là 10 + 30 = 40 phút",
+        "answer": "D. 40 phút"
+    },
+    {
+        "id": 53,
+        "question": "Khoảng thời gian từ 7 giờ kém 15 phút đến 7 giờ 15 phút là:\n",
+        "choices": "['A. 40 phút', 'B. 30 phút', 'C. 10 phút', 'D. 20 phút']",
+        "explanation": "từ 7 giờ kém 15 phút tới 7 giờ là 15 phút, từ 7 giờ tới 7 giờ 15 phút cần thêm 15 phút nữa. Nên tổng cộng ta có khoảng thời gian từ 7 giờ kém 15 phút tới 7 giờ 15 phút là 30 phút",
+        "answer": "B. 30 phút"
+    },
+    {
+        "id": 54,
+        "question": "6 giờ 30 phút – 4 giờ 45 phút = ... giờ ... phút \n",
+        "choices": "['A. 1 giờ 30 phút', 'B. 1 giờ 45 phút', 'C. 3 giờ 45 phút', 'D. 2 giờ 45 phút']",
+        "explanation": "6 giờ 30 phút = 6 * 60 + 30 = 390 phút\n4 giờ 45 phút = 4 * 60 + 45 = 285 phút.\n6 giờ 30 phút - 4 giờ 45 phút = 390 phút - 285 phút = 105 phút = 60 phút + 45 phút = 1 giờ 45 phút",
+        "answer": "B. 1 giờ 45 phút"
+    },
+    {
+        "id": 55,
+        "question": "Tính:\n\n11 phút 25 giây + 2 phút 50 giây = …",
+        "choices": "['A. 13 phút 15 giây.', 'B. 14 phút 65 giây.', 'C. 14 phút 75 giây.', 'D. 14 phút 15 giây.']",
+        "explanation": "Vậy 11 phút 25 giây + 2 phút 50 giây = 14 phút 15 giây.\n",
+        "answer": "D. 14 phút 15 giây."
+    },
+    {
+        "id": 56,
+        "question": "Tính:\n\n(4 giờ 36 phút + 18 phút) : 3",
+        "choices": "['A. 3 giờ 38 phút', 'B. 1 giờ 38 phút', 'C. 4 giờ 38 phút', 'D. 2 giờ 38 phút']",
+        "explanation": "Ta có:\n\n(4 giờ 36 phút  + 18 phút) : 3\n\n= 4 giờ 54 phút : 3\n\n= 3 giờ 114 phút : 3\n\n= 1 giờ 38 phút\n\nĐáp án B. 1 giờ 38 phút",
+        "answer": "B. 1 giờ 38 phút"
+    },
+    {
+        "id": 57,
+        "question": "0,2 m^{3} gấp 25 dm^{3} số lần là:",
+        "choices": "['A. 0,08', 'B. 0,8', 'C. 8', 'D. 0,008']",
+        "explanation": "Đáp án: 0,2m3 gấp 8 lần 25dm3\nGiải thích các bước giải:\nĐổi 0,2m3 = 200 dm3 0,2m3 gấp 25dm3 số lần là: 200 : 25 = 8 (lần)\nĐáp số: 8",
+        "answer": "D. 8"
+    },
+    {
+        "id": 58,
+        "question": "Tính giá trị biểu thức:\n\n6543dm3 - 1,85m3 x 2 + 999dm3",
+        "choices": "['A. 3842 dm3', 'B. 2843 dm3', 'C. 3700 dm3', 'D. 999dm3']",
+        "explanation": "Ta có:\n6543dm3 - 1,58 x 2 m3 + 999dm3 = 6543dm3 - 1850 x 2 dm3 + 999 dm3 = 6543 dm3 - 3700 dm3 + 999 dm3 = 2843 dm3 + 999 dm3 = 3842 dm3\nĐáp án cần chọn là: A. 3842 dm3",
+        "answer": "A. 3842 dm3"
+    },
+    {
+        "id": 59,
+        "question": "Một căn phòng hình lập phương có cạnh 5,5m. Hỏi không khí chứa trong phòng nặng bao nhiêu ki-lô-gam, biết 1 lít không khí nặng 1,2 gam? (Biết 1 lít = 1dm3).",
+        "choices": "['A. 166375 kg', 'B. 199650 kg', 'C. 199 kg', 'D. 199,65 kg']",
+        "explanation": "Đổi 5,5m = 55dm\nThể tích căn phòng đó là: 55 x 55 x 55 = 166375 (dm3)\n166375dm3 = 166375(lít)\n\nVậy thể tích không khí chứa trong phòng là 166375 lít.\n\nKhối lượng của không khí chứa trong phòng là:\n\n1,2 x 166375 = 199650 (g)\n199650g = 199,65 kg\nĐáp số: 199,65kg.\n\nĐáp án cần chọn là: D 199,65 kg",
+        "answer": "D. 199,65 kg"
+    },
+    {
+        "id": 60,
+        "question": "Gấp 9 lần 56 m2 = ... dm2",
+        "choices": "['A. 54', 'B. 50 400', 'C. 504', 'D. 56']",
+        "explanation": "Gấp 9 lần 56 m2 là:\n\n56 m2 × 9 = 504 m2\n\nVì 504 m2 = 50 400 dm2\n\nVậy Gấp 9 lần 56 m2 = 50 400 dm2",
+        "answer": "B. 50 400"
+    },
+    {
+        "id": 61,
+        "question": "Số thích hợp điền vào chỗ chấm: 8 ha 25 m2 = …….. dam2 là:",
+        "choices": "['A. 825', 'B. 800,25', 'C. 8,25', 'D. 80 025']",
+        "explanation": "Đáp án đúng là: B\n\nTa có 8 ha = 800 dam2;\n\n25 m2 = 0,25 dam2.\n\nDo đó 8 ha 25 m2 = 800,25 dam2.\n\nVậy số thích hợp điền vào chỗ chấm là: 800,25.",
+        "answer": "B. 800,25"
+    },
+    {
+        "id": 62,
+        "question": "“8 m2 6 dm2 =…… m2.” Số thích hợp điền vào chỗ chấm là:\n",
+        "choices": "['A. 0,6', 'B. 0,06', 'C. 0,006', 'D. 6']",
+        "explanation": "Đáp án đúng là D\n\nTa có: 1 dm2 = \\frac{1}{100} m2 = 0,01 m2.\n\nNên 6 dm2 = 0,06 m2",
+        "answer": "B. 0,06"
+    },
+    {
+        "id": 63,
+        "question": "Một hình hộp chữ nhật có chiều dài 12 cm, chiều rộng 8 cm và chiều cao 7 cm. Một hình lập phương có cạnh bằng trung bình cộng của ba kích thước của hình hộp chữ nhật trên. Vậy thể tích của hình hộp chữ nhật đó là: … cm3, thể tích của hình lập phương đó là:… cm3\n",
+        "choices": "['A. 9; 729', 'B. 672; 9', 'C. 672; 729', 'D. 9; 9']",
+        "explanation": "Thể tích của hình hộp chữ nhật đó là:\n\n12 x 8 x 7 = 672 (cm3)\n\nĐộ dài cạnh của hình lập phương là:\n\n(12 + 8 + 7) : 3 = 9 (cm)\n\nThể tích của hình lập phương đó là:\n\n9 x 9 x 9 = 729 (cm3)\n\nĐáp số: 672cm3\n\n             729cm3\n\nVậy các số cần điền vào ô trống theo thứ tự từ trên xuống dưới lần lượt là: 672; 729",
+        "answer": "C. 672; 729"
+    },
+    {
+        "id": 64,
+        "question": "Điền số thích hợp vào chỗ trống:\n\nMột hình hộp chữ nhật có chiều dài 35cm, chiều rộng bằng 0,6 lần chiều dài và chiều cao hơn chiều rộng 4cm. Một hình lập phương có cạnh bằng trung bình cộng của ba kích thước của hình hộp chữ nhật trên.\n\nVậy thể tích hình hộp chữ nhật đó là … cm3\n Thể tích của hình lập phương đó là … cm3\nCác số cần điền theo thứ tự từ trên xuống là:",
+        "choices": "['A. 18375; 19683', 'B. 21; 19683', 'C. 18375; 25', 'D. 25; 27']",
+        "explanation": "Chiều rộng của hình hộp chữ nhật là: 35 x 0,6 = 21 (cm)\nChiều cao của hình hộp chữ nhật là: 21 + 4 = 25 (cm)\nThể tích của hình hộp chữ nhật đó là: 35 x 21 x 25 = 18375 (cm3)\nĐộ dài cạnh của hình lập phương là: (35 + 21 + 25) : 3 = 27 (cm)\nThể tích của hình lập phương đó là: 27 x 27 x 27 = 19683 (cm3)\nĐáp số:\n\nThể tích hình hộp chữ nhật: 18375 cm3\nThể tích hình lập phương: 19683 cm3\nVậy các số cần điền vào ô trống theo thứ tự từ trên xuống dưới lần lượt là 18375; 19683.\n\nĐáp án cần chọn là: A",
+        "answer": "A. 18375; 19683"
+    },
+    {
+        "id": 65,
+        "question": "Một hình hộp chữ nhật có chiều dài 8cm, chiều rộng 7 cm và chiều cao 9 cm. Một hình lập phương có cạnh bằng trung bình cộng của ba kích thước của hình hộp chữ nhật trên . Tính:\n\na) Thể tích hình hộp chữ nhật\n\nb) Thể tích hình lập phương",
+        "choices": "['A. a, 8cm3 và b, 512cm3', 'B. a, 504cm3 và b, 8cm3', 'C. a, 505cm3 và b, 512cm3', 'D. a, 504cm3 và b, 512cm3']",
+        "explanation": "a, Thể tích hình hộp chữ nhật là:\n\n8 x 7 x 9 = 504 (cm3)\n\nb, Cạnh hình lập phương dài:\n\\frac{8 + 7 + 9}{3} = 8 (cm)\n\nVậy thể tích hình lập phương là:\n\n8 x 8 x 8 = 512 (cm3)\n\nĐáp số: a, 504cm3\n và b, 512cm3",
+        "answer": "D. a, 504cm3 và b, 512cm3"
+    },
+    {
+        "id": 66,
+        "question": "Chọn câu trả lời đúng.\n\nBạn An đố Mai tìm một số từ bốn số cho trước 64 301, 80 458, 82 361, 83 405, biết rằng:\n\n- Hàng chục nghìn của số cần tìm là 8.\n\n- Nếu làm tròn số cần tìm đến hàng chục thì chữ số hàng chục của số làm tròn là 6.\n\n- Nếu làm tròn số cần tìm đến hàng trăm thì chữ số hàng trăm của số làm tròn là 4.\n\nSố cần tìm là:\n\nA. 64 301\n\nB. 80 458\n\nC. 82 361\n\nD. 83 405",
+        "choices": "['A. 82 361', 'B. 64 301', 'C. 82 360', 'D. 82 400']",
+        "explanation": "Số cần tìm là số 82 361.\n\n- Nếu làm tròn số 82 361 đến hàng chục thì được số 82 360. Số 82 360 có chữ số hàng chục là 6.\n\n- Nếu làm tròn số cần tìm đến hàng trăm thì được số 82 400.",
+        "answer": "A. 82 361"
+    },
+    {
+        "id": 67,
+        "question": "Chữ số 3 trong số thập phân của số 465,732 thuộc hàng nào?",
+        "choices": "['A. hàng chục', 'B. hàng phần trăm', 'C. hàng phần mười', 'D. hàng nghìn']",
+        "explanation": "ta có: Chữ số 3 thuộc hàng phần trăm.",
+        "answer": "B. hang trăm"
+    },
+    {
+        "id": 68,
+        "question": "Trong số thập phân 34,2653 chữ số có giá trị ở hàng phần mười là số:",
+        "choices": "['A. 2', 'B. 3', 'C. 5', 'D. 6']",
+        "explanation": "Theo thứ tự đọc từ trái sang phải.\nTrước dấu phẩy là phần nguyên ta có:\n- hàng chục số 3\n- hàng đơn vị số 4\nSau dấu phẩy là phần thập phân ta có:\n- hàng phần mười số 2\n- hàng phần trăm số 6\n- hàng phần nghìn số 5\n- hàng phần chục nghìn số 3\nVậy ta có số hàng phần mười là 2. Đáp án A. 2",
+        "answer": "A. 2"
+    },
+    {
+        "id": 69,
+        "question": "Số 12,789 có chữ số 8 ở hàng :",
+        "choices": "['A. hàng phần nghìn', 'B. hàng phần trăm', 'C. hàng đơn vị', 'D. hàng chục']",
+        "explanation": "Ta có số 8 nằm ở hàng phần trăm. Ta chọn đáp án B. hàng phần trăm",
+        "answer": "B. hàng phần trăm"
+    },
+    {
+        "id": 70,
+        "question": "“Trong số thập phân 135,43 chữ số 3 ở phần nguyên gấp … lần chữ số 3 ở phần thập phân.” Số thích hợp điền vào chỗ chấm là:",
+        "choices": "['A. 10 000', 'B. 10', 'C. 1 000', 'D. 100']",
+        "explanation": "Đáp án đúng là C\n\nTa thấy số 3 ở phần nguyên của số thập phân 135,43 ở hàng chục vậy nên số 3 ở phần nguyên có giá trị là: 3 x 10 = 30.\n\nSố 3 ở phần thập phân của số thập phân 135,43 ở hàng phần trăm vậy nên số 3 ở phần thập phân có giá trị là: \\frac{3}{100} = 0,03.\n\nDo đó, số 3 ở phần nguyên gấp số 3 ở phần thập phân số lần là: 30 : 0,03 = 1 000.\n\nVậy số 3 ở phần nguyên của số thập phân 135,43 gấp 1 000 lần số 3 ở phần thập phân của số thập phân 135,43. Đáp án C. 1 000",
+        "answer": "C. 1 000"
+    },
+    {
+        "id": 71,
+        "question": "Viết số thập phân. Ba chục đơn vị, năm phần mười, bảy phần nghìn là ...................",
+        "choices": "['A. 30, 57', 'B. 30 507', 'C. 3 507', 'D. 30, 507']",
+        "explanation": "Phần nguyên, ba chục đơn vị là 30\nPhần thập phân, năm phần mười là 0,5; bảy phần nghìn là 0,007\nBa chục đơn vị, năm phần mười, bảy phần nghìn: 30, 507",
+        "answer": "D. 30, 507"
+    },
+    {
+        "id": 72,
+        "question": "\"Hai trăm linh ba đơn vị, một trăm sáu mươi bảy phần nghìn\" = ?",
+        "choices": "['A. 203, 167', 'B. 203 167', 'C. 23, 167', 'D. 203, 0167']",
+        "explanation": "Phần nguyên \"hai trăm linh ba đơn vị\" là 203.\nPhần thập phân \"một trăm sáu mươi bảy phần nghìn\" là 0,167.\nHai trăm linh ba đơn vị, một trăm sáu mươi bảy phần nghìn là 203,167. Đáp án A. 203, 167",
+        "answer": "A. 203, 167"
+    },
+    {
+        "id": 73,
+        "question": "Viết số thích hợp vào chỗ chấm:\n\nb) 0,001 ha = ……...m2        63,9 m2 = ….m2….dm2                 2,7dm2 = ….dm2 …cm2",
+        "choices": "['A. 10m2 63m2 90dm2 2dm2 70cm2', 'B. 1m2 63m2 900dm2 2dm2 70cm2', 'C. 1m2 63m2 90dm2 2dm2 700cm2', 'D. 1m2 63m2 9dm2 2dm2 70cm2']",
+        "explanation": "Đổi đơn vị 1 ha = 1000m2 nên 0,001 ha = 1m2 \nĐổi đơn vị 1m2 = 100dm2 nên 63,9 m2 = 63m2 90dm2\nĐổi đơn vị 1dm2 = 100cm2 nên 2,7dm2 = 2dm2 70cm2\nĐáp án cần điền là C. 1m2 63m2 90dm2 2dm2 70cm2",
+        "answer": "C. 1m2 63m2 90dm2 2dm2 70cm2"
+    },
+    {
+        "id": 74,
+        "question": "Số thích hợp điền vào chỗ chấm của \n6 m2 25cm2 = … cm2 là:",
+        "choices": "['A. 60 025', 'B. 60 25', 'C. 625 cm2', 'D. 600 025 cm2']",
+        "explanation": "Ta có đổi đơn vị 1m2 = 10 000 cm2.\n6m2 25cm2 = 6 x 10 000 + 25 = 60 025 cm2. Đáp án A. 60 025",
+        "answer": "A. 60 025"
+    },
+    {
+        "id": 75,
+        "question": "Điền dấu  ( >,  <  hoặc  = )   thích hợp vào chỗ trống\n\na/ 23ha 450 m2 …….  230 450 m2\nb/ 12 tấn - 8 tạ  …… 4 tấn",
+        "choices": "['A. \"> ; >\"', 'B. \"= ; >\"', 'C. \"= ; =\"', 'D. \"= ; <\"']",
+        "explanation": "Ta đổi 2 bên về cùng một đơn vị trước khi so sánh:\na/ 23ha 450m2 = 23 x 10 000 + 450 = 230 450m2.\nVậy ta cần điền vào dấu =. 23ha 450m2 =  230 450m2\nb/ 12 tấn - 8 tạ = 12 - 8 * 0.1 tấn = 12 - 0.8 = 11.2 tấn > 4 tấn. Nên ta cần điền vào dấu >. 12 tấn - 8 tạ > 4 tấn.\nChọn đáp án B. = ; > ",
+        "answer": "B. =; >"
+    },
+    {
+        "id": 76,
+        "question": "Điền dấu ( >; <; =) thích hợp vào chỗ chấm:\n\n5m 56cm ........ 556cm                                       \n\n5km 7m .............. 57hm",
+        "choices": "['A. \"=; <\"', 'B. \"=; =\"', 'C. \"= ; >\"', 'D. \">; =\"']",
+        "explanation": "Đổi đơn vị: 1m = 100cm, 1km = 10hm, 1hm = 100m, 1m = 0.01hm nên:\n5m 56cm = 556cm. Ta điền vào dấu =                                         \n\n5km 7m = 50,007 hm < 57hm. Ta điền vào dấu <.\nChọn đáp án A. =; <",
+        "answer": "A. =; <"
+    },
+    {
+        "id": 77,
+        "question": "Chữ số 7 trong số thập phân 82,374 có giá trị là:",
+        "choices": "['A. 0,07', 'B. 0,7', 'C. 7', 'D. 0,007']",
+        "explanation": "Vì chữ số 7 nằm ở hàng phần trăm nên có giá trị là 0,07. Chọn đáp án A. 0,007",
+        "answer": "A. 0,07"
+    },
+    {
+        "id": 78,
+        "question": "Chữ số 7 trong số thập phân 98,725 chỉ giá trị là :",
+        "choices": "['A. 7', 'B. 0,007', 'C. 0,07', 'D. 0,7']",
+        "explanation": "Số 7 nằm ở hàng phần mười nên nó có giá trị là 0,7",
+        "answer": "D. 0,7"
+    },
+    {
+        "id": 79,
+        "question": "Giá trị của chữ số 6 trong số thập phân 21,5276 là:",
+        "choices": "['A. 0,0006', 'B. 0,006', 'C. 0,06', 'D. 0,6']",
+        "explanation": "Vì số 6 nằm ở hàng chục nghìn nên nó có giá trị là 0,0006. Ta chọn đáp án A. 0,0006",
+        "answer": "A. 0,0006"
+    },
+    {
+        "id": 80,
+        "question": "Cho 4,53 ha = ……m^{2}.Số thích hợp để điền vào chỗ chấm:",
+        "choices": "['A. 453', 'B. 45 30', 'C. 45 300', 'D. 450 300']",
+        "explanation": "Đổi đơn vị  1 ha = 10 000 m^{2}, nên 4,53 ha = 4,53 * 10 000 = 45 300 m^{2}. Chọn đáp án C. 45 300",
+        "answer": "C. 45 300"
+    },
+    {
+        "id": 81,
+        "question": "Kết quả của phép cộng 631,5 + 28,92 - 479,6 = ?",
+        "choices": "['A. 180,81', 'B. 180,8', 'C. 180,82', 'D. 660,42']",
+        "explanation": "Ta thực hiện từ trái sang phải:\n631,5 + 28,92 - 479,6 = 660,42 - 479,6 = 180.82. Chọn đáp án là C. 180,82",
+        "answer": "C. 180,82"
+    },
+    {
+        "id": 82,
+        "question": "Kết quả của phép cộng \\frac{2}{3} +\\frac{1}{5} là",
+        "choices": "['A. \\frac{13}{15}', 'B. \\frac{12}{15}', 'C. \\frac{13}{5}', 'D. \\frac{17}{15}']",
+        "explanation": "Ta thực hiện quy đồng mẫu số:\n\\frac{2}{3} +\\frac{1}{5} = \\frac{2 x 5}{3 x 5} + \\frac{1 x 3}{5 x 3} = \\frac{10}{15} + \\frac{3}{15} = \\frac{13}{15}. Ta chọn A. \\frac{13}{15}",
+        "answer": "A. \\frac{13}{15}"
+    },
+    {
+        "id": 83,
+        "question": "Kết quả của biểu thức: 75 + (15,2 \\\\times 5) + 30 \\\\div 2 là:",
+        "choices": "['A. 76', 'B. 15', 'C. 166', 'D. 160']",
+        "explanation": "Ta thực hiện phép tính ưu tiên thứ tự trong ngoặc trước, nhân chia trước, cộng trừ sau:\n- Trong ngoặc trước: (15,2 \\\\times 5) = 76\n- 75 + (15,2 \\\\times 5) + 30 \\\\div 2 = 75 + 76 + 30 \\\\div 2\n- Ưu tiên nhân chia trước nên 30 \\\\div 2 = 15.\n- Ta có 75 + 76 + 30 \\\\div 2 = 75 + 76 + 15 = 166.\nVậy chọn đáp án C. 166",
+        "answer": "C. 166"
+    },
+    {
+        "id": 84,
+        "question": "Tính rồi chọn kết quả đúng: \n4\\frac{5}{6} + 2\\frac{3}{4} x 1\\frac{1}{2}\n",
+        "choices": "['A. \\frac{25}{24}', 'B. \\frac{99}{24}', 'C. \\frac{215}{24}', 'D. \\frac{116}{24}']",
+        "explanation": "Ta chuyển thành phân số rồi thực hiện nhân chia trước, cộng trừ sau:\n4\\frac{5}{6} + 2\\frac{3}{4} x 1\\frac{1}{2} = \\frac{4 x 6 + 5}{6} + \\frac{2 x 4 + 3}{4} x \\frac{1 x 2 + 1}{{2}\n= \\frac{29}{6} + \\frac{11}{4} + \\frac{3}{2} = \\frac{29}{6} + \\frac{33}{8} = \\frac{116}{24} + \\frac{99}{24} = \\frac{215}{24}. Vậy đáp án là C. \\frac{215}{24}.",
+        "answer": "C. \\frac{215}{24}"
+    },
+    {
+        "id": 85,
+        "question": "Tính rồi chọn kết quả đúng: \n1\\frac{3}[4}\n+ 2\\frac{6}{7}",
+        "choices": "['A. \\frac{49}{28} ', 'B. \\frac{80}{28}', 'C. \\frac{129}{28}', 'D. \\frac{20}{7}']",
+        "explanation": "Ta có: \n\n1\\frac{3}{4} +2\\frac{6}{7} = \\frac{7}{4} +\\frac{20}{7} =\\frac{49}{28} + \\frac{80}{28} =\\frac{129}{28}\n\nVậy kết quả cần tìm là \\frac{129}{28}\n\nĐáp án cần chọn là C. \\frac{129}{28}",
+        "answer": "C. \\frac{129}{28}"
+    },
+    {
+        "id": 86,
+        "question": "Phân số nào sau đây là phân số thập phân?\n",
+        "choices": "['A. \\frac{1}{5}', 'B. \\frac{2}{10}', 'C. \\frac{6}{7}', 'D. \\frac{3}{4}']",
+        "explanation": "Các phân số thập phân là phân số có mẫu là 10, 100, 1000, ...\nVậy đáp án cần chọn là B. \\frac{2}{10}.",
+        "answer": "B. \\frac{2}{10}"
+    },
+    {
+        "id": 87,
+        "question": "Số thập phân 1,025 được viết dưới dạng phân số thập phân là:",
+        "choices": "['A. \\frac{1025}{1000}', 'B. \\frac{1025}{100}', 'C. \\frac{125}{1000}', 'D. \\frac{1025}{10000}']",
+        "explanation": "Ta cần chuyển vê dạng phân số với mẫu số.\n1,025 = 1 + 0,025 = 1 + \\frac{25}{1000} = \\frac{1025}{1000}.\nVậy ta cần chọn phân số là \\frac{1025}{1000}. Đáp án A. \\frac{1025}{1000}",
+        "answer": "A. \\frac{1025}{1000}"
+    },
+    {
+        "id": 88,
+        "question": "Phân số \\frac{24056}{1000}\n được viết thành số thập phân là :",
+        "choices": "['A. 24,056', 'B. 24,0056', 'C. 24,56', 'D. 240,056']",
+        "explanation": "Ta đổi thành phần nguyên và phần thập phân: \\frac{24056}{1000} = \\frac{24000}{1000} + \\frac{56}{1000} = 24 + \\frac{56}{1000}.\nPhần nguyên là 24, phần thập phân là 0,056. Nên kết quả là 24,056. Chọn đáp án A. 24,056",
+        "answer": "A. 24,056"
+    },
+    {
+        "id": 89,
+        "question": "2 dam^{2} 49 m^{2} = .........m^{2}",
+        "choices": "['A. 2,49', 'B. 2049', 'C. 249', 'D. 2490']",
+        "explanation": "Đổi đơn vị từ dam^{2} sang m^{2}, ta có: 1 dam^{2} = 100m^{2} nên 2 dam^{2} 49 m^{2} = 2 x 100 m^{2} + 49 m^{2} = 249 m^{2}. Đáp án là C. 249 m^{2}",
+        "answer": "C. 249"
+    },
+    {
+        "id": 90,
+        "question": "85 km 2 dam =  ...m",
+        "choices": "['A. 8520', 'B. 850 200', 'C. 850 020', 'D. 85 020']",
+        "explanation": "Đổi các đơn vị km, dam sang m, ta có 1 km = 1000m, 1 dam = 10m.\n85 km 2 dam = 85 x 1000 m + 2 x 10 m = 85 000 + 20 = 85 020m.\nVậy đáp án là A. 85 020.",
+        "answer": "A. 85 020"
+    },
+    {
+        "id": 91,
+        "question": "Phần nguyên của số 1942,54 là:",
+        "choices": "['A. 54', 'B. 19425', 'C. 1942', 'D. 19']",
+        "explanation": "Phần nguyên của số 1942,54 là phần trước dấu phẩy là 1942. Chọn đáp án C. 1924",
+        "answer": "C. 1942"
+    },
+    {
+        "id": 92,
+        "question": "Phần nguyên của số thập phân 23,45 là:",
+        "choices": "['A. 45', 'B. 23', 'C. 234', 'D. 2345']",
+        "explanation": "Phần nguyên của số thập phân là phần đứng bên trái dấu phẩy của số thập phân. Vậy phần nguyên có số thập phân 23,45 là 23.\n\nĐáp án cần chọn là: B",
+        "answer": "B. 23"
+    },
+    {
+        "id": 93,
+        "question": "Phần thập phân của số 54,192342 là :",
+        "choices": "['A. 192342', 'B. 19234', 'C. 54', 'D. 1923']",
+        "explanation": "Phần nguyên của số thập phân là phần đứng bên trái dấu phẩy của số thập phân, còn phần thập phân là bên phải dấu phẩy. Vậy phần thập phân có số thập phân 54,192342 là 192342.\nĐáp án là A. 192342\n",
+        "answer": "A. 192342"
+    },
+    {
+        "id": 94,
+        "question": "Mua 5m vải hết 80 000 đồng. Hỏi mua 7m vải loại đó hết bao nhiêu tiền?",
+        "choices": "['A. 112 000 đồng', 'B. 16 000 đồng', 'C. 12 000 đồng', 'D. 120 000 đồng']",
+        "explanation": "Tóm tắt:\n\n5m   :    80 000 đồng\n\n7m   :    ... đồng?\n\nGiải\n\nMua 1m vải hết: 80 000 : 5 = 16 000 (đồng)\n\nMua 7m vải hết: 16 000 x 7 = 112 000 (đồng)\n\nĐáp số: A. 112 000 đồng.",
+        "answer": "A. 112 000 đồng"
+    },
+    {
+        "id": 95,
+        "question": "Mua 5m vải hết 150000 đồng. Mua 25 m vải loại đó thì phải trả nhiều hơn là .......................... đồng.",
+        "choices": "['A. 500000 (đồng)', 'B. 150000 (đồng)', 'C. 750000 (đồng)', 'D. 600000 (đồng)']",
+        "explanation": "Để biết số tiền trả nhiều hơn so với khi mua 25m vải so với 5m vải. Ta cần tìm số tiền mua 25m vải rồi trừ đi số tiền mua 5m vải.\nMua 1m vải hết: 150000 / 5 = 30000 (đồng).\nMua 25m vải hết: 30000 * 25 = 750000 (đồng).\nVậy ta phải trả thêm số tiền là: 750000 - 150000 = 600000 (đồng). Đáp án D. 600000 (đồng)",
+        "answer": "D. 600000 (đồng)"
+    },
+    {
+        "id": 96,
+        "question": "Số thập phân 2,35 viết dưới dạng hỗn số là:",
+        "choices": "['A. 2\\frac{35}{10}', 'B. 2\\frac{35}{1000}', 'C. 2\\frac{35}{100}', 'D. 2\\frac{350}{100}']",
+        "explanation": "Số thập phân 2,35 = 2 + 0,35 = 2 + \\frac{35}{100}.\nVậy nên hỗn số của số thập phân 2,35 là 2\\frac{35}{100}. Đáp án C. 2\\frac{35}{100}",
+        "answer": "C. 2\\frac{35}{100}"
+    },
+    {
+        "id": 97,
+        "question": "Hỗn số 2\\frac{3}{5}\n được viết dưới dạng phân số là:",
+        "choices": "['A. \\frac{12}{5} ', 'B. \\frac{13}{10} ', 'C. \\frac{3}{5} ', 'D. \\frac{13}{5} ']",
+        "explanation": "Ta chuyển hỗn số 2\\frac{3}{5} thành dạng phân số:\n2\\frac{3}{5} = \\frac{2 x 5 + 3}{5} = \\frac{13}{5}. Đáp án là D. \\frac{13}{5} ",
+        "answer": "D. \\frac{13}{5} "
+    },
+    {
+        "id": 98,
+        "question": "Hỗn số 3 \\\\frac{2}{5} chuyển thành phân số là:",
+        "choices": "['A. \\\\frac{17}{5}', 'B. \\\\frac{7}{5}', 'C. \\\\frac{13}{5}', 'D. \\\\frac{10}{5}']",
+        "explanation": "Để chuyển hỗn số thành phân số, ta cần phải nhân phần nguyên 3 với mẫu số là 5, cộng với tử số:\nTa có phân số được viết là:\n- Tử số: 3 x 5 + 2 = 17.\n- Mẫu số: 5\n3\\\\frac{2}{5} = \\\\frac{3 x 5 + 2}{5} = \\\\frac{17}{5}. Đáp án là A. \\\\frac{17}{5}",
+        "answer": "A. \\\\frac{17}{5}"
+    },
+    {
+        "id": 99,
+        "question": "Dãy số nào dưới đây được viết theo thứ tự từ lớn đến bé:",
+        "choices": "['A. A. 8; 8,76; 8,093; 8,901', 'B. B. 5,494; 5,493; 5,392; 5,001', 'C. C. 6,732; 7; 7,009; 7,013', 'D. D. 13; 12,47; 12,51; 12,001']",
+        "explanation": "Ta sẽ kiểm tra thứ tự từ lớn đến bé của từng câu:\n- Câu A: 8,901 > 8,76 > 8,093 > 8 => Vậy A không chính xác.\n- Câu B: 5,494 > 5,493 > 5,392 > 5,001 => Vậy B là đáp án chính xác.\n- Câu C: 7,013 > 7,009 > 7 > 6,732 => Vậy C không chính xác.\n- Câu D: 13 > 12,51 > 12,47 > 12,001 => Vậy D không chính xác.\nVậy B là đáp án chính xác các số theo thứ tự từ lớn đến bé.",
+        "answer": "B. 5,494; 5,493; 5,392; 5,001"
+    },
+    {
+        "id": 100,
+        "question": "Dãy số nào dưới đây được viết theo thứ tự từ bé đến lớn? 5,017 ; 5, 1 ; 5,028 ;   5,018; 5,039 ; 5,029",
+        "choices": "['A. 5,017 ; 5,018 ; 5, 1 ; 5,028 ; 5,039 ; 5,029', 'B. 5,017 ; 5,018 ; 5,028 ; 5,1 ; 5,039 ; 5,029', 'C. 5,017 ; 5,018; 5,028 ; 5,029 ; 5, 039 ; 5,1', 'D. 5,1 ; 5,017 ; 5,018; 5,028 ; 5,029 ; 5, 039']",
+        "explanation": "Thứ tự từ bé đến lớn là: 5,017 ; 5,018; 5,028 ; 5,029 ; 5, 039 ; 5,1. Đáp án C là chính xác.",
+        "answer": "C. 5,017 ; 5,018; 5,028 ; 5,029 ; 5, 039 ; 5,1"
+    },
+    {
+        "id": 101,
+        "question": "Một cửa hàng bán gạo ngày thứ nhất bán được 47 yến gạo, ngày thứ hai bán được gấp đôi ngày thứ nhất, ngày thứ ba bán được ít hơn tổng của ngày thứ hai và ngày thứ ba 120kg gạo. Hỏi sau ba ngày cửa hàng bán được bao nhiêu tạ gạo?",
+        "choices": "['A. 1290 kg', 'B. 2700 tạ gạo', 'C. 27 tạ gạo', 'D. 270 tạ gạo']",
+        "explanation": "Đổi 47 yến = 470kg\n\nNgày thứ hai cửa hàng bán được số ki-lô-gam gạo là:\n\n470 x 2 = 940 (kg)\n\nNgày thứ ba cửa hàng bán được số ki-lô-gam gạo là:\n\n470 + 940 – 120 = 1290 (kg)\n\nSau ba ngày, cửa hàng bán được số ki-lô-gam gạo là:\n\n470 + 940 + 1290 = 2700 (kg)\n\nĐổi 2700kg = 27 tạ\n\nĐáp số: C. 27 tạ gạo.",
+        "answer": "C. 27 tạ gạo"
+    },
+    {
+        "id": 102,
+        "question": "Có 3 bao gạo như nhau cân nặng tất cả 45 kg và 1 bao đậu xanh cân nặng 10 kg. Hỏi 5 bao gạo như thế và 1 bao đậu xanh cân nặng bao nhiêu ki-lô-gam?",
+        "choices": "['A. 90 kg', 'B. 85 kg', 'C. 75 kg', 'D. 15 kg']",
+        "explanation": "Bài giải\n\nMỗi bao gạo cân nặng số ki-lô-gam là:\n\n45 : 3 = 15 (kg)\n\n5 bao gạo cân nặng số ki-lô-gam là:\n\n15 × 5 = 75 (kg)\n\n5 bao gạo và 1 bao đậu xanh cân nặng số ki-lô-gam là:\n\n75 + 10 = 85 (kg)\n\nĐáp số: B. 85 kg",
+        "answer": "B. 85 kg"
+    },
+    {
+        "id": 103,
+        "question": "Có 4 xe ô tô, mỗi xe chở 4 500 kg gạo đến giúp đỡ đồng bào vùng bị lũ lụt. Dự kiến tất cả số gạo đó được chia đều cho 5 xã. Hỏi mỗi xã sẽ nhận được bao nhiêu ki – lô – gam gạo?",
+        "choices": "['A. 3 600 kg gạo', 'B. 18 000 kg gạo', 'C. 4 600 kg gạo', 'D. 4 000 kg gạo']",
+        "explanation": "4 xe ô tô chở được tất cả số gạo là:\n\n4 500 × 4 = 18 000 (kg)\n\nMỗi xã sẽ nhận được số ki – lô – gam gạo là:\n\n18 000 : 5 = 3 600 (kg)\n\nĐáp số: A. 3 600 kg gạo",
+        "answer": "A. 3 600 kg gạo"
+    },
+    {
+        "id": 104,
+        "question": "Mỗi ki-lô-gam gạo tẻ giá 5 600 đồng, mối ki-lô-gam gạo nếp giá 8 600 đồng. Hỏi nếu mua 36 kg gạo tẻ và 86 kg gạo nếp thì hết tất cả bao nhiêu tiền?",
+        "choices": "['A. 739 600 (đồng) ', 'B. 940 200 đồng', 'C. 941 000 đồng', 'D. 941 200 đồng']",
+        "explanation": "Số tiền mua gạo tẻ là:\n\n5 600 × 36 = 201 600 (đồng) \n\nSố tiền mua gạo nếp là:\n\n8 600 × 86 = 739 600 (đồng) \n\nSố tiền mua gạo nếp và tẻ là:\n\n201 600 + 739 600 = 941 200 (đồng) \n\nĐáp số: 941 200 đồng",
+        "answer": "D. 941 200 đồng"
+    },
+    {
+        "id": 105,
+        "question": "Mỗi túi gạo có 3 kg gạo . Hỏi 5 túi gạo có bao nhiêu ki-lô-gam gạo ?",
+        "choices": "['A. 35 (kg)', 'B. 15 (kg)', 'C. 20 (kg)', 'D. 45 (kg)']",
+        "explanation": "Bài giải\n5 túi gạo có số ki-lô-gam gạo là :\n3 × 5 = 15 (kg). Đáp án là B. 15 (kg)",
+        "answer": "B. 15 (kg)"
+    },
+    {
+        "id": 106,
+        "question": "Diện tích toàn phần của một hình lập phương bằng 486 dm^{2}. Vậy thể tích của hình lập phương đó là:",
+        "choices": "['A. 729 dm^{3}', 'B. 324 dm^{3}', 'C. 486 dm^{3}', 'D. 121,5 dm^{3}']",
+        "explanation": "Diện tích toàn phần của hình lập phương có cạnh a là 6 x a x a.\nVậy nên 6 x a x a = 486 dm^{2}=> a x a = 81 => a = 9 (dm^{2})\nVậy cạnh của hình lập phương đó là 9.\nThể tích của hình lập phương là a x a x a = 9 x 9 x 9 = 729 (dm^{3}). Vậy đáp án là A. 729 dm^{3}",
+        "answer": "A. 729 dm^{3}"
+    },
+    {
+        "id": 107,
+        "question": "Cho hình lập phương có diện tích toàn phần bằng \\frac{3}{4}\n của 648cm2. Tính thể tích của hình lập phương đó.",
+        "choices": "['A. 128 cm2', 'B. 729cm3', 'C. 81 cm2', 'D. 486 cm2']",
+        "explanation": "Diện tích toàn phần của hình lập phương đó là:\n\n648 x \\frac{3}{4} = 486 (cm2)\n\nDiện tích một mặt của hình lập phương đó là:\n\n486 : 6 = 81 (cm2)\n\nMà 81 = 9 x 9\n\nĐộ dài một cạnh của hình lập phương đó là: 9 cm\n\nThể tích của hình lập phương đó là:\n\n9 x 9 x 9 = 729 (cm3)\n\nĐáp số: 729cm3\n\nChọn B",
+        "answer": "B. 729cm3"
+    },
+    {
+        "id": 108,
+        "question": "Một thùng đựng 65kg đường. Người ta lấy ra từ thùng đó 23,5kg đường, sau đó lại lấy ra 8,75kg đường nữa. Hỏi trong thùng còn lại bao nhiêu ki-lô-gam đường?",
+        "choices": "['A. 32,75 kg', 'B. 41,5 kg', 'C. 32,5 kg', 'D. 31,75 kg']",
+        "explanation": "Người ta đã lấy ra số ki-lô-gam đường là:\n65 - 23.5 - 8.75 = 41,5 - 8,75 = 32,75 (kg).\nVậy đáp án là A. 32,75 kg",
+        "answer": "A. 32,75 kg"
+    },
+    {
+        "id": 109,
+        "question": "1 phút 15 giây = ?",
+        "choices": "['A. 1,15 phút', 'B. 1,25 phút', 'C. 115 giây', 'D. 1,35 giây']",
+        "explanation": "Ta đổi đơn vị như sau: 1 phút = 60 giây, vậy 1 phút 15 giây = 60 + 15 = 75 giây. \nHoặc là nếu đổi sang phút: 15 giây = 15 / 60 = 0.25 phút, vậy nên 1 phút 15 giây = 1 phút + 0, 25 phút = 1,25 phút.\nXem qua các đáp án, ta phải chọn đáp án là B. 1,25 phút",
+        "answer": "B. 1,25 phút"
+    },
+    {
+        "id": 110,
+        "question": "Số thập phân gồm 18 đơn vị, 8 phần mười  và 6 phần nghìn được viết là:",
+        "choices": "['A. 18 806', 'B. 18,8006', 'C. 18,806', 'D. 18,86']",
+        "explanation": "Số thập phân gồm 18 đơn vị, 8 phần mười  và 6 phần nghìn được viết là: 18 + 0,8 + 0,006.\nVì 18 đơn vị = 18; 8 phần mười là 8 * 0,1 = 0,8; 6 phần nghìn là 6 x 0,001 = 0,006.\nVậy số thập phân đó là 18,806. Đáp án là C. 18,806",
+        "answer": "C. 18,806"
+    },
+    {
+        "id": 111,
+        "question": "Diện tích thửa ruộng hình thang có độ dài hai đáy lần lượt là 20 m; 15 m, chiều cao là 10m là:",
+        "choices": "['A. 165 m^2', 'B. 170 m^2', 'C. 175 m^2', 'D. 180 m^2']",
+        "explanation": "Diện tích hình thang là (đáy lớn + đáy bé) x chiều cao : 2 = (20 + 15) x 10 : 2 = 175 m^2.\nVậy đáp án là C. 175 m^2",
+        "answer": "C. 175 m^2"
+    },
+    {
+        "id": 112,
+        "question": "Chu vi của một hình chữ nhật là 180 m. Chiều rộng kém chiều dài 20 m. Tính diện tích của hình chữ nhật đó? ",
+        "choices": "['A. 90m', 'B. 35m2', 'C. 55m2', 'D. 1925m2']",
+        "explanation": "Nửa chu vi hình chữ nhật là:\n\n180 : 2 =90 (m)\n\nChiều rộng hình chữ nhật là:\n\n(90 - 20) : 2 = 35  (m)\n\nChiều dài hình chữ nhật là:\n\n35 + 20 = 55(m)\n\nDiện tích của hình chữ nhật là \n\n55 x 35 = 1925 (m2)\n\nĐáp số: D. 1925m2",
+        "answer": "D. 1925m2"
+    },
+    {
+        "id": 113,
+        "question": "Số 0,95 phải nhân với số nào để được 9,5? Em hãy khoanh tròn vào chữ cái đặt trước kết quả đúng.",
+        "choices": "['A. 10000', 'B. 1000', 'C. 10', 'D. 100']",
+        "explanation": "Để số 0,95 trở thành 9,5 thì ta đã dịch chuyển dấu phẩy sang phải một số, nên ta cần nhân với 10. Đáp án là C. 10",
+        "answer": "C. 10"
+    },
+    {
+        "id": 114,
+        "question": "Từ số 1,235 thành 123,5 thì ta cần nhân số này với bao nhiêu ?",
+        "choices": "['A. 10000', 'B. 1000', 'C. 10', 'D. 100']",
+        "explanation": "Số 1,235 thành 123,5, ta đã dịch sang phải 2 số nên ta cần nhân với 100. Đáp án là D. 100",
+        "answer": "D. 100"
+    },
+    {
+        "id": 115,
+        "question": "Với số 198,77, ta dịch dấu phẩy sang trái 2 chữ số thì số mới là bao nhiêu ? ",
+        "choices": "['A. 1,9877', 'B. 19877', 'C. 19,877', 'D. 1987,7']",
+        "explanation": "Dịch dấu phẩy sang trái 2 chữ số, ta sẽ chia số đó với 100.\nVậy nên số mới là 198,77 : 100 = 1,9877. Đáp án A. 1,9877",
+        "answer": "A. 1,9877"
+    },
+    {
+        "id": 116,
+        "question": "Trung bình cộng của 1,12 ; 2,78 ; 3 là:",
+        "choices": "['A. 3,2', 'B. 2,33', 'C. 2,3', 'D. 2,13']",
+        "explanation": "Ta có 1,12; 2,78; 3 có tổng cộng 3 số. Trung bình cộng của 3 số  trên được tính là (1,12 + 2,78 + 3) / 3 = 2,3. Chọn đáp án C. 2,3",
+        "answer": "C. 2,3"
+    },
+    {
+        "id": 117,
+        "question": "Một đàn gà có 16 con gà trống và 34 con gà mái. Tỉ số phần trăm của số gà trống và số gà của đàn?",
+        "choices": "['A. 32%', 'B. 50%', 'C. 16%', 'D. 34%']",
+        "explanation": "Cả đàn có số con gà là:\n\n16 + 34 = 50 (con)\n\nTỉ số phần trăm của số gà trống và số gà của đàn là: 16 : 50 = 0,32 = 32%. Chọn đáp án A. 32%",
+        "answer": "A. 32%"
+    },
+    {
+        "id": 118,
+        "question": "Tìm tỉ số phần trăm của hai số: 0,3 tạ và 50 kg\n",
+        "choices": "['A. 60%', 'B. 70%', 'C. 30%', 'D. 50%']",
+        "explanation": "Đổi đơn vị từ tạ sang kg ta có 1 tạ = 100kg nên 0,3 tạ = 0,3 * 100 = 30 kg.\nTỉ số giữa 0,3 tạ với 50 kg là 30 kg / 50 kg * 100 = 60%. Đáp án A. 60%",
+        "answer": "A. 60%"
+    },
+    {
+        "id": 119,
+        "question": "Tỉ số phần trăm của hai số 18 và 50 là:",
+        "choices": "['A. 32%', 'B. 36%', 'C. 33%', 'D. 34%']",
+        "explanation": "Tỉ số phần trăm của 2 số là 18 / 50 * 100 = 36%",
+        "answer": "B. 36%"
+    },
+    {
+        "id": 120,
+        "question": "Số lớn nhất trong các số: 9,925; 9,259; 9,952; 9,95 là:",
+        "choices": "['A. 9,925', 'B. 9,259', 'C. 9,95', 'D. 9,952']",
+        "explanation": "Để so sánh các số thập phân, ta so sánh từ trái sang phải các hàng. \nTa có thứ tự từ bé đến lớn của các số là: 9,259 < 9,925 < 9,95 < 9,952. Vậy số lớn nhất là 9,952. Đáp án là D. 9,952",
+        "answer": "D. 9,952"
+    },
+    {
+        "id": 121,
+        "question": "Tìm số lớn nhất trong các số sau: 59 876;  651 321;  499 873;  902 011.\n",
+        "choices": "['A. 902 011', 'B. 59 876', 'C. 499 873', 'D. 651 321']",
+        "explanation": "Số lớn nhất trong các số đã cho là: 902 011 (vì có chữ số hàng trăm nghìn lớn nhất). Đáp án là A. 902 011.\n",
+        "answer": "A. 902 011"
+    },
+    {
+        "id": 122,
+        "question": "Tìm hiệu của số lớn nhất và số nhỏ nhất trong các số sau: 70; 0; 12; 27; 80; 3.\n",
+        "choices": "['A. 80', 'B. 70', 'C. 90', 'D. 60']",
+        "explanation": "Số lớn nhất trong các số trên là: 80\n\nSố nhỏ nhất trong các số trên là: 0\n\nHiệu hai số là: 80 – 0 = 80\n\nĐáp số: A. 80",
+        "answer": "A. 80"
+    },
+    {
+        "id": 123,
+        "question": "Số bé nhất trong các số 0,56; 0,65; 0,596; 0,559 là:",
+        "choices": "['A.  0,559', 'B. 0,65', 'C. 0,596', 'D. 0.56']",
+        "explanation": "Đáp án đúng là: D\n\nSố 0,56; 0,596; 0,559 có hàng phần mười là 5.\n\n+ Số 0,56 có hàng phần trăm là 6;\n\n+ Số 0,596 có hàng phần trăm là 9;\n\n+ Số 0,559 có hàng phần trăm là 5.\n\nDo 5 < 6 < 9 nên 0,559 < 0,56 < 0,596.\n\nSố 0,65 có hàng phần mười là 6.\n\nDo 5 < 6 nên 0,559 < 0,56 < 0,596 < 0,65.\n\nVậy số bé nhất trong các số trên là: 0,559. Đáp án đúng là A. 0,559",
+        "answer": "A. 0,559"
+    },
+    {
+        "id": 124,
+        "question": "Kết quả của biểu thức 87,5 x 10 : 0,1 là:",
+        "choices": "['A. 8750', 'B. 5', 'C. 87,5', 'D. 8,75']",
+        "explanation": "Ta thực hiện biểu thức, nhân chia trước, cộng trừ sau, ở đây chỉ có các phép nhân và chia nên ta thực hiện từ trái sang phải:\n87,5 x 10 : 0,1 = 875 : 0.1 = 8750. Nên đáp án đúng là A. 8750",
+        "answer": "A. 8750"
+    },
+    {
+        "id": 125,
+        "question": "Một thư viện có 6000 quyển sách. Cứ sau mỗi năm số sách của thư viện lại được tăng thêm 20% (so với số sách của năm trước). Hỏi sau hai năm thư viện đó có tất cả bao nhiêu quyển sách ?",
+        "choices": "['A. 7200', 'B. 1200', 'C. 1440', 'D. 8640 quyển']",
+        "explanation": "Trong năm đầu, số sách tăng thêm là:\n\n6000 x 20 : 100 = 1200 (quyển)\n\nSau một năm số sách là:\n\n6000 + 1200 = 7200 (quyển)\n\nTrong năm thứ hai, số sách tăng thêm là:\n\n7200 x 20 : 100 = 1440 (quyển)\n\nSau hai năm số sách thư viện có tất cả là:\n\n7200 + 1440 = 8640 (quyển)\n\nĐáp số: D. 8640 quyển.",
+        "answer": "D. 8640"
+    },
+    {
+        "id": 126,
+        "question": "Một số sau khi giảm đi 20% thì phải tăng thêm bao nhiêu phần trăm số mới để lại được số cũ.",
+        "choices": "['A. 15%', 'B. 25%', 'C. 20%', 'D. 24%']",
+        "explanation": "Một số giảm đi 20% tức là giảm đi 1/5 giá trị của số đó.\n\nVậy phải tăng số mới thêm 1/4 của nó tức là 25% thì được số ban đầu. Đáp án là B. 25%",
+        "answer": "B. 25%"
+    },
+    {
+        "id": 127,
+        "question": "Một số sau khi giảm đi 20% thì phải tăng thêm bao nhiêu phần trăm số mới để lại được số cũ.",
+        "choices": "['A. 30%', 'B. 10%', 'C. 25%', 'D. 20%']",
+        "explanation": "Một số giảm đi 20% tức là giảm đi  của nó.\n\nSố cũ:  5 phần                                                \n\nSố mới ; 4 phần                                       \n\nVậy phải tăng số mới thêm 1/4  của nó tức 25% để lại được số ban đầu\n\nĐáp số: C. 25%",
+        "answer": "C. 25%"
+    },
+    {
+        "id": 128,
+        "question": "Một cửa hàng sau khi giảm giá 10% thì giá bán một chiếc ti vi là 500 000 đồng. Hỏi nếu giảm giá 20% thì giá bán chiếc ti vi đó là bao nhiêu tiền?",
+        "choices": "['A. 1 000 000 đồng.', 'B. 2 000 000 đồng.', 'C. 3 000 000 đồng.', 'D. 4 000 000 đồng.']",
+        "explanation": "500 000 đồng ứng với tỉ số phần trăm giá đã định là:\n\n100% – 10% = 90% (giá đã định)\n\nLúc đầu cửa hàng định giá chiếc ti vi đó là:\n\n4500000 : 90 × 100 = 5000000 (đồng)\n\nNếu giảm giá 20% thì giá chiếc ti vi đó là:\n\n5000000 × (100% – 20%) = 4000000 (đồng)\nĐáp số: D. 4 000 000 đồng.",
+        "answer": "D. 4 000 000 đồng."
+    },
+    {
+        "id": 129,
+        "question": "Năng suất lao động tăng 25%. Hỏi khi hoàn thành sản phẩm thì thời gian sẽ giảm bao nhiêu %?",
+        "choices": "['A. 20%', 'B. 30%', 'C. 40%', 'D. 50%']",
+        "explanation": "Giả sử mỗi giờ làm 100 sản phẩm, năng suất tăng 25% thì được 100 x 1,25 = 125 (sản phẩm)\n\nThời gian hoàn thành 100 sản phẩm: 100 : 125 = 4/5 (giờ) = 80% (giờ)\n\nTỉ số phần trăm thời gian được giảm:  100% - 80% = 20%\nVậy đáp án là A. 20%",
+        "answer": "A. 20%"
+    },
+    {
+        "id": 130,
+        "question": "Giá bán một quyển sách là 12000 đồng. Nhân dịp Trung thu, nhà sách giảm giá 15%. Sau khi giảm giá, giá của quyển sách đó còn lại là bao nhiêu?",
+        "choices": "['A. 102850 đồng', 'B. 102085 đồng', 'C. 102000 đồng', 'D. 100000 đồng']",
+        "explanation": "Tỉ số phần trăm của giá sách sau khi giảm và giá bán ban đầu của quyển sách là:\n\n100% − 15% = 85%\n\nGiá của quyển sách sau khi giảm giá là:\n\n120000 : 100 × 85 = 102000 (đồng)\n\nĐáp số: 102000 đồng.\n\nĐáp án C. 102000 đồng.",
+        "answer": "C. 102000 đồng"
+    },
+    {
+        "id": 131,
+        "question": "Phượng Đoàn mua lẻ một món hàng với giá \"24 nghìn giảm giá 12,5%\"\nSau đó cô ấy bán lại số hàng tiền lãi bằng 100/3% tiền vốn bỏ ra sau khi đã giảm bớt 20% trên giá niêm yết. Hỏi giá (nghìn đồng) cô ấy niêm yết là bao nhiêu?",
+        "choices": "['A. 30 000 (đ)', 'B. 35 000 (đ)', 'C. 28 000 (đ)', 'D. 78 000 (đ)']",
+        "explanation": "Số tiền sau khi giảm là:24 000 x12:100= 3000 (đ)\nSố tiền người đó mua là: 24 000-3000=21 000 (đ)\nSố tiền lãi khi bán là; 21 000 x100/3 :100= 7000 (đ)\nSố tiền bán món hàng đó là: 21 000+7000=28 000 (đ)\n28000 đ ứng với số phần trăm giá niêm yết là: 100%-20%= 80% (giá niêm yết)\nPhượng Đoàn đã niêm yết là: 28 000 x100 :80= 35 000(đ)\nChọn đáp án B. 35 000 (đ)",
+        "answer": "B. 35 000 (đ)"
+    },
+    {
+        "id": 132,
+        "question": "Viết và đọc các số: \"Ba mươi hai triệu\"",
+        "choices": "['A. 300 000 000', 'B. 320 000 000', 'C. 302 000 000', 'D. 32 000 000']",
+        "explanation": "Ba mươi hai triệu, ta có:\n- Ba mươi hai: 32.\n- Triệu: 1 000 000\nNên ba mươi hai triệu là 32 000 000. Đáp án D. 32 000 000",
+        "answer": "D. 32 000 000"
+    },
+    {
+        "id": 133,
+        "question": "Đọc số \"Ba trăm linh tám triệu hai trăm năm mươi nghìn bảy trăm linh năm\" và ghi ra số:",
+        "choices": "['A. 308250705', 'B. 308250750', 'C. 308257005', 'D. 380250705']",
+        "explanation": "\"Ba trăm linh tám triệu hai trăm năm mươi nghìn bảy trăm linh năm\"\n- Ba trăm linh tám: 308.\n- triệu: 1 000 000.\n- Ba răm linh tám triệu là 308 000 000\n- hai trăm năm mươi: 250.\n- nghìn: 1 000\n- hai trăm năm mươi nghìn: 250 000.\n- bảy trăm linh năm: 705.\nNên \"Ba trăm linh tám triệu hai trăm năm mươi nghìn bảy trăm linh năm\" là 308 000 000 + 250 000 + 705 = 308250705. Chọn đáp án A. 308250705",
+        "answer": "A. 308250705"
+    },
+    {
+        "id": 134,
+        "question": "Số \"Ba mươi hai triệu năm trăm mười sáu nghìn bốn trăm chín mươi bảy\" được viết như thế nào ?",
+        "choices": "['A. 325016497', 'B. 32516497', 'C. 32516490', 'D. 32510497']",
+        "explanation": "\"Ba mươi hai triệu năm trăm mười sáu nghìn bốn trăm chín mươi bảy\", ta cần viết số đó theo từng hàng triệu, nghìn, trăm, đơn vị:\n- Ba mươi hai triệu: 32 000 000.\n- năm trăm mười sáu nghìn: 516 000\n- bốn trăm chín mươi bảy: 497\nNên \"Ba mươi hai triệu năm trăm mười sáu nghìn bốn trăm chín mươi bảy\" là: 32 000 000 + 516 000 + 497 = 32 516 497. Chọn đáp số B. 32516497",
+        "answer": "B. 32516497"
+    },
+    {
+        "id": 135,
+        "question": "Viết số thích hợp vào chỗ chấm:\n\n12 ngày = ...giờ\n\n3,4 ngày = ...giờ\n\n4 ngày 12 giờ = ...giờ\n\n0,5giờ = ... phút",
+        "choices": "['A. 288; 81,6; 180; 30', 'B. 288; 81; 108; 30', 'C. 288; 81,6; 108; 30', 'D. 280; 81,6; 108; 30']",
+        "explanation": "Ta đổi các đơn vị theo ngày và giờ: 1 ngày = 24 giờ, 1 giờ = 60 phút.\nNên ta có:\n12 ngày = 12 * 24 giờ = 288 giờ\n\n3,4 ngày = 3,4 *24 giờ = 81,6 giờ\n\n4 ngày 12 giờ = 4 * 24 giờ + 12 giờ = 108 giờ\n\n0,5 giờ = 0.5 * 60 phút = 30 phút\nĐáp án là: C. 288; 81,6; 108; 30",
+        "answer": "C. 288; 81,6; 108; 30"
+    },
+    {
+        "id": 136,
+        "question": "Kết quả của X trong biểu thức:  X \\\\div 2,04 = 7,5 \\\\div 5 là:",
+        "choices": "['A. 3,6', 'B. 306', 'C. 36', 'D. 3,06']",
+        "explanation": "Ta đưa 2,04 sang vế phải để tính X, ta có:\nX \\\\div 2,04 = 7,5 \\\\div 5 => X = 7,5 \\\\div 5 \\\\times 2,04 = 3,06\nVậy X = 3,06 chọn đáp án D. 3,06",
+        "answer": null
+    },
+    {
+        "id": 137,
+        "question": "Kết quả của biểu thức: 5  x 134 x 2 là:",
+        "choices": "['A. 1340', 'B. 670', 'C. 1350', 'D. 1430']",
+        "explanation": "Trong biểu thức chỉ có phép nhân nên ta thực hiện chúng từ trái sang phải:\n5  x 134 x 2 = 670 x 2 = 1340. Đáp án là A. 1340.",
+        "answer": "A. 1340"
+    },
+    {
+        "id": 138,
+        "question": "Cho biểu thức: 567 × 5 – x = 1107. Giá trị của x trong biểu thức đã cho là:\n\n",
+        "choices": "['A. 1728', 'B. 2835', 'C. 1107', 'D. 567']",
+        "explanation": "Ta chuyển vế 567× 5 sang vế phải: 567 × 5 - x = 1107 => -x = 1107 - 567 × 5 = 1107 - 2835\n=> -x = -1728 => x = 1728.\nVậy đáp án là A. 1728 ",
+        "answer": "A. 1728"
+    },
+    {
+        "id": 139,
+        "question": "Tính giá trị của x trong biểu thức sau:                \n\n             357 : ( 87: x ) = 119.",
+        "choices": "['A. 357', 'B. 118', 'C. 29', 'D. 87']",
+        "explanation": "357: (87 : x) =119\n\n \n\n87 : x =357 : 119         \n\n \n\n87 : x =3                 \n\n \n\nx =87 : 3             \n\n \n\nx = 29   \nVậy đáp án là C. 29 ",
+        "answer": "C. 29"
+    }
+]

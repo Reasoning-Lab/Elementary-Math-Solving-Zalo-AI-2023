@@ -81,6 +81,12 @@ class ModelArguments:
             )
         },
     )
+    token: Optional[str] = field(
+        default=None,
+        metadata={
+            "help": "HuggingFace access token read for load models"
+        }
+    )
     load_in_8bit: bool = field(default=False, metadata={"help": "Whether to load the model in 8bit mode or not."})
     load_in_4bit: bool = field(default=False, metadata={"help": "Whether to load the model in 4bit mode or not."})
     bnb_4bit_quant_type: Optional[str] = field(
@@ -393,7 +399,7 @@ def main():
         else:
             tokenizer.pad_token = tokenizer.eos_token
         logger.info("Add pad token: {}".format(tokenizer.pad_token))
-
+    tokenizer.padding_side = 'right'
     logger.debug(f"Tokenizer: {tokenizer}")
     IGNORE_INDEX = LabelSmoother.ignore_index if data_args.ignore_pad_token_for_loss else tokenizer.pad_token_id
 
@@ -476,7 +482,6 @@ def main():
             text_choices = "".join(choices)
             
             prompt = (
-                "<s>\n"
                 "Below is a math exercise. Provide a solution to that problem, if given multiple choices to answer; please give a final choice for solving that problem.\n"
                 f"### Question: {question}\n"
             )
@@ -612,6 +617,7 @@ def main():
         use_cache=False if training_args.gradient_checkpointing else True,
         device_map=get_kbit_device_map(),
         quantization_config=get_quantization_config(model_args),
+        token=model_args.token
     )
     logger.info("*** Model loaded! ***")
 
@@ -624,9 +630,8 @@ def main():
         dataset_text_field="text",
         max_seq_length=max_length,
         tokenizer=tokenizer,
-        packing=False,
+        packing=True,
         peft_config=get_peft_config(model_args),
-        neftune_noise_alpha=5,
     )
 
     ###############

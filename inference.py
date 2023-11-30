@@ -13,6 +13,8 @@ import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from peft import PeftModel
 
+from inference_utils import get_user_prompt, post_processing_answer
+
 # Function to load the main model for text generation
 def load_model(model_name, quantization, load_in):
     model = AutoModelForCausalLM.from_pretrained(
@@ -29,27 +31,6 @@ def load_model(model_name, quantization, load_in):
 def load_peft_model(model, peft_model):
     peft_model = PeftModel.from_pretrained(model, peft_model)
     return peft_model
-
-def get_user_prompt(example):
-    question = example["question"]
-    choices = example["choices"]
-
-    text_choices = '['
-    for idx, choice in enumerate(choices):
-        text_choices += f"'{choice}'"
-        if idx != len(choices) - 1:
-            text_choices += ','
-    text_choices += ']'
-
-    user_prompt = (
-        "<s>\n"
-        "Below is a math exercise. Provide a solution to that problem, if given multiple choices to answer; please give a final choice for solving that problem.\n"
-        f"### Question: {question}\n"
-        "### Choices: "
-        f"{text_choices}\n"
-        "### Explanation: "
-    )
-    return user_prompt
 
 
 def main(
@@ -114,7 +95,17 @@ def main(
             )
 
     tokenizer = AutoTokenizer.from_pretrained(peft_model)
-
+    if tokenizer.eos_token_id is None:
+        tokenizer.eos_token = "</s>"  # eos token is required for SFT
+        logger.info("Add eos token: {}".format(tokenizer.eos_token))
+    if tokenizer.pad_token_id is None:
+        if tokenizer.unk_token_id is not None:
+            tokenizer.pad_token = tokenizer.unk_token
+        else:
+            tokenizer.pad_token = tokenizer.eos_token
+        logger.info("Add pad token: {}".format(tokenizer.pad_token))
+    tokenizer.padding_side = 'right'
+    
     results = []
 
     for idx, example in enumerate(data):
@@ -140,8 +131,7 @@ def main(
                 length_penalty=length_penalty,
                 **kwargs,
             )
-        e2e_inference_time = (time.perf_counter() - start) * 1000
-        log.info(f"the inference time is {e2e_inference_time} ms")
+        
         output_text = tokenizer.decode(outputs[0], skip_special_tokens=True)
         gen_text = tokenizer.decode(
             outputs[0][input["input_ids"].shape[1] :], skip_special_tokens=True
@@ -157,23 +147,14 @@ def main(
         if answer_text is None:
             answer_text = gen_text
 
-        log.info(f"Output text: {output_text}")
+        answer = post_processing_answer(answer_text, choices)
+        
+        log.info(f"Output text: {user_prompt + gen_text}")
         log.info(f"Gen text {gen_text}")
         log.info(f"Answer text {answer_text}")
 
-        answer = None
-        for choice in choices:
-            full_answer = choice
-            value_only = re.sub("[ABCD]. ", "", full_answer)
-            if full_answer in answer_text:
-                answer = choice
-                break
-        if answer is None:
-            for choice in choices:
-                value_only = re.sub("[ABCD]. ", "", full_answer)
-                if value_only in answer_text:
-                    answer = choice
-                    break
+        e2e_inference_time = (time.perf_counter() - start) * 1000
+        log.info(f"the inference time is {e2e_inference_time} ms")
         log.info(f"Answer {answer}")
         if answer is None:
             answer = random.choice(choices)

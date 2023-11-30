@@ -262,12 +262,15 @@ def fault_tolerance_data_collator(features: List) -> Dict[str, Any]:
                     batch[k] = torch.tensor([f[k] for f in features])
     except ValueError:  # quick fix by simply take the first example
         for k, v in first.items():
-            if (
-                k not in ("label", "label_ids")
-                and v is not None
-                and not isinstance(v, str)
-            ):
             if k not in ("label", "label_ids") and v is not None and not isinstance(v, str):
+                if isinstance(v, torch.Tensor):
+                    batch[k] = torch.stack([features[0][k]] * len(features))
+                elif isinstance(v, np.ndarray):
+                    batch[k] = torch.tensor(np.stack([features[0][k]] * len(features)))
+                else:
+                    batch[k] = torch.tensor([features[0][k]] * len(features))
+
+    return batch
 
 
 class GroupTextsBuilder:
@@ -286,12 +289,6 @@ class GroupTextsBuilder:
             total_length = (total_length // content_length) * content_length
         # Split by chunks of max_len.
         result = {
-            k: [
-                [firsts[k]] + t[i : i + content_length] + [lasts[k]]
-                for i in range(0, total_length, content_length)
-            ]
-            for k, t in contents.items()
-        }
             k: [[firsts[k]] + t[i: i + content_length] + [lasts[k]] for i in range(0, total_length, content_length)] for
             k, t in contents.items()}
         return result

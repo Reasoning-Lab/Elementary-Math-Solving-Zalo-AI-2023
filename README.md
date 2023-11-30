@@ -51,8 +51,9 @@ ACCELERATE_LOG_LEVEL=info accelerate launch --config_file <multi_gpu.yaml / deep
 
 # Inference
 
+## Quantization inference 4bit / 8bit
 ```bash
-python inference.py --model_name hllj/zephyr-7b-beta-vi-math --peft_model outputs-sft-zephyr-beta-v1/checkpoint-1500/ --load_in 4bit --max_new_tokens 512 --temperature 0.1
+python inference.py --model_name hllj/zephyr-7b-beta-vi-math --peft_model outputs-sft-zephyr-beta-v1/checkpoint-1500/ --load_in 4bit/8bit --max_new_tokens 512 --temperature 0.1
 ```
 
 - model_name: base model mình sử dụng để finetune
@@ -60,3 +61,17 @@ python inference.py --model_name hllj/zephyr-7b-beta-vi-math --peft_model output
 - load_in: 4bit / 8bit quantization
 - max_new_tokens: số lượng token generate tối đa.
 - temperature: temperature cho sampling, nên để 0.1 - 0.5
+
+# Inference with vLLM
+
+## Merge base model with LoRA
+
+```bash
+python merge_peft_adapter.py --model_type auto --base_model <name or path base model> --tokenizer_path <name or path tokenizer> --lora_model <lora folder> --output_dir <output folder for merged model>
+```
+
+## Inference
+
+```bash
+python inference_vllm.py --model_path <output folder for merged model> --max_new_tokens 1024 --temperature 0.1
+```
