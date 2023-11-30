@@ -40,6 +40,7 @@ def main(
     max_padding_length: int = None,  # the max padding length to be used with tokenizer padding the prompts.
     use_fast_kernels: bool = False,  # Enable using SDPA from PyTroch Accelerated Transformers, make use Flash Attention and Xformer memory-efficient kernels
     log_filename: str = "log.txt",
+    output_filepath: str = "submission.csv",
     **kwargs,
 ):
     logging.basicConfig(
@@ -116,7 +117,7 @@ def main(
         results.append({"id": id, "answer": answer})
 
     result_df = pd.DataFrame.from_dict(results)
-    result_df.to_csv(os.path.join(model_path, "submission.csv"), index=False)
+    result_df.to_csv(os.path.join(output_filepath), index=False)
 
 
 if __name__ == "__main__":
