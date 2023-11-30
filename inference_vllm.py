@@ -77,11 +77,14 @@ def main(
                 "Module 'optimum' not found. Please install 'optimum' it before proceeding."
             )
     
+    # Dummy
+    model.generate(get_user_prompt(data[0]), sampling_params)
+    
     results = []
 
     for idx, example in enumerate(data):
         log.info(f"Processing {idx}")
-        start = time.perf_counter()
+        start = time.time()
         user_prompt = get_user_prompt(example)
         id = example["id"]
         choices = example["choices"]
@@ -108,7 +111,7 @@ def main(
 
         answer = post_processing_answer(answer_text, choices)
 
-        e2e_inference_time = (time.perf_counter() - start) * 1000
+        e2e_inference_time = int((time.time() - start) * 1000)
         log.info(f'Inference time: {e2e_inference_time}')
         log.info(f"Answer {answer}")
         if answer is None:
