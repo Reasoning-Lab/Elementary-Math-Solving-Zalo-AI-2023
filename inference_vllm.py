@@ -79,23 +79,28 @@ def main(
     results = []
     tokenizer_embedings, model_embedings = get_model_and_tokenizer()
 
-    db_texts = process_data(read_data())
-    db_embeddings = embedding_text(input_texts=db_texts["information"].values.tolist()[:100])
-
+    db = process_data(read_data())
+    db_texts = db["information"].values.tolist()[:450]
+    db["raw_texts"] = "### Question:" + db["question"] + "### Choices: " + db["choices"]  + "### Explanation: " + db["explanation"]
+    db_raw_texts = db["raw_texts"].values.tolist()[:450]
+    log.info("Embedding database")
+    db_embeddings = embedding_text(tokenizer=tokenizer_embedings,
+            model=model_embedings,
+            input_texts=db_texts)
     import gc
-
     gc.collect()
 
     for idx, example in enumerate(data):
         log.info(f"Processing {idx}")
         start = time.perf_counter()
-        relevant_examples = get_relevance_embeddings(db_embeddings, embedding_query_text(example['question']))
-        relevant_examples = get_relevance_texts(input_text=db_texts, index=relevant_examples, top_k=3)
-        user_prompt = get_user_prompt(example, relevant_examples=relevant_examples)
-        get_similar = get_similar
+        relevant_examples = get_relevance_embeddings(db_embeddings, embedding_query_text(tokenizer=tokenizer_embedings,
+            model=model_embedings,query_text=example['question']))
+        log.info("get relevant_question")
+        relevant_examples = get_relevance_texts(input_texts=db_raw_texts, scores=relevant_examples, top_k=1)
+        user_prompt = get_user_prompt(example, relevant_examples="\n".join(relevant_examples))
         id = example["id"]
         choices = example["choices"]
-
+        log.info(user_prompt)
         output = model.generate(user_prompt, sampling_params)[0]
 
         prompt = output.prompt

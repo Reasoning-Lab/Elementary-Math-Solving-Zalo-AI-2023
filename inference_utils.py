@@ -15,7 +15,6 @@ def get_user_prompt(example, relevant_examples=None):
     if not relevant_examples:
         user_prompt = (
             "Below is a math exercise. Provide a solution to that problem, if given multiple choices to answer; please give a final choice for solving that problem.\n"
-            f"Similar Question and their explanation: {relevant_examples}\n"
             f"### Question: {question}\n"
             "### Choices: "
             f"{text_choices}\n"
@@ -24,6 +23,7 @@ def get_user_prompt(example, relevant_examples=None):
     else:
         user_prompt = (
             "Below is a math exercise. Provide a solution to that problem, if given multiple choices to answer; please give a final choice for solving that problem.\n"
+            f"Similar Question and their explanation: {relevant_examples}\n"
             f"### Question: {question}\n"
             "### Choices: "
             f"{text_choices}\n"
