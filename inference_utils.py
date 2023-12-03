@@ -1,7 +1,7 @@
 import re
 
 
-def get_user_prompt(example):
+def get_user_prompt(example, relevant_examples=None):
     question = example["question"]
     choices = example["choices"]
 
@@ -11,14 +11,24 @@ def get_user_prompt(example):
         if idx != len(choices) - 1:
             text_choices += ','
     text_choices += ']'
-
-    user_prompt = (
-        "Below is a math exercise. Provide a solution to that problem, if given multiple choices to answer; please give a final choice for solving that problem.\n"
-        f"### Question: {question}\n"
-        "### Choices: "
-        f"{text_choices}\n"
-        "### Explanation: "
-    )
+    user_prompt = None
+    if not relevant_examples:
+        user_prompt = (
+            "Below is a math exercise. Provide a solution to that problem, if given multiple choices to answer; please give a final choice for solving that problem.\n"
+            f"Similar Question and their explanation: {relevant_examples}\n"
+            f"### Question: {question}\n"
+            "### Choices: "
+            f"{text_choices}\n"
+            "### Explanation: "
+        )
+    else:
+        user_prompt = (
+            "Below is a math exercise. Provide a solution to that problem, if given multiple choices to answer; please give a final choice for solving that problem.\n"
+            f"### Question: {question}\n"
+            "### Choices: "
+            f"{text_choices}\n"
+            "### Explanation: "
+        )
     return user_prompt
 
 def post_processing_answer(answer_text, choices):

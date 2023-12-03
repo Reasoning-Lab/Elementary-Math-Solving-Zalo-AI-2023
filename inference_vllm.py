@@ -15,7 +15,7 @@ from peft import PeftModel
 from vllm import LLM, SamplingParams
 
 from inference_utils import get_user_prompt, post_processing_answer
-
+from embeddings_space import *
 
 def main(
     model_path,
@@ -75,13 +75,24 @@ def main(
             log.error(
                 "Module 'optimum' not found. Please install 'optimum' it before proceeding."
             )
-    
+
     results = []
+    tokenizer_embedings, model_embedings = get_model_and_tokenizer()
+
+    db_texts = process_data(read_data())
+    db_embeddings = embedding_text(input_texts=db_texts["information"].values.tolist()[:100])
+
+    import gc
+
+    gc.collect()
 
     for idx, example in enumerate(data):
         log.info(f"Processing {idx}")
         start = time.perf_counter()
-        user_prompt = get_user_prompt(example)
+        relevant_examples = get_relevance_embeddings(db_embeddings, embedding_query_text(example['question']))
+        relevant_examples = get_relevance_texts(input_text=db_texts, index=relevant_examples, top_k=3)
+        user_prompt = get_user_prompt(example, relevant_examples=relevant_examples)
+        get_similar = get_similar
         id = example["id"]
         choices = example["choices"]
 
