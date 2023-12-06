@@ -15,6 +15,7 @@ from peft import PeftModel
 
 from inference_utils import get_user_prompt, post_processing_answer
 
+
 # Function to load the main model for text generation
 def load_model(model_name, quantization, load_in):
     model = AutoModelForCausalLM.from_pretrained(
@@ -26,6 +27,7 @@ def load_model(model_name, quantization, load_in):
         low_cpu_mem_usage=True,
     )
     return model
+
 
 # Function to load the PeftModel for performance optimization
 def load_peft_model(model, peft_model):
@@ -59,10 +61,10 @@ def main(
 ):
     logging.basicConfig(
         filename=log_filename,
-        filemode='a',
-        format='%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s',
-        datefmt='%H:%M:%S',
-        level=logging.DEBUG
+        filemode="a",
+        format="%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s",
+        datefmt="%H:%M:%S",
+        level=logging.DEBUG,
     )
 
     log = logging.getLogger(__name__)
@@ -97,15 +99,15 @@ def main(
     tokenizer = AutoTokenizer.from_pretrained(peft_model)
     if tokenizer.eos_token_id is None:
         tokenizer.eos_token = "</s>"  # eos token is required for SFT
-        logger.info("Add eos token: {}".format(tokenizer.eos_token))
+        logger.info(f"Add eos token: {tokenizer.eos_token}")
     if tokenizer.pad_token_id is None:
         if tokenizer.unk_token_id is not None:
             tokenizer.pad_token = tokenizer.unk_token
         else:
             tokenizer.pad_token = tokenizer.eos_token
-        logger.info("Add pad token: {}".format(tokenizer.pad_token))
-    tokenizer.padding_side = 'right'
-    
+        logger.info(f"Add pad token: {tokenizer.pad_token}")
+    tokenizer.padding_side = "right"
+
     results = []
 
     for idx, example in enumerate(data):
@@ -131,7 +133,7 @@ def main(
                 length_penalty=length_penalty,
                 **kwargs,
             )
-        
+
         output_text = tokenizer.decode(outputs[0], skip_special_tokens=True)
         gen_text = tokenizer.decode(
             outputs[0][input["input_ids"].shape[1] :], skip_special_tokens=True
@@ -140,7 +142,7 @@ def main(
         answer_text = None
 
         for text in gen_text.split("###"):
-            if 'Final choice' in text:
+            if "Final choice" in text:
                 answer_text = text
                 break
 
@@ -148,7 +150,7 @@ def main(
             answer_text = gen_text
 
         answer = post_processing_answer(answer_text, choices)
-        
+
         log.info(f"Output text: {user_prompt + gen_text}")
         log.info(f"Gen text {gen_text}")
         log.info(f"Answer text {answer_text}")

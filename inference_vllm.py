@@ -15,6 +15,7 @@ from peft import PeftModel
 from vllm import LLM, SamplingParams
 
 from inference_utils import get_user_prompt, post_processing_answer
+from embeddings_space import *
 
 
 def main(
@@ -24,7 +25,7 @@ def main(
     quantization: bool = False,
     load_in: str = "4bit",
     max_new_tokens=100,  # The maximum numbers of tokens to generate
-    test_file: str = "datasets/math_test.json",
+    test_file: str = "datasets/private_math_test.json",
     seed: int = 42,  # seed value for reproducibility
     do_sample: bool = True,  # Whether or not to use sampling ; use greedy decoding otherwise.
     min_length: int = None,  # The minimum length of the sequence to be generated, input prompt + min_new_tokens
@@ -44,10 +45,10 @@ def main(
 ):
     logging.basicConfig(
         filename=log_filename,
-        filemode='a',
-        format='%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s',
-        datefmt='%H:%M:%S',
-        level=logging.DEBUG
+        filemode="a",
+        format="%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s",
+        datefmt="%H:%M:%S",
+        level=logging.DEBUG,
     )
 
     log = logging.getLogger(__name__)
@@ -59,7 +60,14 @@ def main(
     torch.manual_seed(seed)
 
     model = LLM(model=model_path, seed=seed)
-    sampling_params = SamplingParams(n=1, best_of=1, temperature=temperature, top_p=top_p, stop_token_ids=[2], max_tokens=max_new_tokens)
+    sampling_params = SamplingParams(
+        n=1,
+        best_of=1,
+        temperature=temperature,
+        top_p=top_p,
+        stop_token_ids=[2],
+        max_tokens=max_new_tokens,
+    )
 
     if use_fast_kernels:
         """
@@ -75,16 +83,50 @@ def main(
             log.error(
                 "Module 'optimum' not found. Please install 'optimum' it before proceeding."
             )
-    
+
     results = []
+    tokenizer_embedings, model_embedings = get_model_and_tokenizer()
+
+    db = process_data(read_data())
+    db_texts = db["information"].values.tolist()[:300]
+    db["raw_texts"] = (
+        "### Question:"
+        + db["question"]
+        + "### Choices: "
+        + db["choices"]
+        + "### Explanation: "
+        + db["explanation"]
+    )
+    db_raw_texts = db["raw_texts"].values.tolist()[:300]
+    log.info("Embedding database")
+    db_embeddings = embedding_text(
+        tokenizer=tokenizer_embedings, model=model_embedings, input_texts=db_texts
+    )
+    import gc
+
+    gc.collect()
 
     for idx, example in enumerate(data):
         log.info(f"Processing {idx}")
         start = time.perf_counter()
-        user_prompt = get_user_prompt(example)
+        relevant_examples = get_relevance_embeddings(
+            db_embeddings,
+            embedding_query_text(
+                tokenizer=tokenizer_embedings,
+                model=model_embedings,
+                query_text=example["question"],
+            ),
+        )
+        log.info("get relevant_question")
+        relevant_examples = get_relevance_texts(
+            input_texts=db_raw_texts, scores=relevant_examples, top_k=1
+        )
+        user_prompt = get_user_prompt(
+            example, relevant_examples="\n".join(relevant_examples)
+        )
         id = example["id"]
         choices = example["choices"]
-
+        log.info(user_prompt)
         output = model.generate(user_prompt, sampling_params)[0]
 
         prompt = output.prompt
@@ -94,7 +136,7 @@ def main(
         answer_text = None
 
         for text in gen_text.split("###"):
-            if 'Final choice' in text:
+            if "Final choice" in text:
                 answer_text = text
                 break
 
@@ -108,7 +150,7 @@ def main(
         answer = post_processing_answer(answer_text, choices)
 
         e2e_inference_time = (time.perf_counter() - start) * 1000
-        log.info(f'Inference time: {e2e_inference_time}')
+        log.info(f"Inference time: {e2e_inference_time}")
         log.info(f"Answer {answer}")
         if answer is None:
             answer = random.choice(choices)
