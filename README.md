@@ -70,8 +70,18 @@ python inference.py --model_name hllj/zephyr-7b-beta-vi-math --peft_model output
 python merge_peft_adapter.py --model_type auto --base_model <name or path base model> --tokenizer_path <name or path tokenizer> --lora_model <lora folder> --output_dir <output folder for merged model>
 ```
 
+Ex:
+```bash
+python merge_peft_adapter.py --model_type auto --base_model hllj/mistral-vi-math --tokenizer_path lora --lora_model lora --output_dir final
+```
+
 ## Inference
 
 ```bash
-python inference_vllm.py --model_path <output folder for merged model> --max_new_tokens 1024 --temperature 0.1
+python inference_vllm.py --model_path <output folder for merged model> --max_new_tokens 1024 --temperature 0.1 --output_filepath submission.csv
+```
+
+Ex:
+```bash
+python inference_vllm.py --model_path final --max_new_tokens 1024 --temperature 0.1 --output_filepath submission.csv
 ```
