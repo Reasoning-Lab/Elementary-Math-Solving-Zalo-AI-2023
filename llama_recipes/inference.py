@@ -45,12 +45,12 @@ def get_user_prompt(example, one_shot):
     question = example["question"]
     choices = example["choices"]
 
-    text_choices = '['
+    text_choices = "["
     for idx, choice in enumerate(choices):
         text_choices += f"'{choice}'"
         if idx != len(choices) - 1:
-            text_choices += ','
-    text_choices += ']'
+            text_choices += ","
+    text_choices += "]"
 
     user_prompt = (
         "<s>\n"
@@ -166,7 +166,7 @@ def main(
         answer_text = None
 
         for text in gen_text.split("###"):
-            if 'Final choice' in text:
+            if "Final choice" in text:
                 answer_text = text
                 break
 

@@ -1,0 +1,3325 @@
+{
+   "__count__": 332,
+   "data": [
+      {
+         "id": "2-001",
+         "question": "Kết quả của 1,05 m^{3} = …….. dm^{3} ?",
+         "choices": [
+            "A. 105",
+            "B. 1005",
+            "C. 1050",
+            "D. 1500"
+         ]
+      },
+      {
+         "id": "2-002",
+         "question": "Số thích hợp điền vào chỗ trống 95m^{2} 7dm^{2} = . . . m^{2} là:",
+         "choices": [
+            "A. 957",
+            "B. 95,7",
+            "C. 95,07",
+            "D. 95,007"
+         ]
+      },
+      {
+         "id": "2-003",
+         "question": "302 được viết thành tổng là:",
+         "choices": [
+            "A. 300 + 20",
+            "B. 300 + 02",
+            "C. 300 + 10 + 2",
+            "D. 30 + 10 +2"
+         ]
+      },
+      {
+         "id": "2-004",
+         "question": "Hãy đổi giờ thành phút như sau: 3 giờ 15 phút = ....phút",
+         "choices": [
+            "A. 120 phút",
+            "B. 195 phút",
+            "C. 215 phút",
+            "D. 205 phút"
+         ]
+      },
+      {
+         "id": "2-005",
+         "question": "Phép tính 4 \\frac{33}{100} + 4 \\frac{3}{10} viết dưới dạng số thập phân là:",
+         "choices": [
+            "A. 8,433",
+            "B. 8,63",
+            "C. 4,633",
+            "D. 8,33"
+         ]
+      },
+      {
+         "id": "2-006",
+         "question": "Cô giáo phân công cho 2/5 số bạn trong lớp đi quét sân trường còn 1/3 số bạn đi dọn vệ sinh hành lang thì trong lớp còn 12 bạn vệ sinh lớp học. Hỏi tổng số học sinh ban đầu của lớp là bao nhiêu?",
+         "choices": [
+            "A. 35",
+            "B. 40",
+            "C. 45",
+            "D. 50"
+         ]
+      },
+      {
+         "id": "2-007",
+         "question": "Giá trị của chữ số 2 trong số 340,2 là:",
+         "choices": [
+            "A. \\frac{2}{10}",
+            "B. \\frac{2}{100}",
+            "C. \\frac{2}{100}",
+            "D. 2"
+         ]
+      },
+      {
+         "id": "2-008",
+         "question": "3 \\frac{6}{100} m^{2} = …….. m^{2}",
+         "choices": [
+            "A. 3,6 m^{2}",
+            "B. 3,06 m^{2}",
+            "C. 750 m^{2}",
+            "D. 360 m^{2}"
+         ]
+      },
+      {
+         "id": "2-009",
+         "question": "Các số thập phân sau đây số nào là số bé nhất?",
+         "choices": [
+            "A. 13,1",
+            "B. 12,4",
+            "C. 12,3",
+            "D. 12,2"
+         ]
+      },
+      {
+         "id": "2-010",
+         "question": "Tìm nửa chu vi của khu vườn hình chữ nhật dài 50cm, rộng 40cm.",
+         "choices": [
+            "A. 1596 m",
+            "B. 160 m",
+            "C. 180 m",
+            "D. 90 m"
+         ]
+      },
+      {
+         "id": "2-011",
+         "question": "Số thập phân nhỏ nhất là:",
+         "choices": [
+            "A. 2,445",
+            "B. 2,454",
+            "C. 2,455",
+            "D. 2,444"
+         ]
+      },
+      {
+         "id": "2-012",
+         "question": "Duyên có 18 viên kẹo, Kiên có số viên kẹo bằng 2/3 số kẹo của Duyên, riêng Châu có số kẹo bằng trung bình cộng của Duyên và Kiên. Hỏi cả 3 bạn Duyên, Kiên và Châu có tổng cộng bao nhiêu viên kẹo?",
+         "choices": [
+            "A. 30",
+            "B. 20",
+            "C. 35",
+            "D. 45"
+         ]
+      },
+      {
+         "id": "2-013",
+         "question": "Cách viết khác của 35,33 là:",
+         "choices": [
+            "A. 35,033",
+            "B. 35,330",
+            "C. 35,303",
+            "D. 350,33"
+         ]
+      },
+      {
+         "id": "2-014",
+         "question": "49,4% x 30 = ............. %",
+         "choices": [
+            "A. 1482",
+            "B. 14,82",
+            "C. 148,2",
+            "D. 1,482"
+         ]
+      },
+      {
+         "id": "2-015",
+         "question": "0,12 =  ...............%",
+         "choices": [
+            "A. 1,2%",
+            "B. 12%",
+            "C. 120%",
+            "D. 0,12%"
+         ]
+      },
+      {
+         "id": "2-016",
+         "question": "Dãy số nào sau đây được xếp theo thứ tự giảm dần?",
+         "choices": [
+            "A. 0,901; 0,889; 0,899; 0,809; 0,798",
+            "B. 0,901; 0,899; 0,889; 0,809; 0,798",
+            "C. 0,899; 0,889; 0,798; 0,809; 0,901",
+            "D. 0,798; 0,809; 0,889; 0,899; 0,901"
+         ]
+      },
+      {
+         "id": "2-017",
+         "question": "Chữ số 6 trong số thập phân 72,364 có giá trị là:",
+         "choices": [
+            "A. 6",
+            "B. \\frac{6}{10}",
+            "C. \\frac{6}{100}",
+            "D. \\frac{6}{1000}"
+         ]
+      },
+      {
+         "id": "2-018",
+         "question": "Một con voi nặng 3,3 tấn. Con voi nặng hơn con cá heo nặng 1,7 tấn. Hỏi con cá heo đó nặng bao nhiêu ki-lô-gam?",
+         "choices": [
+            "A. 1,6 kg",
+            "B. 1600kg",
+            "C. 160kg",
+            "D. 16kg"
+         ]
+      },
+      {
+         "id": "2-019",
+         "question": "Phân số bằng phân số \\frac{2}{3} là:",
+         "choices": [
+            "A. \\frac{4}{6}",
+            "B. \\frac{3}{5}",
+            "C. \\frac{4}{5}",
+            "D. \\frac{3}{2}"
+         ]
+      },
+      {
+         "id": "2-020",
+         "question": "Tìm một số biết rằng 20% của số đó bằng 202:",
+         "choices": [
+            "A. 576",
+            "B. 10060",
+            "C. 1010",
+            "D. 765"
+         ]
+      },
+      {
+         "id": "2-021",
+         "question": "5m = ........ Số thích hợp để điền vào chỗ chấm là:",
+         "choices": [
+            "A. 500 cm",
+            "B. 0,05 cm",
+            "C. 5000 cm",
+            "D. 500 dm"
+         ]
+      },
+      {
+         "id": "2-022",
+         "question": "Nếu giảm bán kính của hình tròn đi 6 lần thì chu vi sẽ giảm đi mấy lần?",
+         "choices": [
+            "A. 3 lần",
+            "B. 6 lần",
+            "C. 9 lần",
+            "D. 12 lần"
+         ]
+      },
+      {
+         "id": "2-023",
+         "question": "Số thích hợp viết vào chỗ chấm của 9 cm^{2} 8 mm^{2} = ................ mm^{2} là:",
+         "choices": [
+            "A. 98",
+            "B. 908",
+            "C. 980",
+            "D. 9080"
+         ]
+      },
+      {
+         "id": "2-024",
+         "question": "Một hình tam giác có cạnh đáy 13,6m, chiều cao bằng \\frac{1}{2} cạnh đáy. Tính diện tích hình tam giác đó?",
+         "choices": [
+            "A. 39,69 m^{2}",
+            "B. 92,84 m^{2}",
+            "C. 46,24m^{2}",
+            "D. 4624m^{2}"
+         ]
+      },
+      {
+         "id": "2-025",
+         "question": "Thực hiện phép tính sau: 18,7 – 2 \\times 1,3",
+         "choices": [
+            "A. 15,1",
+            "B. 16,1",
+            "C. 14,1",
+            "D. 13,1"
+         ]
+      },
+      {
+         "id": "2-026",
+         "question": "Hình tam giác có chiều cao 1,5 dm, đáy 8 dm. Vậy diện tích hình là bao nhiêu",
+         "choices": [
+            "A. 6 dm^{2}",
+            "B. 8 dm^{2}",
+            "C. 3 dm^{2}",
+            "D. 3,9 dm^{2}"
+         ]
+      },
+      {
+         "id": "2-027",
+         "question": "Số lớn nhất trong các số sau là:",
+         "choices": [
+            "A. 7,85",
+            "B. 7,58",
+            "C. 8,57",
+            "D. 8,75"
+         ]
+      },
+      {
+         "id": "2-028",
+         "question": "Trong các số thập phân dưới đây, chữ số 5 của số thập phân nào chỉ hàng phần trăm",
+         "choices": [
+            "A. 523,41",
+            "B. 122,15",
+            "C. 225,19",
+            "D. 423,51"
+         ]
+      },
+      {
+         "id": "2-029",
+         "question": "Chữ số 3 trong số 45,2638 có giá trị là:",
+         "choices": [
+            "A. \\frac{3}{1000}",
+            "B. \\frac{3}{10000}",
+            "C. \\frac{3}{100}",
+            "D. \\frac{3}{10}"
+         ]
+      },
+      {
+         "id": "2-030",
+         "question": "Ba đơn vị bốn phần nghìn là:",
+         "choices": [
+            "A. 3,400",
+            "B. 34000",
+            "C. 3,04",
+            "D. 3,004"
+         ]
+      },
+      {
+         "id": "2-031",
+         "question": "Một mảnh vườn hình chữ nhật có chiều dài 28m,chiều rộng 12,5m. Tính diện tích của mảnh đất ấy:",
+         "choices": [
+            "A. 350m^{2}",
+            "B. 336m^{2}",
+            "C. 375m^{2}",
+            "D. 275m^{2}"
+         ]
+      },
+      {
+         "id": "2-032",
+         "question": "Tám đơn vị, ba phần trăm được viết dưới dạng hỗn số là",
+         "choices": [
+            "A. 8 \\frac{30}{100}",
+            "B. 8 \\frac{3}{10}",
+            "C. 8 \\frac{3}{100}",
+            "D. 8 \\frac{300}{10}"
+         ]
+      },
+      {
+         "id": "2-033",
+         "question": "Tìm chiều dài của một đoạn dây điện biết 20% chiều dài là 12m",
+         "choices": [
+            "A. 2,4 m",
+            "B. 60 m",
+            "C. 0,26 m",
+            "D. 12m"
+         ]
+      },
+      {
+         "id": "2-034",
+         "question": "Số thập phân “tám đơn vị, hai phần nghìn” được viết là:",
+         "choices": [
+            "A. 8",
+            "B. 8,2",
+            "C. 8,002",
+            "D. 8,02"
+         ]
+      },
+      {
+         "id": "2-035",
+         "question": "Chữ số 7 trong số thập phân 26,475 có giá trị là:",
+         "choices": [
+            "A. \\frac{7}{10}",
+            "B. \\frac{7}{100}",
+            "C. 7",
+            "D. \\frac{7}{1000}"
+         ]
+      },
+      {
+         "id": "2-036",
+         "question": "Một số thập phân chia 0,1 bằng số đó nhân với........",
+         "choices": [
+            "A. 100",
+            "B. 1",
+            "C. 10",
+            "D. \\frac{1}{10}"
+         ]
+      },
+      {
+         "id": "2-037",
+         "question": "Một chiếc ô tô bắt đầu di chuyển từ thành phố X lúc 7 giờ 30 phút và đến đến thành phố Y lúc 10 giờ. Biết rằng vận tốc của ô tô là 80 km/giờ. Hỏi, độ dài của quãng đường từ thành phố X đến thành phố Y là bao nhiêu?",
+         "choices": [
+            "A. 12500m",
+            "B. 200km",
+            "C. 135km",
+            "D. 13500m"
+         ]
+      },
+      {
+         "id": "2-038",
+         "question": "Hình chữ nhật có diện tích 900cm^{2}. Một cạnh có chiều dài gấp bốn lần cạnh còn lại. Hỏi cạnh dài hơn có chiều dài bao nhiêu ?",
+         "choices": [
+            "A. 150mm",
+            "B. 300mm",
+            "C. 600mm",
+            "D. 900mm"
+         ]
+      },
+      {
+         "id": "2-039",
+         "question": "Một ô tô đi quãng đường AB dài 100 km trong 2 giờ. Hỏi ô tô đi với tốc độ bao nhiêu km giờ?",
+         "choices": [
+            "A. 80 Km/giờ",
+            "B. 60 km/giờ",
+            "C. 50 km/giờ",
+            "D. 48 km/giờ"
+         ]
+      },
+      {
+         "id": "2-040",
+         "question": "Biến đổi 6 \\frac{2}{100} sang dạng số thập phân",
+         "choices": [
+            "A. 6,02",
+            "B. 6,002",
+            "C. 462",
+            "D. 62"
+         ]
+      },
+      {
+         "id": "2-041",
+         "question": "Tỉ số phần trăm của 19 và 76 là:",
+         "choices": [
+            "A. 0,25%",
+            "B. 2,5%",
+            "C. 25%",
+            "D. 76%"
+         ]
+      },
+      {
+         "id": "2-042",
+         "question": "Viết kết quả đúng:  3cm^2 85 mm^2=… cm^2",
+         "choices": [
+            "A. 3,85",
+            "B. 3,0085",
+            "C. 0,385",
+            "D. 38,5"
+         ]
+      },
+      {
+         "id": "2-043",
+         "question": "Gỗ tươi chứa 30% nước. Vậy gỗ sau khi sấy khô hết nước thì còn bao nhiêu phần trăm so với ban đầu chưa sấy.",
+         "choices": [
+            "A. 70%",
+            "B. 16%",
+            "C. 80%",
+            "D. 76,875%"
+         ]
+      },
+      {
+         "id": "2-044",
+         "question": "Giá trị của chữ số 7 trong số thập phân 45,872 là:",
+         "choices": [
+            "A. \\frac{7}{100}",
+            "B. \\frac{7}{1000}",
+            "C. \\frac{7}{10}",
+            "D. 7"
+         ]
+      },
+      {
+         "id": "2-045",
+         "question": "Ngày 28 tháng 4 là thứ sáu. Ngày 2 tháng 5 là thứ mấy?",
+         "choices": [
+            "A. Thứ tư",
+            "B. Thứ ba",
+            "C. Thứ năm",
+            "D. Chủ nhật"
+         ]
+      },
+      {
+         "id": "2-046",
+         "question": "Tỷ lệ giữa 20 và 1200 là:",
+         "choices": [
+            "A. 1,67%",
+            "B. 67%",
+            "C. 16,67%",
+            "D. 25%"
+         ]
+      },
+      {
+         "id": "2-047",
+         "question": "Một quả mít có cân nặng 4\\frac{4}{8}kg, còn quả bưởi có cân nặng là 2\\frac{3}{6} kg. Hỏi quả mít và quả bưởi có cân nặng bao nhiêu ki-lô-gam?",
+         "choices": [
+            "A. 2.5",
+            "B. 4.5",
+            "C. 7",
+            "D. 8"
+         ]
+      },
+      {
+         "id": "2-048",
+         "question": "Diện tích hình tam giác có độ dài đáy 2,5m và chiều cao 1,8m là:",
+         "choices": [
+            "A. 4 m^{2}",
+            "B. 2 m^{2}",
+            "C. 1,6 m^{2}",
+            "D. 2,25 m^{2}"
+         ]
+      },
+      {
+         "id": "2-049",
+         "question": "Kết quả của phép chia 85 \\div 0,01 \\times 0.1 là",
+         "choices": [
+            "A. 850",
+            "B. 8,5",
+            "C. 8500",
+            "D. 85"
+         ]
+      },
+      {
+         "id": "2-050",
+         "question": "Phép tính (60,2 + 2,12) / 0,1 có kết quả là:",
+         "choices": [
+            "A. 62,5",
+            "B. 6,32",
+            "C. 62,32",
+            "D. 623,2"
+         ]
+      },
+      {
+         "id": "2-051",
+         "question": "Cho dãy số 11, 12, 13, 14, 15, 16, 17, 18, 19,20. Số hạng thứ 8 của dãy số cộng thêm 3 đơn vị bằng bao nhiêu?",
+         "choices": [
+            "A. 18",
+            "B. 19",
+            "C. 20",
+            "D. 21"
+         ]
+      },
+      {
+         "id": "2-052",
+         "question": "Số 938,275 giá trị của chữ số 7 là:",
+         "choices": [
+            "A. 7 phần nghìn",
+            "B. 7 chục",
+            "C. 7 phần mười",
+            "D. 7 phần trăm"
+         ]
+      },
+      {
+         "id": "2-053",
+         "question": "Nếu chỉ lấy đến hai chữ số của phần thập phân của thương khi chia 33,14 cho 60 thì số dư là",
+         "choices": [
+            "A. 0,08",
+            "B. 0,4",
+            "C. 0,14",
+            "D. 0,004"
+         ]
+      },
+      {
+         "id": "2-054",
+         "question": "Số học sinh nữ của lớp 5B là 21 và chiếm 60% số học sinh cả lớp. Hỏi lớp 5B có bao nhiêu học sinh:",
+         "choices": [
+            "A. 40",
+            "B. 25",
+            "C. 20",
+            "D. 35"
+         ]
+      },
+      {
+         "id": "2-055",
+         "question": "Tính giá trị của biểu thức: 2,98 + 1 \\times 12 là:",
+         "choices": [
+            "A. 22,22",
+            "B. 12, 24",
+            "C. 10,00",
+            "D. 14,98"
+         ]
+      },
+      {
+         "id": "2-056",
+         "question": "Kết quả của: 12giờ 32 phút \\div 4 = ........ là:",
+         "choices": [
+            "A. 3 giờ 10 phút",
+            "B. 4 giờ 21 phút",
+            "C. 3 giờ 8 phút",
+            "D. 3 giờ 7 phút"
+         ]
+      },
+      {
+         "id": "2-057",
+         "question": "Tính Diện tích của hình chữ nhật biết chiều dài là 15cm và chiều rộng bằng 1/2 chiều dài trừ thêm 1/2cm.",
+         "choices": [
+            "A. 43cm^{2}",
+            "B. 120cm^{2}",
+            "C. 86cm^{2}",
+            "D. 105cm^{2}"
+         ]
+      },
+      {
+         "id": "2-058",
+         "question": "Tổng của dãy số 1, 4, 7, 10, 13, 16, ..., 94, 97, 100, 103 là:",
+         "choices": [
+            "A. 1714",
+            "B. 1720",
+            "C. 1820",
+            "D. 1814"
+         ]
+      },
+      {
+         "id": "2-059",
+         "question": "Dãy số được xếp theo thứ tự từ bé đến lớn là:",
+         "choices": [
+            "A. 0,5; 0,14; 0,41; 0,375",
+            "B. 0,5; 0,41; 0,375; 0,14",
+            "C. 0,14; 0,375; 0,41; 0,5",
+            "D. 0,14; 0,375; 0,5; 0,41"
+         ]
+      },
+      {
+         "id": "2-060",
+         "question": "Lan nghĩ ra 1 số tự nhiên có 4 chữ số, biết rằng nếu xoá đi chữ số hàng ngàn và hàng trăm thì số đó giảm đi 71 lần. Vậy số đó là số nào trong các số dưới đây:",
+         "choices": [
+            "A. 1220",
+            "B. 1420",
+            "C. 1319",
+            "D. 1207"
+         ]
+      },
+      {
+         "id": "2-061",
+         "question": "6ha 5dam^{2} =........ ha. Số thích hợp viết vào chỗ chấm là:",
+         "choices": [
+            "A. 6,5",
+            "B. 6,50",
+            "C. 6,05",
+            "D. 650"
+         ]
+      },
+      {
+         "id": "2-062",
+         "question": "Hai lớp A và B được phân công quét một nửa sân trường. Hai lớp bắt đầu quét cùng một lúc. Sau 20 phút lớp A quét xong phần sân được giao và tiếp tục sang quét cùng lớp B thêm 4 phút nữa thì hai lớp quét xong cả sân trường. Hỏi nếu chỉ 1 mình lớp B quét không có lớp A thì trong bao lâu sẽ xong toàn bộ sân trường.",
+         "choices": [
+            "A. 30 phút",
+            "B. 25 phút",
+            "C. 40 phút",
+            "D. 60 phút"
+         ]
+      },
+      {
+         "id": "2-063",
+         "question": "Tổng của số chẵn lớn nhất có ba chữ số và số liền sau của số bé nhất có hai chữ số là:",
+         "choices": [
+            "A. 1000",
+            "B. 1008",
+            "C. 1009",
+            "D. 1108"
+         ]
+      },
+      {
+         "id": "2-064",
+         "question": "Năm nhuận có bao nhiêu ngày.",
+         "choices": [
+            "A. 355",
+            "B. 366",
+            "C. 377",
+            "D. 365"
+         ]
+      },
+      {
+         "id": "2-065",
+         "question": "Số thập phân 0,5 được viết dưới dạng phân số là số nào? Khoanh vào đáp án đúng:",
+         "choices": [
+            "A. \\frac{5}{100}",
+            "B. \\frac{5}{10}",
+            "C. \\frac{0}{5}",
+            "D. \\frac{0}{50}"
+         ]
+      },
+      {
+         "id": "2-066",
+         "question": "Chữ số 6 trong số 157,62 chỉ:",
+         "choices": [
+            "A. 6 phần mười",
+            "B. 6 phần trăm",
+            "C. 6 đơn vị",
+            "D. 6 chục"
+         ]
+      },
+      {
+         "id": "2-067",
+         "question": "Hai trăm mười phẩy ba mươi lăm có dạng nào sau đây:",
+         "choices": [
+            "A. 210,35",
+            "B. 21,035",
+            "C. 210,345",
+            "D. 2,1035"
+         ]
+      },
+      {
+         "id": "2-068",
+         "question": "Kết quả của phép tính 5645,78 + 212,22",
+         "choices": [
+            "A. 5857",
+            "B. 3821,2",
+            "C. 1781,1",
+            "D. 5858"
+         ]
+      },
+      {
+         "id": "2-069",
+         "question": "0,5% = ?",
+         "choices": [
+            "A. \\frac{5}{10}",
+            "B. \\frac{5}{100}",
+            "C. \\frac{5}{1000}",
+            "D. \\frac{5}{10000}"
+         ]
+      },
+      {
+         "id": "2-070",
+         "question": "Điền đáp án đúng vào dấu .... dưới đây:\n3km 480m = ……..km.",
+         "choices": [
+            "A. 3,048",
+            "B. 3,48",
+            "C. 348",
+            "D. 3048"
+         ]
+      },
+      {
+         "id": "2-071",
+         "question": "Kết quả của hỗn số 5 \\frac{4}{5} - 3 \\frac{4}{5} - \\frac{1}{2} là:",
+         "choices": [
+            "A. \\frac{15}{10}",
+            "B. \\frac{12}{5}",
+            "C. \\frac{15}{5}",
+            "D. \\frac{29}{5}"
+         ]
+      },
+      {
+         "id": "2-072",
+         "question": "Một hình chữ nhật có chiều rộng 15 m và chiều dài gấp 5 lần, thì diện tích hình chữ nhật trên là:",
+         "choices": [
+            "A. 1125m^{2}",
+            "B. 1225m^{2}",
+            "C. 75m^{2}",
+            "D. 275m^{2}"
+         ]
+      },
+      {
+         "id": "2-073",
+         "question": "Đổi:  0,12 m^{2} = ………. dm^{2}",
+         "choices": [
+            "A. 120",
+            "B. 12",
+            "C. 1200",
+            "D. 12000"
+         ]
+      },
+      {
+         "id": "2-074",
+         "question": "Dấu lớn ( >) ở cặp số:",
+         "choices": [
+            "A. 8000.....7999 + 1",
+            "B. 78659.....76860",
+            "C. 9000 + 900......10000",
+            "D. 9000.....9000"
+         ]
+      },
+      {
+         "id": "2-075",
+         "question": "Một tấm bìa hình chữ nhật có chiều dài 21,3cm, chiều rộng 12,5cm. Tính diện tích miếng bìa đó.",
+         "choices": [
+            "A. 266,15cm^{2}",
+            "B. 265,25cm^{2}",
+            "C. 2662,5cm^{2}",
+            "D. 266,25cm^{2}"
+         ]
+      },
+      {
+         "id": "2-076",
+         "question": "Cho biết kết quả của 584g = …. kg là bao nhiêu",
+         "choices": [
+            "A. 58,4kg",
+            "B. 0,584kg",
+            "C. 0,584kg",
+            "D. 0,0584kg"
+         ]
+      },
+      {
+         "id": "2-077",
+         "question": "Tính thể tích của hình hộp chữ nhật  dài 7cm, rộng 5cm và chiều cao bằng 8/5 của chiều rộng là:",
+         "choices": [
+            "A. 280 cm^{3}",
+            "B. 280 cm^{2}",
+            "C. 240 cm^{2}",
+            "D. 240 cm^{3}"
+         ]
+      },
+      {
+         "id": "2-078",
+         "question": "Cho một số có 2 chữ số, biết rằng tổng của 2 chữ số là 10 và tích của 2 chữ số sau cộng thêm 4 là 25 và chữ số ở hàng đơn vị lớn hơn số ở hàng chục. Vậy số đó là số nào trong các số dưới đây:",
+         "choices": [
+            "A. 82",
+            "B. 28",
+            "C. 37",
+            "D. 73"
+         ]
+      },
+      {
+         "id": "2-079",
+         "question": "Hình vuông có chu vi 576 cm thì cạnh của hình vuông đó là:",
+         "choices": [
+            "A. 9cm",
+            "B. 6cm",
+            "C. 144cm",
+            "D. 234cm"
+         ]
+      },
+      {
+         "id": "2-080",
+         "question": "Thời gian từ  8 giờ 50 phút tối đến 9 giờ 35 phút sáng hôm sau là:",
+         "choices": [
+            "A. 1655 phút",
+            "B. 1765 phút",
+            "C. 755 phút",
+            "D. 765 phút"
+         ]
+      },
+      {
+         "id": "2-081",
+         "question": "Người ta xây một bể nước, chiều dài 20 m, chiều rộng 15 m, một khu có độ sâu 0,2 m, một khu có độ sâu 2 m, hai khu có diện tích mặt nước bằng nhau. Muốn khoảng cách giữa mặt nước và mặt bể là 10cm thì lượng nước cần xả là bao nhiêu (bể chưa có nước).",
+         "choices": [
+            "A. 52,5 m^{3}",
+            "B. 67,5 m^{3}",
+            "C. 100 m^{3}",
+            "D. 60 m^{3}"
+         ]
+      },
+      {
+         "id": "2-082",
+         "question": "Hỗn số 2 \\frac{3}{4} được viết dưới dạng số thập phân là:",
+         "choices": [
+            "A. 2,3",
+            "B. 2,4",
+            "C. 2,75",
+            "D. 2,70"
+         ]
+      },
+      {
+         "id": "2-083",
+         "question": "An đi học lúc 6 giờ 45 phút, An chờ xe bus trong 30 phút và xe bus di chuyển mất 15 phút. Vậy An tới trường lúc mấy giờ?",
+         "choices": [
+            "A. 7 giờ 25 phút",
+            "B. 8 giờ 25 phút",
+            "C. 7 giờ 15 phút",
+            "D. 7 giờ 30 phút"
+         ]
+      },
+      {
+         "id": "2-084",
+         "question": "Trong các số 5,686; 5,668; 5,678; 5,716, số bé nhất là:",
+         "choices": [
+            "A. 5,686",
+            "B. 5,668",
+            "C. 5,678",
+            "D. 5,716"
+         ]
+      },
+      {
+         "id": "2-085",
+         "question": "Số thập viết gồm 50 đơn vị, 8 phần trăm, 3 phần nghìn được viết là:",
+         "choices": [
+            "A. 50,8",
+            "B. 50,083",
+            "C. 50,830",
+            "D. 50,803"
+         ]
+      },
+      {
+         "id": "2-086",
+         "question": "Trong các số 9,99; 9,9; 9,98; 9,89 , số nào là số lớn nhất:",
+         "choices": [
+            "A. 9,99",
+            "B. 9,9",
+            "C. 9,98",
+            "D. 9,09"
+         ]
+      },
+      {
+         "id": "2-087",
+         "question": "Một bể nước hình hộp chữ nhật có chiều dài 3m chiều rộng 2m và chiều cao 1,5m. Bể hiện đang chứa đầy nước sau đó người ta lấy ra 50 thùng nước, dung tích của mỗi thùng là 40 lít, tiếp đến người ta lại dùng máy bơm để hút thêm 1/2 lượng nước có trong bể. Hỏi lượng nước còn lại trong bể là bao nhiêu?",
+         "choices": [
+            "A. 7000",
+            "B. 3500",
+            "C. 8000",
+            "D. 4000"
+         ]
+      },
+      {
+         "id": "2-088",
+         "question": "Giá trị của chữ số 2 trong số thập phân 879,427 là:",
+         "choices": [
+            "A. \\frac{2}{10}",
+            "B. \\frac{2}{1000}",
+            "C. 20",
+            "D. \\frac{2}{100}"
+         ]
+      },
+      {
+         "id": "2-089",
+         "question": "Trong số 91,0938 giá trị của chữ số 3 là",
+         "choices": [
+            "A. \\frac{3}{100000}",
+            "B. \\frac{3}{1000}",
+            "C. \\frac{3}{100}",
+            "D. \\frac{3}{10}"
+         ]
+      },
+      {
+         "id": "2-090",
+         "question": "Trong các số có 3 chữ số dưới đây, số nào có hàng trăm trừ hàng chục bằng hàng đơn vị:",
+         "choices": [
+            "A. 852",
+            "B. 210",
+            "C. 321",
+            "D. 744"
+         ]
+      },
+      {
+         "id": "2-091",
+         "question": "Phép chia 23,45 \\div 7 có kết quả đúng là",
+         "choices": [
+            "A. 3,5",
+            "B. 3,05",
+            "C. 4.5",
+            "D. 3.35"
+         ]
+      },
+      {
+         "id": "2-092",
+         "question": "Số chia hết cho cả 2, 5 và 9 là:",
+         "choices": [
+            "A. 1370",
+            "B. 2576",
+            "C. 85324",
+            "D. 6030"
+         ]
+      },
+      {
+         "id": "2-093",
+         "question": "Số lớn nhất trong các số: 9,899; 9,98; 9,89; 8,99 là:",
+         "choices": [
+            "A. 9,89",
+            "B. 9,899",
+            "C. 9,98",
+            "D. 8,99"
+         ]
+      },
+      {
+         "id": "2-094",
+         "question": "Trung bình cộng của 4 số: 45; 23; 68 và a là 96. Tìm a.",
+         "choices": [
+            "A. 228",
+            "B. 248",
+            "C. 288",
+            "D. 328"
+         ]
+      },
+      {
+         "id": "2-095",
+         "question": "Cho tam giác có độ dài cạnh đáy là 5,1cm, chiều cao là 3,5cm. Tính diện tích của tam giác đó",
+         "choices": [
+            "A. 27,3 cm^{2}",
+            "B. 5,35 cm^{2}",
+            "C. 8,925 cm^{2}",
+            "D. 10.7cm^{2}"
+         ]
+      },
+      {
+         "id": "2-096",
+         "question": "Dạng số thập phân của 5 \\frac{8}{100} + 1 \\frac{3}{100} là",
+         "choices": [
+            "A. 6,11",
+            "B. 5,008",
+            "C. 5,08",
+            "D. 6,10"
+         ]
+      },
+      {
+         "id": "2-097",
+         "question": "Một hình lập phương có cạnh là 3,5m. Tính thể tích của hình lập phương đó:",
+         "choices": [
+            "A. 42,875 m^{3}",
+            "B. 12,25 m^{3}",
+            "C. 27 m^{3}",
+            "D. 27 m^{3}"
+         ]
+      },
+      {
+         "id": "2-098",
+         "question": "Tuấn có 15 viên bi, Kiên có số bi bằng 2/3 số bi của Tuấn còn Pháp có số bi bằng tổng số bi của Tuấn và Kiên. Hỏi Pháp có bao nhiêu viên bi?",
+         "choices": [
+            "A. 15",
+            "B. 20",
+            "C. 25",
+            "D. 30"
+         ]
+      },
+      {
+         "id": "2-099",
+         "question": "Một người đi xe máy trong 2 giờ được 40 km. Vận tốc của người đi được là:",
+         "choices": [
+            "A. 20 km",
+            "B. 2,5 km/giờ",
+            "C. 40 giờ",
+            "D. 20 km/giờ"
+         ]
+      },
+      {
+         "id": "2-100",
+         "question": "Bạn Lan nghĩ ra được 1 số có 3 chữ số, nếu số đó cộng với 10 sau đó chia cho 10 thì được thương là 12 và dư 5, hãy tìm số đó.",
+         "choices": [
+            "A. 105",
+            "B. 115",
+            "C. 125",
+            "D. 145"
+         ]
+      },
+      {
+         "id": "2-101",
+         "question": "Tính diện tích xung quanh của khối gỗ hình lập phương có cạnh 5 dm:",
+         "choices": [
+            "A. 100dm^{2}",
+            "B. 37,5dm^{2}",
+            "C. 6,25dm^{2}",
+            "D. 25dm^{2}"
+         ]
+      },
+      {
+         "id": "2-102",
+         "question": "Tính diện tích của một hình chữ nhật dài 102cm và rộng 10cm:",
+         "choices": [
+            "A. 1020 cm^{2}",
+            "B. 10,22 cm^{2}",
+            "C. 12 cm^{2}",
+            "D. 120 cm^{2}"
+         ]
+      },
+      {
+         "id": "2-103",
+         "question": "Diện tích của nửa viên gạch hình vuông có cạnh 30cm là:",
+         "choices": [
+            "A. 90cm^{2}",
+            "B. 45cm^{2}",
+            "C. 900cm^{2}",
+            "D. 450cm^{2}"
+         ]
+      },
+      {
+         "id": "2-104",
+         "question": "Số 40,12 có phần thập phân là:",
+         "choices": [
+            "A. 12",
+            "B. \\frac{12}{10}",
+            "C. \\frac{12}{100}",
+            "D. \\frac{12}{1000}"
+         ]
+      },
+      {
+         "id": "2-105",
+         "question": "Cho phân số \\frac{16}{5}. Nếu cộng thêm vào tử số và mẫu số của phân số đã cho cùng một số tự nhiên x thì ta được một phân số mới bằng 2. Hỏi \\frac{x}{2}+\\frac{1}{(x+2)} bằng bao nhiêu?",
+         "choices": [
+            "A. \\frac{16}{5}",
+            "B. \\frac{7}{3}",
+            "C. \\frac{11}{4}",
+            "D. \\frac{25}{8}"
+         ]
+      },
+      {
+         "id": "2-106",
+         "question": "Có 20 viên bi, trong đó có 3 viên bi đỏ, 4 viên bi xám, 5 viên bi đen, 8 viên bi trắng. Như vậy 1/4 số viên bi có màu là:",
+         "choices": [
+            "A. Đỏ",
+            "B. Xám",
+            "C. Đen",
+            "D. Trắng"
+         ]
+      },
+      {
+         "id": "2-107",
+         "question": "Số thập phân thích hợp viết vào chỗ chấm để 12tấn5kg =……tấn là:",
+         "choices": [
+            "A. 12,005",
+            "B. 12,0005",
+            "C. 12,05",
+            "D. 12005"
+         ]
+      },
+      {
+         "id": "2-108",
+         "question": "Đổi: 2 giờ 60phút = .................phút là:",
+         "choices": [
+            "A. 2,6",
+            "B. 90",
+            "C. 120",
+            "D. 180"
+         ]
+      },
+      {
+         "id": "2-109",
+         "question": "Điền số thích hợp: 8m^{2} 8dm^{2} = ……..m^{2}",
+         "choices": [
+            "A. 8,8",
+            "B. 8,80",
+            "C. 8,08",
+            "D. 8,008"
+         ]
+      },
+      {
+         "id": "2-110",
+         "question": "Một cửa hàng buổi sáng bán được 1/2 số truyện tranh có trong cửa hàng và buổi chiều bán thêm được 2/9 số truyện thì còn lại 15 quyển truyện tranh trong cửa hàng. Hỏi tổng số quyển truyện tranh bán được trong buổi sáng là bao nhiêu?",
+         "choices": [
+            "A. 39",
+            "B. 30",
+            "C. 27",
+            "D. 24"
+         ]
+      },
+      {
+         "id": "2-111",
+         "question": "Kết quả của phép tính sau đây là bao nhiêu: 1\\frac{2}{3} + 2\\frac{3}{4} + 3\\frac{4}{5} + 4\\frac{5}{6} + \\frac{2}{3} + \\frac{3}{4} + \\frac{4}{5} + \\frac{5}{6}",
+         "choices": [
+            "A. \\frac{161}{10}",
+            "B. \\frac{163}{10}",
+            "C. \\frac{171}{10}",
+            "D. \\frac{173}{10}"
+         ]
+      },
+      {
+         "id": "2-112",
+         "question": "Tính tỉ số phần trăm giữa số học sinh nữ và tổng số học sinh cả lớp biết số học sinh nữ là 20 và số học sinh nam là 25.",
+         "choices": [
+            "A. 44,44%",
+            "B. 66,66%",
+            "C. 40%",
+            "D. 60%"
+         ]
+      },
+      {
+         "id": "2-113",
+         "question": "Số thập phân của phân số \\frac{300}{500}",
+         "choices": [
+            "A. \\frac{30}{100}",
+            "B. \\frac{6}{10}",
+            "C. 0,6",
+            "D. 0,35"
+         ]
+      },
+      {
+         "id": "2-114",
+         "question": "Tính tổng S = 1/2 + 1/4 + 1/8 + ………………… + 1/128 + 1/256",
+         "choices": [
+            "A. 1",
+            "B. 1 + 1/256",
+            "C. 1 - 1/256",
+            "D. 1/256"
+         ]
+      },
+      {
+         "id": "2-115",
+         "question": "Chu vi hình chữ nhật có chiều dài \\frac{5}{2} m và chiều rộng \\frac{1}{2} m là:",
+         "choices": [
+            "A. \\frac{3}{4} m",
+            "B. \\frac{6}{4} m",
+            "C. 4 m",
+            "D. 6 m"
+         ]
+      },
+      {
+         "id": "2-116",
+         "question": "Viết số thích hợp vào dấu 3 chấm :\n32 tấn 9 kg = ... kg",
+         "choices": [
+            "A. 3209",
+            "B. 32009",
+            "C. 3290",
+            "D. 32090"
+         ]
+      },
+      {
+         "id": "2-117",
+         "question": "Một hình thang có độ dài hai đáy lần lượt là 26cm và 64cm. Diện tích hình thang 324 cm2 thì chiều cao là:",
+         "choices": [
+            "A. 7,2cm",
+            "B. 36cm",
+            "C. 72cm",
+            "D. 3,6cm"
+         ]
+      },
+      {
+         "id": "2-118",
+         "question": "\\frac{11}{25} có dạng phân số thập phân là:",
+         "choices": [
+            "A. \\frac{11}{100}",
+            "B. \\frac{25}{100}",
+            "C. \\frac{44}{100}",
+            "D. \\frac{4}{100}"
+         ]
+      },
+      {
+         "id": "2-119",
+         "question": "Một ô tô đi trên quãng đường AB dài 135 km trong 3 giờ. Vận tốc của ô tô là:",
+         "choices": [
+            "A. 45 km/giờ",
+            "B. 40 km/giờ",
+            "C. 55 km/giờ",
+            "D. 65 km/giờ"
+         ]
+      },
+      {
+         "id": "2-120",
+         "question": "Tìm chiều cao của hình hộp chữ nhật biết hình hộp chữ nhật dài 20dm, rộng 6dm và có thể tích là 300dm^{3}",
+         "choices": [
+            "A. 10dm",
+            "B. 2,5dm",
+            "C. 8dm",
+            "D. 6dm"
+         ]
+      },
+      {
+         "id": "2-121",
+         "question": "Có 2 hình chữ nhật bằng nhau, biết một hình chữ nhật có chu vi bằng 40dm và một cạnh của hình chữ nhật đó có độ dài 5dm. Hỏi diện tích của 2 hình chữ nhật là bao nhiêu?",
+         "choices": [
+            "A. 75dm^{2}",
+            "B. 100dm^{2}",
+            "C. 125dm^{2}",
+            "D. 150dm^{2}"
+         ]
+      },
+      {
+         "id": "2-122",
+         "question": "Bạn Lan có 18 nhãn vở, còn bạn Hiền có số nhãn vở bằng 2/3 số nhãn của Lan, bạn Pháp có số nhãn vở bằng trung bình cộng của Lan và Hiền. Hỏi Pháp có bao nhiêu nhãn vở?",
+         "choices": [
+            "A. 15",
+            "B. 20",
+            "C. 25",
+            "D. 30"
+         ]
+      },
+      {
+         "id": "2-123",
+         "question": "Phân số \\frac{2}{20} có dạng số thập phân là:",
+         "choices": [
+            "A. 1,5",
+            "B. 2,0",
+            "C. 0,02",
+            "D. 0,1"
+         ]
+      },
+      {
+         "id": "2-124",
+         "question": "Trong các số 12,895; 12,891; 12,901; 12,894. Số thập phân bé nhất là:",
+         "choices": [
+            "A. 12,895",
+            "B. 12,891",
+            "C. 12,901",
+            "D. 12,894"
+         ]
+      },
+      {
+         "id": "2-125",
+         "question": "Tính diện tích của một hình tam giác có độ dài cạnh đáy 4dm và chiều cao 1dm:",
+         "choices": [
+            "A. 5,4d m^{2}",
+            "B. 10,8 dm^{2}",
+            "C. 2,7 dm^{2}",
+            "D. 2 dm^{2}"
+         ]
+      },
+      {
+         "id": "2-126",
+         "question": "Khi đánh số trang của một cuốn sách từ trang 90 đến 110  ta cần dùng bao nhiêu chữ số.",
+         "choices": [
+            "A. 33",
+            "B. 43",
+            "C. 53",
+            "D. 63"
+         ]
+      },
+      {
+         "id": "2-127",
+         "question": "Một ô tô đi với vận tốc 60km/giờ, đi được trong 150 phút. Tính quãng đường mà ô tô đi được",
+         "choices": [
+            "A. 150 km",
+            "B. 480 km",
+            "C. 420 km",
+            "D. 300 km"
+         ]
+      },
+      {
+         "id": "2-128",
+         "question": "Trong số thập phân 58,3072, chữ số 7 có giá trị là:",
+         "choices": [
+            "A. \\frac{7}{10}",
+            "B. \\frac{7}{100}",
+            "C. \\frac{7}{1000}",
+            "D. 7"
+         ]
+      },
+      {
+         "id": "2-129",
+         "question": "Số thập phân gồm có: 5 nghìn, 2 đơn vị, 2 phần nghìn được viết là:",
+         "choices": [
+            "A. 50002,0002",
+            "B. 5002,002",
+            "C. 5000,2002",
+            "D. 5002,0002"
+         ]
+      },
+      {
+         "id": "2-130",
+         "question": "Hỗn số 5 \\frac{2}{3} được viết dưới dạng phân số là:",
+         "choices": [
+            "A. \\frac{17}{3}",
+            "B. \\frac{13}{3}",
+            "C. \\frac{17}{5}",
+            "D. \\frac{15}{2}"
+         ]
+      },
+      {
+         "id": "2-131",
+         "question": "Hình hộp chữ nhật có chiều dài 1,5 cm chiều rộng 1,2 cm và chiều cao 0,5 cm. Thể tích hình hộp chữ nhật là:",
+         "choices": [
+            "A. 0,9 cm^{2}",
+            "B. 2,7 cm^{2}",
+            "C. 0,9 cm^{3}",
+            "D. 9 cm^{3}"
+         ]
+      },
+      {
+         "id": "2-132",
+         "question": "Kết quả của phép tính 6,7 + 8 + 7,7 là:",
+         "choices": [
+            "A. 12,7",
+            "B. 24,4",
+            "C. 22,4",
+            "D. 15,7"
+         ]
+      },
+      {
+         "id": "2-133",
+         "question": "Tính thể tích của ba hình hộp chữ nhật biết chiều dài 8 cm, chiều rộng 4cm, chiều cao 2cm.",
+         "choices": [
+            "A. 450 cm^{3}",
+            "B. 180 cm^{3}",
+            "C. 192 cm^{3}",
+            "D. 210 cm^{3}"
+         ]
+      },
+      {
+         "id": "2-134",
+         "question": "Dệt 5 chiếc khăn mặt hết 250g sợi. Hỏi dệt 30 chiếc khăn mặt như thế thì hết bao nhiêu gam sợi?",
+         "choices": [
+            "A. 3500g",
+            "B. 2000g",
+            "C. 4000g",
+            "D. 1500g"
+         ]
+      },
+      {
+         "id": "2-135",
+         "question": "Diện tích của hình chữ nhật có chiều dài 22cm, chiều rộng 16,5 cm",
+         "choices": [
+            "A. 3,625 cm^{2}",
+            "B. 36,25 cm^{2}",
+            "C. 362,3 cm^{2}",
+            "D. 363 cm^{2}"
+         ]
+      },
+      {
+         "id": "2-136",
+         "question": "Hình hộp chữ nhật có chiều dài 1dm, chiều rộng 2cm, chiều cao 5cm thì thể tích hình hộp chữ nhật là:",
+         "choices": [
+            "A. 10 dm^{3}",
+            "B. 10 dm^{3}",
+            "C. 0,1 dm^{3}",
+            "D. 1 dm^{3}"
+         ]
+      },
+      {
+         "id": "2-137",
+         "question": "Hỏi: 36 phút = ...giờ",
+         "choices": [
+            "A. 0,5 giờ",
+            "B. 0,25 giờ",
+            "C. 0,75 giờ",
+            "D. 0,6 giờ"
+         ]
+      },
+      {
+         "id": "2-138",
+         "question": "Khi lấy 669,23 trừ cho 245,65 ta được:",
+         "choices": [
+            "A. 70,54",
+            "B. 700,54",
+            "C. 423,58",
+            "D. 700,54"
+         ]
+      },
+      {
+         "id": "2-139",
+         "question": "Kết quả của phép tính 25,8 \\times  3,5 là:",
+         "choices": [
+            "A. 90,30",
+            "B. 9,030",
+            "C. 903,0",
+            "D. 9030"
+         ]
+      },
+      {
+         "id": "2-140",
+         "question": "Chữ số 5 trong số thập phân 7,256 thuộc hàng nào ?",
+         "choices": [
+            "A. Hàng đơn vị",
+            "B. Hàng phần trăm",
+            "C. Hàng phần mười",
+            "D. Hàng phần nghìn"
+         ]
+      },
+      {
+         "id": "2-141",
+         "question": "Tính thể tích hình chữ nhật biết chiều dài 3,2m; chiều rộng 1,2m; chiều cao 1m:",
+         "choices": [
+            "A. 6m^{2}",
+            "B. 3,68 m",
+            "C. 3,68m^{2}",
+            "D. 3,84m^{3}"
+         ]
+      },
+      {
+         "id": "2-142",
+         "question": "Tìm số có 3 chữ số, trong đó chữ số hàng đơn vị bằng 1/6 lần chữ số hàng chục và chữ số hàng trăm chia cho 5 số dư là 4.",
+         "choices": [
+            "A. 461",
+            "B. 561",
+            "C. 661",
+            "D. 961"
+         ]
+      },
+      {
+         "id": "2-143",
+         "question": "Kết quả của phép chia 34,254 : 0,01 là:",
+         "choices": [
+            "A. 3,4254",
+            "B. 34,254",
+            "C. 342,54",
+            "D. 3425,4"
+         ]
+      },
+      {
+         "id": "2-144",
+         "question": "Chữ số 5 trong số 1695,7 chỉ:",
+         "choices": [
+            "A. 5 đơn vị",
+            "B. 5 phần mười",
+            "C. 5 chục",
+            "D. 5 phần trăm"
+         ]
+      },
+      {
+         "id": "2-145",
+         "question": "Một nhân viên cửa hàng buổi sáng bán được 1/2 số táo và buổi chiều bán thêm được 2/9 số táo thì còn lại 15 quả táo trong cửa hàng. Hỏi số quả táo có trong cửa hàng trước khi bán là bao nhiêu?",
+         "choices": [
+            "A. 50",
+            "B. 54",
+            "C. 58",
+            "D. 62"
+         ]
+      },
+      {
+         "id": "2-146",
+         "question": "Nếu chia 812,6 cho 4 và thương chỉ lấy 2 chữ số ở phần thập phân thì số dư là:",
+         "choices": [
+            "A. 8",
+            "B. 0,8",
+            "C. 0,15",
+            "D. 1,5"
+         ]
+      },
+      {
+         "id": "2-147",
+         "question": "Tìm thương và số dư trong phép chia 78:4",
+         "choices": [
+            "A. Thương 19 dư 2",
+            "B. Thương 17 dư 4",
+            "C. Thương 19 dư 4",
+            "D. Thương 17 dư 2"
+         ]
+      },
+      {
+         "id": "2-148",
+         "question": "Kết quả của phép tính: 84,32−24,32",
+         "choices": [
+            "A. 70",
+            "B. 84",
+            "C. 60",
+            "D. 80"
+         ]
+      },
+      {
+         "id": "2-149",
+         "question": "Số thập phân thích hợp điền vào chỗ trống: 2cm^{2} 7mm^{2} = . . . . . .  cm^{2}",
+         "choices": [
+            "A. 27",
+            "B. 2,7",
+            "C. 2,007",
+            "D. 2,07"
+         ]
+      },
+      {
+         "id": "2-150",
+         "question": "Tìm chữ số X, biết: 7,5 \\times 8 < 7,578 \\times X",
+         "choices": [
+            "A. X = 7",
+            "B. X = 8",
+            "C. X = 6",
+            "D. X = 0"
+         ]
+      },
+      {
+         "id": "2-151",
+         "question": "Trong năm học vừa qua trường Thành Công A có 30 bạn thi học sinh giỏi hai môn Toán và Tiếng Việt. Trong số đó có 17 bạn thi môn Toán và 16 bạn thi môn Tiếng Việt. Hỏi Trường có bao nhiêu bạn thi cả hai môn?",
+         "choices": [
+            "A. 5",
+            "B. 3",
+            "C. 15",
+            "D. 17"
+         ]
+      },
+      {
+         "id": "2-152",
+         "question": "Tìm số lớn biết tổng hai số bằng 212,12 và hiệu của hai số bằng 1,2:",
+         "choices": [
+            "A. 106,66",
+            "B. 100",
+            "C. 184,7",
+            "D. 105,46"
+         ]
+      },
+      {
+         "id": "2-153",
+         "question": "Có 144 cái cốc đóng đều vào 8 hộp mỗi hộp 6 cái; 7 hộp mỗi hộp 8 cái. Số cốc còn lại được đóng đều vào các hộp chứa được 10 cốc mỗi hộp. Hỏi tổng số hộp để chứa hết số cốc là bao nhiêu ?",
+         "choices": [
+            "A. 19",
+            "B. 21",
+            "C. 23",
+            "D. 29"
+         ]
+      },
+      {
+         "id": "2-154",
+         "question": "Một bể nước hình hộp chữ nhật có chiều dài 3m chiều rộng 2m và chiều cao 1,5m.Đầu tiên người ta hút đi 2/5 lượng nước trong bể sau đó dùng thùng lấy ra 50 thùng nước, dung tích của mỗi thùng là 40 lít. Hỏi lượng nước còn lại trong bể là bao nhiêu lít?",
+         "choices": [
+            "A. 3400",
+            "B. 3500",
+            "C. 5300",
+            "D. 4300"
+         ]
+      },
+      {
+         "id": "2-155",
+         "question": "Điền số thích hợp vào chỗ trống: 2,5m^{2}5dm^{2} = ...... m^{2} là:",
+         "choices": [
+            "A. 2,5",
+            "B. 2,55",
+            "C. 255",
+            "D. 2, 055"
+         ]
+      },
+      {
+         "id": "2-156",
+         "question": "Một lớp học có 22 học sinh nam và 18 học sinh nữ. Vậy, tỉ số học sinh nữ so với số học sinh cả lớp là:",
+         "choices": [
+            "A. 4,5%",
+            "B. 45%",
+            "C. 60%",
+            "D. 0,6%"
+         ]
+      },
+      {
+         "id": "2-157",
+         "question": "Phân số thập phân là:",
+         "choices": [
+            "A. \\frac{3}{7}",
+            "B. \\frac{4}{19}",
+            "C. \\frac{100}{34}",
+            "D. \\frac{15}{100}"
+         ]
+      },
+      {
+         "id": "2-158",
+         "question": "Trong lớp học, có 2/5 số bạn được phân công vào đội múa còn 1/3 số bạn được phân công vào đội hát. Sau khi phân công thì trong lớp còn 12 bạn chưa được phân công. Hỏi số bạn được phân công vào đội múa là bao nhiêu bạn?",
+         "choices": [
+            "A. 12",
+            "B. 15",
+            "C. 18",
+            "D. 20"
+         ]
+      },
+      {
+         "id": "2-159",
+         "question": "Tìm một số, biết rằng nếu lấy số đó bớt đi 3454 rồi gấp lên 3 lần cuối cùng thêm 100 vào thì được 1036.",
+         "choices": [
+            "A. 1036",
+            "B. 3454",
+            "C. 312",
+            "D. 3766"
+         ]
+      },
+      {
+         "id": "2-160",
+         "question": "Giá trị của chữ số 5 trong số thập phân 14,597 là:",
+         "choices": [
+            "A. 5",
+            "B. \\frac{5}{10}",
+            "C. \\frac{5}{100}",
+            "D. \\frac{5}{1000}"
+         ]
+      },
+      {
+         "id": "2-161",
+         "question": "Điền số thích hợp: 2m^{2} 12dm^{2}= …………m^{2} là:",
+         "choices": [
+            "A. 212 m^{2}",
+            "B. 2,12 m^{2}",
+            "C. 2,02 m^{2}",
+            "D. 2,002 m^{2}"
+         ]
+      },
+      {
+         "id": "2-162",
+         "question": "Phép tính (45,6 \\div 12) - 2,03 có kết quả là:",
+         "choices": [
+            "A. 1,77",
+            "B. 24,1",
+            "C. 36,97",
+            "D. 4,06"
+         ]
+      },
+      {
+         "id": "2-163",
+         "question": "Điền kết quả đúng: 2kg 3g =…………g",
+         "choices": [
+            "A. 230",
+            "B. 203",
+            "C. 2003",
+            "D. 23"
+         ]
+      },
+      {
+         "id": "2-164",
+         "question": "Tính số lượng số hạng của dãy số sau: 1, 4, 7, 10, 13, 16, ..., 94, 97, 100, 103.",
+         "choices": [
+            "A. 33",
+            "B. 34",
+            "C. 35",
+            "D. 36"
+         ]
+      },
+      {
+         "id": "2-165",
+         "question": "Một cửa hàng có 10450 m vải , cửa hàng đã bán trong 4 tuần , mỗi tuần bán được 770m vải. Hỏi cửa hàng còn lại bao nhiêu mét vải ?",
+         "choices": [
+            "A. 7730",
+            "B. 7370",
+            "C. 7703",
+            "D. 7037"
+         ]
+      },
+      {
+         "id": "2-166",
+         "question": "Số gồm 7 đơn vị và 65 phần nghìn là:",
+         "choices": [
+            "A. 65007",
+            "B. 7,65",
+            "C. 0,765",
+            "D. 7,065"
+         ]
+      },
+      {
+         "id": "2-167",
+         "question": "Sáu đơn vị, tám phần mười, năm phần trăm, ba phần nghìn.",
+         "choices": [
+            "A. 685,3",
+            "B. 68,53",
+            "C. 6,853",
+            "D. 6,835"
+         ]
+      },
+      {
+         "id": "2-168",
+         "question": "Trong các số sau: 2,102; 2,245; 2,600; 2,150, số nào là số bé nhất:",
+         "choices": [
+            "A. 2,102",
+            "B. 2,245",
+            "C. 2,600",
+            "D. 2,150"
+         ]
+      },
+      {
+         "id": "2-169",
+         "question": "Một hình tròn có đường kính 40cm. Tính diện tích hình tròn đó.",
+         "choices": [
+            "A. 31,4 cm^{2}",
+            "B. 62,8 cm^{2}",
+            "C. 314 cm^{2}",
+            "D. 1256,4cm^{2}"
+         ]
+      },
+      {
+         "id": "2-170",
+         "question": "Kết quả của 2ha 3m^{2} =............... m^{2} là:",
+         "choices": [
+            "A. 203",
+            "B. 2 003",
+            "C. 20 003",
+            "D. 200 000 3"
+         ]
+      },
+      {
+         "id": "2-171",
+         "question": "Tìm số có 3 chữ số, biết rằng tổng các số hạng bằng số lớn nhất của số tự nhiên có 1 chữ số. Và số chữ số hàng trăm trừ đi chữ số hàng chục trừ thêm một thì bằng chữ số hàng đơn vị và bằng số tự nhiên nhỏ nhất.",
+         "choices": [
+            "A. 540",
+            "B. 630",
+            "C. 450",
+            "D. 730"
+         ]
+      },
+      {
+         "id": "2-172",
+         "question": "Kết quả của 2kg 12g = ..........kg",
+         "choices": [
+            "A. 2,012kg",
+            "B. 5,23kg",
+            "C. 5230kg",
+            "D. 5023kg"
+         ]
+      },
+      {
+         "id": "2-173",
+         "question": "Một hình tam giác có độ dài 3 cạnh lần lượt là 5cm; 7cm; 3cm. Chu vi hình tam giác là:",
+         "choices": [
+            "A. 15cm",
+            "B. 21cm",
+            "C. 35cm",
+            "D. 105cm"
+         ]
+      },
+      {
+         "id": "2-174",
+         "question": "Một cửa hàng sáng bán được 3/10 số vải thì trong cửa hàng còn lại 56m vải. Hỏi ban đầu số mét vải có trong cửa hàng là bao nhiêu?",
+         "choices": [
+            "A. 60m",
+            "B. 70m",
+            "C. 80m",
+            "D. 90m"
+         ]
+      },
+      {
+         "id": "2-175",
+         "question": "Kết quả của phép tính 10 + 21 * 5 - 4,5 * 2 là bao nhiêu:",
+         "choices": [
+            "A. 31",
+            "B. 106",
+            "C. 146",
+            "D. 41"
+         ]
+      },
+      {
+         "id": "2-176",
+         "question": "Lớp 4A có 12 bạn thích môn tiếng Việt, 18 bạn thích môn Toán. Trong số các bạn tích Tiếng Việt hoặc thích Toán có 8 bạn thích cả hai môn Tiếng Việt và Toán. Trong lớp vẫn còn có 10 bạn không thích môn nào (trong hai môn Tiếng Việt và Toán). Hỏi lớp 4A có bao nhiêu bạn tất cả?",
+         "choices": [
+            "A. 7",
+            "B. 12",
+            "C. 37",
+            "D. 32"
+         ]
+      },
+      {
+         "id": "2-177",
+         "question": "Cho một hình vuông có cạnh 3,5 cm, một hình chữ nhật có chiều dài 4 cm, chiều rộng 3 cm.",
+         "choices": [
+            "A. Chu vi hình vuông bằng chu vi hình chữ nhật",
+            "B. Diện tích hình vuông bằng diện tích hình chữ nhật",
+            "C. Diện tích hình vuông nhỏ hơn diện tích hình chữ nhật",
+            "D. Chu vi hình vuông lớn hơn chu vi hình chữ nhật"
+         ]
+      },
+      {
+         "id": "2-178",
+         "question": "Tìm chiều dài một thửa ruộng hình chữ nhật biết S=632,4 m2 và chiều rộng bằng 18m",
+         "choices": [
+            "A. 35,13m",
+            "B. 35,24m",
+            "C. 35,27m",
+            "D. 3,46"
+         ]
+      },
+      {
+         "id": "2-179",
+         "question": "Tám đơn vị, sáu phần mười, năm phần nghìn viết được số thập phân là:",
+         "choices": [
+            "A. 8,56",
+            "B. 86,5",
+            "C. 8,605",
+            "D. 8,65"
+         ]
+      },
+      {
+         "id": "2-180",
+         "question": "Khi biểu diễn trên tia số, phân số gần số 0 nhất là:",
+         "choices": [
+            "A. \\frac{1}{2}",
+            "B. \\frac{1}{4}",
+            "C. \\frac{1}{5}",
+            "D. \\frac{1}{10}"
+         ]
+      },
+      {
+         "id": "2-181",
+         "question": "Điền số thích hợp: 3kg 12g =............kg",
+         "choices": [
+            "A. 2002",
+            "B. 2,02",
+            "C. 2",
+            "D. 2,012"
+         ]
+      },
+      {
+         "id": "2-182",
+         "question": "Giá trị của chữ số 5 trong số 23,150 là:",
+         "choices": [
+            "A. \\frac{5}{10}",
+            "B. \\frac{5}{100}",
+            "C. \\frac{5}{1000}",
+            "D. 5"
+         ]
+      },
+      {
+         "id": "2-183",
+         "question": "Kết quả của phép tính: 45,6 \\div 10",
+         "choices": [
+            "A. 456",
+            "B. 4,56",
+            "C. 345",
+            "D. 3,45"
+         ]
+      },
+      {
+         "id": "2-184",
+         "question": "Tìm số bé nhất trong các số sau: 52,02; 9,11; 53,20; 32,05",
+         "choices": [
+            "A. 52,02",
+            "B. 53,20",
+            "C. 9,11",
+            "D. 32,05"
+         ]
+      },
+      {
+         "id": "2-185",
+         "question": "Phân số nào có thể chuyển thành phân số thập phân. Biết các phân số thập phân là các phân số có mẫu là: 10,100,1000...",
+         "choices": [
+            "A. \\frac{5}{3}",
+            "B. \\frac{5}{11}",
+            "C. \\frac{11}{5}",
+            "D. \\frac{5}{26}"
+         ]
+      },
+      {
+         "id": "2-186",
+         "question": "Tính nhanh: 1,1 + 2,2 + 3,3 + 4,4 + 5,5 + 6,6 + 7,7 + 8,8 + 9,9 + 10,10",
+         "choices": [
+            "A. 49,6",
+            "B. 59,6",
+            "C. 60,6",
+            "D. 70,6"
+         ]
+      },
+      {
+         "id": "2-187",
+         "question": "Hình lập phương có:",
+         "choices": [
+            "A. Có 6 mặt đều là hình vuông, có 8 đỉnh và 12 cạnh bằng nhau",
+            "B. Có 6 mặt đều là hình chữ nhật, có 8 đỉnh và 12 cạnh bằng nhau",
+            "C. Có 6 mặt đều là hình chữ nhật, có 12 đỉnh và 8 cạnh",
+            "D. Tất cả đáp án đều sai"
+         ]
+      },
+      {
+         "id": "2-188",
+         "question": "Điền số thích hợp: 105 kg = ...... tấn",
+         "choices": [
+            "A. 15",
+            "B. 0,015",
+            "C. 105",
+            "D. 0,105"
+         ]
+      },
+      {
+         "id": "2-189",
+         "question": "Một lớp học có 40 học sinh, trong đó có 19 học sinh nữ. Tỷ số phần trăm giữa số học sinh nữ và tống số học sinh cả lớp là:",
+         "choices": [
+            "A. 47,5%",
+            "B. 4,75%",
+            "C. 45,7%",
+            "D. 52,5%"
+         ]
+      },
+      {
+         "id": "2-190",
+         "question": "Kết quả của 19 giờ 48 phút \\div 9 là:",
+         "choices": [
+            "A. 2 giờ 12 phút",
+            "B. 2 giờ 15 phút",
+            "C. 2 giờ 10 phút",
+            "D. 2 giờ 02 phút"
+         ]
+      },
+      {
+         "id": "2-191",
+         "question": "Tìm số dư trong phép chia  231,37 \\div 22, biết rằng phần thương chỉ lấy 2 chữ số thập phân:",
+         "choices": [
+            "A. 0,15",
+            "B. 0,015",
+            "C. 1,5",
+            "D. 15"
+         ]
+      },
+      {
+         "id": "2-192",
+         "question": "Số thích hợp viết vào chỗ chấm là:\n2cm^{2} 9mm^{2} =..... cm^{2}",
+         "choices": [
+            "A. 29",
+            "B. 2,09",
+            "C. 2,9",
+            "D. 2,009"
+         ]
+      },
+      {
+         "id": "2-193",
+         "question": "Số 0,085 dưới dạng tỉ số phần trăm là:",
+         "choices": [
+            "A. 8,5%",
+            "B. 850%",
+            "C. 0,85%",
+            "D. 85%"
+         ]
+      },
+      {
+         "id": "2-194",
+         "question": "Số thích hợp điền vào chỗ chấm là: 2 tấn 17kg =......kg",
+         "choices": [
+            "A. 217",
+            "B. 2017",
+            "C. 2,017",
+            "D. 2,17"
+         ]
+      },
+      {
+         "id": "2-195",
+         "question": "3 ha 45dam^{2} = ……… dam^{2}",
+         "choices": [
+            "A. 345dam^{2}",
+            "B. 30045dam^{2}",
+            "C. 3045dam^{2}",
+            "D. 3450 dam^{2}"
+         ]
+      },
+      {
+         "id": "2-196",
+         "question": "Một học sinh đã làm đúng 25 bài kiểm tra trong số tổng cộng 30 bài kiểm tra. Tỉ lệ phần trăm bài kiểm tra đúng của học sinh đó là:",
+         "choices": [
+            "A. 15%",
+            "B. 60%",
+            "C. 75%",
+            "D. 83.33%"
+         ]
+      },
+      {
+         "id": "2-197",
+         "question": "Chọn số lớn nhất trong các số sau: 724,36; 963,19; 512,47; 937,82.",
+         "choices": [
+            "A. 512,47",
+            "B. 724,36",
+            "C. 963,19",
+            "D. 937,82"
+         ]
+      },
+      {
+         "id": "2-198",
+         "question": "Tính kết quả của: 56,47 \\times 0,01",
+         "choices": [
+            "A. 0,5647",
+            "B. 5,647",
+            "C. 564,7",
+            "D. 56,47"
+         ]
+      },
+      {
+         "id": "2-199",
+         "question": "Viết số thích hợp vào chỗ chấm: 9 m^{3} 25dm^{3} = ....dm^{3}",
+         "choices": [
+            "A. 9025",
+            "B. 90025",
+            "C. 900025",
+            "D. 925"
+         ]
+      },
+      {
+         "id": "2-200",
+         "question": "Tổng của hai số là 222 và số thứ nhất gấp rưỡi số thứ hai. Vậy số thứ nhất là:",
+         "choices": [
+            "A. 132,2",
+            "B. 74,7",
+            "C. 80",
+            "D. 88,8"
+         ]
+      },
+      {
+         "id": "2-201",
+         "question": "Giá  trị chữ số 8 trong số thập phân 12,384 là :",
+         "choices": [
+            "A. \\frac{8}{10}",
+            "B. \\frac{8}{100}",
+            "C. \\frac{8}{1000}",
+            "D. \\frac{8}{10000}"
+         ]
+      },
+      {
+         "id": "2-202",
+         "question": "Giá trị của chữ số 5 trong số 21,075 là:",
+         "choices": [
+            "A. 5",
+            "B. \\frac{5}{1000}",
+            "C. \\frac{5}{100}",
+            "D. \\frac{5}{10}"
+         ]
+      },
+      {
+         "id": "2-203",
+         "question": "Lớp 9A có 35 bạn, với 10 bạn nữ. Tỷ lệ bạn nữ so với bạn nam là bao nhiêu %",
+         "choices": [
+            "A. 45%",
+            "B. 65%",
+            "C. 40%",
+            "D. 75%"
+         ]
+      },
+      {
+         "id": "2-204",
+         "question": "Phòng học có dạng hình hộp chữ nhật chiều dài 7m, chiều rộng 4,5m, chiều cao 3m. Người ta muốn sơn toàn bộ trần nhà và 4 bức tường. Biết tổng diện tích các cửa là 7,5m2, tính diện tích cần sơn.",
+         "choices": [
+            "A. 83m^{2}",
+            "B. 108m^{2}",
+            "C. 93m^{2}",
+            "D. 98m^{2}"
+         ]
+      },
+      {
+         "id": "2-205",
+         "question": "23,25 + 5,34 có kết quả là:",
+         "choices": [
+            "A. 2,859",
+            "B. 28,59",
+            "C. 79,65",
+            "D. 59,28"
+         ]
+      },
+      {
+         "id": "2-206",
+         "question": "Trong số 410,920, giá trị của chữ số 2:",
+         "choices": [
+            "A. \\frac{2}{1000}",
+            "B. \\frac{2}{100}",
+            "C. \\frac{2}{10}",
+            "D. 2"
+         ]
+      },
+      {
+         "id": "2-207",
+         "question": "Khoảng thời gian từ 13 giờ kém 10 phút đến 21 giờ 30 phút là:",
+         "choices": [
+            "A. 520 phút",
+            "B. 500 phút",
+            "C. 52 phút",
+            "D. 50 phút"
+         ]
+      },
+      {
+         "id": "2-208",
+         "question": "Hình vuông có chu vi 44m, cạnh của nó là:",
+         "choices": [
+            "A. 12m",
+            "B. 11m",
+            "C. 16m",
+            "D. 18m"
+         ]
+      },
+      {
+         "id": "2-209",
+         "question": "An nghĩ ra một số, nếu lấy số đó chia cho 5 thì được thương là 5 và số dư là số dư lớn nhất. Hãy tìm số đó.",
+         "choices": [
+            "A. 24",
+            "B. 29",
+            "C. 19",
+            "D. 14"
+         ]
+      },
+      {
+         "id": "2-210",
+         "question": "Trung bình cộng của 3 phân số là \\frac{13}{36}. Trung bình cộng của phân số thứ nhất và phân số thứ hai là \\frac{5}{12}, của phân số thứ hai và phân số thứ ba là \\frac{7}{24}. Phân số thứ nhất, thứ 2, thứ 3 lần lượt là:",
+         "choices": [
+            "A. \\frac{1}{2}, \\frac{1}{3}, \\frac{1}{4}",
+            "B. \\frac{1}{2}, \\frac{1}{4}, \\frac{1}{6}",
+            "C. \\frac{1}{3}, \\frac{1}{2}, \\frac{1}{4}",
+            "D. \\frac{1}{6}, \\frac{1}{2}, \\frac{1}{4}"
+         ]
+      },
+      {
+         "id": "2-211",
+         "question": "Ngày 29/2/2012 là thứ tư, vậy ngày 4/3/2012 là thứ mấy",
+         "choices": [
+            "A. Thứ năm",
+            "B. Thứ sáu",
+            "C. Thứ bảy",
+            "D. Chủ nhật"
+         ]
+      },
+      {
+         "id": "2-212",
+         "question": "Số 3,3 viết dưới dạng hỗn số là:",
+         "choices": [
+            "A. 3 \\frac{3}{10}",
+            "B. 6 \\frac{6}{10}",
+            "C. 3 \\frac{3}{100}",
+            "D. 6 \\frac{6}{100}"
+         ]
+      },
+      {
+         "id": "2-213",
+         "question": "Một khối kim loại hình lập phương có thể tích 2,12cm^{3} nặng 18g. Vậy nếu một khối kim loại cùng chất có thể tích 3,0cm3 thì khối lượng khối kim loại này là bao nhiêu?",
+         "choices": [
+            "A. 7,6 g",
+            "B. 13,034 g",
+            "C. 26,6 g",
+            "D. 25,377 g"
+         ]
+      },
+      {
+         "id": "2-214",
+         "question": "Mua 3kg gạo hết 30 000 đồng. Vậy mua 5,5 kg gạo hết số tiền là:",
+         "choices": [
+            "A. 35 000 đồng",
+            "B. 45 000 đồng",
+            "C. 55 000 đồng",
+            "D. 50 000 đồng"
+         ]
+      },
+      {
+         "id": "2-215",
+         "question": "Vĩnh và Phúc cùng làm một công việc thì trong 16 giờ thì xong. Nếu Vĩnh làm 3 giờ và Phúc làm 6 giờ thì họ làm được 25% công việc. Hỏi mỗi người làm công việc đó một mình thì trong bao lâu sẽ hoàn thành xong công việc ?",
+         "choices": [
+            "A. 16h",
+            "B. 24h",
+            "C. 36h",
+            "D. 48h"
+         ]
+      },
+      {
+         "id": "2-216",
+         "question": "Một cái hộp có 150 viên bi gồm 18 viên bi màu đỏ, 30 viên bi màu xanh, 45 viên bi màu tím và 57 viên bi màu vàng. Nếu không nhìn vào hộp, cần lấy ra bao nhiêu viên để chắc chắn rằng số bi lấy ra sẽ có đủ cả bốn màu?",
+         "choices": [
+            "A. 94 viên",
+            "B. 133 viên",
+            "C. 110 viên",
+            "D. 106 viên"
+         ]
+      },
+      {
+         "id": "2-217",
+         "question": "Giá trị của chữ số 8 trong số thập phân 71,268 là:",
+         "choices": [
+            "A. 8",
+            "B. \\frac{8}{10}",
+            "C. \\frac{8}{100}",
+            "D. \\frac{8}{1000}"
+         ]
+      },
+      {
+         "id": "2-218",
+         "question": "Phân số thập phân \\frac{231}{1000} được viết dưới dạng số thập phân là:",
+         "choices": [
+            "A. 23,1",
+            "B. 0,231",
+            "C. 2,31",
+            "D. 0,0231"
+         ]
+      },
+      {
+         "id": "2-219",
+         "question": "Bểu thức 212,99 - 5,11 + 3,22 - 4 có kết quả là:",
+         "choices": [
+            "A. 207,1",
+            "B. 207,88",
+            "C. 223,54",
+            "D. 207,01"
+         ]
+      },
+      {
+         "id": "2-220",
+         "question": "Tính chu vi hình tròn có D= 4cm là:",
+         "choices": [
+            "A. 12,56 cm",
+            "B. 125,6 cm",
+            "C. 1,256 cm",
+            "D. 1256 cm"
+         ]
+      },
+      {
+         "id": "2-221",
+         "question": "16 \\frac{7}{100}  viết dưới dạng số thập phân là:",
+         "choices": [
+            "A. 16,7",
+            "B. 16,70",
+            "C. 16,07",
+            "D. 16,007"
+         ]
+      },
+      {
+         "id": "2-222",
+         "question": "Các số X, III, XX, IX, VI, XI được sắp xếp theo thứ tự từ lớn đến bé là:",
+         "choices": [
+            "A. XX, XI , IX ,X, VI, III",
+            "B. XX, IX , XI ,X, VI, III",
+            "C. XI, X , IX , VIII, V, II",
+            "D. XI, X , IX , VIII, II, V"
+         ]
+      },
+      {
+         "id": "2-223",
+         "question": "Thực hiện phép tính: 136,5 – (100 \\div 2,4) \\times 0,9",
+         "choices": [
+            "A. 100,5",
+            "B. 110,5",
+            "C. 100",
+            "D. 99"
+         ]
+      },
+      {
+         "id": "2-224",
+         "question": "Hỗn số 6 \\frac{9}{100} được viết thành số thập phân:",
+         "choices": [
+            "A. 6,09",
+            "B. 6,90",
+            "C. 6,009",
+            "D. 69"
+         ]
+      },
+      {
+         "id": "2-225",
+         "question": "Trong các số dưới đây số nào gấp 6 lần chữ số hàng đơn vị của nó?",
+         "choices": [
+            "A. 12",
+            "B. 22",
+            "C. 32",
+            "D. 42"
+         ]
+      },
+      {
+         "id": "2-226",
+         "question": "Hình tròn có bán kính r= 6cm thì diện tích của 1/3 hình tròn là:",
+         "choices": [
+            "A. 37,68cm^{2}",
+            "B. 37,67cm^{2}",
+            "C. 113,04cm^{2}",
+            "D. 113cm^{2}"
+         ]
+      },
+      {
+         "id": "2-227",
+         "question": "Thể tích của một hình hộp chữ nhật có chiều dài 8m, chiều rộng 3m, chiều cao 2m là:",
+         "choices": [
+            "A. 24m^{3}",
+            "B. 48m^{3}",
+            "C. 32m^{3}",
+            "D. 6m^{3}"
+         ]
+      },
+      {
+         "id": "2-228",
+         "question": "Viết 5 \\frac{5}{100} dưới dạng số thập phân ta được:",
+         "choices": [
+            "A. 5,005",
+            "B. 5,05",
+            "C. 5,03",
+            "D. 5,003"
+         ]
+      },
+      {
+         "id": "2-229",
+         "question": "Trong các số sau đây, số nào có chữ số hàng trăm là 2?",
+         "choices": [
+            "A. 502",
+            "B. 205",
+            "C. 025",
+            "D. 052"
+         ]
+      },
+      {
+         "id": "2-230",
+         "question": "Tìm số tự nhiên x biết: 22,75 < x < 23,05",
+         "choices": [
+            "A. X = 22,76",
+            "B. X = 23",
+            "C. X = 23, 05",
+            "D. X = 22"
+         ]
+      },
+      {
+         "id": "2-231",
+         "question": "Kết quả phép cộng: 56,27 + 2,46",
+         "choices": [
+            "A. 78,73",
+            "B. 87,37",
+            "C. 58,73",
+            "D. 58,37"
+         ]
+      },
+      {
+         "id": "2-232",
+         "question": "Năm nay tuổi bố gấp 8 lần tuổi bé Hạnh, tuổi mẹ gấp 7 lần tuổi bé Hạnh và bố hơn mẹ 4 tuổi. Vậy 2 năm sau Hạnh bao nhiêu tuổi?",
+         "choices": [
+            "A. 4",
+            "B. 3",
+            "C. 5",
+            "D. 6"
+         ]
+      },
+      {
+         "id": "2-233",
+         "question": "Dạng phân số thập phân của 2,2 là:",
+         "choices": [
+            "A. \\frac{13}{100}",
+            "B. \\frac{22}{10}",
+            "C. \\frac{26}{50}",
+            "D. \\frac{104}{200}"
+         ]
+      },
+      {
+         "id": "2-234",
+         "question": "Giá trị của chữ x trong phép tính (x+2) x 5 = 565 là :",
+         "choices": [
+            "A. 121",
+            "B. 113",
+            "C. 111",
+            "D. 114"
+         ]
+      },
+      {
+         "id": "2-235",
+         "question": "Cho số thập phân 102,456. Nếu chuyển dấu phẩy sang bên phải 2 chữ số thì chữ số 4 thuộc hàng nào?",
+         "choices": [
+            "A. Hàng chục",
+            "B. Hàng đơn vị",
+            "C. Hàn trăm",
+            "D. Hàng nghìn"
+         ]
+      },
+      {
+         "id": "2-236",
+         "question": "Dạng số thập phân của 2 \\frac{6}{1000}:",
+         "choices": [
+            "A. 2,0006",
+            "B. 2,006",
+            "C. 2,06",
+            "D. 2,6"
+         ]
+      },
+      {
+         "id": "2-237",
+         "question": "Phân số của hỗn số 2 \\frac{5}{9} là:",
+         "choices": [
+            "A. \\frac{21}{5}",
+            "B. \\frac{25}{3}",
+            "C. \\frac{13}{10}",
+            "D. \\frac{23}{9}"
+         ]
+      },
+      {
+         "id": "2-238",
+         "question": "3,3 giờ = .....giờ......phút. Số thích hợp điền vào chỗ chấm là:",
+         "choices": [
+            "A. 3 giờ 30 phút",
+            "B. 3 giờ 15 phút",
+            "C. 3 giờ 18 phút",
+            "D. 3 giờ 12 phút"
+         ]
+      },
+      {
+         "id": "2-239",
+         "question": "20,12 \\div 4,2 được:",
+         "choices": [
+            "A. 4,49",
+            "B. 4,781",
+            "C. 4,4",
+            "D. 4,39"
+         ]
+      },
+      {
+         "id": "2-240",
+         "question": "Viết số thích hợp:  5 tấn 312 kg = … kg",
+         "choices": [
+            "A. 513,2 kg",
+            "B. 53,12 kg",
+            "C. 5,312 kg",
+            "D. 5312 kg"
+         ]
+      },
+      {
+         "id": "2-241",
+         "question": "Phép trừ 792,54 - 48,8 có két quả đúng là:",
+         "choices": [
+            "A. 743,64",
+            "B. 643, 64",
+            "C. 743,74",
+            "D. 707,65"
+         ]
+      },
+      {
+         "id": "2-242",
+         "question": "Giá trị của biểu thức: 201 \\div 1,5 - 2,5 - 0,9 là:",
+         "choices": [
+            "A. 130,6",
+            "B. 136,25",
+            "C. 132,4",
+            "D. 131,57"
+         ]
+      },
+      {
+         "id": "2-243",
+         "question": "Tìm số còn thiếu trong dãy số sau 1, 2, 3, 4, 5, 6,  ... để trung bình cộng của dãy số được 7:",
+         "choices": [
+            "A. 7",
+            "B. 14",
+            "C. 21",
+            "D. 28"
+         ]
+      },
+      {
+         "id": "2-244",
+         "question": "Biến đổi 4/10 * 100 dưới dạng số thập phân là:",
+         "choices": [
+            "A. 0,04",
+            "B. 0,4",
+            "C. 4,0",
+            "D. 40,0"
+         ]
+      },
+      {
+         "id": "2-245",
+         "question": "Biết 25% của số đó là 40, vậy số đó là:",
+         "choices": [
+            "A. 45",
+            "B. 80",
+            "C. 160",
+            "D. 25"
+         ]
+      },
+      {
+         "id": "2-246",
+         "question": "Số 3,175 chuyển thành phân số:",
+         "choices": [
+            "A. \\frac{3175}{10}",
+            "B. \\frac{3175}{1000}",
+            "C. \\frac{317}{100}",
+            "D. \\frac{3}{17}"
+         ]
+      },
+      {
+         "id": "2-247",
+         "question": "Ngày 27 tháng 5 năm 2016 là thứ sáu thì ngày 4 tháng 6 cùng năm đó là thứ mấy?",
+         "choices": [
+            "A. Thứ tư",
+            "B. Thứ năm",
+            "C. Thứ sáu",
+            "D. Thứ bảy"
+         ]
+      },
+      {
+         "id": "2-248",
+         "question": "5% của 12 và số 12 là số nào? Khoanh vào đáp án đúng:",
+         "choices": [
+            "A. 18",
+            "B. 12.6",
+            "C. 24",
+            "D. 12.12"
+         ]
+      },
+      {
+         "id": "2-249",
+         "question": "Có 40 viên bi, trong đó có 17 viên bi hồng, 10 viên bi xám, 5 viên bi đen, 8 viên bi trắng. Như vậy 1/5 số viên bi có màu là:",
+         "choices": [
+            "A. Hồng",
+            "B. Xám",
+            "C. Đen",
+            "D. Trắng"
+         ]
+      },
+      {
+         "id": "2-250",
+         "question": "Chữ số 8 trong số 24,289 thuộc hàng nào?",
+         "choices": [
+            "A. Hàng chục",
+            "B. Hàng phần mười",
+            "C. Hàng phần trăm",
+            "D. Hàng phần nghìn"
+         ]
+      },
+      {
+         "id": "2-251",
+         "question": "Một hình hộp chữ nhật có diện tích xung quanh là 4800 cm², trong đó chiều dài đáy là 40 cm và chiều rộng là 30 cm. Tính chiều cao của hình hộp chữ nhật đó.",
+         "choices": [
+            "A. 34.28 dm",
+            "B. 17,14 cm",
+            "C. 17,14 dm",
+            "D. 34,28 cm"
+         ]
+      },
+      {
+         "id": "2-252",
+         "question": "1 tấn 8 kg = . . . . tấn. Số thích hợp để điền vào chỗ chấm là:",
+         "choices": [
+            "A. 1,008",
+            "B. 1,08",
+            "C. 1,8",
+            "D. 1,0008"
+         ]
+      },
+      {
+         "id": "2-253",
+         "question": "3 \\frac{1}{2} giờ = ……. phút",
+         "choices": [
+            "A. 210 phút",
+            "B. 120 phút",
+            "C. 150 phút",
+            "D. 180 phút"
+         ]
+      },
+      {
+         "id": "2-254",
+         "question": "Chữ số 8 trong số 6,008 có giá trị:",
+         "choices": [
+            "A. 800",
+            "B. \\frac{8}{10}",
+            "C. \\frac{8}{100}",
+            "D. \\frac{8}{1000}"
+         ]
+      },
+      {
+         "id": "2-255",
+         "question": "Kết quả của phép tính 1,6 \\times 10 + 8 \\div 4 là:",
+         "choices": [
+            "A. 16",
+            "B. 14",
+            "C. 10",
+            "D. 18"
+         ]
+      },
+      {
+         "id": "2-256",
+         "question": "Số nào là số lớn nhất trong 5,67; 5,76; 5,65; 5,675:",
+         "choices": [
+            "A. 5,67",
+            "B. 5,76",
+            "C. 5,65",
+            "D. 5,675"
+         ]
+      },
+      {
+         "id": "2-257",
+         "question": "Tổng diện tích của hai viên gạch hình vuông có cạnh 40cm là:",
+         "choices": [
+            "A. 1600cm^{2}",
+            "B. 16cm^{2}",
+            "C. 32cm^{2}",
+            "D. 3200cm^{2}"
+         ]
+      },
+      {
+         "id": "2-258",
+         "question": "Mua 12 quyển vở hết 36 000 đồng. Mua 33 quyển vở như thế hết số tiền là:",
+         "choices": [
+            "A. 75 000 đồng",
+            "B. 36 037 đồng",
+            "C. 90 000 đồng",
+            "D. 99 000 đồng"
+         ]
+      },
+      {
+         "id": "2-259",
+         "question": "Viết dạng số thập phân của: năm mươi sáu phẩy bẩy mươi mốt",
+         "choices": [
+            "A. 56,71",
+            "B. 56,701",
+            "C. 56,071",
+            "D. 50,671"
+         ]
+      },
+      {
+         "id": "2-260",
+         "question": "Số lớn nhất trong các số: 7,85; 6,58; 8,95; 7,99 là:",
+         "choices": [
+            "A. 7,85",
+            "B. 6.58",
+            "C. 8,95",
+            "D. 7,99"
+         ]
+      },
+      {
+         "id": "2-261",
+         "question": "Kết quả của (14:35)x10:",
+         "choices": [
+            "A. 0,4",
+            "B. 4",
+            "C. 40",
+            "D. 400"
+         ]
+      },
+      {
+         "id": "2-262",
+         "question": "Một ban công hình vuông có chu vi 362,4m. Hỏi cạnh của ban công là bao nhiêu?",
+         "choices": [
+            "A. 3,6m",
+            "B. 9,06m",
+            "C. 9,6m",
+            "D. 90,6m"
+         ]
+      },
+      {
+         "id": "2-263",
+         "question": "Số thập phân của hỗn số 3 \\frac{6}{10} - 2 \\frac{1}{100} là",
+         "choices": [
+            "A. 3,06",
+            "B. 0,59",
+            "C. 1,59",
+            "D. 3,6"
+         ]
+      },
+      {
+         "id": "2-264",
+         "question": "Giá trị của chữ số 6 trong số 862 495 là:",
+         "choices": [
+            "A. 60 000",
+            "B. 600 000",
+            "C. 600",
+            "D. 60"
+         ]
+      },
+      {
+         "id": "2-265",
+         "question": "Tỉ số phần trăm của 90 và 120 + 130 + 20",
+         "choices": [
+            "A. 45",
+            "B. 33%",
+            "C. 45%",
+            "D. 45"
+         ]
+      },
+      {
+         "id": "2-266",
+         "question": "Mua 3m vải hết 75 000 đồng. Hỏi mua 9m vải như thế hết bao nhiêu tiền?",
+         "choices": [
+            "A. 25 000 đồng",
+            "B. 125 000 đồng",
+            "C. 45 090 đồng",
+            "D. 225 000 đồng"
+         ]
+      },
+      {
+         "id": "2-267",
+         "question": "Tính diện tích của  miếng bìa hình tam giác có độ dài cạnh đáy 12dm, chiều cao bằng \\frac{1}{4} cạnh đáy",
+         "choices": [
+            "A. 36 dm^{2}",
+            "B. 9 dm^{2}",
+            "C. 27 dm^{2}",
+            "D. 18 dm^{2}"
+         ]
+      },
+      {
+         "id": "2-268",
+         "question": "Tìm số lớn nhất: 7,234; 7,432; 7,324; 7,243",
+         "choices": [
+            "A. 7,432",
+            "B. 7,324",
+            "C. 7,243",
+            "D. 7,234"
+         ]
+      },
+      {
+         "id": "2-269",
+         "question": "Lan có 9000 đồng, Mai có số tiền gấp 5 lần số tiền của Lan. Vậy số tiền Mai có là",
+         "choices": [
+            "A. 8000 đồng",
+            "B. 30000 đồng",
+            "C. 45 000 đồng",
+            "D. 48 000 đồng"
+         ]
+      },
+      {
+         "id": "2-270",
+         "question": "Một ô tô đi với vận tốc 60 km/h, tính quãng đường ô tô đi được trong 12 phút.",
+         "choices": [
+            "A. 0,2 km",
+            "B. 5km",
+            "C. 720km",
+            "D. 12km"
+         ]
+      },
+      {
+         "id": "2-271",
+         "question": "Lãi suất tiết kiệm là 0,6 % một tháng. Một người gửi tiết kiệm là 10 000 000 đồng. Hỏi sau một tháng người đó nhận được tiền lãi và tiền gửi là bao nhiêu?",
+         "choices": [
+            "A. 10 060 000",
+            "B. 10 600 000",
+            "C. 10 050 000",
+            "D. 10 500 000"
+         ]
+      },
+      {
+         "id": "2-272",
+         "question": "Điền số thích hợp: 4kg 750g = ............ g.",
+         "choices": [
+            "A. 4750",
+            "B. 4075",
+            "C. 47,5",
+            "D. 4,75"
+         ]
+      },
+      {
+         "id": "2-273",
+         "question": "Tính % giữa 30 và 22:",
+         "choices": [
+            "A. 73,33%",
+            "B. 730%",
+            "C. 73%",
+            "D. 703%"
+         ]
+      },
+      {
+         "id": "2-274",
+         "question": "Phần thập phân của 212,12  là:",
+         "choices": [
+            "A. 12",
+            "B. \\frac{12}{10}",
+            "C. \\frac{12}{100}",
+            "D. \\frac{12}{1000}"
+         ]
+      },
+      {
+         "id": "2-275",
+         "question": "Tính diện tích toàn phần của một hình lập phương biết diện tích xung quanh là 216 m²:",
+         "choices": [
+            "A. 144 m^{2}",
+            "B. 216 m^{2}",
+            "C. 125 m^{2}",
+            "D. 324 m^{2}"
+         ]
+      },
+      {
+         "id": "2-276",
+         "question": "Số ở giữa số 9990 và số 9997 là:",
+         "choices": [
+            "A. 9908",
+            "B. 9980",
+            "C. 9995",
+            "D. 9998"
+         ]
+      },
+      {
+         "id": "2-277",
+         "question": "Cho hình vuông có cạnh là 2,3cm. Chu vi của hình hình vuông đó là:",
+         "choices": [
+            "A. 5,29cm",
+            "B. 9,2dm 2,3cm",
+            "C. 9,2cm",
+            "D. 92cm"
+         ]
+      },
+      {
+         "id": "2-278",
+         "question": "Một hình lập phương có cạnh là 160 dm. Hãy tính thể tích hình lập phương đó:",
+         "choices": [
+            "A. 496 m^{3}",
+            "B. 4096 m^{3}",
+            "C. 256 m^{3}",
+            "D. 2560 m^{3}"
+         ]
+      },
+      {
+         "id": "2-279",
+         "question": "Số thập phân của hỗn số 3 \\frac{1}{2} là",
+         "choices": [
+            "A. 3,25",
+            "B. 32,5",
+            "C. 2,5",
+            "D. 3,5"
+         ]
+      },
+      {
+         "id": "2-280",
+         "question": "Một nhà máy ngày một xuất được 1/2 số hàng và ngày hai xuất được thêm 2/9 số hàng ban đầu. Thì số hàng còn lại là 15 mặt hàng. Hỏi số hàng mà cửa hàng đã xuất đi trong ngày thứ 2 là bao nhiêu?",
+         "choices": [
+            "A. 39 mặt hàng",
+            "B. 42 mặt hàng",
+            "C. 27 mặt hàng",
+            "D. 12 mặt hàng"
+         ]
+      },
+      {
+         "id": "2-281",
+         "question": "6005 dm^{3} = … m^{3}",
+         "choices": [
+            "A. 6,005 m^{3}",
+            "B. 60 m^{3}",
+            "C. 6 m^{3}",
+            "D. 0,6 m^{3}"
+         ]
+      },
+      {
+         "id": "2-282",
+         "question": "Phân số \\frac{250}{20} được chuyển sang dạng số thập phân:",
+         "choices": [
+            "A. 12,5",
+            "B. 1,25",
+            "C. 10,25",
+            "D. 22,5"
+         ]
+      },
+      {
+         "id": "2-283",
+         "question": "Diện tích của hình tròn có bán kính 6.5dm  là:",
+         "choices": [
+            "A. 132,665 dm^{2}",
+            "B. 113,04 dm^{2}",
+            "C. 131,4 dm^{2}",
+            "D. 150,24 dm^{2}"
+         ]
+      },
+      {
+         "id": "2-284",
+         "question": "Năm đơn vị chín phần mười bốn phần trăm trừ cho hai đơn vị là:",
+         "choices": [
+            "A. 5,094",
+            "B. 5,94",
+            "C. 3,94",
+            "D. 3,094"
+         ]
+      },
+      {
+         "id": "2-285",
+         "question": "Biểu thức: \\frac{1}{2} + \\frac{3}{4} x \\frac{2}{5} có kết quả là:",
+         "choices": [
+            "A. 4",
+            "B. \\frac{4}{5}",
+            "C. \\frac{8}{30}",
+            "D. \\frac{2}{3}"
+         ]
+      },
+      {
+         "id": "2-286",
+         "question": "Năm 1899 thuộc thế kỉ nào sau đây?",
+         "choices": [
+            "A. 12",
+            "B. 19",
+            "C. 20",
+            "D. 21"
+         ]
+      },
+      {
+         "id": "2-287",
+         "question": "Thể tích của hình lập phương có cạnh 0.03m là:",
+         "choices": [
+            "A. 27cm^{3}",
+            "B. 0,27m^{2}",
+            "C. 27m^{3}",
+            "D. 2,7cm^{3}"
+         ]
+      },
+      {
+         "id": "2-288",
+         "question": "Trong các số có 3 chữ số dưới đây số nào khi cộng thêm với các chữ số hàng đơn vị, hàng chục, hàng trăm thì bằng 581.",
+         "choices": [
+            "A. 543",
+            "B. 550",
+            "C. 555",
+            "D. 565"
+         ]
+      },
+      {
+         "id": "2-289",
+         "question": "Cô giáo phân công cho 2/5 số bạn trong lớp đi quét sân trường còn 1/3 số bạn đi dọn vệ sinh hành lang thì trong lớp còn 12 bạn vệ sinh lớp học. Hỏi số lượng học sinh được phân công đi dọn vệ sinh hành lang là bao nhiêu bạn?",
+         "choices": [
+            "A. 12",
+            "B. 15",
+            "C. 18",
+            "D. 20"
+         ]
+      },
+      {
+         "id": "2-290",
+         "question": "33 000  cm =.................km",
+         "choices": [
+            "A. 33",
+            "B. 0,33",
+            "C. 1,33",
+            "D. 330"
+         ]
+      },
+      {
+         "id": "2-291",
+         "question": "Tìm chu vi của nửa hình tròn biết chiều dài đường kính là 4,5cm:",
+         "choices": [
+            "A. 14,13cm",
+            "B. 7,06cm",
+            "C. 12,56cm",
+            "D. 6,28cm"
+         ]
+      },
+      {
+         "id": "2-292",
+         "question": "2 phần trăm của 212 là:",
+         "choices": [
+            "A. 12",
+            "B. 12,5",
+            "C. 4,2",
+            "D. 4,24"
+         ]
+      },
+      {
+         "id": "2-293",
+         "question": "Kết quả của phép tính 0,4 + 22,40 \\div 3,5 là:",
+         "choices": [
+            "A. 2,49",
+            "B. 2,9",
+            "C. 6,4",
+            "D. 6,8"
+         ]
+      },
+      {
+         "id": "2-294",
+         "question": "Biết trung bình cộng của 2 số là 185 và số lớn hơn số bé 26 đơn vị. Tìm số lớn.",
+         "choices": [
+            "A. 185",
+            "B. 370",
+            "C. 173",
+            "D. 198"
+         ]
+      },
+      {
+         "id": "2-295",
+         "question": "Tìm số tự nhiên x biết 98,69 - 1 < x < 99,4 - 1?",
+         "choices": [
+            "A. X = 98",
+            "B. X = 99",
+            "C. X = 90",
+            "D. X = 96"
+         ]
+      },
+      {
+         "id": "2-296",
+         "question": "Phân số \\frac{1}{5} - \\frac{1}{8} + \\frac{1}{2} viết dưới dạng số thập phân là:",
+         "choices": [
+            "A. 0,575",
+            "B. 0,57",
+            "C. 0,02",
+            "D. 0,2"
+         ]
+      },
+      {
+         "id": "2-297",
+         "question": "Tìm Y biết Y + 2,20 = 2,5 \\times  4:",
+         "choices": [
+            "A. 10",
+            "B. 10,18",
+            "C. 10,22",
+            "D. 7,80"
+         ]
+      },
+      {
+         "id": "2-298",
+         "question": "Lớp 5A có 12 học sinh nam và 24 học sinh nữ. Phần trăm giữa số học sinh nam so với toàn bộ học sinh là:",
+         "choices": [
+            "A. 20%",
+            "B. 50%",
+            "C. 25%",
+            "D. 33%"
+         ]
+      },
+      {
+         "id": "2-299",
+         "question": "Một nhân viên cửa hàng buổi sáng bán được 1/2 số táo và buổi chiều bán thêm được 2/9 số táo so với số táo ban đầu thì còn lại 15 quả táo trong cửa hàng. Hỏi tổng số quả táo buổi sáng và buổi chiều bán được là bao nhiêu?",
+         "choices": [
+            "A. 39",
+            "B. 42",
+            "C. 46",
+            "D. 49"
+         ]
+      },
+      {
+         "id": "2-300",
+         "question": "Cho hình thang có độ dài hai đáy là 18cm và 16cm; chiều cao là 15 cm. Hãy tính diện tích nửa hình thang.",
+         "choices": [
+            "A. 225 cm^{2}",
+            "B. 127,5 cm^{2}",
+            "C. 255 cm^{2}",
+            "D. 540 cm^{2}"
+         ]
+      },
+      {
+         "id": "2-301",
+         "question": "Một con chim đại bàng bay được 30 km trong 1 giờ. Chim sẻ bay được vận tốc bằng 2/5 đại bàng. Hỏi trong 3.5 giờ thì chim sẻ bay được:",
+         "choices": [
+            "A. 12km",
+            "B. 42km",
+            "C. 4,2km",
+            "D. 1,2km"
+         ]
+      },
+      {
+         "id": "2-302",
+         "question": "Kết quả của biểu thức 7,33 : (1,7 + 2,1) – 1,5",
+         "choices": [
+            "A. 3,01",
+            "B. 7,49",
+            "C. 1,87",
+            "D. 0,427"
+         ]
+      },
+      {
+         "id": "2-303",
+         "question": "Số lớn hơn 3,75 và bé hơn tổng của 2,4 +1,8 là số:",
+         "choices": [
+            "A. 3,57",
+            "B. 3,79",
+            "C. 3,9",
+            "D. 4,2"
+         ]
+      },
+      {
+         "id": "2-304",
+         "question": "Diện tích hình chữ nhật có chiều dài a và chiều rộng b được tính theo công thức:",
+         "choices": [
+            "A. (a + b) \\times 2",
+            "B. a \\times b",
+            "C. a \\times b \\times 2",
+            "D. a + b \\times 2"
+         ]
+      },
+      {
+         "id": "2-305",
+         "question": "Số thập phân gồm có “Năm đơn vị, 2 phần trăm, bảy phần nghìn\" viết là:",
+         "choices": [
+            "A. 5,27",
+            "B. 5,027",
+            "C. 5,007",
+            "D. 7,05"
+         ]
+      },
+      {
+         "id": "2-306",
+         "question": "Một người đi xe đạp được 40 km trong 2 giờ 30 phút. Tính vận tốc đạp xe của người đó.",
+         "choices": [
+            "A. 25 km/giờ",
+            "B. 16 km/giờ",
+            "C. 30 km/giờ",
+            "D. 20 km/giờ"
+         ]
+      },
+      {
+         "id": "2-307",
+         "question": "Tìm số lớn nhất trong dãy: 2,345; 2,453; 2,534; 2,345",
+         "choices": [
+            "A. 2,345",
+            "B. 2,534",
+            "C. 2,453",
+            "D. 2,345"
+         ]
+      },
+      {
+         "id": "2-308",
+         "question": "Một mảnh vườn hình chữ nhật dài 44 m, rộng 12 m. Nếu người ta dùng 10 % diện tích mảnh đất để làm nhà thì phần đất còn lại là:",
+         "choices": [
+            "A. 300 m^{2}",
+            "B. 475,2 m^{2}",
+            "C. 60,32 m^{2}",
+            "D. 204 m^{2}"
+         ]
+      },
+      {
+         "id": "2-309",
+         "question": "Tìm một số biết 35% - 15% của số đó là 5,4 - 1,2 :",
+         "choices": [
+            "A. 25",
+            "B. 2",
+            "C. 21",
+            "D. 20"
+         ]
+      },
+      {
+         "id": "2-310",
+         "question": "Cái hộp có chiều dài 12cm, chiều rộng 3cm và chiểu cao 2,2cm, thể tích của cái hộp đó là:",
+         "choices": [
+            "A. 30cm^{3}",
+            "B. 35cm^{3}",
+            "C. 59cm^{3}",
+            "D. 79,2cm^{3}"
+         ]
+      },
+      {
+         "id": "2-311",
+         "question": "Số thập phân gồm 25 đơn vị, 9 phần mười và 7 phần nghìn là:",
+         "choices": [
+            "A. 25,97",
+            "B. 25,097",
+            "C. 25,907",
+            "D. 2,597"
+         ]
+      },
+      {
+         "id": "2-312",
+         "question": "Giá trị của biểu thức 8,5 + 6,5- (10-3,3) + 1 là",
+         "choices": [
+            "A. 8,3",
+            "B. 7,3",
+            "C. 9,3",
+            "D. 0,7"
+         ]
+      },
+      {
+         "id": "2-313",
+         "question": "Điền số thích hợp: 2m^{3}85dm^{3} = …………………m^{3}.",
+         "choices": [
+            "A. 2,385",
+            "B. 2,085",
+            "C. 285",
+            "D. 23,85"
+         ]
+      },
+      {
+         "id": "2-314",
+         "question": "Tìm chữ số x, biết: 5,5 \\times x < 5,471",
+         "choices": [
+            "A. X = 8",
+            "B. X = 7",
+            "C. X = 1",
+            "D. X = 0"
+         ]
+      },
+      {
+         "id": "2-315",
+         "question": "Lớp 5A có số bạn đi thi học sinh giỏi môn toán là 2/11, và số bạn thi học sinh giỏi môn tiếng Việt là 1/4 sau khi các bạn đi thi học sinh giỏi thì trong lớp còn 25 bạn. Hỏi tổng số bạn đi thi học sinh giỏi môn toán và tiếng Việt là bao nhiêu bạn?",
+         "choices": [
+            "A. 13",
+            "B. 15",
+            "C. 17",
+            "D. 19"
+         ]
+      },
+      {
+         "id": "2-316",
+         "question": "Hình chữ nhật ABCD có chiều dài bằng 16cm, chiều rộng bằng 1/4 chiều dài. Tính diện tích của hình chữ nhật đó.",
+         "choices": [
+            "A. 6,4 m2",
+            "B. 12,8 m2",
+            "C. 128 cm2",
+            "D. 64 cm2"
+         ]
+      },
+      {
+         "id": "2-317",
+         "question": "Các số X, III, XIX, XX, VII được sắp xếp theo thứ tự từ bé đến lớn:",
+         "choices": [
+            "A. X, XIX,XX, VII, III",
+            "B. III, XIX,VII, X,XX",
+            "C. III,VII,X,XIX,XX",
+            "D. III,X,VII,XIX,XX"
+         ]
+      },
+      {
+         "id": "2-318",
+         "question": "Điền số thích hợp: 10m^{2} 6dm^{2} =........m^{2} là:",
+         "choices": [
+            "A. 10",
+            "B. 10,06",
+            "C. 1006",
+            "D. 10"
+         ]
+      },
+      {
+         "id": "2-319",
+         "question": "Chữ số 6 trong số 15,306 thuộc hàng nào?",
+         "choices": [
+            "A. Hàng đơn vị",
+            "B. Hàng trăm",
+            "C. Hàng phần trăm",
+            "D. Hàng phần nghìn"
+         ]
+      },
+      {
+         "id": "2-320",
+         "question": "Đổi: 2kg 15g =  ............g",
+         "choices": [
+            "A. 215g",
+            "B. 2150g",
+            "C. 2015g",
+            "D. 2105g"
+         ]
+      },
+      {
+         "id": "2-321",
+         "question": "Trên bảng ghi các số 15, 18, 21, 24, 27, 30, 33, 36. Bạn Mạnh xóa đi một số thì thấy trung bình cộng của các số trên bảng còn lại kết thúc bằng chữ số 4. Hãy cho biết Mạnh xóa đi số nào?",
+         "choices": [
+            "A. 36",
+            "B. 33",
+            "C. 24",
+            "D. 18"
+         ]
+      },
+      {
+         "id": "2-322",
+         "question": "Số dư trong phép chia 12328 : 105 sau khi cộng với 7 là bao nhiêu:",
+         "choices": [
+            "A. 20",
+            "B. 30",
+            "C. 40",
+            "D. 50"
+         ]
+      },
+      {
+         "id": "2-323",
+         "question": "Một ôtô có vận tốc 60 km/giờ. Vậy vận tốc của ô tô khi đổi sang mét/phút là bao nhiêu?",
+         "choices": [
+            "A. 1000 m/phút",
+            "B. 805 m/phút",
+            "C. 510 m/phút",
+            "D. 5100 m/phút"
+         ]
+      },
+      {
+         "id": "2-324",
+         "question": "Số thập phân có 2 thành phần:",
+         "choices": [
+            "A. Phần nguyên đứng trước dấu phẩy, phần thập phân đứng sau dấu phẩy",
+            "B. Phần nguyên đứng sau dấu phẩy, phần thập phân đứng trước dấu phẩy",
+            "C. Phần nguyên đứng trước dấu phẩy, phần phân số thập phân đứng sau dấu phẩy",
+            "D. Phần nguyên đứng sau dấu phẩy, phần phân số đứng trước dấu phẩy"
+         ]
+      },
+      {
+         "id": "2-325",
+         "question": "Kết quả của 2km 17m = …………km là:",
+         "choices": [
+            "A. 2,017 km",
+            "B. 2,17 km",
+            "C. 0,217 km",
+            "D. 21,17 km"
+         ]
+      },
+      {
+         "id": "2-326",
+         "question": "Số \\frac{3}{25} + \\frac{1}{100} viết dưới dạng số thập phân là:",
+         "choices": [
+            "A. 0,13",
+            "B. 0,15",
+            "C. 0,001",
+            "D. 0,12"
+         ]
+      },
+      {
+         "id": "2-327",
+         "question": "Hỗn số 17 \\frac{3}{10} viết dưới dạng số thập phân là :",
+         "choices": [
+            "A. 1,73",
+            "B. 17,3",
+            "C. 7,13",
+            "D. 7,03"
+         ]
+      },
+      {
+         "id": "2-328",
+         "question": "Một hình tròn có đường kính 3m. Diện tích nửa hình tròn đó là:",
+         "choices": [
+            "A. 7,065m^{2}",
+            "B. 8,54m^{2}",
+            "C. 70,65m^{2}",
+            "D. 3,5325m^{2}"
+         ]
+      },
+      {
+         "id": "2-329",
+         "question": "Giá trị của chữ số 8 trong số thập phân 50,289:",
+         "choices": [
+            "A. 8",
+            "B. \\frac{8}{10}",
+            "C. \\frac{8}{100}",
+            "D. 80"
+         ]
+      },
+      {
+         "id": "2-330",
+         "question": "Diện tích hình tròn có bán kính 10 cm là:",
+         "choices": [
+            "A. 3,14 dm^{2}",
+            "B. 3,14 cm^{2}",
+            "C. 0,314 dm^{2}",
+            "D. 34,1 cm^{2}"
+         ]
+      },
+      {
+         "id": "2-331",
+         "question": "Có bao nhiêu số có 2 chữ số mà số đó gấp 4 lần tổng 2 chữ số của nó?",
+         "choices": [
+            "A. 2",
+            "B. 3",
+            "C. 4",
+            "D. 5"
+         ]
+      },
+      {
+         "id": "2-332",
+         "question": "Người thứ nhất làm xong công việc trong 4 giờ, người thứ hai làm xong công việc trong 8 giờ. Thời gian hoàn thành nếu hai người cùng làm là:",
+         "choices": [
+            "A. 20 giờ",
+            "B. 9 giờ",
+            "C. \\frac{20}{9} giờ",
+            "D. \\frac{8}{3} giờ"
+         ]
+      }
+   ]
+}

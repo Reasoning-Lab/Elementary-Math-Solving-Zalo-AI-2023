@@ -14,7 +14,14 @@ import torch.nn as nn
 import datasets
 from datasets import load_dataset
 from accelerate import Accelerator
-from peft import LoraConfig, PeftConfig, TaskType, get_peft_model, PeftModel, prepare_model_for_kbit_training
+from peft import (
+    LoraConfig,
+    PeftConfig,
+    TaskType,
+    get_peft_model,
+    PeftModel,
+    prepare_model_for_kbit_training,
+)
 import transformers
 from transformers import (
     AutoConfig,
@@ -33,7 +40,11 @@ from transformers import (
     DataCollatorForSeq2Seq,
 )
 from transformers.models.llama import modeling_llama
-from transformers.models.llama.modeling_llama import LlamaAttention, apply_rotary_pos_emb, repeat_kv
+from transformers.models.llama.modeling_llama import (
+    LlamaAttention,
+    apply_rotary_pos_emb,
+    repeat_kv,
+)
 from transformers.trainer import TRAINING_ARGS_NAME
 from transformers.trainer_pt_utils import LabelSmoother
 
@@ -51,7 +62,9 @@ try:
     from flash_attn import flash_attn_func, flash_attn_varlen_func
     from flash_attn.bert_padding import pad_input, unpad_input
 except ImportError:
-    print("FlashAttention-2 is not installed, ignore this if you are not using FlashAttention.")
+    print(
+        "FlashAttention-2 is not installed, ignore this if you are not using FlashAttention."
+    )
 
 MODEL_CLASSES = {
     "bloom": (AutoConfig, BloomForCausalLM, BloomTokenizerFast),
@@ -63,6 +76,7 @@ MODEL_CLASSES = {
 
 DataClassType = NewType("DataClassType", Any)
 
+
 @dataclass
 class ModelArguments:
     """
@@ -71,7 +85,10 @@ class ModelArguments:
 
     model_type: str = field(
         default=None,
-        metadata={"help": "Model type selected in the list: " + ", ".join(MODEL_CLASSES.keys())}
+        metadata={
+            "help": "Model type selected in the list: "
+            + ", ".join(MODEL_CLASSES.keys())
+        },
     )
     model_name_or_path: Optional[str] = field(
         default=None,
@@ -82,17 +99,22 @@ class ModelArguments:
         },
     )
     token: Optional[str] = field(
-        default=None,
-        metadata={
-            "help": "HuggingFace access token read for load models"
-        }
+        default=None, metadata={"help": "HuggingFace access token read for load models"}
     )
-    load_in_8bit: bool = field(default=False, metadata={"help": "Whether to load the model in 8bit mode or not."})
-    load_in_4bit: bool = field(default=False, metadata={"help": "Whether to load the model in 4bit mode or not."})
+    load_in_8bit: bool = field(
+        default=False,
+        metadata={"help": "Whether to load the model in 8bit mode or not."},
+    )
+    load_in_4bit: bool = field(
+        default=False,
+        metadata={"help": "Whether to load the model in 4bit mode or not."},
+    )
     bnb_4bit_quant_type: Optional[str] = field(
         default="nf4", metadata={"help": "precise the quantization type (fp4 or nf4)"}
     )
-    use_bnb_nested_quant: bool = field(default=False, metadata={"help": "use nested quantization"})
+    use_bnb_nested_quant: bool = field(
+        default=False, metadata={"help": "use nested quantization"}
+    )
     tokenizer_name_or_path: Optional[str] = field(
         default=None,
         metadata={
@@ -103,11 +125,15 @@ class ModelArguments:
     )
     cache_dir: Optional[str] = field(
         default=None,
-        metadata={"help": "Where do you want to store the pretrained models downloaded from huggingface.co"},
+        metadata={
+            "help": "Where do you want to store the pretrained models downloaded from huggingface.co"
+        },
     )
     use_fast_tokenizer: bool = field(
         default=False,
-        metadata={"help": "Whether to use one of the fast tokenizer (backed by the tokenizers library) or not."},
+        metadata={
+            "help": "Whether to use one of the fast tokenizer (backed by the tokenizers library) or not."
+        },
     )
     torch_dtype: Optional[str] = field(
         default="float16",
@@ -121,19 +147,24 @@ class ModelArguments:
     )
     device_map: Optional[str] = field(
         default="auto",
-        metadata={"help": "Device to map model to. If `auto` is passed, the device will be selected automatically. "},
+        metadata={
+            "help": "Device to map model to. If `auto` is passed, the device will be selected automatically. "
+        },
     )
     trust_remote_code: bool = field(
         default=True,
-        metadata={"help": "Whether to trust remote code when loading a model from a remote checkpoint."},
+        metadata={
+            "help": "Whether to trust remote code when loading a model from a remote checkpoint."
+        },
     )
     model_revision: str = field(
         default="main",
-        metadata={"help": "The specific model version to use (can be a branch name, tag name or commit id)."},
+        metadata={
+            "help": "The specific model version to use (can be a branch name, tag name or commit id)."
+        },
     )
     rope_scaling: Optional[Literal["linear", "dynamic"]] = field(
-        default=None,
-        metadata={"help": "Adopt scaled rotary positional embeddings."}
+        default=None, metadata={"help": "Adopt scaled rotary positional embeddings."}
     )
     use_flash_attention_2: bool = field(
         default=False,
@@ -145,20 +176,27 @@ class ModelArguments:
     )
     shift_attn: Optional[bool] = field(
         default=False,
-        metadata={"help": "Enable shift short attention (S^2-Attn) proposed by LongLoRA."}
+        metadata={
+            "help": "Enable shift short attention (S^2-Attn) proposed by LongLoRA."
+        },
     )
     neft_alpha: Optional[float] = field(
         default=0,
-        metadata={"help": "The alpha parameter to control the noise magnitude in NEFTune. value can be 5."}
+        metadata={
+            "help": "The alpha parameter to control the noise magnitude in NEFTune. value can be 5."
+        },
     )
 
     def __post_init__(self):
         if self.model_type is None:
             raise ValueError(
-                "You must specify a valid model_type to run training. Available model types are " + ", ".join(
-                    MODEL_CLASSES.keys()))
+                "You must specify a valid model_type to run training. Available model types are "
+                + ", ".join(MODEL_CLASSES.keys())
+            )
         if self.model_name_or_path is None:
-            raise ValueError("You must specify a valid model_name_or_path to run training.")
+            raise ValueError(
+                "You must specify a valid model_name_or_path to run training."
+            )
 
 
 @dataclass
@@ -168,13 +206,21 @@ class DataArguments:
     """
 
     dataset_name: Optional[str] = field(
-        default=None, metadata={"help": "The name of the dataset to use (via the datasets library)."}
+        default=None,
+        metadata={"help": "The name of the dataset to use (via the datasets library)."},
     )
     dataset_config_name: Optional[str] = field(
-        default=None, metadata={"help": "The configuration name of the dataset to use (via the datasets library)."}
+        default=None,
+        metadata={
+            "help": "The configuration name of the dataset to use (via the datasets library)."
+        },
     )
-    train_file_dir: Optional[str] = field(default=None, metadata={"help": "The train jsonl data file folder."})
-    validation_file_dir: Optional[str] = field(default=None, metadata={"help": "The evaluation jsonl file folder."})
+    train_file_dir: Optional[str] = field(
+        default=None, metadata={"help": "The train jsonl data file folder."}
+    )
+    validation_file_dir: Optional[str] = field(
+        default=None, metadata={"help": "The evaluation jsonl file folder."}
+    )
     max_train_samples: Optional[int] = field(
         default=None,
         metadata={
@@ -195,10 +241,13 @@ class DataArguments:
     )
     ignore_pad_token_for_loss: bool = field(
         default=True,
-        metadata={"help": "If only pad tokens should be ignored. This assumes that `config.pad_token_id` is defined."},
+        metadata={
+            "help": "If only pad tokens should be ignored. This assumes that `config.pad_token_id` is defined."
+        },
     )
     overwrite_cache: bool = field(
-        default=False, metadata={"help": "Overwrite the cached training and evaluation sets"}
+        default=False,
+        metadata={"help": "Overwrite the cached training and evaluation sets"},
     )
     validation_split_percentage: Optional[int] = field(
         default=10,
@@ -213,7 +262,10 @@ class DataArguments:
 
     def __post_init__(self):
         if self.max_train_samples is not None and 0 < self.max_train_samples <= 1000:
-            logger.warning("You may set max_train_samples = -1 to run all samples in production.")
+            logger.warning(
+                "You may set max_train_samples = -1 to run all samples in production."
+            )
+
 
 @dataclass
 class SFTConfig(transformers.TrainingArguments):
@@ -223,13 +275,20 @@ class SFTConfig(transformers.TrainingArguments):
 
     max_seq_length: Optional[int] = field(
         default=None,
-        metadata={"help": ("Used by TRL for reward model training, which tries to read this parameter in init.")},
+        metadata={
+            "help": (
+                "Used by TRL for reward model training, which tries to read this parameter in init."
+            )
+        },
     )
     logging_first_step: bool = field(
         default=True,
-        metadata={"help": ("Whether to log and evaluate the first global_step or not.")},
+        metadata={
+            "help": ("Whether to log and evaluate the first global_step or not.")
+        },
     )
     optim: Optional[str] = field(default="adamw_torch")
+
 
 @dataclass
 class ScriptArguments:
@@ -254,10 +313,15 @@ class ScriptArguments:
         default=None,
         metadata={"help": ("Model layers to unfreeze & train")},
     )
-    peft_path: Optional[str] = field(default=None, metadata={"help": "The path to the peft model"})
+    peft_path: Optional[str] = field(
+        default=None, metadata={"help": "The path to the peft model"}
+    )
+
 
 class H4ArgumentParser(HfArgumentParser):
-    def parse_yaml_and_args(self, yaml_arg: str, other_args: Optional[List[str]] = None) -> List[dataclass]:
+    def parse_yaml_and_args(
+        self, yaml_arg: str, other_args: Optional[List[str]] = None
+    ) -> List[dataclass]:
         """
         Parse a YAML file and overwrite the default/loaded values with the values provided to the command line.
 
@@ -275,7 +339,9 @@ class H4ArgumentParser(HfArgumentParser):
 
         outputs = []
         # strip other args list into dict of key-value pairs
-        other_args = {arg.split("=")[0].strip("-"): arg.split("=")[1] for arg in other_args}
+        other_args = {
+            arg.split("=")[0].strip("-"): arg.split("=")[1] for arg in other_args
+        }
         used_args = {}
 
         # overwrite the default/loaded value with the value provided to the command line
@@ -307,7 +373,9 @@ class H4ArgumentParser(HfArgumentParser):
                     if arg not in used_args:
                         used_args[arg] = val
                     else:
-                        raise ValueError(f"Duplicate argument provided: {arg}, may cause unexpected behavior")
+                        raise ValueError(
+                            f"Duplicate argument provided: {arg}, may cause unexpected behavior"
+                        )
 
             obj = data_class(**inputs)
             outputs.append(obj)
@@ -321,7 +389,9 @@ class H4ArgumentParser(HfArgumentParser):
             output = self.parse_yaml_file(os.path.abspath(sys.argv[1]))
         # parse command line args and yaml file
         elif len(sys.argv) > 2 and sys.argv[1].endswith(".yaml"):
-            output = self.parse_yaml_and_args(os.path.abspath(sys.argv[1]), sys.argv[2:])
+            output = self.parse_yaml_and_args(
+                os.path.abspath(sys.argv[1]), sys.argv[2:]
+            )
         # parse command line args only
         else:
             output = self.parse_args_into_dataclasses()
@@ -333,19 +403,23 @@ class H4ArgumentParser(HfArgumentParser):
         return output
 
     def save_yaml(self, output_dir):
-        with open(self.yaml_arg, 'r') as f:
+        with open(self.yaml_arg) as f:
             config = yaml.safe_load(f)
-        with open(os.path.join(output_dir, 'config_argument.yaml'), 'w') as f:
+        with open(os.path.join(output_dir, "config_argument.yaml"), "w") as f:
             yaml.dump(config, f, default_flow_style=False)
+
 
 logger = logging.getLogger(__name__)
 
+
 def main():
-    parser = H4ArgumentParser((ModelArguments, DataArguments, SFTConfig, ScriptArguments))
+    parser = H4ArgumentParser(
+        (ModelArguments, DataArguments, SFTConfig, ScriptArguments)
+    )
     model_args, data_args, training_args, script_args = parser.parse()
 
     accelerator = Accelerator()
-    
+
     ###############
     # Setup logging
     ###############
@@ -389,19 +463,25 @@ def main():
     tokenizer_name_or_path = model_args.tokenizer_name_or_path
     if not tokenizer_name_or_path:
         tokenizer_name_or_path = model_args.model_name_or_path
-    tokenizer = tokenizer_class.from_pretrained(tokenizer_name_or_path, **tokenizer_kwargs)
+    tokenizer = tokenizer_class.from_pretrained(
+        tokenizer_name_or_path, **tokenizer_kwargs
+    )
     if tokenizer.eos_token_id is None:
         tokenizer.eos_token = "</s>"  # eos token is required for SFT
-        logger.info("Add eos token: {}".format(tokenizer.eos_token))
+        logger.info(f"Add eos token: {tokenizer.eos_token}")
     if tokenizer.pad_token_id is None:
         if tokenizer.unk_token_id is not None:
             tokenizer.pad_token = tokenizer.unk_token
         else:
             tokenizer.pad_token = tokenizer.eos_token
-        logger.info("Add pad token: {}".format(tokenizer.pad_token))
-    tokenizer.padding_side = 'right'
+        logger.info(f"Add pad token: {tokenizer.pad_token}")
+    tokenizer.padding_side = "right"
     logger.debug(f"Tokenizer: {tokenizer}")
-    IGNORE_INDEX = LabelSmoother.ignore_index if data_args.ignore_pad_token_for_loss else tokenizer.pad_token_id
+    IGNORE_INDEX = (
+        LabelSmoother.ignore_index
+        if data_args.ignore_pad_token_for_loss
+        else tokenizer.pad_token_id
+    )
 
     # Get datasets
     if data_args.dataset_name is not None:
@@ -427,37 +507,47 @@ def main():
     else:
         # Loading a dataset from local files.
         data_files = {}
-        if data_args.train_file_dir is not None and os.path.exists(data_args.train_file_dir):
-            train_data_files = glob(f'{data_args.train_file_dir}/**/*.json', recursive=True) + glob(
-                f'{data_args.train_file_dir}/**/*.jsonl', recursive=True)
+        if data_args.train_file_dir is not None and os.path.exists(
+            data_args.train_file_dir
+        ):
+            train_data_files = glob(
+                f"{data_args.train_file_dir}/**/*.json", recursive=True
+            ) + glob(f"{data_args.train_file_dir}/**/*.jsonl", recursive=True)
             logger.info(f"train files: {train_data_files}")
             data_files["train"] = train_data_files
-            train_data_files_artifact = wandb.Artifact(name="train_datafiles", type="dataset")
+            train_data_files_artifact = wandb.Artifact(
+                name="train_datafiles", type="dataset"
+            )
             train_data_files_artifact.add_dir(local_path=data_args.train_file_dir)
             run.log_artifact(train_data_files_artifact)
-        if data_args.validation_file_dir is not None and os.path.exists(data_args.validation_file_dir):
-            eval_data_files = glob(f'{data_args.validation_file_dir}/**/*.json', recursive=True) + glob(
-                f'{data_args.validation_file_dir}/**/*.jsonl', recursive=True)
+        if data_args.validation_file_dir is not None and os.path.exists(
+            data_args.validation_file_dir
+        ):
+            eval_data_files = glob(
+                f"{data_args.validation_file_dir}/**/*.json", recursive=True
+            ) + glob(f"{data_args.validation_file_dir}/**/*.jsonl", recursive=True)
             logger.info(f"eval files: {eval_data_files}")
             data_files["validation"] = eval_data_files
-            eval_data_files_artifact = wandb.Artifact(name="eval_datafiles", type="dataset")
+            eval_data_files_artifact = wandb.Artifact(
+                name="eval_datafiles", type="dataset"
+            )
             eval_data_files_artifact.add_dir(local_path=data_args.validation_file_dir)
             run.log_artifact(eval_data_files_artifact)
         raw_datasets = load_dataset(
-            'json',
+            "json",
             data_files=data_files,
             cache_dir=model_args.cache_dir,
         )
         # If no validation data is there, validation_split_percentage will be used to divide the dataset.
         if "validation" not in raw_datasets.keys():
             raw_datasets["validation"] = load_dataset(
-                'json',
+                "json",
                 data_files=data_files,
                 split=f"train[:{data_args.validation_split_percentage}%]",
                 cache_dir=model_args.cache_dir,
             )
             raw_datasets["train"] = load_dataset(
-                'json',
+                "json",
                 data_files=data_files,
                 split=f"train[{data_args.validation_split_percentage}%:]",
                 cache_dir=model_args.cache_dir,
@@ -477,20 +567,30 @@ def main():
 
         text_list = []
 
-        print(len(examples), len(examples["question"]), len(examples["choices"]), len(examples["explanation"]), len(examples["answer"]))
-        for i, (question, choices, explanation, answer) in enumerate(zip(examples['question'], examples['choices'], examples['explanation'], examples['answer'])):
+        print(
+            len(examples),
+            len(examples["question"]),
+            len(examples["choices"]),
+            len(examples["explanation"]),
+            len(examples["answer"]),
+        )
+        for i, (question, choices, explanation, answer) in enumerate(
+            zip(
+                examples["question"],
+                examples["choices"],
+                examples["explanation"],
+                examples["answer"],
+            )
+        ):
             text_choices = "".join(choices)
-            
+
             prompt = (
                 "Below is a math exercise. Provide a solution to that problem, if given multiple choices to answer; please give a final choice for solving that problem.\n"
                 f"### Question: {question}\n"
             )
-            
+
             if text_choices != "":
-                prompt += (
-                    "### Choices: "
-                    f"{text_choices}\n"
-                )
+                prompt += "### Choices: " f"{text_choices}\n"
 
             output = ""
 
@@ -498,7 +598,7 @@ def main():
                 output += f"### Explanation: {explanation}\n"
             if answer != "":
                 output += f"### Final choice: {answer}\n"
-            
+
             output += "</s>"
 
             text = prompt + output
@@ -509,7 +609,7 @@ def main():
             #     print('answer', text)
             text_list.append(text)
 
-        examples['text'] = text_list
+        examples["text"] = text_list
         return examples
 
     def filter_empty_labels(example):
@@ -521,7 +621,7 @@ def main():
     if training_args.do_train:
         if "train" not in raw_datasets:
             raise ValueError("--do_train requires a train dataset")
-        train_dataset = raw_datasets['train']
+        train_dataset = raw_datasets["train"]
         max_train_samples = len(train_dataset)
         if data_args.max_train_samples is not None and data_args.max_train_samples > 0:
             max_train_samples = min(len(train_dataset), data_args.max_train_samples)
@@ -530,7 +630,7 @@ def main():
         with training_args.main_process_first(desc="Train dataset tokenization"):
             train_dataset = train_dataset.shuffle().map(
                 preprocess_function,
-                batched=True    ,
+                batched=True,
                 num_proc=data_args.preprocessing_num_workers,
                 remove_columns=train_dataset.column_names,
                 load_from_cache_file=not data_args.overwrite_cache,
@@ -546,7 +646,10 @@ def main():
                 raise ValueError("--do_eval requires a validation dataset")
             eval_dataset = raw_datasets["validation"]
             max_eval_samples = len(eval_dataset)
-            if data_args.max_eval_samples is not None and data_args.max_eval_samples > 0:
+            if (
+                data_args.max_eval_samples is not None
+                and data_args.max_eval_samples > 0
+            ):
                 max_eval_samples = min(len(eval_dataset), data_args.max_eval_samples)
                 eval_dataset = eval_dataset.select(range(max_eval_samples))
             logger.debug(f"Example eval_dataset[0]: {eval_dataset[0]}")
@@ -560,11 +663,12 @@ def main():
             )
             logger.debug(f"Num eval_samples: {len(eval_dataset)}")
 
-
-    logger.info(f'info: {eval_dataset}')
+    logger.info(f"info: {eval_dataset}")
     logger.info("*** Load pretrained model ***")
     torch_dtype = (
-        model_args.torch_dtype if model_args.torch_dtype in ["auto", None] else getattr(torch, model_args.torch_dtype)
+        model_args.torch_dtype
+        if model_args.torch_dtype in ["auto", None]
+        else getattr(torch, model_args.torch_dtype)
     )
 
     def get_current_device() -> int:
@@ -602,13 +706,14 @@ def main():
             lora_dropout=script_args.lora_dropout,
             bias="none",
             task_type="CAUSAL_LM",
-            target_modules=['q_proj', 'k_proj', 'v_proj', 'o_proj'],
+            target_modules=["q_proj", "k_proj", "v_proj", "o_proj"],
             modules_to_save=script_args.lora_modules_to_save,
         )
 
         return peft_config
-    logger.info(f'Train Dataset: {train_dataset}')
-    logger.info(f'Evaluation Dataset: {eval_dataset}')
+
+    logger.info(f"Train Dataset: {train_dataset}")
+    logger.info(f"Evaluation Dataset: {eval_dataset}")
     model_kwargs = dict(
         revision=model_args.model_revision,
         trust_remote_code=model_args.trust_remote_code,
@@ -617,7 +722,7 @@ def main():
         use_cache=False if training_args.gradient_checkpointing else True,
         device_map=get_kbit_device_map(),
         quantization_config=get_quantization_config(model_args),
-        token=model_args.token
+        token=model_args.token,
     )
     logger.info("*** Model loaded! ***")
 
@@ -640,7 +745,11 @@ def main():
     logger.info("*** Train ***")
     train_result = trainer.train()
     metrics = train_result.metrics
-    max_train_samples = data_args.max_train_samples if data_args.max_train_samples is not None else len(train_dataset)
+    max_train_samples = (
+        data_args.max_train_samples
+        if data_args.max_train_samples is not None
+        else len(train_dataset)
+    )
     metrics["train_samples"] = min(max_train_samples, len(train_dataset))
     trainer.log_metrics("train", metrics)
     trainer.save_metrics("train", metrics)
@@ -652,7 +761,11 @@ def main():
     if training_args.do_eval:
         logger.info("*** Evaluate ***")
         metrics = trainer.evaluate()
-        max_eval_samples = data_args.max_eval_samples if data_args.max_eval_samples is not None else len(eval_dataset)
+        max_eval_samples = (
+            data_args.max_eval_samples
+            if data_args.max_eval_samples is not None
+            else len(eval_dataset)
+        )
         metrics["eval_samples"] = min(max_eval_samples, len(eval_dataset))
         trainer.log_metrics("eval", metrics)
         trainer.save_metrics("eval", metrics)
@@ -665,7 +778,6 @@ def main():
     config_artifact = wandb.Artifact("config", type="config")
     config_artifact.add_file(local_path=config_path)
     run.log_artifact(config_artifact)
-
 
     ##################################
     # Save model and create model card
