@@ -86,9 +86,10 @@ def main(
 
     results = []
     tokenizer_embedings, model_embedings = get_model_and_tokenizer()
+    model_embedings.cuda()
 
     db = process_data(read_data())
-    db_texts = db["information"].values.tolist()[:300]
+    db_texts = db["information"].values.tolist()[:500]
     db["raw_texts"] = (
         "### Question:"
         + db["question"]
@@ -97,13 +98,16 @@ def main(
         + "### Explanation: "
         + db["explanation"]
     )
-    db_raw_texts = db["raw_texts"].values.tolist()[:300]
+    db_raw_texts = db["raw_texts"].values.tolist()[:500]
     log.info("Embedding database")
+    import gc
+    gc.collect()
     db_embeddings = embedding_text(
         tokenizer=tokenizer_embedings, model=model_embedings, input_texts=db_texts
     )
+    print(db_embeddings.shape)
+    # return None
     import gc
-
     gc.collect()
 
     for idx, example in enumerate(data):
