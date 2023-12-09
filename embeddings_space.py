@@ -46,24 +46,31 @@ def process_inference_data(df):
 
 
 def embedding_text(tokenizer=None, model=None, input_texts=None):
-    batch_dict = tokenizer(
-        input_texts, max_length=512, padding=True, truncation=True, return_tensors="pt"
-    )
+    embeddings = []
+    for input_text in input_texts:
+        batch_dict = tokenizer(
+            input_text, max_length=512, padding=True, truncation=True, return_tensors="pt"
+        )
+        batch_dict = {k: v.to("cuda") for k, v in batch_dict.items()}
 
-    outputs = model(**batch_dict)
-    embeddings = average_pool(outputs.last_hidden_state, batch_dict["attention_mask"])
-    # normalize embeddings
-    embeddings = F.normalize(embeddings, p=2, dim=1).detach().numpy()
-    return embeddings
+        outputs = model(**batch_dict)
+        embedding = average_pool(outputs.last_hidden_state, batch_dict["attention_mask"])
+        # normalize embedding
+        embedding = F.normalize(embedding, p=2, dim=1).cpu().detach().numpy()
+        embeddings.append(embedding[0])
+
+    return np.array(embeddings)
 
 
 def embedding_query_text(tokenizer=None, model=None, query_text=None):
     batch_dict = tokenizer(
         query_text, max_length=512, padding=True, truncation=True, return_tensors="pt"
     )
+    batch_dict = {k: v.to("cuda") for k, v in batch_dict.items()}
     outputs = model(**batch_dict)
     embeddings = (
         average_pool(outputs.last_hidden_state, batch_dict["attention_mask"])
+        .cpu()
         .detach()
         .numpy()
     )
