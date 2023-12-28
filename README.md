@@ -8,7 +8,7 @@
 
 - CUDA: 12.1
 
-## Installation - Cài đặt
+## Installation
 
 ```bash
 pip install -r requirements.txt
@@ -19,7 +19,35 @@ huggingface-cli login
 wandb login
 ```
 
-# Data Source
+# Solution overview
+
+## Overview
+
+<img src="./figures/Training Zalo AI - Math Solving-Overview.drawio.png" width=500 heigh=300>
+
+The training steps of the model include 2 stages:
+
+- Continue pretraining: Using text corpus collected from external data about elementary school mathematics knowledge, some types of exercises to help LLM align with mathematical knowledge.
+
+- Finetuning: Using the dataset provided by the organizers and some filtered data in the format Question, Choices, Explanation, Answer to train Reasoning for the model from Stage 1.
+
+## Finetune
+
+<img src="./figures/Training_ZaloAI_Math_Solving.drawio.png" width=500 heigh=300>
+
+We train the model followwing instruction with the input being Question + Choices and the output being Explanation + Answer. 
+
+The input data is filled with complete explanations to ensure the model always makes inferences before giving an answer.
+
+## Inference
+
+Using [intfloat/e5-base](https://huggingface.co/intfloat/e5-base) as embedding model
+
+<img src="./figures/Inference_ZaloAI_Math_Solving.drawio.png" width=500 heigh=300>
+
+In the inference phase, we use a few-shot prompting, using an additional embedding model to find the top-k samples that are most similar to the question + input choice. We then post-process and give the final answer.
+
+# Data Curation
 
 In this section, we will provide the data sets used and processing directions to create data sets for the two stages of Continue Pretraining and Finetuning.
 
@@ -31,7 +59,7 @@ All processed datasets:
 
 | Dataset Name                                     | Description                                                                        | Size | Filename                               | Note                               |
 |--------------------------------------------------|------------------------------------------------------------------------------------|------|----------------------------------------|------------------------------------|
-| Original Train                                   | training dataset from competition organizer                                        | 1200 | math_train.json, with explanation: 537 | Only a few fields with explanation |
+| Original Train                                   | training dataset from competition organizer                                        | 1200 | math_train.json, with explanation: 537 | Only a few with explanation |
 | GPT3.5 Generate Explanation                      | Using GPT3.5 to generate explanation fields                                        | 1200 | with-missing-explain-3.5.json          |                                    |
 | GPT4 Generate Explanation                        | Using GPT4 to generate explanation fields                                          | 1200 | with-missing-explain-4.json            |                                    |
 | Public Test                                      | public test dataset from competition organizer                                     | 189  | math_test.json                         | Several questions with no answer   |
@@ -73,28 +101,17 @@ Finetuning data set is created from the competition dataset plus with external d
 | Vietnamese Grade School Math - Multiple Choice    | Filtering questions with long explanation.                                             | vietjack_finetune.json      | 2115 |
 | Total                                             |                                                                                        |                             | 8657 |
 
+# Training Script
 
-# Solution overview
+## Baseline with Llama-2-7b LoRA 8bit
 
-## Training
-
-<img src="./figures/Training_ZaloAI_Math_Solving.drawio.png" width=500 heigh=300>
-
-## Inference
-
-Using [intfloat/e5-base](https://huggingface.co/intfloat/e5-base) as embedding model
-
-<img src="./figures/Inference_ZaloAI_Math_Solving.drawio.png" width=500 heigh=300>
-
-# Training - Huấn luyện
-
-## Baseline Llama-2-7b LoRA 8bit
+### Baseline Llama-2-7b LoRA 8bit
 
 ```bash
 python llama_recipes/finetuning.py --use_peft --peft_method lora --quantization --model_name meta-llama/Llama-2-7b-hf --output_dir outputs
 ```
 
-## Finetuning with llama_recipes (deprecated - not using in final solution)
+### Finetuning with llama_recipes (deprecated - not using in final solution)
 
 model baseline: zephyr-7b-alpha
 with zalo_math_fill_missing_explain_4 (using GPT4)
@@ -109,13 +126,15 @@ python llama_recipes/finetuning.py --use_peft --peft_method lora --quantization 
 python llama_recipes/finetuning.py --use_peft --peft_method lora --quantization --model_name HuggingFaceH4/zephyr-7b-alpha --dataset zalo_math_fill_missing_explain_4 --output_dir outputs --max_length 2048 --num_epochs 6 --load_in 4bit --use_wandb --wandb_entity baolocpham --wandb_key KEY
 ```
 
-## Pretraining
+## Final Solution
+
+### Pretraining
 
 ```bash
 bash run_pt.sh
 ```
 
-## Finetune - SFTTrainer
+### Finetune with SFTTrainer
 
 using [HuggingFaceH4/zephyr-7b-beta](https://huggingface.co/HuggingFaceH4/zephyr-7b-beta) as base model
 
