@@ -23,7 +23,7 @@ wandb login
 
 ## Overview
 
-<img src="./figures/Training Zalo AI - Math Solving-Overview.drawio.png" width=500 heigh=300>
+<img src="./figures/Training Zalo AI - Math Solving-Overview.drawio.png">
 
 The training steps of the model include 2 stages:
 
