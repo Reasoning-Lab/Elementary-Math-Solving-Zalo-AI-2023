@@ -1,5 +1,5 @@
 torch>=2.0.1
-accelerate>=0.21.0
+accelerate==0.21.0
 appdirs
 loralib
 bitsandbytes
@@ -7,7 +7,7 @@ black
 black[jupyter]
 datasets
 fire
-peft
+peft==0.5.0
 transformers>=4.33.2
 sentencepiece
 py7zr
