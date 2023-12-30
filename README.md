@@ -176,6 +176,18 @@ Ex:
 python merge_peft_adapter.py --model_type auto --base_model hllj/mistral-vi-math --tokenizer_path lora --lora_model lora --output_dir final
 ```
 
+# Experiment 
+
+## Continue pretraining
+
+| Base model      | Train loss         | Eval loss         | Eval_Accuracy      | Eval_Perplexity    |
+|-----------------|--------------------|-------------------|--------------------|--------------------|
+| Mistral-7b-v0.1 | 0.5717931843230705 | 0.605161726474762 | 0.8357321441998862 | 1.8315483947998228 |
+|                 |                    |                   |                    |                    |
+|                 |                    |                   |                    |                    |
+
+## Finetune
+
 ## Inference
 
 ```bash
