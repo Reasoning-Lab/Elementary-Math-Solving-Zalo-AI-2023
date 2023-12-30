@@ -64,13 +64,15 @@ def main():
         help="Whether to resize model token embeddings",
     )
     parser.add_argument("--output_dir", default="./merged", type=str)
-    parser.add_argument("--hub_model_id", required=True, type=str)
+    parser.add_argument("--push_to_hub", action="store_true")
+    parser.add_argument("--hub_model_id", default="", type=str)
     args = parser.parse_args()
     print(args)
 
     base_model_path = args.base_model
     lora_model_path = args.lora_model
     output_dir = args.output_dir
+    push_to_hub =  args.push_to_hub
     hub_model_id = args.hub_model_id
     print(f"Base model: {base_model_path}")
     print(f"LoRA model: {lora_model_path}")
@@ -126,9 +128,10 @@ def main():
     base_model.save_pretrained(
         output_dir, safe_serialization=False
     )  # max_shard_size='10GB'
-    tokenizer.push_to_hub(hub_model_id, private=True)
-    base_model.push_to_hub(hub_model_id, private=True)
-    print(f"Done! model saved to {output_dir}")
+    if push_to_hub is True:
+        tokenizer.push_to_hub(hub_model_id, private=True)
+        base_model.push_to_hub(hub_model_id, private=True)
+        print(f"Done! model saved to {output_dir}")
 
 
 if __name__ == "__main__":
