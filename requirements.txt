@@ -24,3 +24,6 @@ tensorboard
 # deepspeed
 vllm
 jupyterlab
+tiktoken
+transformers_stream_generator
+einops
