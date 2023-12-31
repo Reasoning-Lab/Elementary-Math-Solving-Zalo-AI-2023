@@ -35,7 +35,7 @@ The training steps of the model include 2 stages:
 
 <img src="./figures/Training_ZaloAI_Math_Solving.drawio.png" width=500 heigh=300>
 
-We train the model followwing instruction with the input being Question + Choices and the output being Explanation + Answer. 
+We train the model followwing instruction with the input being Question + Choices and the output being Explanation + Answer.
 
 The input data is filled with complete explanations to ensure the model always makes inferences before giving an answer.
 
@@ -176,7 +176,7 @@ Ex:
 python merge_peft_adapter.py --model_type auto --base_model hllj/mistral-vi-math --tokenizer_path lora --lora_model lora --output_dir final
 ```
 
-# Experiment 
+# Experiment
 
 ## Continue pretraining
 
@@ -189,6 +189,12 @@ python merge_peft_adapter.py --model_type auto --base_model hllj/mistral-vi-math
 | BloomZ-7b1      | 1.2220947331637801 | 1.241927146911621  | 0.7222003923855691 | 3.4622793605962974 |
 
 ## Finetune
+
+| Base Model                  | Finetuning                                                                                                                  | Train loss | Eval loss    |
+| --------------------------- | --------------------------------------------------------------------------------------------------------------------------- | ---------- | ------------ |
+| hllj/mistral-vi-math        | BaoLocTown/sft-mistral-7b-vi-math-v1-clean-valid                                                                            | 0.2929     | 0.4370269775 |
+| hllj/Zephyr-beta-7B-Vi-Math | BaoLocTown/sft-zephyr-beta-7b-vi-math-v1-clean-valid                                                                        | 0.2968     | 0.4378368258 |
+| hllj/Llama2-7B-Vi-Math      | BaoLocTown/sft-llama2-7b-vi-math-v1-clean-valid                                                                             | 0.3555     | 0.4689075351 |
 
 ## Inference
 

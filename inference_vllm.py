@@ -101,6 +101,7 @@ def main(
     db_raw_texts = db["raw_texts"].values.tolist()[:500]
     log.info("Embedding database")
     import gc
+
     gc.collect()
     db_embeddings = embedding_text(
         tokenizer=tokenizer_embedings, model=model_embedings, input_texts=db_texts
@@ -108,6 +109,7 @@ def main(
     print(db_embeddings.shape)
     # return None
     import gc
+
     gc.collect()
 
     for idx, example in enumerate(data):
