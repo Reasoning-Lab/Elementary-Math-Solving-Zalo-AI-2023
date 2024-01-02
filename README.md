@@ -190,11 +190,11 @@ python merge_peft_adapter.py --model_type auto --base_model hllj/mistral-vi-math
 
 ## Finetune
 
-| Base Model                  | Finetuning                                                                                                                  | Train loss | Eval loss    |
-| --------------------------- | --------------------------------------------------------------------------------------------------------------------------- | ---------- | ------------ |
-| hllj/mistral-vi-math        | BaoLocTown/sft-mistral-7b-vi-math-v1-clean-valid                                                                            | 0.2929     | 0.4370269775 |
-| hllj/Zephyr-beta-7B-Vi-Math | BaoLocTown/sft-zephyr-beta-7b-vi-math-v1-clean-valid                                                                        | 0.2968     | 0.4378368258 |
-| hllj/Llama2-7B-Vi-Math      | BaoLocTown/sft-llama2-7b-vi-math-v1-clean-valid                                                                             | 0.3555     | 0.4689075351 |
+| Base model                  | Finetuning                                           | Train loss | Eval loss    | public test acc |
+|-----------------------------|------------------------------------------------------|------------|--------------|-----------------|
+| hllj/mistral-vi-math        | BaoLocTown/sft-mistral-7b-vi-math-v1-clean-valid     | 0.2929     | 0.4370269775 | 0.5238          |
+| hllj/Zephyr-beta-7B-Vi-Math | BaoLocTown/sft-zephyr-beta-7b-vi-math-v1-clean-valid | 0.2968     | 0.4378368258 | 0.6878          |
+| hllj/Llama2-7B-Vi-Math      | BaoLocTown/sft-llama2-7b-vi-math-v1-clean-valid      | 0.3555     | 0.4689075351 |                 |
 
 ## Inference
 
