@@ -194,7 +194,7 @@ python merge_peft_adapter.py --model_type auto --base_model hllj/mistral-vi-math
 |-----------------------------|------------------------------------------------------|------------|--------------|-----------------|
 | hllj/mistral-vi-math        | BaoLocTown/sft-mistral-7b-vi-math-v1-clean-valid     | 0.2929     | 0.4370269775 | 0.5238          |
 | hllj/Zephyr-beta-7B-Vi-Math | BaoLocTown/sft-zephyr-beta-7b-vi-math-v1-clean-valid | 0.2968     | 0.4378368258 | 0.6878          |
-| hllj/Llama2-7B-Vi-Math      | BaoLocTown/sft-llama2-7b-vi-math-v1-clean-valid      | 0.3555     | 0.4689075351 |                 |
+| hllj/Llama2-7B-Vi-Math      | BaoLocTown/sft-llama2-7b-vi-math-v1-clean-valid      | 0.3555     | 0.4689075351 | 0.4126                 |
 
 ## Inference
 
