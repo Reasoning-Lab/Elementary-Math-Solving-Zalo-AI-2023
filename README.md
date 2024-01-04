@@ -1,12 +1,56 @@
 # ZAIC-2023-Elementary-Math-Solving
 
+# Table of Content
+
+- [ZAIC-2023-Elementary-Math-Solving](#zaic-2023-elementary-math-solving)
+- [Team GigaChat](#team-gigachat)
+- [Environment](#environment)
+  * [Specs](#specs)
+  * [Installation](#installation)
+- [Solution overview](#solution-overview)
+  * [Overview](#overview)
+  * [Finetune](#finetune)
+  * [Inference](#inference)
+- [Data Curation](#data-curation)
+  * [Data from Competition](#data-from-competition)
+  * [External Datasets](#external-datasets)
+  * [Continue pretraining Dataset](#continue-pretraining-dataset)
+  * [Finetuning Dataset](#finetuning-dataset)
+- [Experiment Result](#experiment-result)
+  * [Continue pretraining](#continue-pretraining)
+  * [Finetune](#finetune-1)
+- [Training Script](#training-script)
+  * [Baseline with Llama-2-7b LoRA 8bit](#baseline-with-llama-2-7b-lora-8bit)
+    + [Baseline Llama-2-7b LoRA 8bit](#baseline-llama-2-7b-lora-8bit)
+    + [Finetuning with llama_recipes (deprecated - not using in final solution)](#finetuning-with-llama-recipes--deprecated---not-using-in-final-solution-)
+  * [Final Solution](#final-solution)
+    + [Pretraining](#pretraining)
+    + [Finetune with SFTTrainer](#finetune-with-sfttrainer)
+- [Inference](#inference-1)
+  * [Quantization inference 4bit / 8bit](#quantization-inference-4bit---8bit)
+- [Inference with vLLM](#inference-with-vllm)
+  * [Merge base model with LoRA](#merge-base-model-with-lora)
+  * [Inference](#inference-2)
+
+
+# Team GigaChat
+
+![image](https://github.com/Reasoning-Lab/Elementary-Math-Solving-Zalo-AI-2023/assets/67360122/7466638d-3c9d-403f-914f-9da8bc374f06)
+
+| Name                                                 | Email                   |
+| ---------------------------------------------------- | ----------------------- |
+| [Bùi Văn Hợp](https://github.com/hllj)               | vanhop3499@gmail.com    |
+| [Phạm Bảo Lộc](https://github.com/BaoLocPham)        | phambaoloc163@gmail.com |
+| [Nguyễn Thành Đồng](https://github.com/liamnguyen97) | liamnguyen97@gmail.com  |
+| [Phan Văn Phúc](https://github.com/pphuc25)          | phanphuc1100@gmail.com  |
+
 # Environment
 
 ## Specs
 
 - Pytorch: 2.1.0
-
 - CUDA: 12.1
+- GPU: RTX3090, RTX4090 (at least 20Gb VRAM)
 
 ## Installation
 
@@ -101,6 +145,27 @@ Finetuning data set is created from the competition dataset plus with external d
 | Vietnamese Grade School Math - Multiple Choice    | Filtering questions with long explanation.                                             | vietjack_finetune.json      | 2115 |
 | Total                                             |                                                                                        |                             | 8657 |
 
+
+# Experiment Result
+
+## Continue pretraining
+
+| Base model      | Train loss         | Eval loss          | Eval_Accuracy      | Eval_Perplexity    |
+|-----------------|--------------------|--------------------|--------------------|--------------------|
+| Llama-2 7B      | 0.5671561380291116 | 0.6204795241355896 | 0.831146229075127  | 1.8598196564670118 |
+| Mistral-7b-v0.1 | 0.5717931843230705 | 0.605161726474762  | 0.8357321441998862 | 1.8315483947998228 |
+| zephyr-7b-beta  | 0.5778149476435406 | 0.6088958978652954 | 0.8344175985305018 | 1.838400495913874  |
+| Qwen-7B         | 0.9038185586734694 | 0.9308816194534302 | 0.7710786622703721 | 2.5367446354805163 |
+| BloomZ-7b1      | 1.2220947331637801 | 1.241927146911621  | 0.7222003923855691 | 3.4622793605962974 |
+
+## Finetune
+
+| Base model                  | Finetuning                                           | Train loss | Eval loss    | public test acc |
+|-----------------------------|------------------------------------------------------|------------|--------------|-----------------|
+| hllj/mistral-vi-math        | BaoLocTown/sft-mistral-7b-vi-math-v1-clean-valid     | 0.2929     | 0.4370269775 | 0.5238          |
+| hllj/Zephyr-beta-7B-Vi-Math | BaoLocTown/sft-zephyr-beta-7b-vi-math-v1-clean-valid | 0.2968     | 0.4378368258 | 0.6878          |
+| hllj/Llama2-7B-Vi-Math      | BaoLocTown/sft-llama2-7b-vi-math-v1-clean-valid      | 0.3555     | 0.4689075351 | 0.4126          |
+
 # Training Script
 
 ## Baseline with Llama-2-7b LoRA 8bit
@@ -163,6 +228,8 @@ python inference.py --model_name hllj/zephyr-7b-beta-vi-math --peft_model output
 
 # Inference with vLLM
 
+vLLM is faster about (20%~40%) comparing with simple quantization inference.
+
 ## Merge base model with LoRA
 
 Because when inference with vLLM, it doesn't allow using LoRA outputs but the merged weights itself
@@ -176,26 +243,6 @@ Ex:
 python merge_peft_adapter.py --model_type auto --base_model hllj/mistral-vi-math --tokenizer_path lora --lora_model lora --output_dir final
 ```
 
-# Experiment
-
-## Continue pretraining
-
-| Base model      | Train loss         | Eval loss          | Eval_Accuracy      | Eval_Perplexity    |
-|-----------------|--------------------|--------------------|--------------------|--------------------|
-| Llama-2 7B      | 0.5671561380291116 | 0.6204795241355896 | 0.831146229075127  | 1.8598196564670118 |
-| Mistral-7b-v0.1 | 0.5717931843230705 | 0.605161726474762  | 0.8357321441998862 | 1.8315483947998228 |
-| zephyr-7b-beta  | 0.5778149476435406 | 0.6088958978652954 | 0.8344175985305018 | 1.838400495913874  |
-| Qwen-7B         | 0.9038185586734694 | 0.9308816194534302 | 0.7710786622703721 | 2.5367446354805163 |
-| BloomZ-7b1      | 1.2220947331637801 | 1.241927146911621  | 0.7222003923855691 | 3.4622793605962974 |
-
-## Finetune
-
-| Base model                  | Finetuning                                           | Train loss | Eval loss    | public test acc |
-|-----------------------------|------------------------------------------------------|------------|--------------|-----------------|
-| hllj/mistral-vi-math        | BaoLocTown/sft-mistral-7b-vi-math-v1-clean-valid     | 0.2929     | 0.4370269775 | 0.5238          |
-| hllj/Zephyr-beta-7B-Vi-Math | BaoLocTown/sft-zephyr-beta-7b-vi-math-v1-clean-valid | 0.2968     | 0.4378368258 | 0.6878          |
-| hllj/Llama2-7B-Vi-Math      | BaoLocTown/sft-llama2-7b-vi-math-v1-clean-valid      | 0.3555     | 0.4689075351 | 0.4126                 |
-
 ## Inference
 
 ```bash
@@ -206,3 +253,4 @@ Ex:
 ```bash
 python inference_vllm.py --model_path final --max_new_tokens 1024 --temperature 0.1 --output_filepath submission.csv
 ```
+
