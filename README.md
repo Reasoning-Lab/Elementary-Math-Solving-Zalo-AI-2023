@@ -79,7 +79,7 @@ The training steps of the model include 2 stages:
 
 <img src="./figures/Training_ZaloAI_Math_Solving.drawio.png" width=500 heigh=300>
 
-We train the model followwing instruction with the input being Question + Choices and the output being Explanation + Answer.
+We train the model following instruction with the input being Question + Choices and the output being Explanation + Answer.
 
 The input data is filled with complete explanations to ensure the model always makes inferences before giving an answer.
 
@@ -127,7 +127,7 @@ External datasets:
 The dataset will follow the continue pretrain direction with text corpora and training for 1 epoch. All datasets for pretraining are in datasets/pretrain/.
 
 | Dataset Name                                             | Filename                            | Size  |
-|----------------------------------------------------------|-------------------------------------|-------|
+|----------------------------------------------------------|-------------------------------------|:-------:|
 | Vietnamese Translated Grade School Math Dataset          | vi_train_raw.json, vi_test_raw.json | 8792  |
 | Vietnamese Elementary Math Knowledge and Workbook - Text | grade_{1,5}.json                    | 10246 |
 | Vietjack Text                                            | vietjack_pretrain.json              | 13615 |
@@ -138,7 +138,7 @@ The dataset will follow the continue pretrain direction with text corpora and tr
 Finetuning data set is created from the competition dataset plus with external datasets with multiple-choice format, in addition to adding data, we also filter out some erroneous data or missing explanations to increase the model's inference ability. All datasets for finetuning are in datasets/finetune/.
 
 | Dataset Name                                      | Description                                                                            | Filename                    | Size |
-|---------------------------------------------------|----------------------------------------------------------------------------------------|-----------------------------|------|
+|---------------------------------------------------|----------------------------------------------------------------------------------------|-----------------------------|:------:|
 | Qualified Dataset from Competition                | Qualified dataset + GPT-4 Fill Explanation                                             | convert_qualified_data.json | 1196 |
 | Collected Dataset                                 | From Crawled Hand Label Public Test that we collected, similar to public test dataset. | convert_qualified_data.json | 140  |
 | Vietnamese Elementary Math Knowledge and Workbook | Convert to multiple-choice question format by generating 3 more false answers.         | grade_{3,5}_mcq.json        | 5206 |
@@ -151,7 +151,7 @@ Finetuning data set is created from the competition dataset plus with external d
 ## Continue pretraining
 
 | Base model      | Train loss         | Eval loss          | Eval_Accuracy      | Eval_Perplexity    |
-|-----------------|--------------------|--------------------|--------------------|--------------------|
+|-----------------|:--------------------:|:--------------------:|:--------------------:|:--------------------:|
 | Llama-2 7B      | 0.5671561380291116 | 0.6204795241355896 | 0.831146229075127  | 1.8598196564670118 |
 | Mistral-7b-v0.1 | 0.5717931843230705 | 0.605161726474762  | 0.8357321441998862 | 1.8315483947998228 |
 | zephyr-7b-beta  | 0.5778149476435406 | 0.6088958978652954 | 0.8344175985305018 | 1.838400495913874  |
@@ -161,7 +161,7 @@ Finetuning data set is created from the competition dataset plus with external d
 ## Finetune
 
 | Base model                  | Finetuning                                           | Train loss | Eval loss    | public test acc |
-|-----------------------------|------------------------------------------------------|------------|--------------|-----------------|
+|-----------------------------|------------------------------------------------------|:------------:|:--------------:|:-----------------:|
 | hllj/mistral-vi-math        | BaoLocTown/sft-mistral-7b-vi-math-v1-clean-valid     | 0.2929     | 0.4370269775 | 0.5238          |
 | hllj/Zephyr-beta-7B-Vi-Math | BaoLocTown/sft-zephyr-beta-7b-vi-math-v1-clean-valid | 0.2968     | 0.4378368258 | 0.6878          |
 | hllj/Llama2-7B-Vi-Math      | BaoLocTown/sft-llama2-7b-vi-math-v1-clean-valid      | 0.3555     | 0.4689075351 | 0.4126          |
@@ -207,7 +207,7 @@ using [HuggingFaceH4/zephyr-7b-beta](https://huggingface.co/HuggingFaceH4/zephyr
 ACCELERATE_LOG_LEVEL=info accelerate launch --config_file <multi_gpu.yaml / deepspeed_zero3.yaml> --num_processes=1 sft.py config_lora.yaml
 ```
 
-Ex:
+Example:
 
 ```bash
 ACCELERATE_LOG_LEVEL=info accelerate launch --config_file multi_gpu.yaml --num_processes=1 sft.py config_lora.yaml
@@ -238,7 +238,7 @@ Because when inference with vLLM, it doesn't allow using LoRA outputs but the me
 python merge_peft_adapter.py --model_type auto --base_model <name or path base model> --tokenizer_path <name or path tokenizer> --lora_model <lora folder> --output_dir <output folder for merged model>
 ```
 
-Ex:
+Example:
 ```bash
 python merge_peft_adapter.py --model_type auto --base_model hllj/mistral-vi-math --tokenizer_path lora --lora_model lora --output_dir final
 ```
@@ -249,7 +249,7 @@ python merge_peft_adapter.py --model_type auto --base_model hllj/mistral-vi-math
 python inference_vllm.py --model_path <output folder for merged model> --max_new_tokens 1024 --temperature 0.1 --output_filepath submission.csv
 ```
 
-Ex:
+Example:
 ```bash
 python inference_vllm.py --model_path final --max_new_tokens 1024 --temperature 0.1 --output_filepath submission.csv
 ```
