@@ -3,7 +3,7 @@ model_type: auto
 model_name_or_path: hllj/mistral-vi-math
 device_map: auto
 torch_dtype: float16
-token: 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
+token: {YOUR_WRITE_HUGGINGFACE_TOKEN}
 
 # LoRA arguments
 use_peft: true
