@@ -22,7 +22,7 @@ trl>=0.7.1
 scikit-learn
 tensorboard
 # deepspeed
-vllm
+vllm==0.2.5
 jupyterlab
 tiktoken
 transformers_stream_generator
